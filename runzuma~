@@ -1,0 +1,1 @@
+wine ~/bin/lem/LEM95.EXE input/ZUMA.inp output/ZUMA.out

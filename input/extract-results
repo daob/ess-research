@@ -1,0 +1,6 @@
+
+grep FREQUENCIES ../output/doctors/output -A110 > ../output/doctors/residuals
+tail  ../output/doctors/residuals -n108 >  ../output/doctors/residuals.tab
+grep "L-squared" ../output/doctors/output > ../output/doctors/L-squared
+grep "Degrees of freedom" ../output/doctors/output > ../output/doctors/df
+grep "LATENT CLASS OUTPUT" -n30 ../output/doctors/output > ../output/doctors/latent-class

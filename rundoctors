@@ -1,0 +1,1 @@
+wine ~/bin/lem/LEM95.EXE ~/work/svn/berlin/input/doctors-lie.inp ~/work/svn/berlin/output/doctors-lie.out

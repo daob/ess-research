@@ -1,0 +1,7 @@
+man 	3
+lat 	1
+dim 	3 3 4 4
+lab 	X C A B
+str	C {C}
+	X|C {CX}
+	
