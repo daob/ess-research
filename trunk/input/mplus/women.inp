@@ -1,0 +1,131 @@
+TITLE: MTMM analysis Norway
+DATA: 
+    FILE IS ../data/w2exponly.dat;
+
+VARIABLE: 
+    NAMES ARE     
+      idno	cntry_num	dweight	group	
+      trstprl	trstlgl	trstplt	
+      stfeco	stfgov	stfdem	
+      dckptrt	dctreql	dcdisc	
+      vrtywrk	jbscr	hlthrwk	
+      testa2	testa3	testa4	
+      testa5	testa6	testa7	
+      testa8	testa9	testa10	
+      testa11	testa12	testa13	
+      testa14	testa15	testa16	
+      testa17	testa18	testa19	
+      testa20	testa21	testa22	
+      testa23	testa24	testa25	
+      testa26	testa27	testa28	
+      testa29	testa30	testa31	
+      testa32	testa33	testa34	
+      testa35	testa36	testa37	
+      testa38	testa39	testa40	
+      spltadma	essround	cntry	dif_date;
+
+    USEVARIABLES ARE 
+       stfeco	stfgov	stfdem
+       testa11	testa12	testa13
+       testa35	testa36	testa37;    
+
+    USEOBSERVATIONS ARE          
+        (dweight NE -9999 AND dif_date NE -9999 AND cntry_num EQ 13 );
+
+    WEIGHT IS dweight;
+    
+    GROUPING IS group (0=sameday 1=otherday);
+
+    IDVARIABLE = idno;
+    MISSING ARE ALL(-9999);
+
+
+
+ANALYSIS: 
+    TYPE = MISSING;
+    ESTIMATOR IS MLR;
+    COVERAGE = 0.000;    
+
+MODEL: 
+   N1 BY stfeco@1;
+       N1@0;
+       stfeco          (15);
+   N2 BY stfgov@1;
+       N2@0;
+       stfgov          (16);
+   N3 BY stfdem@1;
+       N3@0;
+       stfdem          (17);
+   N4 BY testa11@1;
+       N4@0;
+       testa11         (18);
+   N5 BY testa12@1;
+       N5@0;
+       testa12         (19);
+   N6 BY testa13@1;
+       N6@0;
+       testa13         (20);
+   N7 BY testa35@1;
+       N7@0;
+       testa35         (21);
+   N8 BY testa36@1;
+       N8@0;
+       testa36         (22);
+   N9 BY testa37@1;
+       N9@0;
+       testa37         (23);
+
+    [N1@0 N2@0 N3@0 N4@0 N5@0 N6@0 N7@0 N8@0 N9@0];
+    [T1-T3@0];
+    [M1-M3@0];
+
+    T1 BY N1@1 
+      N4*.5       (1)
+      N7*.5       (2)
+      ;
+    T2 BY N2@1 
+      N5*.5       (3)
+      N8*.5       (4)
+      ;
+    T3 BY N3@1 
+      N6*.5       (5)
+      N9*.5       (6)
+      ;      
+    M1 BY N1@1 N2@1 N3@1;
+    M2 BY N4@1 N5@1 N6@1;
+    M3 BY N7@1 N8@1 N9@1;
+
+    T1*.5         (7)
+    T2*.5         (8)
+    T3*.5         (9)
+    M1@0          !constraint M1 := 0 introduced for Norway
+    M2            (10)
+    M3            (11)
+    ;           
+
+    T1 WITH T2    (12);
+    T1 WITH T3    (13);
+    T2 WITH T3    (14);
+
+    T1 WITH M1@0;
+    T2 WITH M1@0;
+    T3 WITH M1@0;
+
+    T1 WITH M2@0;
+    T2 WITH M2@0;
+    T3 WITH M2@0;
+
+    T1 WITH M3@0;
+    T2 WITH M3@0;
+    T3 WITH M3@0;
+
+    M1 WITH M2@0;
+    M1 WITH M3@0;
+    M2 WITH M3@0;
+
+OUTPUT:  
+    SAMPSTAT MODINDICES(4) RESIDUAL STANDARDIZED CINTERVAL H1SE H1TECH3
+            PATTERNS TECH1 TECH3 TECH4 TECH5;
+PLOT: 
+    TYPE=PLOT3;
+    
