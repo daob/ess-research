@@ -38,7 +38,7 @@ r2.mtmm$unique.id <- paste(r2.mtmm$CNTRY, r2.mtmm$IDNO, sep="")
 # Edit this to select different variables.
 vars.main.extra <- c("DWEIGHT","CNTRY")
 vars.main <- c("WMCPWRK", "MNRSPHM", "MNRGTJB")
-vars.mtmm <- c("TESTA8", "TESTA9", "TESTA10", "TESTA22", "TESTA23", "TESTA24")
+vars.mtmm <- c("TESTA8", "TESTA9", "TESTA10", "TESTA22", "TESTA23", "TESTA24","SPLTADMA")
 
 # The newly created unique id must always be selected
 both.need <- c( "unique.id" )
@@ -54,7 +54,7 @@ data <- as.data.frame(data)
 # Extra conditions, transformations, etc.
 
    # use only the 5 categories [TODO: add DK (8)]
-missing.values <- c(6:9,66,77,88,99)
+missing.values <- c(6:9,15,66,77,88,99)
 analyse.vars <- c(vars.main,vars.mtmm)
 
 for( i in 1:length(analyse.vars) ) {
