@@ -38,7 +38,7 @@ r2.mtmm$unique.id <- paste(r2.mtmm$CNTRY, r2.mtmm$IDNO, sep="")
 # Edit this to select different variables.
 vars.main.extra <- c("DWEIGHT","CNTRY")
 vars.main <- c("WMCPWRK", "MNRSPHM", "MNRGTJB")
-vars.mtmm <- c("TESTA8", "TESTA9", "TESTA10", "TESTA22", "TESTA23", "TESTA24")
+vars.mtmm <- c("TESTA8", "TESTA9", "TESTA10", "TESTA22", "TESTA23", "TESTA24","SPLTADMA")
 
 # The newly created unique id must always be selected
 both.need <- c( "unique.id" )
@@ -64,6 +64,7 @@ for( i in 1:length(analyse.vars) ) {
 }
 
 data <- cbind(c(1:NROW(data)),as.numeric(data$CNTRY),data$DWEIGHT,data[,analyse.vars], data$unique.id)
+
 # Produce tables, note that country comes last.
 write.table(data, paste(basedir, "data/", analysis.name, ".dat", sep=""), na="-9999",row.names=FALSE,col.names=FALSE)
 
