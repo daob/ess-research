@@ -17,16 +17,16 @@
 
 # clear R memory
 rm(list = ls())
-basedir <- "/home/daob/work/svn/berlin/"
-analysis.name <- "doctors"
+basedir <- "/home/daob/work/svn/ess-research/"
+analysis.name <- "women"
 
 # needed for reading SPSS data:
 require(foreign)
 
 # read main and MTMM data files:
-r2.main <- read.spss( "/home/daob/work/ESS/data/ESS2e03.spss.zip_FILES/ESS2e03.por", use.value.labels = FALSE)
+r2.main <- read.spss( "/home/daob/work/ess/data/ESS2e03.spss.zip_FILES/ESS2e03.por", use.value.labels = FALSE)
 
-r2.mtmm <- read.spss( "/home/daob/work/ESS/data/ESS2MTMMe03_1.spss.zip_FILES/ESS2MTMMe03_1.por", use.value.labels = FALSE)
+r2.mtmm <- read.spss( "/home/daob/work/ess/data/ESS2MTMMe03_1.spss.zip_FILES/ESS2MTMMe03_1.por", use.value.labels = FALSE)
 
 # interviewer questionnaire: r2.int <- 
 
@@ -36,14 +36,15 @@ r2.mtmm$unique.id <- paste(r2.mtmm$CNTRY, r2.mtmm$IDNO, sep="")
 
 # select variables to be analysed
 # Edit this to select different variables.
-vars.main <- c("DCTREQL", "CNTRY")
-vars.mtmm <- c("TESTA6")
+vars.main.extra <- c("DWEIGHT","CNTRY")
+vars.main <- c("WMCPWRK", "MNRSPHM", "MNRGTJB")
+vars.mtmm <- c("TESTA8", "TESTA9", "TESTA10", "TESTA22", "TESTA23", "TESTA24","SPLTADMA")
 
 # The newly created unique id must always be selected
 both.need <- c( "unique.id" )
 
 # Select the wanted subsets and convert them to data frames (may take a while)
-r2.main.subset <- as.data.frame( r2.main[ which( names(r2.main)%in%c( vars.main, both.need ) ) ] )
+r2.main.subset <- as.data.frame( r2.main[ which( names(r2.main)%in%c( vars.main, vars.main.extra, both.need ) ) ] )
 r2.mtmm.subset <- as.data.frame( r2.mtmm[ which( names(r2.mtmm)%in%c( vars.mtmm, both.need ) ) ] )
 
 # Merge data sets
@@ -53,16 +54,19 @@ data <- as.data.frame(data)
 # Extra conditions, transformations, etc.
 
    # use only the 5 categories [TODO: add DK (8)]
-   valid.values <- c(1:5,8)
-   use.countries <- c("DE","AT","LU","EE")
+missing.values <- c(6:9,66,77,88,99)
+analyse.vars <- c(vars.main,vars.mtmm)
 
+for( i in 1:length(analyse.vars) ) {
+  data[ data[,analyse.vars[i]]%in%missing.values,
+       analyse.vars[i]
+      ] <- NA
+}
 
-   data <- data[ which(data[,vars.main[1]]%in%valid.values & data[,vars.mtmm[1]]%in%valid.values & data$CNTRY%in%use.countries)  ,]
+data <- cbind(c(1:NROW(data)),as.numeric(data$CNTRY),data$DWEIGHT,data[,analyse.vars], data$unique.id)
 
 # Produce tables, note that country comes last.
-r <- table( data[,c(vars.mtmm,vars.main)]  )
-print( r[,,use.countries] )
-write.table(r, paste(basedir, "data/table-doctors-equal", sep="") )
+write.table(data, paste(basedir, "data/", analysis.name, ".dat", sep=""), na="-9999",row.names=FALSE,col.names=FALSE)
 
 
 # Utilities:

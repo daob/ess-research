@@ -95,3 +95,31 @@ cond.print <- function(giv) {
 print( by(dgiv, dgiv$C, cond.print) )
 print( by(tgiv, tgiv$C, cond.print) )
 
+
+d <- scan("~/work/svn/ess-research/input/mplus/women-estimates")
+
+intercepts <- array(dim=c(0,9))
+error.vars <- array(dim=c(0,9))
+loadings.list <- list()
+j <- 1
+countries <- c("CH","CZ","DE","EE","GR","SI")
+
+for ( i in seq(1,length(d),by=171) ) {
+
+  tmp <- d[ i:(i+171) ]
+  
+  intercepts <- rbind(intercepts, tmp[1:9] )
+  
+  loadings <- tmp[10:63]
+  loadings <- t(matrix(loadings, 6,9, byrow=F))
+  loadings.list[[j]] <- loadings
+
+  theta <- tmp[64:(81+63)]
+  theta <- theta[theta!=0]
+  error.vars <- rbind(error.vars, theta)
+  j=j+1
+}
+
+row.names(intercepts) <- countries
+row.names(error.vars) <- countries
+names(loadings.list) <- countries
