@@ -1,0 +1,13 @@
+#summary Plan de campagne.
+
+= Next steps =
+
+  # same model, free covariances between scales. This yields cov matrix which can be used as input for SEM
+  # restrict thresholds and perform test of restricted vs unrestricted model
+  # create input using multiple group rather than FIML. Get Modification indices
+
+= Questions =
+
+  * are the thresholds different? Do people use the scale differently in different countries
+  * are the loadings different? Do people understand the same question in the same way in different countries?
+  * what is the effect differences in thresholds have on the quality coefficients? To what extent can the differences in quality that were found be explained by differences in the use of the scale and to what extent by differences in understanding?
