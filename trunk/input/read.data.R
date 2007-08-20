@@ -123,3 +123,20 @@ for ( i in seq(1,length(d),by=171) ) {
 row.names(intercepts) <- countries
 row.names(error.vars) <- countries
 names(loadings.list) <- countries
+write.table(intercepts,paste(basedir,"output/intercepts-",analysis.name,sep=""))
+write.table(error.vars,paste(basedir,"output/error-vars-",analysis.name,sep=""))
+write.table(loadings.list,paste(basedir,"output/loadings-",analysis.name,sep=""))
+
+
+s <- ""
+
+for ( i in 1:length(analyse.vars) ) {
+  str <- "["
+  for( j in 1:4 ) {
+    str <- paste(str, analyse.vars[i], "#", j," ", sep="")
+  }
+  str <- paste(str,"]", sep="")
+  s <- paste(str,s)
+}
+
+write(s,"~/txt")

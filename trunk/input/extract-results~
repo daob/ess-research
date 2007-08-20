@@ -1,3 +1,0 @@
-
-grep FREQUENCIES doctors.out -A110 > ../output/residuals
-grep "L-squared" doctors.out >
