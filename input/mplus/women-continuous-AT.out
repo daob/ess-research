@@ -1,0 +1,129 @@
+Mplus VERSION 4.2
+MUTHEN & MUTHEN
+08/17/2007   7:53 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: MTMM analysis Norway
+  DATA:
+      FILE IS z:\home\daob\work\svn\ess-research\data\women.dat;
+
+  VARIABLE:
+      NAMES ARE
+          ID        country_num                dweight
+          WMCPWRK                MNRSPHM                MNRGTJB
+          TESTA8                 TESTA9                 TESTA10
+          TESTA22                TESTA23                TESTA24
+          SPLTADMA;
+
+      USEVARIABLES ARE
+          WMCPWRK                MNRSPHM                MNRGTJB
+          TESTA8                 TESTA9                 TESTA10
+          TESTA22                TESTA23                TESTA24;
+
+      USEOBSERVATIONS ARE
+        (dweight NE -9999 AND country_num NE -9999 AND
+          country_num EQ 1 OR country_num EQ 4 OR
+          country_num EQ 12 OR country_num EQ 19 OR
+          country_num EQ 20);
+
+      WEIGHT IS dweight;
+
+      GROUPING IS country_num;
+
+      IDVARIABLE = ID;
+      MISSING ARE ALL(-9999);
+
+
+
+  ANALYSIS:
+      TYPE = MISSING;
+      ESTIMATOR IS MLR;
+      COVERAGE = 0.000;
+
+  MODEL:
+     T1 BY WMCPWRK@1;
+         WMCPWRK          (24);
+     T2 BY MNRSPHM@1;
+         MNRSPHM          (16);
+     T3 BY MNRGTJB@1;
+         MNRGTJB          (17);
+     T1 BY TESTA8;
+         TESTA8                 (18);
+     T2 BY TESTA9;
+         TESTA9                 (19);
+     T3 BY TESTA10;
+         TESTA10         (20);
+     T1 BY TESTA22;
+         TESTA22         (21);
+     T2 BY TESTA23;
+         TESTA23         (22);
+     T3 BY TESTA24;
+         TESTA24         (23);
+
+      [T1-T3@0];
+      [M1-M3@0];
+
+      M1 BY WMCPWRK@1 MNRSPHM@1 MNRGTJB@1;
+      M2 BY TESTA8@1 TESTA9@1 TESTA10@1;
+      M3 BY TESTA22*.5 TESTA23@1 TESTA24@1;
+
+      T1*.5         (7)
+      T2*.5         (8)
+      T3*.5         (9)
+      M1@0
+      M2            (11)
+      M3            (12)
+      ;
+
+      T1 WITH T2    (13);
+      T1 WITH T3    (14);
+      T2 WITH T3    (15);
+
+      T1 WITH M1@0;
+      T2 WITH M1@0;
+      T3 WITH M1@0;
+
+      T1 WITH M2@0;
+      T2 WITH M2@0;
+      T3 WITH M2@0;
+
+      T1 WITH M3@0;
+      T2 WITH M3@0;
+      T3 WITH M3@0;
+
+      M1 WITH M2@0;
+      M1 WITH M3@0;
+      M2 WITH M3@0;
+
+  !TESTA9   WITH MNRSPHM;
+
+  [ WMCPWRK*2.736       MNRSPHM*2.030       MNRGTJB*3.457       TESTA8*2.731
+  TESTA10*2.289       TESTA22*2.856       TESTA23*2.261       TESTA24*3.557 ]
+
+
+  OUTPUT:
+      SAMPSTAT MODINDICES(4) RESIDUAL STANDARDIZED CINTERVAL H1SE H1TECH3
+              PATTERNS TECH1 TECH3 TECH4 TECH5;
+  PLOT:
+      TYPE=PLOT3;
+
+
+*** WARNING
+  Variable name contains more than 8 characters.
+  Only the first 8 characters will be printed in the output.
+  Variable: COUNTRY_NUM
+*** ERROR in Variable command
+  Specification for GROUPING option is missing grouping values.
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2006 Muthen & Muthen

@@ -1,0 +1,43 @@
+TITLE:    this is an example of a LCA with binary
+          latent class indicators using automatic
+          starting values with random starts
+DATA: 
+    FILE IS z:\home\daob\work\svn\ess-research\data\women.dat;
+
+VARIABLE: 
+    NAMES ARE     
+	ID country dweight          
+	WMCPWRK MNRSPHM MNRGTJB               
+	TESTA8 TESTA9 TESTA10               
+	TESTA22 TESTA23 TESTA24
+	SPLTADMA;
+
+    USEVARIABLES ARE 
+	WMCPWRK	TESTA8; 
+
+    USEOBSERVATIONS ARE         
+      (dweight NE -9999 AND country NE -9999 AND
+	country EQ  4 OR country EQ 12 OR country EQ  7);
+
+    WEIGHT IS dweight;
+    KNOWNCLASS IS country (4=CZ 7=EE 12=GR);
+    IDVARIABLE = ID;
+    MISSING ARE ALL(-9999);
+
+   CLASSES = c (5);
+   CATEGORICAL =
+	WMCPWRK	TESTA8;
+ANALYSIS: TYPE = MIXTURE;
+MODEL:
+
+%c#1%
+[ WMCPWRK$1  WMCPWRK$2  WMCPWRK$3  WMCPWRK$4@15 ]
+[ TESTA8$1 TESTA8$2 TESTA8$3 TESTA8$4@15 ]
+
+%c#5%
+[ WMCPWRK$1@-15  WMCPWRK$2  WMCPWRK$3  WMCPWRK$4 ]
+[ TESTA8$1@-15 TESTA8$2 TESTA8$3 TESTA8$4 ]
+
+
+OUTPUT:   TECH1 TECH8;
+
