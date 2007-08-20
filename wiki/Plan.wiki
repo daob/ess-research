@@ -6,7 +6,7 @@
   # restrict thresholds and perform test of restricted vs unrestricted model
   # create input using multiple group rather than FIML. Get Modification indices
 
-= Questions =
+== Questions ==
 
   * are the thresholds different? Do people use the scale differently in different countries
   * are the loadings different? Do people understand the same question in the same way in different countries?
