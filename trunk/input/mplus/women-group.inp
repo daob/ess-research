@@ -1,0 +1,253 @@
+TITLE: MTMM analysis women
+DATA: 
+    FILE (CH_SB1) IS z:\home\daob\work\svn\ess-research\data\womenCHsb1.dat;
+    FILE (CH_SB2) IS z:\home\daob\work\svn\ess-research\data\womenCHsb2.dat;
+
+!    FILE (CZ_SB1) IS z:\home\daob\work\svn\ess-research\data\womenCZsb1.dat;
+!    FILE (CZ_SB2) IS z:\home\daob\work\svn\ess-research\data\womenCZsb2.dat;
+
+VARIABLE: 
+    NAMES ARE     
+	ID	cntrynum		dweight          
+	WMCPWRK                MNRSPHM                MNRGTJB               
+	TESTA8                 TESTA9                 TESTA10               
+	TESTA22                TESTA23                TESTA24
+	SPLTADMA;
+
+    USEVARIABLES ARE 
+	WMCPWRK  MNRSPHM  MNRGTJB               
+	TESTA8  TESTA9  TESTA10
+	TESTA22  TESTA23  TESTA24;
+
+    USEOBSERVATIONS ARE          
+        (dweight NE -9999);
+
+    CATEGORICAL ARE 
+	WMCPWRK                MNRSPHM                MNRGTJB               
+	TESTA8                 TESTA9                 TESTA10               
+	TESTA22                TESTA23                TESTA24;
+
+    WEIGHT IS dweight;
+    IDVARIABLE = ID;
+    MISSING ARE ALL(-9999);
+
+ANALYSIS: 
+    TYPE = MEANSTRUCTURE;
+    ESTIMATOR IS WLSMV;   
+
+MODEL: 
+
+   T1 BY WMCPWRK@1;
+   T2 BY MNRSPHM@1;
+   T3 BY MNRGTJB@1;
+   T1 BY TESTA8;
+   T2 BY TESTA9;
+   T3 BY TESTA10;
+   T1 BY TESTA22;
+   T2 BY TESTA23;
+   T3 BY TESTA24;
+
+   WMCPWRK  MNRSPHM  MNRGTJB               
+   TESTA8  TESTA9  TESTA10
+   TESTA22  TESTA23  TESTA24;	
+   
+   [TESTA24$1 TESTA24$2 TESTA24$3 TESTA24$4 ] ;
+   [TESTA23$1 TESTA23$2 TESTA23$3 TESTA23$4 ] ;
+   [TESTA22$1 TESTA22$2 TESTA22$3 TESTA22$4 ] ;
+   [TESTA10$1 TESTA10$2 TESTA10$3 TESTA10$4 ] ;
+   [TESTA9$1 TESTA9$2 TESTA9$3 TESTA9$4 ] ;
+   [TESTA8$1 TESTA8$2 TESTA8$3 TESTA8$4 ] ;
+   [MNRGTJB$1 MNRGTJB$2 MNRGTJB$3 MNRGTJB$4 ] ;
+   [MNRSPHM$1 MNRSPHM$2 MNRSPHM$3 MNRSPHM$4 ] ;
+   [WMCPWRK$1 WMCPWRK$2 WMCPWRK$3 WMCPWRK$4 ] ;
+   
+   [M1-M3@0];
+
+    M1 BY WMCPWRK@1 MNRSPHM@1 MNRGTJB@1;
+    M2 BY TESTA8@1 TESTA9@1 TESTA10@1;
+    M3 BY TESTA22@1 TESTA23@1 TESTA24@1;
+
+    T1*.5 T2*.5 T3*.5
+    M1 M2 M3;  
+
+    T1 WITH T2    ;
+    T1 WITH T3    ;
+    T2 WITH T3    ;
+
+    T1 WITH M1@0;
+    T2 WITH M1@0;
+    T3 WITH M1@0;
+
+    T1 WITH M2@0;
+    T2 WITH M2@0;
+    T3 WITH M2@0;
+
+    T1 WITH M3@0;
+    T2 WITH M3@0;
+    T3 WITH M3@0;
+
+    M1 WITH M2@0;
+    M1 WITH M3@0;
+    M2 WITH M3@0;
+
+MODEL CH_SB1: 
+   T1 BY WMCPWRK@1;
+   T2 BY MNRSPHM@1;
+   T3 BY MNRGTJB@1;
+   T1 BY TESTA8;
+   T2 BY TESTA9;
+   T3 BY TESTA10;
+   T1 BY TESTA22@0;
+   T2 BY TESTA23@0;
+   T3 BY TESTA24@0;
+
+	WMCPWRK	(11)	;
+	MNRSPHM	(12)	;
+	MNRGTJB	(13)	;
+   TESTA8  TESTA9  TESTA10;
+   TESTA22@0  TESTA23@0  TESTA24@0;
+
+   [TESTA24$1@0 TESTA24$2@0 TESTA24$3@0 TESTA24$4@0 ] ;
+   [TESTA23$1@0 TESTA23$2@0 TESTA23$3@0 TESTA23$4@0 ] ;
+   [TESTA22$1@0 TESTA22$2@0 TESTA22$3@0 TESTA22$4@0 ] ;
+
+   [TESTA10$1 TESTA10$2 TESTA10$3 TESTA10$4 ] ;
+   [TESTA9$1 TESTA9$2 TESTA9$3 TESTA9$4 ] ;
+   [TESTA8$1 TESTA8$2 TESTA8$3 TESTA8$4 ] ;
+
+   [
+	MNRGTJB$1 (111)
+	MNRGTJB$2 (112)
+	MNRGTJB$3 (113)
+	MNRGTJB$4 (114)
+   ] ;
+   [
+	MNRSPHM$1 (121)
+	MNRSPHM$2 (122)
+	MNRSPHM$3 (123)
+	MNRSPHM$4 (124)
+   ] ;
+   [
+	WMCPWRK$1 (131)
+	WMCPWRK$2 (132)
+	WMCPWRK$3 (133)
+	WMCPWRK$4 (134)
+   ] ;
+   
+   [M1-M3@0];
+
+    M1 BY WMCPWRK@1 MNRSPHM@1 MNRGTJB@1;
+    M2 BY TESTA8@1 TESTA9@1 TESTA10@1;
+    M3 BY TESTA22@1 TESTA23@1 TESTA24@1;
+
+	T1*.5 	(101);
+	T2*.5 	(102);
+	T3*.5 	(103);
+	M1 	(104);
+    M2 M3@0;  
+
+    T1 WITH T2    ;
+    T1 WITH T3    ;
+    T2 WITH T3    ;
+
+    T1 WITH M1@0;
+    T2 WITH M1@0;
+    T3 WITH M1@0;
+
+    T1 WITH M2@0;
+    T2 WITH M2@0;
+    T3 WITH M2@0;
+
+    T1 WITH M3@0;
+    T2 WITH M3@0;
+    T3 WITH M3@0;
+
+    M1 WITH M2@0;
+    M1 WITH M3@0;
+    M2 WITH M3@0;
+
+MODEL CH_SB2: 
+   T1 BY WMCPWRK@1;
+   T2 BY MNRSPHM@1;
+   T3 BY MNRGTJB@1;
+   T1 BY TESTA8@0;
+   T2 BY TESTA9@0;
+   T3 BY TESTA10@0;
+   T1 BY TESTA22;
+   T2 BY TESTA23;
+   T3 BY TESTA24;
+
+	WMCPWRK	(11)	;
+	MNRSPHM	(12)	;
+	MNRGTJB	(13)	;
+   TESTA8@0  TESTA9@0  TESTA10@0;
+   TESTA22  TESTA23  TESTA24;
+
+   [TESTA24$1 TESTA24$2 TESTA24$3 TESTA24$4 ] ;
+   [TESTA23$1 TESTA23$2 TESTA23$3 TESTA23$4 ] ;
+   [TESTA22$1 TESTA22$2 TESTA22$3 TESTA22$4 ];
+
+   [TESTA10$1@0 TESTA10$2@0 TESTA10$3@0 TESTA10$4@0 ] ;
+   [TESTA9$1@0 TESTA9$2@0 TESTA9$3@0 TESTA9$4@0 ] ;
+   [TESTA8$1@0 TESTA8$2@0 TESTA8$3@0 TESTA8$4@0 ] ;
+
+   [
+	MNRGTJB$1 (111)
+	MNRGTJB$2 (112)
+	MNRGTJB$3 (113)
+	MNRGTJB$4 (114)
+   ] ;
+   [
+	MNRSPHM$1 (121)
+	MNRSPHM$2 (122)
+	MNRSPHM$3 (123)
+	MNRSPHM$4 (124)
+   ] ;
+   [
+	WMCPWRK$1 (131)
+	WMCPWRK$2 (132)
+	WMCPWRK$3 (133)
+	WMCPWRK$4 (134)
+   ] ;
+   
+   [M1-M3@0];
+
+    M1 BY WMCPWRK@1 MNRSPHM@1 MNRGTJB@1;
+    M2 BY TESTA8@1 TESTA9@1 TESTA10@1;
+    M3 BY TESTA22@1 TESTA23@1 TESTA24@1;
+
+	T1*.5 	(101);
+	T2*.5 	(102);
+	T3*.5 	(103);
+	M1 	(104);
+    M2@0 M3;  
+
+    T1 WITH T2    ;
+    T1 WITH T3    ;
+    T2 WITH T3    ;
+
+    T1 WITH M1@0;
+    T2 WITH M1@0;
+    T3 WITH M1@0;
+
+    T1 WITH M2@0;
+    T2 WITH M2@0;
+    T3 WITH M2@0;
+
+    T1 WITH M3@0;
+    T2 WITH M3@0;
+    T3 WITH M3@0;
+
+    M1 WITH M2@0;
+    M1 WITH M3@0;
+    M2 WITH M3@0;
+
+
+
+OUTPUT:  
+    SAMPSTAT MODINDICES(4) RESIDUAL STANDARDIZED CINTERVAL
+            PATTERNS TECH1 TECH2 TECH3 TECH4 TECH5;
+
+PLOT: 
+    TYPE=PLOT3;
+    

@@ -1,0 +1,301 @@
+Mplus VERSION 4.2
+MUTHEN & MUTHEN
+08/21/2007  11:20 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE: MTMM analysis women
+  DATA:
+      FILE IS z:\home\daob\work\svn\ess-research\data\women.dat;
+
+  VARIABLE:
+      NAMES ARE
+          ID        cntrynum                dweight
+          WMCPWRK                MNRSPHM                MNRGTJB
+          TESTA8                 TESTA9                 TESTA10
+          TESTA22                TESTA23                TESTA24
+          SPLTADMA;
+
+      USEVARIABLES ARE
+          WMCPWRK                MNRSPHM                MNRGTJB
+          TESTA8                 TESTA9                 TESTA10
+          TESTA22                TESTA23                TESTA24;
+
+      USEOBSERVATIONS ARE
+          (dweight NE -9999 AND
+           cntrynum EQ 3 OR cntrynum EQ 5 OR cntrynum EQ 22 OR
+          cntrynum EQ  4 OR cntrynum EQ 12 OR cntrynum EQ  7);
+
+      CATEGORICAL ARE
+          WMCPWRK                MNRSPHM                MNRGTJB
+          TESTA8                 TESTA9                 TESTA10
+          TESTA22                TESTA23                TESTA24;
+
+      WEIGHT IS dweight;
+      CLASSES = country (6);
+      KNOWNCLASS = country
+        (cntrynum=3 cntrynum=4
+        cntrynum=5 cntrynum=7
+        cntrynum=12 cntrynum=22);
+  !    GROUPING IS cntrynum (3=CH 4=CZ 5=DE 7=EE 12=GR 22=SI);
+      IDVARIABLE = ID;
+      MISSING ARE ALL(-9999);
+
+  ANALYSIS:
+      TYPE = MISSING MIXTURE MEANSTRUCTURE;
+      ESTIMATOR IS MLR;
+      COVERAGE = 0.000;
+      LINK=LOGIT;
+      ALGORITHM=INTEGRATION;
+      INTEGRATION=MONTECARLO (40);
+      MCCONVERGENCE=0.0001;
+      MUCONVERGENCE=0.0001;
+      MCONVERGENCE=0.0001;
+
+  MODEL:
+
+  %OVERALL%
+
+     T1 BY WMCPWRK@1;
+     T2 BY MNRSPHM@1;
+     T3 BY MNRGTJB@1;
+     T1 BY TESTA8;
+     T2 BY TESTA9;
+     T3 BY TESTA10;
+     T1 BY TESTA22;
+     T2 BY TESTA23;
+     T3 BY TESTA24;
+
+      [T1-T3@0];
+      [M1-M3@0];
+
+      M1 BY WMCPWRK@1 MNRSPHM@1 MNRGTJB@1;
+      M2 BY TESTA8@1 TESTA9@1 TESTA10@1;
+      M3 BY TESTA22@1 TESTA23@1 TESTA24@1;
+
+      T1*.5
+      T2*.5
+      T3*.5
+      M1
+      M2
+      M3
+      ;
+
+      T1 WITH T2    ;
+      T1 WITH T3    ;
+      T2 WITH T3    ;
+
+      T1 WITH M1@0;
+      T2 WITH M1@0;
+      T3 WITH M1@0;
+
+      T1 WITH M2@0;
+      T2 WITH M2@0;
+      T3 WITH M2@0;
+
+      T1 WITH M3@0;
+      T2 WITH M3@0;
+      T3 WITH M3@0;
+
+      M1 WITH M2@0;
+      M1 WITH M3@0;
+      M2 WITH M3@0;
+
+  %country#1%
+
+     T1 BY TESTA8;
+     T2 BY TESTA9;
+     T3 BY TESTA10;
+     T1 BY TESTA22;
+     T2 BY TESTA23;
+     T3 BY TESTA24;
+
+      T1*.5 T2*.5 T3*.5;
+      M1  M2  M3;
+
+      T1 WITH T2    ;
+      T1 WITH T3    ;
+      T2 WITH T3    ;
+
+  [TESTA24$1 TESTA24$2 TESTA24$3 TESTA24$4 ];
+  [TESTA23$1 TESTA23$2 TESTA23$3 TESTA23$4 ] ;
+  [TESTA22$1 TESTA22$2 TESTA22$3 TESTA22$4 ] ;
+  [TESTA10$1 TESTA10$2 TESTA10$3 TESTA10$4 ] ;
+  [TESTA9$1 TESTA9$2 TESTA9$3 TESTA9$4 ] ;
+  [TESTA8$1 TESTA8$2 TESTA8$3 TESTA8$4 ] ;
+  [MNRGTJB$1 MNRGTJB$2 MNRGTJB$3 MNRGTJB$4 ] ;
+  [MNRSPHM$1 MNRSPHM$2 MNRSPHM$3 MNRSPHM$4 ] ;
+  [WMCPWRK$1 WMCPWRK$2 WMCPWRK$3 WMCPWRK$4 ] ;
+
+  [ T1@0 T2@0 T3@0 M1@0 M2@0 M3@0 ];
+
+
+  %country#2%
+
+     T1 BY TESTA8;
+     T2 BY TESTA9;
+     T3 BY TESTA10;
+     T1 BY TESTA22;
+     T2 BY TESTA23;
+     T3 BY TESTA24;
+
+      T1*.5 T2*.5 T3*.5;
+      M1  M2  M3;
+
+      T1 WITH T2    ;
+      T1 WITH T3    ;
+      T2 WITH T3    ;
+
+  [TESTA24$1 TESTA24$2 TESTA24$3 TESTA24$4 ];
+  [TESTA23$1 TESTA23$2 TESTA23$3 TESTA23$4 ] ;
+  [TESTA22$1 TESTA22$2 TESTA22$3 TESTA22$4 ] ;
+  [TESTA10$1 TESTA10$2 TESTA10$3 TESTA10$4 ] ;
+  [TESTA9$1 TESTA9$2 TESTA9$3 TESTA9$4 ] ;
+  [TESTA8$1 TESTA8$2 TESTA8$3 TESTA8$4 ] ;
+  [MNRGTJB$1 MNRGTJB$2 MNRGTJB$3 MNRGTJB$4 ] ;
+  [MNRSPHM$1 MNRSPHM$2 MNRSPHM$3 MNRSPHM$4 ] ;
+  [WMCPWRK$1 WMCPWRK$2 WMCPWRK$3 WMCPWRK$4 ] ;
+
+  [ T1 T2 T3 M1@0 M2@0 M3@0 ];
+
+  %country#3%
+
+     T1 BY TESTA8;
+     T2 BY TESTA9;
+     T3 BY TESTA10;
+     T1 BY TESTA22;
+     T2 BY TESTA23;
+     T3 BY TESTA24;
+
+      T1*.5 T2*.5 T3*.5;
+      M1  M2  M3;
+
+      T1 WITH T2    ;
+      T1 WITH T3    ;
+      T2 WITH T3    ;
+
+  [TESTA24$1 TESTA24$2 TESTA24$3 TESTA24$4 ];
+  [TESTA23$1 TESTA23$2 TESTA23$3 TESTA23$4 ] ;
+  [TESTA22$1 TESTA22$2 TESTA22$3 TESTA22$4 ] ;
+  [TESTA10$1 TESTA10$2 TESTA10$3 TESTA10$4 ] ;
+  [TESTA9$1 TESTA9$2 TESTA9$3 TESTA9$4 ] ;
+  [TESTA8$1 TESTA8$2 TESTA8$3 TESTA8$4 ] ;
+  [MNRGTJB$1 MNRGTJB$2 MNRGTJB$3 MNRGTJB$4 ] ;
+  [MNRSPHM$1 MNRSPHM$2 MNRSPHM$3 MNRSPHM$4 ] ;
+  [WMCPWRK$1 WMCPWRK$2 WMCPWRK$3 WMCPWRK$4 ] ;
+
+  [ T1 T2 T3 M1@0 M2@0 M3@0 ];
+
+
+  %country#4%
+
+     T1 BY TESTA8;
+     T2 BY TESTA9;
+     T3 BY TESTA10;
+     T1 BY TESTA22;
+     T2 BY TESTA23;
+     T3 BY TESTA24;
+
+      T1*.5 T2*.5 T3*.5;
+      M1  M2  M3;
+
+      T1 WITH T2    ;
+      T1 WITH T3    ;
+      T2 WITH T3    ;
+
+  [TESTA24$1 TESTA24$2 TESTA24$3 TESTA24$4 ];
+  [TESTA23$1 TESTA23$2 TESTA23$3 TESTA23$4 ] ;
+  [TESTA22$1 TESTA22$2 TESTA22$3 TESTA22$4 ] ;
+  [TESTA10$1 TESTA10$2 TESTA10$3 TESTA10$4 ] ;
+  [TESTA9$1 TESTA9$2 TESTA9$3 TESTA9$4 ] ;
+  [TESTA8$1 TESTA8$2 TESTA8$3 TESTA8$4 ] ;
+  [MNRGTJB$1 MNRGTJB$2 MNRGTJB$3 MNRGTJB$4 ] ;
+  [MNRSPHM$1 MNRSPHM$2 MNRSPHM$3 MNRSPHM$4 ] ;
+  [WMCPWRK$1 WMCPWRK$2 WMCPWRK$3 WMCPWRK$4 ] ;
+
+  [ T1 T2 T3 M1@0 M2@0 M3@0 ];
+
+  %country#5%
+
+     T1 BY TESTA8;
+     T2 BY TESTA9;
+     T3 BY TESTA10;
+     T1 BY TESTA22;
+     T2 BY TESTA23;
+     T3 BY TESTA24;
+
+      T1*.5 T2*.5 T3*.5;
+      M1  M2  M3;
+
+      T1 WITH T2    ;
+      T1 WITH T3    ;
+      T2 WITH T3    ;
+
+  [TESTA24$1 TESTA24$2 TESTA24$3 TESTA24$4 ];
+  [TESTA23$1 TESTA23$2 TESTA23$3 TESTA23$4 ] ;
+  [TESTA22$1 TESTA22$2 TESTA22$3 TESTA22$4 ] ;
+  [TESTA10$1 TESTA10$2 TESTA10$3 TESTA10$4 ] ;
+  [TESTA9$1 TESTA9$2 TESTA9$3 TESTA9$4 ] ;
+  [TESTA8$1 TESTA8$2 TESTA8$3 TESTA8$4 ] ;
+  [MNRGTJB$1 MNRGTJB$2 MNRGTJB$3 MNRGTJB$4 ] ;
+  [MNRSPHM$1 MNRSPHM$2 MNRSPHM$3 MNRSPHM$4 ] ;
+  [WMCPWRK$1 WMCPWRK$2 WMCPWRK$3 WMCPWRK$4 ] ;
+
+  [ T1 T2 T3 M1@0 M2@0 M3@0 ];
+
+  %country#6%
+
+     T1 BY TESTA8;
+     T2 BY TESTA9;
+     T3 BY TESTA10;
+     T1 BY TESTA22;
+     T2 BY TESTA23;
+     T3 BY TESTA24;
+
+      T1*.5 T2*.5 T3*.5;
+      M1  M2  M3;
+
+      T1 WITH T2    ;
+      T1 WITH T3    ;
+      T2 WITH T3    ;
+
+  [TESTA24$1 TESTA24$2 TESTA24$3 TESTA24$4 ];
+  [TESTA23$1 TESTA23$2 TESTA23$3 TESTA23$4 ] ;
+  [TESTA22$1 TESTA22$2 TESTA22$3 TESTA22$4 ] ;
+  [TESTA10$1 TESTA10$2 TESTA10$3 TESTA10$4 ] ;
+  [TESTA9$1 TESTA9$2 TESTA9$3 TESTA9$4 ] ;
+  [TESTA8$1 TESTA8$2 TESTA8$3 TESTA8$4 ] ;
+  [MNRGTJB$1 MNRGTJB$2 MNRGTJB$3 MNRGTJB$4 ] ;
+  [MNRSPHM$1 MNRSPHM$2 MNRSPHM$3 MNRSPHM$4 ] ;
+  [WMCPWRK$1 WMCPWRK$2 WMCPWRK$3 WMCPWRK$4 ] ;
+
+  [ T1 T2 T3 M1@0 M2@0 M3@0 ];
+
+
+  OUTPUT:
+      SAMPSTAT MODINDICES(4) RESIDUAL STANDARDIZED CINTERVAL
+              PATTERNS TECH1 TECH2 TECH3 TECH4 TECH5;
+  PLOT:
+      TYPE=PLOT3;
+
+
+
+
+*** WARNING in Plot command
+   (Err#: 30)
+  Error opening PLOT data file:  women.gph
+  Plots will not be produced.
+*** WARNING in Output command
+  MODINDICES option is not available for ALGORITHM=INTEGRATION.
+  Request for MODINDICES is ignored.
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  56
+   1 ERROR(S) FOUND IN THE INPUT INSTRUCTIONS
+   3 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+MTMM analysis women
+
