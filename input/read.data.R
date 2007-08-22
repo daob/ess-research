@@ -63,7 +63,20 @@ for( i in 1:length(analyse.vars) ) {
       ] <- NA
 }
 
-data <- cbind(c(1:NROW(data)),as.numeric(data$CNTRY),data$DWEIGHT,data[,analyse.vars], data$unique.id)
+data <- cbind(c(1:NROW(data)),as.numeric(data$CNTRY),data$DWEIGHT,data[,analyse.vars], data$unique.id, data$CNTRY)
+
+
+countries <- c("CH","CZ","DE","EE","GR","SI")
+split.ballot.codes <- c(1,2)
+
+for (country in countries) {
+  for (sbcode in split.ballot.codes) {
+    sb <- data[ (data[,'data$CNTRY']==country & data[,'SPLTADMA']==sbcode) ,]
+    write.table(sb, paste(basedir, "data/", analysis.name, country ,"sb",sbcode, ".dat", sep=""), na="-9999",row.names=FALSE,col.names=FALSE)
+  }
+}
+
+
 
 # Produce tables, note that country comes last.
 write.table(data, paste(basedir, "data/", analysis.name, ".dat", sep=""), na="-9999",row.names=FALSE,col.names=FALSE)
@@ -102,7 +115,7 @@ intercepts <- array(dim=c(0,9))
 error.vars <- array(dim=c(0,9))
 loadings.list <- list()
 j <- 1
-countries <- c("CH","CZ","DE","EE","GR","SI")
+
 
 for ( i in seq(1,length(d),by=171) ) {
 

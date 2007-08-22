@@ -1,0 +1,115 @@
+TITLE: MTMM analysis 
+DATA: 
+    FILE IS C:\ESS\data\complw1_experiments_only_missing_poltrust.dat;
+
+VARIABLE: 
+    NAMES ARE     
+      cntry 	idno	    dweight	
+      trstprl	trstlgl	    trstplc	
+      trstprl2	trstlgl2	trstplc2	
+      trstprl3	trstlgl3	trstplc3;
+    USEVARIABLES ARE 
+      trstprl	trstlgl	    trstplc	
+      trstprl2	trstlgl2	trstplc2	
+      trstprl3	trstlgl3	trstplc3;    
+    USEOBSERVATIONS ARE
+          !(dweight NE -9999 AND cntry EQ 1);
+        (dweight NE -9999 AND cntry NE 12 AND cntry NE 16);
+    WEIGHT IS dweight;
+    GROUPING IS cntry
+    (    1=Austria
+         2=Belgium
+         3=Switzerland
+         4=Czech-Republic
+         5=Germany
+         6=Denmark
+         7=Spain
+         8=Finland
+         9=France
+         10=UK
+         11=Greece
+!        12=Hungary
+         13=Ireland
+         14=Israel
+         15=Italy
+!        16=Luxembourg
+         17=Netherlands
+         18=Norway
+         19=Poland
+         20=Portugal
+         21=Sweden
+         22=Slovenia);
+    IDVARIABLE = idno;
+    MISSING ARE ALL(-9999);
+
+ANALYSIS: 
+    TYPE = MISSING;
+    ESTIMATOR IS MLR;
+    COVERAGE = 0.01;
+    STARTS = 50 5;
+    STITERATIONS = 25;
+    ITERATIONS = 1500;
+    SDITERATIONS = 300;
+    STSCALE = 4;
+
+MODEL: 
+   N1 BY trstprl@1;
+       N1@0;
+   N2 BY trstlgl@1;
+       N2@0;
+   N3 BY trstplc@1;
+       N3@0;
+   N4 BY trstprl2@1;
+       N4@0;
+   N5 BY trstlgl2@1;
+       N5@0;
+   N6 BY trstplc2@1;
+       N6@0;
+   N7 BY trstprl3@1;
+       N7@0;
+   N8 BY trstlgl3@1;
+       N8@0;
+   N9 BY trstplc3@1;
+       N9@0;
+
+    [N1@0 N2@0 N3@0 N4@0 N5@0 N6@0 N7@0 N8@0 N9@0];
+    [T1-T3@0];
+    [M1-M3@0];
+
+    T1 BY N1@1 N4*.5 N7*.5;
+    T2 BY N2@1 N5*.5 N8*.5;
+    T3 BY N3@1 N6*.5 N9*.5;
+    M1 BY N1@1 N2@1 N3@1;
+    M2 BY N4@1 N5@1 N6@1;
+    M3 BY N7@1 N8@1 N9@1;
+
+    T1*.5 T2*.5 T3*.5 M1 M2 M3;
+
+    T1 WITH T2;
+    T1 WITH T3;
+    T2 WITH T3;
+
+    T1 WITH M1@0;
+    T2 WITH M1@0;
+    T3 WITH M1@0;
+
+    T1 WITH M2@0;
+    T2 WITH M2@0;
+    T3 WITH M2@0;
+
+    T1 WITH M3@0;
+    T2 WITH M3@0;
+    T3 WITH M3@0;
+
+    M1 WITH M2@0;
+    M1 WITH M3@0;
+    M2 WITH M3@0;
+
+    
+
+OUTPUT:  
+    SAMPSTAT MODINDICES RESIDUAL STANDARDIZED CINTERVAL H1SE H1TECH3
+            PATTERNS TECH1 TECH3 TECH4 TECH5;
+PLOT: 
+    TYPE=PLOT3;
+    
