@@ -1,6 +1,6 @@
 TITLE: MTMM analysis women-estimate covar
 DATA: 
- FILE IS z:\home\daob\work\svn\ess-research\data\women.dat;
+ FILE IS ..\..\data\women.dat;
 
 VARIABLE: 
  NAMES ARE 
@@ -40,7 +40,7 @@ ANALYSIS:
  COVERAGE = 0.000; 
  LINK=PROBIT;
  ALGORITHM=INTEGRATION;
- INTEGRATION=MONTECARLO (900);
+ INTEGRATION=MONTECARLO (300);
  LOGCRITERION=0.001
  RLOGCRITERION=0.001
  PROCESSORS=2;
@@ -92,31 +92,31 @@ LTESTA10  WITH LTESTA22-LTESTA24@0;
 
 [TESTA24$1*-2 ] (1); 
 [TESTA24$2 TESTA24$3];
-[ TESTA24$4*2 ] (10);
+[ TESTA24$4*3 ] (10);
 [TESTA23$1*-2 ] (2);
 [ TESTA23$2 TESTA23$3];
-[ TESTA23$4*2 ]  (11);
+[ TESTA23$4*3 ]  (11);
 [TESTA22$1*-2 ] (3);
 [ TESTA22$2 TESTA22$3];
-[ TESTA22$4*2 ]  (12);
+[ TESTA22$4*3 ]  (12);
 [TESTA10$1*-2 ] (4);
 [ TESTA10$2 TESTA10$3];
-[ TESTA10$4*2 ]  (13);
+[ TESTA10$4*3 ]  (13);
 [TESTA9$1*-2 ] (5);
 [ TESTA9$2 TESTA9$3];
-[ TESTA9$4*2 ]  (14);
+[ TESTA9$4*3 ]  (14);
 [TESTA8$1*-2 ] (6);
 [ TESTA8$2 TESTA8$3];
-[ TESTA8$4*2 ]  (15);
+[ TESTA8$4*3 ]  (15);
 [MNRGTJB$1*-2 ] (7);
 [ MNRGTJB$2 MNRGTJB$3];
-[ MNRGTJB$4*2 ]  (16);
+[ MNRGTJB$4*3 ]  (16);
 [MNRSPHM$1*-2 ] (8);
 [ MNRSPHM$2 MNRSPHM$3];
-[ MNRSPHM$4*2 ]  (17);
+[ MNRSPHM$4*3 ]  (17);
 [WMCPWRK$1*-2 ] (9);
 [ WMCPWRK$2 WMCPWRK$3];
-[ WMCPWRK$4*2 ]  (18);
+[ WMCPWRK$4*3 ]  (18);
 
 
 ! Fix means of traits to 0 in all groups
