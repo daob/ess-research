@@ -1,6 +1,6 @@
 TITLE: MTMM analysis women-estimate covar
 DATA: 
- FILE IS z:\home\daob\work\svn\ess-research\data\women.dat;
+ FILE IS C:\ESS\berlin\data\women.dat;
 
 VARIABLE: 
  NAMES ARE 
@@ -38,7 +38,7 @@ ANALYSIS:
  COVERAGE = 0.000; 
  LINK=PROBIT;
  ALGORITHM=INTEGRATION;
- INTEGRATION=MONTECARLO (500);
+ INTEGRATION=MONTECARLO (600);
  LOGCRITERION=0.1
  RLOGCRITERION=0.0001
  PROCESSORS=2;
