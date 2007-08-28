@@ -1,6 +1,6 @@
 TITLE: MTMM analysis Norway
 DATA: 
-      FILE IS z:/home/daob/work/svn/ess-research/data/w2exponly.dat;
+      FILE IS C:/ESS/berlin/data/w2exponly.dat;
 
 VARIABLE: 
     NAMES ARE     
@@ -32,7 +32,7 @@ VARIABLE:
     USEOBSERVATIONS ARE          
         (dweight NE -9999 AND dif_date NE -9999 AND cntry_num EQ 13 );
 
-    WEIGHT IS dweight;
+    !WEIGHT IS dweight;
     
     GROUPING IS group (0=sameday 1=otherday);
 
@@ -42,9 +42,10 @@ VARIABLE:
 
 
 ANALYSIS: 
-    TYPE = MISSING;
+    TYPE = MISSING H1;
     ESTIMATOR IS MLR;
-    COVERAGE = 0.000;    
+    COVERAGE = 0.000;
+    
 
 MODEL: 
    N1 BY stfeco@1;
@@ -80,32 +81,32 @@ MODEL:
     [M1-M3@0];
 
     T1 BY N1@1 
-      N4*.5       (1)
-      N7*.5       (2)
+      N4       (1)
+      N7       (2)
       ;
     T2 BY N2@1 
-      N5*.5       (3)
-      N8*.5       (4)
+      N5       (3)
+      N8       (4)
       ;
     T3 BY N3@1 
-      N6*.5       (5)
-      N9*.5       (6)
+      N6       (5)
+      N9       (6)
       ;      
     M1 BY N1@1 N2@1 N3@1;
     M2 BY N4@1 N5@1 N6@1;
     M3 BY N7@1 N8@1 N9@1;
 
-    T1*.5         (7)
-    T2*.5         (8)
-    T3*.5         (9)
-    M1@0          !constraint M1 := 0 introduced for Norway
-    M2            (10)
-    M3            (11)
-    ;           
+    T1         (7);
+    T2         (8);
+    T3         (9);
+    M1@0;         
+    M2         (11);
+    M3         (12);
+               
 
-    T1 WITH T2    (12);
-    T1 WITH T3    (13);
-    T2 WITH T3    (14);
+    T1 WITH T2    ;
+    T1 WITH T3    ;
+    T2 WITH T3    ;
 
     T1 WITH M1@0;
     T2 WITH M1@0;
@@ -123,21 +124,17 @@ MODEL:
     M1 WITH M3@0;
     M2 WITH M3@0;
 
-MODEL SAMEDAY:
+MODEL SAMEDAY:	[stfeco*6.578	stfgov*4.392	stfdem*6.240
+	       testa11*6.108	testa12*4.172	testa13*6.071
+	       testa35*6.071	testa36*4.193	testa37*5.899 ];
 
-	[stfeco	stfgov	stfdem
-	       testa11	testa12	testa13
-	       testa35	testa36	testa37];
-
-MODEL OTHERDAY:
-
-	[stfeco	stfgov	stfdem
-	       testa11	testa12	testa13
-	       testa35	testa36	testa37];
-
+MODEL OTHERDAY:	[ stfeco*6.263	stfgov*4.415	stfdem*6.279
+	       testa11*5.991	testa12*3.901	testa13*5.732
+	       testa35*5.888	testa36*3.846	testa37*5.652 ];
 OUTPUT:  
-    SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL H1SE H1TECH3
-            PATTERNS TECH1 TECH3 TECH4 TECH5;
+    SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL 
+    H1TECH3
+             TECH1 TECH3 TECH4 TECH5 TECH6 ;
 PLOT: 
     TYPE=PLOT3;
     
