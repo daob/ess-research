@@ -88,7 +88,7 @@ MODEL:
 MODEL CH: 
      [ L_WORK@0 L_MENFST@0 L_MENJB@0 L_TEST8@0 L_TEST9@0 L_TEST10@0 ];
      
-!     L_WORK@1 L_MENFST@1 L_MENJB@1 L_TEST8@1 L_TEST9@1 L_TEST10@1;
+     L_WORK@1 L_MENFST@1 L_MENJB@1 L_TEST8@1 L_TEST9@1 L_TEST10@1;
      
      WORK@0 MENFST@0 MENJB@0 TEST8@0 TEST9@0 TEST10@0;
 
@@ -100,15 +100,21 @@ MODEL CH:
     TMenJb BY L_TEST10;
 
     TWork TMenFt TMenJb  MWMin MWPlus;
+   [ 
+    WORK$1 WORK$4      
+     MENJB$1 
+     TEST8$3 TEST8$4 
+   ];
 
-   [ WORK$4 MENJB$1 TEST8$4 ];
 
 MODEL CZ: 
- [ WORK$4 
- MENJB$1  MENJB$4 
- TEST8$3  TEST8$4 
-  TEST9$3 TEST9$4 
- TEST10$1 TEST10$2 ];
+ [ 
+    WORK$4 
+    MENJB$1  MENJB$3 
+    TEST8$3  TEST8$4 
+    TEST9$3 TEST9$4 
+    TEST10$1 TEST10$2 
+ ];
  
     TWork BY L_TEST8;
     TMenFt BY L_TEST9;
@@ -120,13 +126,17 @@ MODEL CZ:
     TWork TMenFt TMenJb  MWMin MWPlus;
 
 MODEL GR:
-    [ WORK$1 WORK$4
-    MENFST$1  MENFST$3 
-    MENJB$1 MENJB$4
+  [ 
+    WORK$4              (11) !WORK$1
+    MENFST$1  
+    MENFST$3
+    MENJB$1             (12)
+        !MENJB$4
     TEST8$2 TEST8$3 
-     TEST9$3 TEST9$4 
-    TEST10$1 TEST10$2 ]; 
-
+    TEST9$3 TEST9$4 
+    TEST10$1 TEST10$2 
+  ];
+   
 
     TWork BY L_TEST8;
     TMenFt BY L_TEST9;
@@ -138,8 +148,15 @@ MODEL GR:
     TWork TMenFt TMenJb  MWMin MWPlus;
 
 MODEL SI:
-     [ TEST9$4 
-      TEST10$1 TEST10$2 ];
+ [ 
+    MENFST$1 MENFST$2
+    MENJB$1             (12)
+        MENJB$4 
+    TEST9$4 
+    TEST10$1 TEST10$4 
+    WORK$2
+        WORK$4          (11)
+ ];
 
     TWork BY L_TEST8;
     TMenFt BY L_TEST9;
