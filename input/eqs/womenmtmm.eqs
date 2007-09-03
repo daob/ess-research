@@ -1,99 +1,96 @@
-  /TITLE 
-	CH: women MTMM 
-  /SPECIFICATIONS
+/TITLE 
+   CH: women MTMM 
+/SPECIFICATIONS
    VARIABLES=6; CASES=539;
- 	 DATA_FILE = 'C:\ESS\berlin\data\women_CH.cov';
+   DATA_FILE = 'C:\ESS\berlin\data\women_CH.cov';
    METHODS=ML; MATRIX=COV; GROUPS=4;
 
-  /EQUATIONS
-	 V1 = F1 + F4 + E1;
-	 V2 = F2 + F4 + E2;
-	 V3 = F3 + F4 + E3;
+/EQUATIONS
+   V1 = F1 + F4 + E1;
+   V2 = F2 + F4 + E2;
+   V3 = F3 + F4 + E3;
 
-	 V4 = *F1 + F5 + E4;
-	 V5 = *F2 + F5 + E5;
-	 V6 = *F3 + F5 + E6;
-  /VARIANCES
+   V4 = *F1 + F5 + E4;
+   V5 = *F2 + F5 + E5;
+   V6 = *F3 + F5 + E6;
+/VARIANCES
    E1 TO E6 = *;
- 	 F1 TO F5 = *;
-  /COVARIANCES
- 	F1 TO F3 = *;
+   F1 TO F5 = *;
+/COVARIANCES
+   F1 TO F3 = *;
+/END
 
-  /END
-
-  /TITLE 
-	CZ: women MTMM 
-  /SPECIFICATIONS
+/TITLE 
+   CZ: women MTMM 
+/SPECIFICATIONS
    VARIABLES=6; CASES=1033;
- 	 DATA_FILE = 'C:\ESS\berlin\data\women_CZ.cov';
+   DATA_FILE = 'C:\ESS\berlin\data\women_CZ.cov';
    METHODS=ML; MATRIX=COV; 
-  /EQUATIONS
-	 V1 = -0.361*F1 + F4 + E1;
-	 V2 = -1.494*F2 + F4 + E2;
-	 V3 =  -0.419*F3 + F4 + E3;
+/EQUATIONS
+   V1 = F1 + *F4 + E1;
+   V2 = F2 + F4 + E2;
+   V3 = F3 + F4 + E3;
 
-	 V4 = *F1 + F5 + E4;
-	 V5 = *F2 + *F5 + E5;
-	 V6 = *F3 + *F5 + E6;
-  /VARIANCES
+   V4 = *F1 + F5 + E4;
+   V5 = *F2 + *F5 + E5;
+   V6 = *F3 + F5 + E6;
+/VARIANCES
    E1 TO E6 = *;
- 	 F1=0.636*; F2=0.279*; F3=1.083*;
-F4 TO F5 = *;
-  /COVARIANCES
- 	F1 TO F3 = *;
+   F1=0.636*; F2=0.279*; F3=1.083*; 
+   F4 TO F5 = *;
+/COVARIANCES
+   F1 TO F3 = *;
+/END
 
-  /END
-
-  /TITLE 
-	GR: women MTMM 
-  /SPECIFICATIONS
+/TITLE 
+   GR: women MTMM 
+/SPECIFICATIONS
    VARIABLES=6; CASES=790;
- 	 DATA_FILE = 'C:\ESS\berlin\data\women_GR.cov';
+   DATA_FILE = 'C:\ESS\berlin\data\women_GR.cov';
    METHODS=ML; MATRIX=COV; 
 
-  /EQUATIONS
-	 V1 = F1 + F4 + E1;
-	 V2 = F2 + F4 + E2;
-	 V3 = F3 + F4 + E3;
+/EQUATIONS
+   V1 = F1 + F4 + E1;
+   V2 = F2 + *F4 + E2;
+   V3 = F3 + *F4 + E3;
 
-	 V4 = .5*F1 + F5 + E4;
-	 V5 = .5*F2 + F5 + E5;
-	 V6 = .5*F3 + F5 + E6;
-  /VARIANCES
+   V4 = .5*F1 + F5 + E4;
+   V5 = .5*F2 + F5 + E5;
+   V6 = .5*F3 + F5 + E6;
+/VARIANCES
    E1 TO E6 = *;
- 	 F1 TO F5 = *;
-  /COVARIANCES
- 	F1 TO F3 = *;
+   F1 TO F5 = *;
+/COVARIANCES
+   F1 TO F3 = *;
+   E6,E4=*;
+/END
 
-  /END
 
-
-  /TITLE 
-	SI: women MTMM 
-  /SPECIFICATIONS
+/TITLE 
+   SI: women MTMM 
+/SPECIFICATIONS
    VARIABLES=6; CASES=443;
- 	 DATA_FILE = 'C:\ESS\berlin\data\women_SI.cov';
+   DATA_FILE = 'C:\ESS\berlin\data\women_SI.cov';
    METHODS=ML; MATRIX=COV; 
-  /EQUATIONS
-	 V1 = F1 + F4 + E1;
-	 V2 = F2 + F4 + E2;
-	 V3 = F3 + F4 + E3;
+/EQUATIONS
+   V1 = F1 + F4 + E1;
+   V2 = F2 + F4 + E2;
+   V3 = F3 + F4 + E3;
 
-	 V4 = .5*F1 + F5 + E4;
-	 V5 = .5*F2 + F5 + E5;
-	 V6 = .5*F3 + F5 + E6;
-  /VARIANCES
+   V4 =  -.418*F1 + *F5 + E4;
+   V5 = -1.427*F2 + F5 + E5;
+   V6 = -.461*F3 + F5 + E6;
+/VARIANCES
    E1 TO E6 = *;
- 	 F1 TO F5 = *;
+   F1 TO F5 = *;
 
+/COVARIANCES
+   F1 TO F3 = *;
 
-  /COVARIANCES
- 	F1 TO F3 = *;
+/TECHNICAL
+   ITR=150;   	
 
-  /TECHNICAL
-	 ITR=150;   	
+/LMTEST
+   SET =PEE, PFF, PFV;
 
-  /PRINT
-   TABLE=EQUATION;    
-
-  /END
+/END
