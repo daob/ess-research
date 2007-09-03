@@ -7,25 +7,38 @@ highpower <- .80 # What constitutes "high power"?
 
 critical  <- qchisq( 1-alpha, 1 ) # Critical value of chisquare with 1 df
 
-countries <- c("CH","CZ","GR","SI")
+countries <- c("Switzerland","Czech Republic","Greece","Slovenia")
 
 # mi.dat <- read.table("~/current-project/output/mi_CZ.txt", header=T)
- mi.dat <- read.table("~/current-project/output/women-sb2-mi", header=T)
- mi.dat$ncp <-  ( mi.dat$mi / mi.dat$stdXYEPC^2 ) * effsize^2
+mi.dat <- read.table("c:\\ess\\berlin\\output\\women-MI.txt", header=T)
+mi.dat$ncp <-  ( mi.dat$mi / mi.dat$stdXYEPC^2 ) * effsize^2
 
- beg <- c( grep("WORK\\$1",param), length(param)+1 )
- tmp <- vector()
- for ( i in 1:(length(beg)-1) ) {
-   tmp <- c( tmp, rep( countries[i], beg[i+1]-beg[i] ) )
- }
+beg <- c( grep("WORK\\$1",param), length(param)+1 )
+tmp <- vector()
+for ( i in 1:(length(beg)-1) ) {
+  tmp <- c( tmp, rep( countries[i], beg[i+1]-beg[i] ) )
+}
 
- mi.dat$CNTRY <- tmp
- mi.dat$power <- round( 1 - pchisq( critical, 1, ncp=mi.dat$ncp), 2 )
+mi.dat$CNTRY <- tmp
 
- attach(mi.dat)
+mi.dat$power <- round( 1 - pchisq( critical, 1, ncp=mi.dat$ncp), 2 )
 
- stem(power)
- stem(mi)
+attach(mi.dat)
+
+stem(power)
+stem(mi)
+
+quants <-  c(0,quantile(abs(stdXYEPC)))
+EPC <- character()
+for( i in 2:length(quants) ) {
+  EPC[ which( abs(stdXYEPC) <= quants[i] & abs(stdXYEPC) > quants[i-1] )  ] <- paste("<=", round(quants[i],3), sep="" )
+}
+
+require(ggplot2)
+Power <- power
+MI <- mi
+qplot(Power, MI, size=EPC, facets=.~CNTRY)
+#q + geom_hline(intercept=critical)
 
 #pdf("~/current-project/output/pics/power-sb2.pdf")
 

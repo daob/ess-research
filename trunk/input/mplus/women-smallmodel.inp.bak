@@ -1,6 +1,6 @@
 TITLE: MTMM analysis women-small model
 DATA: 
- FILE IS ..\..\data\women.dat;
+ FILE IS C:\ESS\berlin\data\women.dat;
 
 VARIABLE: 
  NAMES ARE 
@@ -85,23 +85,45 @@ MODEL CH:
                     L_TEST9*-.174 L_TEST10*.317 ;
      L_TEST9 WITH L_TEST10*-.422;
 
-   [ WORK$4 MENJB$1 TEST8$4 ];
+   [ 
+     WORK$1 WORK$4      
+     MENJB$1 
+     TEST8$3 TEST8$4 
+     MENFST$4
+   ];
+
 MODEL CZ: 
- [ WORK$4 
- MENJB$1  MENJB$4 
- TEST8$3  TEST8$4 
-  TEST9$3 TEST9$4 
- TEST10$1 TEST10$2 ];
+ [ 
+    WORK$4 
+    MENJB$1  MENJB$3 
+    MENFST$1
+    TEST8$3  TEST8$4 
+    TEST9$1 TEST9$4 
+    TEST10$1 TEST10$2 
+ ];
+
 MODEL GR:
-    [ WORK$1 WORK$4
-    MENFST$1  MENFST$3 
-    MENJB$1 MENJB$4
+  [ 
+    WORK$1 WORK$4             
+    MENFST$1  
+    MENFST$3
+    MENJB$1             (12)
+        !MENJB$4
     TEST8$2 TEST8$3 
-     TEST9$3 TEST9$4 
-    TEST10$1 TEST10$2 ]; 
+    TEST9$3 TEST9$4 
+    TEST10$1 TEST10$2 
+  ];
+   
 MODEL SI:
-     [ TEST9$4 
-      TEST10$1 TEST10$2 ];
+ [ 
+    MENFST$1 MENFST$2
+    MENJB$1             (12)
+        MENJB$4 
+    TEST9$4 
+    TEST10$1 TEST10$4 
+    WORK$2
+        WORK$4          
+ ];
 
 OUTPUT:
       SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL TECH1 TECH2 TECH3;
