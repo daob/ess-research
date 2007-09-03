@@ -1,6 +1,6 @@
 TITLE: MTMM analysis women-small model
 DATA: 
- FILE IS C:\ESS\berlin\data\women.dat;
+ FILE IS z:/home/daob/current-project/data/women.dat;
 
 VARIABLE: 
  NAMES ARE 
@@ -87,7 +87,10 @@ MODEL CZ:
       TEST8 TEST9 TEST10
 	TEST22 TEST23 TEST24;
 
-    M2 BY TEST9*0.170;
+   WORK WITH TEST9*.36 (1);
+   MENJB WITH TEST9*.36 (2);
+   MENFST WITH TEST10*.19 (3);
+
 
     T1*.5 T2*.5 T3*.5 M1*.5 M2*.5 M3;
 
