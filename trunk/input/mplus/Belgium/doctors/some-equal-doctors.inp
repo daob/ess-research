@@ -1,6 +1,6 @@
 TITLE: MTMM analysis doctors Belgium
 DATA: 
-    FILE IS z:\home\daob\work\ess\ESS\wave2\w2exponly-regions.dat;
+    FILE IS C:\ESS\ESS\wave2\w2exponly-regions.dat;
 
 VARIABLE: 
     NAMES ARE     
