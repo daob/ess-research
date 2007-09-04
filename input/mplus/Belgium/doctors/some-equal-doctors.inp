@@ -1,0 +1,154 @@
+TITLE: MTMM analysis doctors Belgium
+DATA: 
+    FILE IS z:\home\daob\work\ess\ESS\wave2\w2exponly-regions.dat;
+
+VARIABLE: 
+    NAMES ARE     
+      ID dweight cntrynum regionbe 
+      trstprl trstlgl trstplt          ! Experiment 1: Trust             
+      testa25 testa26 testa27                                            
+      testa38 testa39 testa40                                            
+      stfeco stfgov stfdem          ! Experiment 2: Satisfaction      
+      testa11 testa12 testa13                                            
+      testa35 testa36 testa37                                            
+      dckptrt dctreql dcdisc          ! Experiment 3: Doctors           
+      testa5 testa6 testa7                                            
+      testa28 testa29 testa30                                            
+      wmcpwrk mnrsphm mnrgtjb          ! Experiment 4: Women             
+      testa8 testa9 testa10                                            
+      testa22 testa23 testa24                                            
+      hwktwd1 hwkpwd1 hwkpwdp          ! Experiment 5: Housework         
+      testa1 testa2 testa3 testa4 
+      testa14 testa15 testa16  testa17 
+      vrtywrk jbscr hlthrwk             ! Experiment 6: Job               
+      testa19 testa20 testa21 testa32 
+      testa33 testa34 testa18 testa31 
+      inwdd inwmm inwyr inwshh inwsmm 
+      inwehh inwemm spltadma supqdd 
+      supqmm supqyr inwtm intv_date 
+      sup_date dif_date gndr yrbrn edulvla eduyrs;
+
+ USEVARIABLES ARE 
+      dckptrt	dctreql	dcdisc	         ! Experiment 3: Doctors           
+      testa5	testa6	testa7	                                           
+      testa28	testa29	testa30	;    
+
+   
+    USEOBSERVATIONS ARE          
+        (dweight NE -9999 AND cntrynum EQ 2 AND regionbe NE -9999);
+
+    WEIGHT IS dweight;
+    
+    GROUPING IS regionbe (1=Flanders 2=Wallonia);
+
+    IDVARIABLE = ID;
+    MISSING ARE ALL(-9999);
+
+
+ANALYSIS: 
+    TYPE = MISSING;
+    ESTIMATOR IS MLR;
+    COVERAGE = 0.000;    
+
+MODEL: 
+   N1 BY dckptrt@1;
+       N1@0;
+       dckptrt       ;
+   N2 BY dctreql@1;
+       N2@0;
+       dctreql       ;
+   N3 BY dcdisc@1;
+       N3@0;
+       dcdisc        ;
+   N4 BY testa5@1;
+       N4@0;
+       testa5        ;
+   N5 BY testa6@1;
+       N5@0;
+       testa6        ;
+   N6 BY testa7@1;
+       N6@0;
+       testa7        ;
+   N7 BY testa28@1;
+       N7@0;
+       testa28       ;
+   N8 BY testa29@1;
+       N8@0;
+       testa29       ;
+   N9 BY testa30@1;
+       N9@0;
+       testa30       ;
+
+    [N1@0 N2@0 N3@0 N4@0 N5@0 N6@0 N7@0 N8@0 N9@0];
+    [T1-T3@0];
+    [M1-M3@0];
+
+    T1 BY N1@1 
+      N4*.5      
+      N7*.5      
+      ;
+    T2 BY N2@1 
+      N5*.5      
+      N8*.5      (4)
+      ;
+    T3 BY N3@1 
+      N6*.5      (5)
+      N9*.5      (6)
+      ;      
+    M1 BY N1@1
+	N2@1 N3@1;
+    M2 BY 
+        N4*      (7)
+        N5@1 N6@1;
+    M3 BY 
+        N7*.2 	 (8)
+        N8@1 N9@1;
+
+    T1*.5      
+    T2*.5      
+    T3*.5      
+    M1         
+    M2         
+    M3         
+    ;           
+
+    T1 WITH T2   ;
+    T1 WITH T3   ;
+    T2 WITH T3   ;
+
+    T1 WITH M1@0;
+    T2 WITH M1@0;
+    T3 WITH M1@0;
+
+    T1 WITH M2@0;
+    T2 WITH M2@0;
+    T3 WITH M2@0;
+
+    T1 WITH M3@0;
+    T2 WITH M3@0;
+    T3 WITH M3@0;
+
+    M1 WITH M2@0;
+    M1 WITH M3@0;
+    M2 WITH M3@0;
+
+MODEL Flanders:
+                           
+[      dckptrt*1.873	dctreql*3.401	dcdisc*3.672
+      testa5*2.848	testa6*3.415	testa7*3.538
+      testa28*3.274	testa29*2.453	testa30*2.240	];  
+
+MODEL Wallonia:
+
+[      dckptrt*2.298	dctreql*3.647	dcdisc*3.547
+      testa5*2.966	testa6*3.123	testa7*3.306
+      testa28*2.807	testa29*2.259	testa30*2.226	]; 
+
+
+OUTPUT:  
+  
+    SAMPSTAT MODINDICES(0) RESIDUAL  CINTERVAL H1SE H1TECH3
+            PATTERNS TECH1 TECH3 TECH4 TECH5 STANDARDIZED;
+PLOT: 
+    TYPE=PLOT3;
+    
