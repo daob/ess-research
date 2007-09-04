@@ -1,0 +1,60 @@
+Free
+          Value                             34.548*
+          Degrees of Freedom                    20
+          P-Value                           0.0226
+          Scaling Correction Factor          1.071
+            for MLR
+
+          FLANDERS                          22.654
+          WALLONIA                          11.894
+
+ 
+ INPUTS:
+ Satorra-Bentler chi square for the MORE constrained model= 37.925
+ Normal chi square for the MORE constrained model= 41.035
+ Degrees of freedom for the MORE constrained model= 25
+ Satorra-Bentler chi square for the LESS constrained model= 34.548
+ Normal chi square for the LESS constrained model= 37.001
+ Degrees of freedom for the LESS constrained model= 20
+
+
+ OUTPUTS:
+ Satorra-Bentler Scaled Difference = 3.5826  df =  5
+ Chi Square probability = 0.610933
+
+Equal except for 3 which were not from power analysis
+
+          Value                             37.925*
+          Degrees of Freedom                    25
+          P-Value                           0.0470
+          Scaling Correction Factor          1.082
+            for MLR
+
+          FLANDERS                          23.742
+          WALLONIA                          14.183
+
+
+ Satorra-Bentler chi square for the MORE constrained model= 72.889
+ Normal chi square for the MORE constrained model= 77.408
+ Degrees of freedom for the MORE constrained model= 28
+ Satorra-Bentler chi square for the LESS constrained model= 37.925
+ Normal chi square for the LESS constrained model= 41.035
+ Degrees of freedom for the LESS constrained model= 25
+
+
+ OUTPUTS:
+ Satorra-Bentler Scaled Difference = 40.6273  df =  3
+ Chi Square probability = 0.000000
+
+
+Equal
+          Value                             72.889*
+          Degrees of Freedom                    28
+          P-Value                           0.0000
+          Scaling Correction Factor          1.062
+            for MLR
+
+          FLANDERS                          32.159
+          WALLONIA                          40.730
+
+
