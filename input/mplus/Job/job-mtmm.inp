@@ -1,0 +1,144 @@
+DATA: 
+      FILE IS C:/ESS/berlin/data/w2exponly.dat;
+
+VARIABLE: 
+    NAMES ARE     
+      idno	cntrynum	dweight	group	
+      trstprl	trstlgl	trstplt	
+      stfeco	stfgov	stfdem	
+      dckptrt	dctreql	dcdisc	
+      vrtywrk	jbscr	hlthrwk	
+      testa2	testa3	testa4	
+      testa5	testa6	testa7	
+      testa8	testa9	testa10	
+      testa11	testa12	testa13	
+      testa14	testa15	testa16	
+      testa17	testa18	testa19	
+      testa20	testa21	testa22	
+      testa23	testa24	testa25	
+      testa26	testa27	testa28	
+      testa29	testa30	testa31	
+      testa32	testa33	testa34	
+      testa35	testa36	testa37	
+      testa38	testa39	testa40	
+      spltadma	;
+
+USEVARIABLES ARE 
+   vrtywrk	jbscr	hlthrwk	
+	testa19	testa20	testa21
+   testa32	testa33	testa34	
+   ;
+
+ USEOBSERVATIONS ARE 
+   (dweight NE -9999 AND 
+	 cntrynum EQ 2 OR cntrynum EQ 9 OR
+ 	 cntrynum EQ 4 OR cntrynum EQ 17 );
+ 
+ WEIGHT IS dweight;
+ GROUPING IS cntrynum(2=BE 9=DK 4=CZ 17=SI);
+ IDVARIABLE = idno;
+ MISSING ARE ALL(-9999);
+
+
+ANALYSIS: 
+ TYPE = MISSING ;
+ ESTIMATOR IS MLR;
+ PROCESSORS=2;
+ 
+
+MODEL:
+   M1 BY vrtywrk@1 jbscr@1 hlthrwk@1; 
+   M2 BY testa19@1 testa20@1 testa21@1;
+   M3 BY testa32@1 testa33@1 testa34@1;
+
+   T1 BY vrtywrk@1   testa19 testa32;
+   T2 BY jbscr@1 testa20 testa33;
+   T3 BY hlthrwk@1  testa21 testa34;
+
+   vrtywrk jbscr hlthrwk 
+      testa19 testa20 testa21
+	testa32 testa33 testa34;
+
+    T1*.5 T2*.5 T3*.5 M1*.5 M2*.5 M3*.5;
+
+    [ T1@0 T2@0 T3@0 M1@0 M2@0 M3@0 ];
+
+    T1 WITH T2 T3 M1@0 M2@0 M3@0;
+    T2 WITH T3 M1@0 M2@0 M3@0;
+    T3 WITH M1@0 M2@0 M3@0;
+    M1 WITH M2@0 M3@0;
+    M2 WITH M3@0;
+
+    [	vrtywrk jbscr hlthrwk 
+	testa19 testa20 testa21 
+	testa32 testa33 testa34 ];
+
+MODEL BE:
+
+   T1 BY vrtywrk@1   testa19 testa32;
+   T2 BY jbscr@1 testa20 testa33;
+   T3 BY hlthrwk@1  testa21 testa34;
+
+   vrtywrk jbscr hlthrwk 
+      testa19 testa20 testa21
+	testa32 testa33 testa34;
+
+T1*.5 T2*.5 T3*.5 M1*.5 M2*.5 M3*.5;
+
+[   vrtywrk*3.135 jbscr*3.077 hlthrwk*1.796 
+      testa19*3.024 testa20*3.166 testa21*1.728 
+	testa32*7.238 testa33*7.435 testa34*3.383 ];
+
+
+MODEL CZ:
+   T1 BY vrtywrk@1   testa19 testa32;
+   T2 BY jbscr@1 testa20 testa33;
+   T3 BY hlthrwk@1  testa21 testa34;
+
+   vrtywrk jbscr hlthrwk 
+      testa19 testa20 testa21
+	testa32 testa33 testa34;
+
+T1*.5 T2*.5 T3*.5 M1*.5 M2*.5 M3*.5;
+
+[	vrtywrk*2.841 jbscr*2.328 hlthrwk*1.963 
+	testa19*2.780 testa20*2.472 testa21*1.691 
+	testa32*6.203 testa33*5.138 testa34*3.260 ];
+
+MODEL DK:
+   T1 BY vrtywrk@1   testa19 testa32;
+   T2 BY jbscr@1 testa20 testa33;
+   T3 BY hlthrwk@1  testa21 testa34;
+
+   vrtywrk jbscr hlthrwk 
+      testa19 testa20 testa21
+	testa32 testa33 testa34;
+
+T1*.5 T2*.5 T3*.5 M1*.5 M2*.5 M3*.5;
+
+[	vrtywrk*3.206 jbscr*3.005 hlthrwk*1.667 
+	testa19*2.954 testa20*2.917 testa21*1.836
+	testa32*7.277 testa33*7.108 testa34*4.164 ];
+
+MODEL SI:
+   T1 BY vrtywrk@1   testa19 testa32;
+   T2 BY jbscr@1 testa20 testa33;
+   T3 BY hlthrwk@1  testa21 testa34;
+
+   vrtywrk jbscr hlthrwk 
+      testa19 testa20 testa21
+	testa32 testa33 testa34;
+
+T1*.5 T2*.5 T3*.5 M1*.5 M2*.5 M3*.5;
+
+[	vrtywrk*3.120 jbscr*2.885 hlthrwk*1.954 
+	testa19*2.859 testa20*2.706 testa21*1.950 
+	testa32*7.083 testa33*6.408  testa34*4.014 ];
+
+
+OUTPUT:
+      SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL TECH1 TECH2 TECH3;
+
+PLOT:
+   TYPE =  PLOT3 PLOT2 PLOT1;
+

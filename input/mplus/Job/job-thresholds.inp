@@ -1,0 +1,121 @@
+DATA: 
+      FILE IS C:/ESS/berlin/data/w2exponly.dat;
+
+VARIABLE: 
+    NAMES ARE     
+      idno	cntrynum	dweight	group	
+      trstprl	trstlgl	trstplt	
+      stfeco	stfgov	stfdem	
+      dckptrt	dctreql	dcdisc	
+      varie	secur	healt	
+      test2	test3	test4	
+      test5	test6	test7	
+      test8	test9	test10	
+      test11	test12	test13	
+      test14	test15	test16	
+      test17	test18	test19	
+      test20	test21	test22	
+      test23	test24	test25	
+      test26	test27	test28	
+      test29	test30	test31	
+      test32	test33	test34	
+      test35	test36	test37	
+      test38	test39	test40	
+      spltadma	;
+
+USEVARIABLES ARE 
+   varie	secur	healt	
+	test19	test20	test21
+   ;
+
+CATEGORICAL ARE 
+   varie	secur	healt	
+	test19	test20	test21
+   ;
+
+ USEOBSERVATIONS ARE 
+   (dweight NE -9999 AND 
+	 cntrynum EQ 2 OR cntrynum EQ 17 );
+ 
+ WEIGHT IS dweight;
+ GROUPING IS cntrynum(2=BE 17=SI);
+ IDVARIABLE = idno;
+ MISSING ARE ALL(-9999);
+
+
+ANALYSIS: 
+ TYPE = MISSING ;
+ ESTIMATOR IS MLR;
+ PROCESSORS=2;
+
+
+ANALYSIS: 
+ TYPE = MISSING MEANSTRUCTURE;
+ ESTIMATOR IS WLS;
+ PROCESSORS=2;
+ PARAMETERIZATION =THETA;
+
+
+MODEL: 
+     L_varie BY varie@1;
+     L_secur BY secur@1;
+     L_healt BY healt@1;
+     L_test19 BY test19@1;
+     L_test20 BY test20@1;
+     L_test21 BY test21@1; 
+
+	[test21$1 test21$2 test21$3    ];
+	[test20$1 test20$2 test20$3    ];
+	[test19$1 test19$2 test19$3    ];
+	[healt$1 healt$2 healt$3      ];
+	[secur$1 secur$2 secur$3      ];
+	[varie$1 varie$2 varie$3      ];
+
+     L_varie WITH
+        L_secur L_healt L_test19 L_test20 L_test21;
+     L_secur WITH
+        L_healt L_test19 L_test20 L_test21;
+     L_healt  WITH
+              L_test19 L_test20 L_test21  ;
+     L_test19  WITH
+                    L_test20 L_test21 ;
+     L_test20 WITH L_test21;
+     
+     L_varie L_secur L_healt 
+     L_test19 L_test20 L_test21;
+
+     [ L_varie L_secur L_healt L_test19 L_test20 L_test21 ];
+     varie@0 secur@0 healt@0 test19@0 test20@0 test21@0 ;
+
+MODEL BE: 
+     [ L_varie@0 L_secur@0 L_healt@0 L_test19@0 L_test20@0 L_test21@0 ];
+     
+     L_varie@1 L_secur@1 L_healt@1 L_test19@1 L_test20@1 L_test21@1;
+     
+     varie@0 secur@0 healt@0 test19@0 test20@0 test21@0;
+
+     L_varie WITH
+        L_secur*-.121 L_healt*.423 L_test19*-.418 L_test20*.410 L_test21*-.263;
+     L_secur WITH
+        L_healt*-.269 L_test19*.156 L_test20*-.474 L_test21*.356;
+     L_healt  WITH
+              L_test19*-.202 L_test20*.534 L_test21*-.602  ;
+     L_test19  WITH
+                    L_test20*-.174 L_test21*.317 ;
+     L_test20 WITH L_test21*-.422;
+
+
+[  
+    HEALT$1 
+    SECUR$1
+];
+
+MODEL SI: 
+
+
+OUTPUT:
+      SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL TECH1 TECH2 TECH3;
+
+PLOT:
+   TYPE =  PLOT3 PLOT2 PLOT1;
+
