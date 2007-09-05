@@ -7,10 +7,10 @@ highpower <- .80 # What constitutes "high power"?
 
 critical  <- qchisq( 1-alpha, 1 ) # Critical value of chisquare with 1 df
 
-countries <- c("Switzerland","Czech Republic","Greece","Slovenia")
+countries <- c("Belgium","Slovenia")
 
 # mi.dat <- read.table("~/current-project/output/mi_CZ.txt", header=T)
-mi.dat <- read.table("c:\\ess\\berlin\\output\\women-MI.txt", header=T)
+mi.dat <- read.table("C:\\ESS\\berlin\\input\\mplus\\Job\\job-MI.txt", header=T)
 mi.dat$ncp <-  ( mi.dat$mi / mi.dat$stdXYEPC^2 ) * effsize^2
 
 beg <- c( grep("VARIE\\$1",param), length(param)+1 )

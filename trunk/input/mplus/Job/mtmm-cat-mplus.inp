@@ -1,0 +1,73 @@
+TITLE:
+   job mtmm mplus poging
+
+DATA:
+   NGROUPS=2;
+   FILE  = C:\ESS\berlin\data\job.cov;
+   NOBSERVATIONS ARE 305 435;    
+   TYPE=COVARIANCE;   
+
+VARIABLE: 
+   NAMES ARE    
+    vari1	secu1	heal1
+    vari2	secu2	heal2;
+ 
+ANALYSIS: 
+   TYPE = GENERAL;
+   ESTIMATOR IS ML;
+    ITER = 200;
+
+MODEL: 
+   T1 BY vari1@1
+         vari2*.5;
+   T2 BY secu1@1	
+         secu2*.5;
+   T3 BY heal1@1 
+         heal2*.5;
+    vari1	secu1	heal1
+    vari2	secu2	heal2;
+   M1 BY     vari1@1	secu1@1	heal1@1;
+   M2 BY     vari2@1	secu2@1	heal2@1;
+
+   T1 WITH T2 T3 M1@0 M2@0;
+   T2 WITH T3 M1@0 M2@0;
+   T3 WITH M1@0 M2@0;
+   M1 WITH M2@0;
+
+   T1 T2 T3 M1 M2;
+
+MODEL G1:
+   T1 BY vari1@1
+         vari2*0.73;
+   T2 BY secu1@1	
+         secu2*0.73;
+   T3 BY heal1@1 
+         heal2*0.73;
+
+    vari1*.12	secu1*.12	heal1*.07
+    vari2*.52	secu2*.48	heal2*.47;
+
+   T1*.01 T2*.01 T3*.01 M1*.05 M2*.02;
+
+   T1 WITH T2*0.14 T3*-.11 ;
+   T2 WITH T3*.01;
+
+MODEL G2:
+   T1 BY vari1@1
+         vari2*0.82;
+   T2 BY secu1@1	
+         secu2*0.82 ;
+   T3 BY heal1@1 
+         heal2*0.82 ;
+    
+    vari1*0.36	secu1*0.78	heal1*0.78
+    vari2*0.32	secu2*0.30	heal2*0.36;
+
+   T1*.01 T2*.01 T3*.01 M1*0.05 M2@0;
+
+   T1 WITH T2*0.25 T3*-0.11 ;
+   T2 WITH T3*0.05;
+
+
+OUTPUT:  
+   MODINDICES(0) STANDARDIZED TECH1 TECH2 TECH3;   

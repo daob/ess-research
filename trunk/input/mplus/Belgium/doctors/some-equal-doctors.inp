@@ -133,13 +133,13 @@ MODEL:
     M2 WITH M3@0;
 
 MODEL Flanders:
-                           
+                    
 [      dckptrt*1.873	dctreql*3.401	dcdisc*3.672
       testa5*2.848	testa6*3.415	testa7*3.538
       testa28*3.274	testa29*2.453	testa30*2.240	];  
 
 MODEL Wallonia:
-
+T1 BY N4*.5       ;
 [      dckptrt*2.298	dctreql*3.647	dcdisc*3.547
       testa5*2.966	testa6*3.123	testa7*3.306
       testa28*2.807	testa29*2.259	testa30*2.226	]; 
