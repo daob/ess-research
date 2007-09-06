@@ -1,0 +1,128 @@
+DATA: 
+      FILE IS C:/ESS/berlin/data/w2exponly.dat;
+
+VARIABLE: 
+    NAMES ARE     
+      idno	cntrynum	dweight	group	
+      trstprl	trstlgl	trstplt	
+      stfeco	stfgov	stfdem	
+      dtrt	deql	ddis
+      varie	secur	healt	
+      test2	test3	test4	
+      test5	test6	test7	
+      test8	test9	test10	
+      test11	test12	test13	
+      test14	test15	test16	
+      test17	test18	test19	
+      test20	test21	test22	
+      test23	test24	test25	
+      test26	test27	test28	
+      test29	test30	test31	
+      test32	test33	test34	
+      test35	test36	test37	
+      test38	test39	test40	
+      spltadma	;
+
+USEVARIABLES ARE 
+   dtrt	deql	ddis	
+	test28	test29	test30
+   ;
+
+CATEGORICAL ARE 
+   dtrt	deql	ddis	
+	test28	test29	test30
+   ;
+
+ USEOBSERVATIONS ARE 
+   (dweight NE -9999 AND 
+	 cntrynum EQ 6 OR cntrynum EQ 7 );
+ 
+ WEIGHT IS dweight;
+ GROUPING IS cntrynum( 6=DK 7=EE );
+ IDVARIABLE = idno;
+ MISSING ARE ALL(-9999);
+
+
+ANALYSIS: 
+ TYPE = MISSING ;
+ ESTIMATOR IS MLR;
+ PROCESSORS=2;
+
+
+ANALYSIS: 
+ TYPE = MISSING MEANSTRUCTURE;
+ ESTIMATOR IS WLS;
+ PROCESSORS=2;
+ PARAMETERIZATION = THETA;
+
+
+MODEL: 
+     L_dtrt BY dtrt@1;
+     L_deql BY deql@1;
+     L_ddis BY ddis@1;
+     L_test28 BY test28@1;
+     L_test29 BY test29@1;
+     L_test30 BY test30@1; 
+
+	[test30$1 test30$2 test30$3 test30$3   ];
+	[test29$1 test29$2 test29$3 test29$4   ];
+	[test28$1 test28$2 test28$3 test28$4   ];
+	[ddis$1 ddis$2 ddis$3 ddis$4     ];
+	[deql$1 deql$2 deql$3 deql$4      ];
+	[dtrt$1 dtrt$2 dtrt$3 dtrt$4      ];
+
+     L_dtrt WITH
+        L_deql L_ddis L_test28 L_test29 L_test30;
+     L_deql WITH
+        L_ddis L_test28 L_test29 L_test30;
+     L_ddis  WITH
+              L_test28 L_test29 L_test30  ;
+     L_test28  WITH
+                    L_test29 L_test30 ;
+     L_test29 WITH L_test30;
+     
+     L_dtrt L_deql L_ddis 
+     L_test28 L_test29 L_test30;
+
+     [ L_dtrt L_deql L_ddis L_test28 L_test29 L_test30 ];
+     dtrt@0 deql@0 ddis@0 test28@0 test29@0 test30@0 ;
+
+MODEL DK: 
+     [ L_dtrt@0 L_deql@0 L_ddis@0 L_test28@0 L_test29@0 L_test30@0 ];
+     
+     L_dtrt@1 L_deql@1 L_ddis@1 L_test28@1 L_test29@1 L_test30@1;
+     
+     dtrt@0 deql@0 ddis@0 test28@0 test29@0 test30@0;
+
+     L_dtrt WITH
+        L_deql*-.121 L_ddis*.423 L_test28*-.418 L_test29*.410 L_test30*-.263;
+     L_deql WITH
+        L_ddis*-.269 L_test28*.156 L_test29*-.474 L_test30*.356;
+     L_ddis  WITH
+              L_test28*-.202 L_test29*.534 L_test30*-.602  ;
+     L_test28  WITH
+                    L_test29*-.174 L_test30*.317 ;
+     L_test29 WITH L_test30*-.422;
+
+[
+   DTRT$3
+   DEQL$2
+   DEQL$3
+   DDIS$1
+   DDIS$2
+   TEST28$2
+    TEST28$3
+    TEST30$2
+    TEST30$3
+   
+]; 
+
+MODEL EE: 
+
+
+OUTPUT:
+      SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL TECH1 TECH2 TECH3;
+
+!PLOT:
+!   TYPE =  PLOT3 PLOT2 PLOT1;
+
