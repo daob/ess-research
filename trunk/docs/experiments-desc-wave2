@@ -1,9 +1,8 @@
 exp-num	exp-name	exp-topic        m1desc  m2desc  m3desc
 1	numeric-estimates 	housework       write-hrs-6pt-none-all  write-hrs       write-hrs-ptg
-2	scale-position 	doctors 5pt-true-false  5pt-agree-rarely        5pt-agree-usually
+2	scale-position 	doctors 5pt-never-always  5pt-agree-rarely        5pt-agree-usually
 3	batteries 	job             4pt-nottrue-verytrue    4pt-not-very    11pt-not-very
-4       labels	women   5pt-agree-npp-DK        5pt-agree-pnn-DK        5pt-neg-pos-npp
-5       fixed-reference-points	satisfaction    11pt-extdis-extsat-2lab 11pt-extdis-extsat-3lab 11pt-verydis-verysat-2lab
-6       repetition-data-collection	trust           11pt-no-complete-DK     11pt-no-complete        11pt-no-complete
-
+4  labels	women   5pt-agree-npp-DK        5pt-agree-pnn-DK        5pt-neg-pos-npp
+5  fixed-reference-points	satisfaction    11pt-extdis-extsat-2lab 11pt-extdis-extsat-3lab 11pt-verydis-verysat-2lab
+6  repetition-data-collection	trust           11pt-no-complete-DK     11pt-no-complete        11pt-no-complete
 

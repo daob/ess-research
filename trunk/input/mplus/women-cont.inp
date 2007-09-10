@@ -1,6 +1,6 @@
-TITLE: MTMM analysis Norway
+TITLE: MTMM analysis women continuous
 DATA: 
-    FILE IS z:\home\daob\work\svn\ess-research\data\women.dat;
+    FILE IS C:\ESS\berlin\data\women.dat;
 
 VARIABLE: 
     NAMES ARE     
@@ -17,17 +17,12 @@ VARIABLE:
 
     USEOBSERVATIONS ARE         
       (dweight NE -9999 AND country_num NE -9999 AND
-	country_num EQ 3 OR country_num EQ 4 OR 
-	country_num EQ 5 OR country_num EQ 7 OR 
-	country_num EQ 12 OR country_num EQ 22);
+      	country_num EQ 12 );
 
-    WEIGHT IS dweight;
-    
-    GROUPING IS country_num (3=CH 4=CZ 5=DE 7=EE 12=GR 22=SI);
+    WEIGHT IS dweight;   
 
     IDVARIABLE = ID;
     MISSING ARE ALL(-9999);
-
 
 
 ANALYSIS: 
@@ -59,7 +54,7 @@ MODEL:
     [M1-M3@0];
 
     M1 BY WMCPWRK@1 MNRSPHM@1 MNRGTJB@1;
-    M2 BY TESTA8@1 TESTA9@1 TESTA10@1;
+    M2 BY TESTA8@1 TESTA9* TESTA10@1;
     M3 BY TESTA22@1 TESTA23@1 TESTA24@1;
 
     T1*.5        
@@ -92,149 +87,13 @@ MODEL:
 
 
 
-	[ WMCPWRK*2.736 MNRSPHM*2.030 MNRGTJB*3.457 TESTA8*2.731 TESTA9*3.151
-	TESTA10*2.289 TESTA22*2.856 TESTA23*2.261 TESTA24*3.557 ];
-
-MODEL CH:
-	[ WMCPWRK*2.412 MNRSPHM*2.055 MNRGTJB*3.379 TESTA8*3.016 TESTA9*3.202
-	TESTA10*2.380 TESTA22*2.687 TESTA23*2.324 TESTA24*3.470 ];
- 
-   T1 BY WMCPWRK@1;
-       WMCPWRK          ;
-   T2 BY MNRSPHM@1;
-       MNRSPHM          ;
-   T3 BY MNRGTJB@1;
-       MNRGTJB          ;
-   T1 BY TESTA8;
-       TESTA8         	;
-   T2 BY TESTA9;
-       TESTA9         	;
-   T3 BY TESTA10;
-       TESTA10         ;
-   T1 BY TESTA22;
-       TESTA22        ;
-   T2 BY TESTA23;
-       TESTA23        ;
-   T3 BY TESTA24;
-       TESTA24      ;
-
-MODEL CZ:
-	[ WMCPWRK*2.518 MNRSPHM*1.912 MNRGTJB*3.046 TESTA8*2.587 TESTA9*3.107
-	TESTA10*2.317 TESTA22*2.680 TESTA23*2.210 TESTA24*3.154 ];	 
-   T1 BY WMCPWRK@1;
-       WMCPWRK          ;
-   T2 BY MNRSPHM@1;
-       MNRSPHM          ;
-   T3 BY MNRGTJB@1;
-       MNRGTJB          ;
-   T1 BY TESTA8;
-       TESTA8         	;
-   T2 BY TESTA9;
-       TESTA9         	;
-   T3 BY TESTA10;
-       TESTA10         ;
-   T1 BY TESTA22;
-       TESTA22        ;
-   T2 BY TESTA23;
-       TESTA23        ;
-   T3 BY TESTA24;
-       TESTA24      ;
-
-MODEL DE:
-	[ WMCPWRK*2.750 MNRSPHM*2.018 MNRGTJB*3.474 TESTA8*2.797 TESTA9*3.212
-	TESTA10*2.251 TESTA22*2.860 TESTA23*2.195 TESTA24*3.676 ] ;
-   T1 BY WMCPWRK@1;
-       WMCPWRK          ;
-   T2 BY MNRSPHM@1;
-       MNRSPHM          ;
-   T3 BY MNRGTJB@1;
-       MNRGTJB          ;
-   T1 BY TESTA8;
-       TESTA8         	;
-   T2 BY TESTA9;
-       TESTA9         	;
-   T3 BY TESTA10;
-       TESTA10         ;
-   T1 BY TESTA22;
-       TESTA22        ;
-   T2 BY TESTA23;
-       TESTA23        ;
-   T3 BY TESTA24;
-       TESTA24      ;
-
-MODEL EE:
-	[ WMCPWRK*2.495 MNRSPHM*1.758 MNRGTJB*3.098 TESTA8*3.027 TESTA9*3.609
-	TESTA10*2.440 TESTA22*2.659 TESTA23*1.804 TESTA24*3.281 ] ;
-   T1 BY WMCPWRK@1;
-       WMCPWRK          ;
-   T2 BY MNRSPHM@1;
-       MNRSPHM          ;
-   T3 BY MNRGTJB@1;
-       MNRGTJB          ;
-   T1 BY TESTA8;
-       TESTA8         	;
-   T2 BY TESTA9;
-       TESTA9         	;
-   T3 BY TESTA10;
-       TESTA10         ;
-   T1 BY TESTA22;
-       TESTA22        ;
-   T2 BY TESTA23;
-       TESTA23        ;
-   T3 BY TESTA24;
-       TESTA24      ;
-
-MODEL GR:
 	[ WMCPWRK*2.808 MNRSPHM*2.068 MNRGTJB*2.790 TESTA8*2.977 TESTA9*3.201
 	TESTA10* 2.729 TESTA22*2.744 TESTA23*2.153 TESTA24*2.811 ] ;
-   T1 BY WMCPWRK@1;
-       WMCPWRK          ;
-   T2 BY MNRSPHM@1;
-       MNRSPHM          ;
-   T3 BY MNRGTJB@1;
-       MNRGTJB          ;
-   T1 BY TESTA8;
-       TESTA8         	;
-   T2 BY TESTA9;
-       TESTA9         	;
-   T3 BY TESTA10;
-       TESTA10         ;
-   T1 BY TESTA22;
-       TESTA22        ;
-   T2 BY TESTA23;
-       TESTA23        ;
-   T3 BY TESTA24;
-       TESTA24      ;
 
-MODEL SI:
-	[ WMCPWRK*2.858 MNRSPHM*1.811 MNRGTJB*3.466 TESTA8*2.744 TESTA9*3.373
-	TESTA10*2.226 TESTA22*2.984 TESTA23*1.750 TESTA24*3.567 ]       ;
-   T1 BY WMCPWRK@1;
-       WMCPWRK          ;
-   T2 BY MNRSPHM@1;
-       MNRSPHM          ;
-   T3 BY MNRGTJB@1;
-       MNRGTJB          ;
-   T1 BY TESTA8;
-       TESTA8         	;
-   T2 BY TESTA9;
-       TESTA9         	;
-   T3 BY TESTA10;
-       TESTA10         ;
-   T1 BY TESTA22;
-       TESTA22        ;
-   T2 BY TESTA23;
-       TESTA23        ;
-   T3 BY TESTA24;
-       TESTA24      ;
-      
+
 
 OUTPUT:  
-    SAMPSTAT MODINDICES(4) RESIDUAL STANDARDIZED CINTERVAL H1SE H1TECH3
-            PATTERNS TECH1 TECH3 TECH4 TECH5;
-SAVEDATA:
-   ESTIMATES ARE women-estimates ;
-   FORMAT IS FREE;
-PLOT: 
-    TYPE=PLOT3;
-    
+    SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL H1SE H1TECH3
+            PATTERNS TECH1 TECH3 TECH4 TECH5;    
+PLOT:
+    TYPE=PLOT1 PLOT2 PLOT3;
