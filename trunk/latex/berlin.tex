@@ -145,6 +145,21 @@ Thus, the model we use allows to a certain extent the separation of errors due t
 
 It can be shown that analysing polychoric correlations in an MTMM model is a special case of the model we use (Muth\'{e}n \& Asparouhov, 2002). However, we do not use polychoric correlations because it would be  necessary to assume that the variances of the latent response variables are equal across countries. Since we try to separate categorisation errors from differences in the continuous part of the model, this is not a desirable assumption. Last, it should be noted that the model we use is equivalent to a multi-dimensional two parameter graded response model in item response theory (Muth\'{e}n \& Asparouhov, 2002).
 
+\subsection{Categorisation errors in survey questions}
+
+...
+
+Given this fact, it is again possible to estimate the MTMM model and the corresponding quality measures: the first part mentioned above. However, this time the quality measures--as was the case before--do not contain both the linear measurement error and the categorization error, but only the former. The new quality measures using the model with free-to-vary thresholds can be used to assess how much of the cross-country variation in quality is due to categorization and how much due to linear errors.
+
+To see this, consider that the quality (or reliability ratio) of a variable is defined as the ratio of the true trait variance to the observed variance (see also figure \ref{fig:response} in the first section):
+\begin{equation}
+q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
+\end{equation}
+However, we have now seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation \ref{eqn:relratio} can be decomposed into
+\begin{equation}
+q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
+\end{equation}
+The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2$, the quality from the continuous analysi, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis, have been obtained.
 
 \section{Data}
 
