@@ -112,7 +112,7 @@ Standard Deviation & .77 & .76 & .84 & 2.29 & 2.37 & 2.44 & .72 & .71 & .77 \\
 
 \begin{table}\centering\caption{The standardised estimates of the MTMM parameters (figure \ref{fig:mtmm}), which are obtained when analysing the sample covariance matrix above.\label{tab:mtmm_results}}
 \begin{tabular}{lrrrrrrrr}\hline
- &   \multicolumn{3}{c}{Validity coefficients} & \multicolumn{3}{c}{Method effects} &  & Reliability coeff.\\ 
+ &   \multicolumn{3}{c}{Validity coeffs} & \multicolumn{3}{c}{Method effects} &  & Reliability coeff.\\ 
  \hline
     & F1 & F2 & F3 & M1 & M2 & M3 \\ 
 T11   & .93 &  &  & .36 &  &  &  & .79 \\ 
@@ -133,8 +133,18 @@ T33   &  &  & .88 &  &  & .48 &  & .84  \\
 \subsection{The categorical response model}
 
 The response model discussed so far makes no mention of the fact that many of the measures we use are in fact ordinal--that is, they are ordered categories rather than a continuous scale. 
+Broadly speaking, two types of measurement models have been proposed for this situation. The first assumes there is an unobserved categorical variable, and that errors arise from the conditional chances of choosing a category on the survey question given the unobserved score. Such models are often referred to as latent class models or finite mixture models \cite{lazarsfeld_latent_1968}.
 
-Categorical model, caterr coeff, =2PL IRT 
+The second approach deals with the case where a continuous scale or `latent response variable' is thought to underly the observed categorical item. Such models are sometimes called latent trait models. Several possible extensions are possible, but we focus on a special case described by Muth\'en (1978). This is the model we will use in our subsequent analysis of the data.
+
+Errors may arise at two stages. The first is the connection between the latent response variable and its latent trait. This part of the error model is completely analagous to factor analysis or MTMM models for continuous data: the scale is modelled as a linear combination of a latent trait, a reaction to the particular method used to measure the trait, and a random error, and interest then focuses on the connection between the trait and the scale, which we again term the `quality coefficient' (see figure \ref{fig:mtmm}). 
+
+The second stage at which errors arise, however, differs from the continuous case. Here the continuous latent response variable is split up into the different categories, such that each category of the observed variable corresponds to a certain range on the unobserved continuous scale. The sizes of these ranges are determined by threshold parameters.
+
+Thus, the model we use allows to a certain extent the separation of errors due to the categorisation, errors due to the method and random errors. We will use this fact later on to compare the amount of error due to categorisation introduced across countries.
+
+It can be shown that analysing polychoric correlations in an MTMM model is a special case of the model we use (Muth\'{e}n \& Asparouhov, 2002). However, we do not use polychoric correlations because it would be  necessary to assume that the variances of the latent response variables are equal across countries. Since we try to separate categorisation errors from differences in the continuous part of the model, this is not a desirable assumption. Last, it should be noted that the model we use is equivalent to a multi-dimensional two parameter graded response model in item response theory (Muth\'{e}n \& Asparouhov, 2002).
+
 
 \section{Data}
 
@@ -148,7 +158,8 @@ The European Social Survey (ESS) has the unique characteristic that in more than
 \item Satisfaction with the political situation;
 \item Political trust.
 \end{enumerate}
-Concerning each of these topics 3 questions were asked and these three questions were presented in 3 different forms following the discussed MTMM designs \cite{campbell_convergent_1959}.   The first form,  used for all respondents, was presented in the main questionnaire. The two alternative forms were presented in a supplementary questionnaire which was filled in after the main questionnaire. All respondents were only asked to reply to one alternative form but different groups got different version of the same questions \cite{saris_new_2004}. For the specific questions for the 6 experiments we refer to the ESS website where the English source version of all questions are presented\footnote{http://www.europeansocialsurvey.org}, and for the different translations we refer to the ESS archive\footnote{http://ess.nsd.uib.no}.
+Concerning each of these topics 3 questions were asked and these three questions were presented in 3 different forms following the discussed MTMM designs 
+\cite{campbell_convergent_1959}. The first form,  used for all respondents, was presented in the main questionnaire. The two alternative forms were presented in a supplementary questionnaire which was filled in after the main questionnaire. All respondents were only asked to reply to one alternative form but different groups got different version of the same questions \cite{saris_new_2004}. For the specific questions for the 6 experiments we refer to the ESS website where the English source version of all questions are presented\footnote{http://www.europeansocialsurvey.org}, and for the different translations we refer to the ESS archive\footnote{http://ess.nsd.uib.no}.
 
 	Each experiment varies a different aspect of the method by which questions can be asked in questionnaires. The `housework' experiment compares numeric estimates by respondents with other scales. The `doctors' experiment examines the effect of choosing arbitrary scale positions as a starting point for agreement-disagreement with a statement. The `job' experiment compares a 4 point with an 11 point scale and a true-false scale with a direct question. In the `women' experiment agree-disagree scales are reversed, there is one negative item, and a `don't know' category is omitted in one of the methods.  The `satisfaction' experiment varies the extremeness and number of fixed reference points of the scale. And finally, the experiment on political trust was meant to investigate the effect of repeating the same question in the same format.
 
@@ -299,6 +310,7 @@ Using the above criteria, it is clear that the equality model contains severe mi
 
 
 \begin{table}\centering\caption{\label{tab:meta}}
+\begin{minipage}[ht]{.73\textwidth}
 \begin{tabular}{llrrrr}
 \hline
  &  & Estimate & S.E. & lower & upper\\
@@ -328,6 +340,10 @@ Using the above criteria, it is clear that the equality model contains severe mi
  & Positive & 0.48 & 0.07 & 0.34 & 0.63\\
 \hline
 \end{tabular}
+
+Multiple R-Squared: 0.55; Adjusted R-squared: 0.44; F-test for factor sums of squares: 
+\begin{quote}Topic: $p=.16$; Country: $p=.17$; Scale: $p=.02$; Position: $p<.00001$.\end{quote}
+\end{minipage}
 \end{table}
 
 
