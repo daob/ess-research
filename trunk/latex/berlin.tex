@@ -1,7 +1,9 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{fullpage}
 \usepackage{ucs}
+\usepackage{ifpdf}
 \usepackage{graphicx}
+\usepackage[usenames]{color}
 \usepackage{apalike}
 \usepackage{longtable}
 \usepackage{hyperref}
@@ -23,7 +25,7 @@ These MTMM experiments showed that there are considerable differences in measure
 
 Measurement error can invalidate conclusions drawn from cross-country comparisons if the errors differ from country to country \cite{Saris_design_2007}. For this reason, when different groups such as countries as compared with one another, attention should not only be given to absolute levels of errors, but also to the differences between the groups. Different strategies have been developed to deal with the problem, for example within the context of invariance testing in the social sciences \cite{joreskog_simultaneous_1971}, differential item function in psychology \cite{muthen_multiple_1985}, and differential measurement error models in epidemiology and biostatistics \cite{carroll_nonlinear_1995}.
 
-In the ESS a lot of time, money, and effort is spent to make the questions as functionally equivalent across countries as possible \cite{harkness_cross-cultural_2002} and to make the samples as comparable as possible (H\"{a}der and Lynn 2007)*. Nevertheless, considerable differences in quality of the questions can be observed across countries (see Table \ref{tab:countries}). In round 2 of the ESS the largest difference found was between questions in Sweden with a quality of .4 and in Portugal with a quality above .9. The Scandinavian countries had an average quality around .5 over 54 questions while other countries such as Greece, Portugal and Estonia had an average quality of .8.  To study these differences is important because these differences can cause differences in relationships between variables in different countries which have no substantive meaning but are just caused by differences in quality in the measurement \cite{Saris_design_2007}. In order to avoid such differences it is also important to study reasons for these differences in quality. 
+In the ESS a lot of time, money, and effort is spent to make the questions as functionally equivalent across countries as possible \cite{harkness_cross-cultural_2002} and to make the samples as comparable as possible \cite{hader_2007}\nocite{jowell_measuring_2007}. Nevertheless, considerable differences in quality of the questions can be observed across countries (see Table \ref{tab:countries}). In round 2 of the ESS the largest difference found was between questions in Sweden with a quality of .4 and in Portugal with a quality above .9. The Scandinavian countries had an average quality around .5 over 54 questions while other countries such as Greece, Portugal and Estonia had an average quality of .8.  To study these differences is important because these differences can cause differences in relationships between variables in different countries which have no substantive meaning but are just caused by differences in quality in the measurement \cite{Saris_design_2007}. In order to avoid such differences it is also important to study reasons for these differences in quality. 
 
 In an earlier study, we investigated differences in translations, differences in the experiments' design, and differences in the complexity of the question as possible reasons for differences in question quality across countries \cite{oberski_differences_}. Here we consider differences in categorisation errors or use of the answer scale as a source of differences between countries. 
 
@@ -35,12 +37,17 @@ In Figure \ref{fig:response} we show the basic response model \cite{Saris_design
 
 \begin{figure}[htb]
 \centering
+\ifpdf
+\includegraphics[width=.7\textwidth]{response_model.pdf}
+\else
 \includegraphics[width=.7\textwidth]{response_model.eps}
+\fi
 \caption{The response model used in the MTMM experiments.\label{fig:response}}
 \end{figure}
 
 The difference between the observed response ($y$) and the so called `true score' ($t$) is random measurement error ($e$). So the coefficient $r$ represents the reliability coefficient and $r^2$ is the reliability.
-The difference between the true score and the concept by intuition ($f_1$) are the respondents' systematic reactions to the method ($m$). So the coefficient $v$ represents the true score validity coefficient and $v^2$ is the true score validity. The quality of a measure ($q^2$) is defined as  $q^2 =  r^2 . v^2$ and $q$ is the quality coefficient. The correlation between the unobserved variables of interest is denoted by $\rho(f_1,f_2)$.
+The difference between the true score and the concept by intuition ($f_1$) are the respondents' systematic reactions to the method ($m$). So the coefficient $v$ represents the true score validity coefficient and $v^2$ is the true score validity. The quality of a measure ($q^2$) is defined as  $q^2 =  r^2 . v^2$ and $q$ is the quality coefficient. This quality--sometimes also called the reliability ratio--equals $\frac{Var(f)}{Var(y)}$: it can be interpreted as the proportion of variation in the observed variable that is due to the unobserved trait of interest. The correlation between the unobserved variables of interest is denoted by $\rho(f_1,f_2)$.
+
 Several remarks should be made. The first is that the correlation $\rho(y_i, y_j)$ between two observed variables is:
 \begin{equation}
 \rho(y_i, y_j) = \overbrace{\rho(f_i, f_j)}^{\textrm{Correlation of interest}} \cdot \overbrace{q_i \cdot q_j}^{\textrm{Attenuation factor}} + \overbrace{r_i \cdot r_j \cdot m_i \cdot m_j}^{\textrm{Correlation due to method}}
@@ -74,18 +81,23 @@ The three methods are specified by the following response scales:
 \end{quote}\end{minipage}}
 \end{table}
 
-Collecting data using this MTMM design, data for nine variables are obtained and from that data a correlation matrix of $9 \times 9$ is obtained. The model formulated to estimate the reliability, validity, and method effects is an extension of the model presented in Figure \ref{fig:response}. This figure illustrates the relationships between the true scores and their general factors of interest. Figure \ref{fig:mtmm} shows that each trait ($f_i$) is measured in three ways. It is assumed that the traits are correlated but that the method factors ($M_1$, $M_2$, $M_3$) are not correlated. To reduce the complexity of the figure, it is not indicated that for each true score there is an observed response variable that is affected by the true score and a random error as was previously introduced in the model in Figure \ref{fig:response}. However, these relationships, although not made explicit, are implied.  
 
 \begin{figure}[htb]\centering
+\ifpdf
+\includegraphics[width=.7\textwidth]{mtmm.pdf}
+\else
 \includegraphics[width=.7\textwidth]{mtmm.eps}
+\fi
 \caption{\label{fig:mtmm}MTMM model illustrating the true scores and their factors of interest.}
 \end{figure}
- 
-The MTMM design of 3 traits and 3 methods generates 45 covariances and variances. In turn, these 45 pieces of information provide sufficient information to estimate 9 reliability and 9 validity coefficients, 3 method effect coefficients and 3 correlations between the traits. In total there are 24 parameters to be estimated. This leaves 45 â”€ 24 = 21 degrees of freedom, meaning that the necessary condition for identification is fulfilled. It also can be shown that the sufficient condition for identification is satisfied and given that $df=21$ a test of the model is possible.
+
+Collecting data using this MTMM design, data for nine variables are obtained and from that data a correlation matrix of $9 \times 9$ is obtained. The model formulated to estimate the reliability, validity, and method effects is an extension of the model presented in Figure \ref{fig:response}. This figure illustrates the relationships between the true scores and their general factors of interest. Figure \ref{fig:mtmm} shows that each trait ($f_i$) is measured in three ways. It is assumed that the traits are correlated but that the method factors ($M_1$, $M_2$, $M_3$) are not correlated. To reduce the complexity of the figure, it is not indicated that for each true score there is an observed response variable that is affected by the true score and a random error as was previously introduced in the model in Figure \ref{fig:response}. However, these relationships, although not made explicit, are implied.  
+
+The MTMM design of 3 traits and 3 methods generates 45 covariances and variances. In turn, these 45 pieces of information provide sufficient information to estimate 9 reliability and 9 validity coefficients, 3 method effect coefficients and 3 correlations between the traits. In total there are 24 parameters to be estimated. This leaves $45 - 24 = 21$ degrees of freedom, meaning that the necessary condition for identification is fulfilled. It also can be shown that the sufficient condition for identification is satisfied and given that $df=21$ a test of the model is possible.
 
 Table \ref{tab:mtmm_cor} presents the correlations that we derived between the 9 measures obtained from a sample of 481 people in the British population. Using the specifications of the model indicated above and the ML estimator to estimate the quality indicators, the results presented in Table \ref{tab:mtmm_results} are obtained\footnote{In this case the ML estimator is used. The estimation is done using the covariance matrix as the input matrix and not the correlation matrix . Thereafter, the estimates are standardized to obtain the requested coefficients. A result of this is that the standardized  method effects are not exactly equal to each other.}.  
 
-\begin{table}\centering\caption{Correlations between nine measures obtained from a sample of 481 people from the British population. Correlations between a repetition of a trait using a different method (`monotrait-heteromethod' correlations) are indicated in boldface.\label{tab:mtmm_cor}}
+\begin{table}[htb]\centering\caption{Correlations between nine measures obtained from a sample of 481 people from the British population. Correlations between a repetition of a trait using a different method (`monotrait-heteromethod' correlations) are indicated in boldface.\label{tab:mtmm_cor}}
 \begin{tabular}{lrrrrrrrrr}\hline
 & \multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2} & \multicolumn{3}{c}{Method  3} \\ 
 \hline
@@ -107,11 +119,9 @@ Mean & 2.42 & 2.71 & 2.45 & 5.26 & 4.37 & 5.13 & 2.01 & 1.75 & 2.01 \\
 Standard Deviation & .77 & .76 & .84 & 2.29 & 2.37 & 2.44 & .72 & .71 & .77 \\ 
 \hline
 \end{tabular}
-
 \end{table}
 
-
-\begin{table}\centering\caption{The standardised estimates of the MTMM parameters (figure \ref{fig:mtmm}), which are obtained when analysing the sample covariance matrix above.\label{tab:mtmm_results}}
+\begin{table}[htb]\centering\caption{The standardised estimates of the MTMM parameters (figure \ref{fig:mtmm}), which are obtained when analysing the sample covariance matrix above.\label{tab:mtmm_results}}
 \begin{tabular}{lrrrrrrrr}\hline
  &   \multicolumn{3}{c}{Validity coeffs} & \multicolumn{3}{c}{Method effects} &  & Reliability coeff.\\ 
  \hline
@@ -130,29 +140,34 @@ T33   &  &  & .88 &  &  & .48 &  & .84  \\
 \hline
 \end{tabular}
 \end{table}
-
+\hfill
 \subsection{The categorical response model}
 
 The response model discussed so far makes no mention of the fact that many of the measures we use are in fact ordinal--that is, they are ordered categories rather than a continuous scale. 
-Broadly speaking, two types of measurement models have been proposed for this situation. The first assumes there is an unobserved categorical variable, and that errors arise from the conditional chances of choosing a category on the survey question given the unobserved score. Such models are often referred to as latent class models or finite mixture models \cite{lazarsfeld_latent_1968}.
+Broadly speaking, two types of measurement models have been proposed for this situation. The first assumes there is an unobserved categorical variable, and that errors arise from the conditional chances of choosing a category on the survey question given the unobserved score. Such models are often referred to as latent class models \cite{lazarsfeld_latent_1968,hagenaars_applied_2002}.
 
-The second approach deals with the case where a continuous scale or `latent response variable' is thought to underly the observed categorical item. Such models are sometimes called latent trait models. Several possible extensions are possible, but we focus on a special case described by Muth\'en (1978). This is the model we will use in our subsequent analysis of the data.
+The second approach deals with the case where a continuous scale or `latent response variable' is thought to underly the observed categorical item. Such models are sometimes called latent trait models. Several possible extensions are possible, but we focus on a special case described by Muth\'en (1978). This is the model we will use in our subsequent analysis of the data\footnote{It can be shown that analysing polychoric correlations in an MTMM model is a special case of the model we use (Muth\'{e}n \& Asparouhov, 2002). However, we do not use polychoric correlations because it would be  necessary to assume that the variances of the latent response variables are equal across countries. Since we try to separate categorisation errors from differences in the continuous part of the model, this is not a desirable assumption. Last, it should be noted that the model we use is equivalent to a multi-dimensional two parameter graded response model in item response theory (Muth\'{e}n \& Asparouhov, 2002).}.
 
-Errors may arise at two stages. The first is the connection between the latent response variable and its latent trait. This part of the error model is completely analagous to factor analysis or MTMM models for continuous data: the scale is modelled as a linear combination of a latent trait, a reaction to the particular method used to measure the trait, and a random error, and interest then focuses on the connection between the trait and the scale, which we again term the `quality coefficient' (see figure \ref{fig:mtmm}). 
+Errors may arise at two stages. The first is the connection between the latent response variable and its latent trait. This part of the error model is completely analagous to factor analysis or MTMM models for continuous data: the scale is modelled as a linear combination of a latent trait, a reaction to the particular method used to measure the trait, and a random error, and interest then focuses on the connection between the trait and the scale, which we again term the `quality coefficient' (see figures \ref{fig:response} and \ref{fig:mtmm}). It should be noted that, because we are interested only in the quality coefficient and not in the separation of the reliability and validity coefficients, we do not make a distinction between the true score and the latent trait as is done in the true score model explained above. The two models are, however, mathematically equivalent \cite{coenders_testing_2000}.
 
-The second stage at which errors arise, however, differs from the continuous case. Here the continuous latent response variable is split up into the different categories, such that each category of the observed variable corresponds to a certain range on the unobserved continuous scale. The sizes of these ranges are determined by threshold parameters.
+The second stage at which errors arise, however, differs from the continuous case. Here the continuous latent response variable is split up into the different categories, such that each category of the observed variable corresponds to a certain range on the unobserved continuous scale. The sizes of these ranges are determined by threshold parameters. Several types of errors can be distinguished at this stage \cite{coenders_structural_1996}:
+\begin{enumerate}
+\item \emph{Grouping errors} occur because the infinite possible values of the latent response variable are collapsed into a fixed number of categories. These errors will be higher when there are fewer categories;
+\item \emph{Transformation errors} occur when the distances between the numerical scores assigned to each category are not the same as the mean of the latent response variable in that category. This happens when the thresholds are not at equal distances, or when the available categories do not cover the unobserved opinions adequately. 
+\end{enumerate}
+Categorisation, then, can be expected to be another source of measurement error besides random errors and method variance. If these errors differ across countries, then so will the overall measurement quality, and differences in means, correlations, regression coefficients, and cross-tables across countries may be found which are due purely to differences in measurement errors.
 
-Thus, the model we use allows to a certain extent the separation of errors due to the categorisation, errors due to the method and random errors. We will use this fact later on to compare the amount of error due to categorisation introduced across countries.
-
-It can be shown that analysing polychoric correlations in an MTMM model is a special case of the model we use (Muth\'{e}n \& Asparouhov, 2002). However, we do not use polychoric correlations because it would be  necessary to assume that the variances of the latent response variables are equal across countries. Since we try to separate categorisation errors from differences in the continuous part of the model, this is not a desirable assumption. Last, it should be noted that the model we use is equivalent to a multi-dimensional two parameter graded response model in item response theory (Muth\'{e}n \& Asparouhov, 2002).
+The model we use allows to a certain extent the separation of errors due to the categorisation, errors due to the reaction to the method and random errors. In this paper we take advantage of this separation to compare the amount of error due to categorisation introduced across countries. 
 
 \subsection{Categorisation errors in survey questions}
 
-...
+The previous sections showed that, using the MTMM design, it is possible to obtain a measure ($q^2$) of the total quality of a question. If a continuous model is used, this quality is influenced by errors in both stages of the categorical response model: not only random errors and method effects are included, but also errors due to the categorisation. Consequently the linear MTMM model, assuming continuous variables, does not discount categorisation errors, but includes them to a certain extent in the estimates of the quality and other estimates \cite{coenders_structural_1996}.
 
-Given this fact, it is again possible to estimate the MTMM model and the corresponding quality measures: the first part mentioned above. However, this time the quality measures--as was the case before--do not contain both the linear measurement error and the categorization error, but only the former. The new quality measures using the model with free-to-vary thresholds can be used to assess how much of the cross-country variation in quality is due to categorization and how much due to linear errors.
+However, since the quality coefficient is estimated from the covariance matrix of the measures, it can be both reduced and increased by categorisation errors. In general all correlations between measures increase after correction for categorisation, but they need not all increase equally. As an illustration, consider again table \ref{tab:mtmm_cor}. If categorisation errors are higher using the first method then the correlations between the latent response variables using this method (the upper-left triangle of the matrix) will increase more than the correlations of each variable with its repetition using a different method (in bold). In this case the amount of variance in the reponse variable due to the method will go up, and the estimated quality of the measure in the categorical response model can become lower than the estimated quality in the continuous MTMM model. This is because there there are method effects (correlated errors) on the level of the continuous latent response variables which do not manifest themselves in the observed (Pearson) correlations between the categorical variables. Categorisation can therefore in some cases inflate estimates of the quality of categorical observed variables, even though, at the same time, it causes errors which reduce the quality. There are thus two processes at work, which have opposite effects on the estimates of the quality.
 
-To see this, consider that the quality (or reliability ratio) of a variable is defined as the ratio of the true trait variance to the observed variance (see also figure \ref{fig:response} in the first section):
+Because it can both reduce the quality and artificially inflate estimates of quality, categorisation error is an important possible source of differences in question quality across countries. If either of these two processes differs from one country to another, the estimates of the quality can be expected to differ as well. Therefore, we focus here on the changes in the quality coefficient one observes in a continuous reponse model relative to a categorical model. This allows us to study the attentuation or inflation of quality estimates across countries.
+
+As noted before, the quality (or reliability ratio) of a variable is defined as the ratio of the true trait variance to the observed variance (see also figure \ref{fig:response} in the first section):
 \begin{equation}
 q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
 \end{equation}
@@ -160,10 +175,12 @@ However, we have now seen that $y$ is itself a categorization of an unobserved c
 \begin{equation}
 q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
 \end{equation}
-The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2$, the quality from the continuous analysi, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis, have been obtained.
+The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2$, the quality from the continuous analysi, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis, have been obtained. So the effect of categorisation on the quality estimate can be derived.
+
+In the present study, we estimate this `categorisation factor' for different countries and experiments, and examine to what extent it can explain the differences in quality across countries. First, however, we give an overview of the data we use.
+
 
 \section{Data}
-
 
 The European Social Survey (ESS) has the unique characteristic that in more than 20 countries the same questions were asked and that within each round of the ESS Multitrait-Multimethod (MTMM) experiments are built in to evaluate the quality of a limited number of questions. This gives us an exceptional opportunity to observe the differences in quality of questions over a large number of countries. In this paper we have used the MTMM experiments of round 2 of the ESS. The topics of the 6 MTMM experiments in the second round of the ESS were the following:
 \begin{enumerate}
@@ -223,34 +240,36 @@ The previous section showed that in some cases large differences were found in q
 
 \section{Results}
 
-We first turn to the hypothesis that all thresholds are equal across different countries. We selected the three countries with the highest and the two countries with the lowest quality coefficients for the `women' experiment. In this experiment wording of the question reversed in the second method. For example, the statement `When jobs are scarce, men should have more right to a job than women' from the main questionnaire was changed to `When jobs are scarce, women should have the same right to a job as men' in the supplementary questionnaire. The countries with high quality coefficients were, in this case, Portugal, Greece, and Switzerland. The lowest coefficients for this experiment were found in Estonia and the Czech Republic. To be able to separately study misspecifications in the categorization part of the model, we imposed no restrictions on the covariance matrix of the latent response variables at this stage. The estimation was done using the weighted least squares approach described by Flora \& Curran (2004)*1.
+[this part needs to be re-written...]
+
+%\color{Gray}
+
+We first turn to the hypothesis that all thresholds are equal across different countries. We selected the three countries with the highest and the two countries with the lowest quality coefficients for the `women' experiment. In this experiment wording of the question reversed in the second method. For example, the statement `When jobs are scarce, men should have more right to a job than women' from the main questionnaire was changed to `When jobs are scarce, women should have the same right to a job as men' in the supplementary questionnaire. The countries with high quality coefficients were, in this case, Portugal, Greece, and Switzerland. The lowest coefficients for this experiment were found in Estonia and the Czech Republic. To be able to separately study misspecifications in the categorization part of the model, we imposed no restrictions on the covariance matrix of the latent response variables at this stage. The estimation was done using the weighted least squares approach described by Flora \& Curran (2004)*.
 
 In the first analysis, all thresholds were constrained to be equal across the five countries. This yields a likelihood ratio statistic of 507 on 48 degrees of freedom. The country with the highest (128) contribution to this chi-square statistic is Portugal. When we examine the expected parameter changes, it also turns out that in this country these standardised values are very large with some values close to .9 while in other countries the highest obtained and exceptional value is .6. At the same time, there is nothing about this group that makes the power particularly high. There are a few very high power values of .97 for large expected changes, but the average power is .37. For some reason, the equality constraint on the Portuguese thresholds appears to be a particularly gross misspecification.
 
 This misspecification is very likely due to a translation error. The intention of the experiment was to reverse the wording of the question in the second method. But in Portugal the reverse wording was not used, and the same version was presented as in the main questionnaire. The supplementary questions mean something else in Portugal and therefore it makes sense that the thresholds should differ from those found in the other countries. To prevent incomparability when the MTMM model is estimated, we omit Portugal from our further analyses and continue with four countries. We should note, however, that the resulting experiment does provide a good opportunity to examine the effect of a repetition on the threshold structure.
 
-Continuing our analysis with four countries, the model where all thresholds are constrained to be equal yields a likelihood ratio of 351 and 36 degrees of freedom. We again approximate the power of the score test (modification index) to detect a standardised difference of at least .1, and examine the modification indices and expected parameter changes. 
+Continuing our analysis with four countries, the model where all thresholds are constrained to be equal yields a likelihood ratio of 351 and 36 degrees of freedom. We approximate the power of the score test (modification index) to detect a standardised difference of at least .1, and examine the modification indices and expected parameter changes. 
 
-Because there are many constrained parameters, the results are summarised in a plot rather than a table (figure \ref{fig:modindices}). The upper left quadrant of this plot shows parameters for which there is a low power of the score test, but which nevertheless exceed the critical value. These are all taken to be misspecifications. The upper right quadrant contains parameters for which the power is high and the score test significant. Only those parameters with a standardised expected change of .1 or higherâ€”the two trianglesâ€”are taken to be misspecified. The lower right quadrant shows parameters for which the power was high but nevertheless the score test was not rejected. These are most likely not misspecified and can remain constrained to be equal across groups. The lower left quadrant, finally, contains parameters for which the power was low and the score test could not be rejected. Here no decision could be taken since it is not known whether the failure to reject is due to low power or because the model is correctly specified.
+Using the above criteria, it is clear that the equality model contains severe misspecifications. We formulated a new model in which some thresholds were constrained to be equal, while others were freed to vary. However, we found that too many parameters were freed for Greece and some parameters could again be constrained to be equal: the expected parameter change which led us to free these parameters is an estimate, which need not equal the actual parameter change. For some thresholds the actual change was negligible (although still within a 95\% confidence interval for the expected change) and we constrained these four parameters again. The resulting model has an approximate likelihood ratio of 2.8 on 2 degrees of freedom ($p=.24$)3. 
+%\color{Black}
 
-\begin{figure}\caption{The power and modification index of all thresholds which were constrained to be equal across the four countries. The points represent parameters, while the size of the point is determined by the size of the expected parameter change. The horizontal line is drawn at the chi-square quantile 6.63, i.e. the critical value for $\alpha=.01$. The vertical line imposes a criterion of â€˜high powerâ€™ of .8.\label{fig:modindices}}
-\end{figure}
+\subsection{Experiment 1}
 
-Using the above criteria, it is clear that the equality model contains severe misspecifications2. We formulated a new model in which some thresholds were constrained to be equal, while others were freed to vary. However, we found that too many parameters were freed for Greece and some parameters could again be constrained to be equal: the expected parameter change which led us to free these parameters is an estimate, which need not equal the actual parameter change. For some thresholds the actual change was negligible (although still within a 95% confidence interval for the expected change) and we constrained these four parameters again. The resulting model has an approximate likelihood ratio of 2.8 on 2 degrees of freedom ($p=.24$)3. 
+\fbox{\begin{minipage}{\textwidth}\begin{small}
+	\input{c:/ess/berlin/output/thresh_Women.tex}
+\end{small}\end{minipage}}
 
 \begin{table}\centering\caption{\label{tab:women}}\begin{tabular}{lllrrr}
 \hline
  &  &  & \multicolumn{3}{c}{`Women'} \\
  &  &  & CutDown & Respnsib. & MenRight\\
 \hline
-\multicolumn{2}{l}{Continuous analysis}\\
-		   & $q$ & Greece & 0.84 & -0.81 & 0.84\\
- &  & Slovenia & 0.73 & -0.50 & 0.82\\
+\multicolumn{2}{l}{Continuous analysis}\\		   
  & $q^2$ & Greece & 0.71 & 0.66 & 0.71\\
  &  & Slovenia & 0.54 & 0.25 & 0.68\\
 \multicolumn{2}{l}{Categorical analysis}   &  &  &  & \\
- & $q$ & Greece & 0.71 & 0.59 & 0.69\\
- &  & Slovenia & 0.83 & 0.53 & 0.81\\
  & $q^2$ & Greece & 0.51 & 0.35 & 0.48\\
  &  & Slovenia & 0.69 & 0.29 & 0.65\\
  \multicolumn{2}{l}{Categorisation factor}   &  &  &  & \\
@@ -259,26 +278,26 @@ Using the above criteria, it is clear that the equality model contains severe mi
 \hline
 \end{tabular}\end{table}
 
+\subsection{Experiment 2}
+
 \begin{table}\centering\caption{\label{tab:job}}\begin{tabular}{lllrrr}
 \hline
-Â  & Â   & & \multicolumn{3}{c}{`Job'} \\
- & Â   Â  & Â  & Varied & Secure & Risky\\
+  &    & & \multicolumn{3}{c}{`Job'} \\
+ &      &   & Varied & Secure & Risky\\
 \hline
 \multicolumn{2}{l}{Continuous analysis    } &  &  &  & \\
- &   $q$ & Belgium & 0.94 & 0.94 & 0.96\\
- &    & Slovenia & 0.78 & 0.46 & 0.74\\
  &   $q^2$ & Belgium & 0.88 & 0.88 & 0.92\\
  &    & Slovenia & 0.61 & 0.21 & 0.55\\
 \multicolumn{2}{l}{Categorical analysis  }   &  &  &  & \\
- &   $q$ & Belgium & 0.96 & 0.76 & 0.82\\
- &    & Slovenia & 0.71 & 0.54 & 0.82\\
  &   $q^2$ & Belgium & 0.92 & 0.58 & 0.66\\
  &    & Slovenia & 0.50 & 0.29 & 0.67\\
 \multicolumn{2}{l}{Categorisation factor}     &  &  &  & \\
  &    & Belgium & 0.96 & 1.52 & 1.39\\
- & Â  Â  & Slovenia & 1.22 & 0.72 & 0.82\\
+ &     & Slovenia & 1.22 & 0.72 & 0.82\\
 \hline
 \end{tabular}\end{table}
+
+\subsection{Experiment 3}
 
 \begin{table}\centering\caption{\label{tab:doctors}}\begin{tabular}{lllrrr}
 
@@ -287,13 +306,9 @@ Using the above criteria, it is clear that the equality model contains severe mi
  &  &  & Truth & Equals & Discuss\\
 \hline
 \multicolumn{2}{l}{Continuous analysis   }&  &  &  & \\
- & $q$ & Denmark & 0.22 & 0.86 & 0.88\\
- &  & Estonia & 0.65 & 0.92 & 0.91\\
  & $q^2$ & Denmark & 0.05 & 0.74 & 0.77\\
  &  & Estonia & 0.42 & 0.85 & 0.83\\
 \multicolumn{2}{l}{Categorical analysis  } &  &  &  & \\
- & $q$ & Denmark & 0.35 & 0.91 & 0.90\\
- &  & Estonia & 0.87 & 0.89 & 0.87\\
  & $q^2$ & Denmark & 0.12 & 0.83 & 0.82\\
  &  & Estonia & 0.75 & 0.79 & 0.75\\
 \multicolumn{2}{l}{Categorisation factor}   &  &  &  & \\
@@ -302,19 +317,17 @@ Using the above criteria, it is clear that the equality model contains severe mi
 \hline
 \end{tabular}\end{table}
 
+\subsection{Experiment 4}
+
 \begin{table}\centering\caption{\label{tab:efficacy}}\begin{tabular}{lllrrr}
 \hline
  &  &  &  & `Efficacy' & \\
 	   &  &  & Complex & Active & Mind\\
 	   \hline
  \multicolumn{2}{l}{Continuous analysis}\\
-	 & $q$ & Switzerland & 0.70 & -0.90 & 0.71\\
- &  & Denmark & 0.88 & -0.91 & -0.89\\
  & $q^2$ & Switzerland & 0.49 & 0.81 & 0.50\\
  &  & Denmark & 0.77 & 0.83 & 0.79\\
 \multicolumn{2}{l}{Categorical analysis}   &  &  &  & \\
- & $q$ & Switzerland & 0.79 & 0.97 & 0.79\\
- &  & Denmark & 0.79 & 0.84 & 0.80\\
  & $q^2$ & Switzerland & 0.62 & 0.94 & 0.62\\
  &  & Denmark & 0.63 & 0.70 & 0.63\\
 \multicolumn{2}{l}{Categorisation factor}    &  &  & \\
@@ -325,7 +338,7 @@ Using the above criteria, it is clear that the equality model contains severe mi
 \end{tabular}\end{table}
 
 
-\begin{table}\centering\caption{\label{tab:meta}}
+\begin{table}\centering\caption{A meta-analysis of the categorisation error studies. The table presents a linear regression of the categorisation factor on topic, country, scale and scale position.\label{tab:meta}}
 \begin{minipage}[ht]{.73\textwidth}
 \begin{tabular}{llrrrr}
 \hline
@@ -365,11 +378,11 @@ Multiple R-Squared: 0.55; Adjusted R-squared: 0.44; F-test for factor sums of sq
 
 \section{Discussion and conclusion}
 
-interpret meta
+interpret meta analysis
 
-advice
+advice based on this study
 
-future research.
+future research: o.a. specific causes for differing quality such as education, age, or interviewer effects?
 
 \newpage
 \bibliography{quality}

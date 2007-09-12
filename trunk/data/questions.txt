@@ -1,0 +1,7 @@
+question	trait	method	experiment
+"A woman should be prepared to cut down on her paid work for the sake of her family"	1	1	1
+"Men should take as much responsibility as women for the home and children."	2	1	1
+"When jobs are scarce, men should have more right to a job than women."	3	1	1
+"A woman should not have to cut down on her paid work for the sake of her family."	1	2	1
+"Women should take more responsibility for the home and children than men"	2	2	1
+"When jobs are scarce, women should have the same right to a job as men."	3	2	1
