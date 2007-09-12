@@ -6,7 +6,6 @@
 \usepackage{longtable}
 \usepackage{hyperref}
 \bibliographystyle{apalike}
- \input epsf
 \author{Willem E. Saris\\Daniel Oberski\\ESADE, Universitat Ramon Llull\\\\Jacques Hagenaars\\Tilburg University}
 
 \title{Categorisation errors and differences in the quality of questions across countries}
@@ -34,8 +33,9 @@ First we provide the necessary background: the response model we use as our star
 
 In Figure \ref{fig:response} we show the basic response model \cite{Saris_design_2007} we use as our starting point. 
 
-\begin{figure}[bh]
-%\epsffile{response-model.eps}
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.7\textwidth]{response_model.eps}
 \caption{The response model used in the MTMM experiments.\label{fig:response}}
 \end{figure}
 
@@ -76,8 +76,9 @@ The three methods are specified by the following response scales:
 
 Collecting data using this MTMM design, data for nine variables are obtained and from that data a correlation matrix of $9 \times 9$ is obtained. The model formulated to estimate the reliability, validity, and method effects is an extension of the model presented in Figure \ref{fig:response}. This figure illustrates the relationships between the true scores and their general factors of interest. Figure \ref{fig:mtmm} shows that each trait ($f_i$) is measured in three ways. It is assumed that the traits are correlated but that the method factors ($M_1$, $M_2$, $M_3$) are not correlated. To reduce the complexity of the figure, it is not indicated that for each true score there is an observed response variable that is affected by the true score and a random error as was previously introduced in the model in Figure \ref{fig:response}. However, these relationships, although not made explicit, are implied.  
 
-\begin{figure}[htb]\caption{\label{fig:mtmm}MTMM model illustrating the true scores and their factors of interest.}
-figure about here
+\begin{figure}[htb]\centering
+\includegraphics[width=.7\textwidth]{mtmm.eps}
+\caption{\label{fig:mtmm}MTMM model illustrating the true scores and their factors of interest.}
 \end{figure}
  
 The MTMM design of 3 traits and 3 methods generates 45 covariances and variances. In turn, these 45 pieces of information provide sufficient information to estimate 9 reliability and 9 validity coefficients, 3 method effect coefficients and 3 correlations between the traits. In total there are 24 parameters to be estimated. This leaves 45 ─ 24 = 21 degrees of freedom, meaning that the necessary condition for identification is fulfilled. It also can be shown that the sufficient condition for identification is satisfied and given that $df=21$ a test of the model is possible.
