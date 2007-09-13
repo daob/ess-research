@@ -1,0 +1,14 @@
+mean	country		trait	method
+0.000   Belgium	1	1
+0.000   Belgium	2	1
+0.000   Belgium	3	1
+0.000   Belgium	1	2
+0.000   Belgium	2	2
+0.000   Belgium	3	2
+
+-0.137   Slovenia	1	1
+-0.500   Slovenia	2	1
+ 1.249   Slovenia	3	1
+-0.578   Slovenia	1	2
+-0.760   Slovenia	2	2
+ 0.407   Slovenia	3	2

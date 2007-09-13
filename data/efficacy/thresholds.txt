@@ -1,0 +1,52 @@
+tau		country	trait	method	experiment 
+-1.401  	 Switzerland	1	1	1  
+-0.509 	 Switzerland	1	1	1  
+ 0.558 	 Switzerland	1	1	1  
+ 1.324 	 Switzerland	1	1	1  
+-0.410  	 Switzerland	2	1	1  
+ 0.263  	 Switzerland	2	1	1  
+ 0.681  	 Switzerland	2	1	1  
+ 1.329 	 Switzerland	2	1	1  
+-1.546  	 Switzerland	3	1	1  
+-0.639  	 Switzerland	3	1	1  
+ 0.272  	 Switzerland	3	1	1  
+ 1.538 	 Switzerland	3	1	1  
+                                   
+-1.514	 	 Switzerland 	1	2	1  
+-0.140 	 Switzerland 	1	2	1  
+ 0.407 	 Switzerland 	1	2	1  
+ 1.497 	 Switzerland 	1	2	1  
+-1.760  	 Switzerland 	2	2	1  
+-0.589  	 Switzerland 	2	2	1  
+-0.333  	 Switzerland 	2	2	1  
+ 0.589 	 Switzerland 	2	2	1  
+-1.163  	 Switzerland 	3	2	1  
+ 0.035  	 Switzerland 	3	2	1  
+ 0.721  	 Switzerland 	3	2	1  
+ 1.949  	 Switzerland 	3	2	1  
+		                                   
+-1.360 	Denmark	1	1	1          
+-0.494	Denmark	1	1	1          
+ 0.541	Denmark	1	1	1          
+ 1.286	Denmark	1	1	1          
+-0.202 	Denmark	2	1	1          
+ 0.200 	Denmark	2	1	1          
+ 0.517 	Denmark	2	1	1          
+ 1.218	Denmark	2	1	1          
+-1.344 	Denmark	3	1	1          
+-0.427 	Denmark	3	1	1          
+ 0.249 	Denmark	3	1	1          
+ 1.412	Denmark	3	1	1    
+ 
+-1.404 	Denmark 	1	2	1          
+-0.130	Denmark 	1	2	1          
+ 0.378	Denmark 	1	2	1          
+ 1.389	Denmark 	1	2	1          
+-1.780 	Denmark 	2	2	1          
+-0.595 	Denmark 	2	2	1          
+-0.336 	Denmark 	2	2	1          
+ 0.596	Denmark 	2	2	1          
+-1.141 	Denmark 	3	2	1          
+ 0.173 	Denmark 	3	2	1          
+ 0.636 	Denmark 	3	2	1          
+ 1.721	Denmark 	3	2	1          

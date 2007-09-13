@@ -1,0 +1,14 @@
+mean	country		trait	method
+0.000	 Denmark		1	1          
+0.000	 Denmark		2	1          
+0.000	 Denmark		3	1          
+0.000	 Denmark		1	2          
+0.000	 Denmark		2	2          
+0.000	 Denmark		3	2          
+	                                    
+-0.273	  Estonia	1	1          
+-0.503	  Estonia	2	1          
+-0.347	  Estonia	3	1          
+0.021	  Estonia	1	2          
+-0.278	  Estonia	2	2          
+-0.111	  Estonia	3	2          

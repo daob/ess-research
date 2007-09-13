@@ -1,0 +1,14 @@
+mean	country		trait	method
+0.000	 Switzerland		1	1          
+0.000	 Switzerland		2	1          
+0.000	 Switzerland		3	1          
+0.000	 Switzerland		1	2          
+0.000	 Switzerland		2	2          
+0.000	 Switzerland		3	2          
+	                                    
+-0.023 	  Denmark	1	1          
+ 0.778 	  Denmark	2	1          
+ 0.432 	  Denmark	3	1          
+-0.009   Denmark	1	2          
+-0.585 	  Denmark	2	2          
+ 0.034 	  Denmark	3	2          
