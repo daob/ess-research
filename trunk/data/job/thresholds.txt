@@ -1,0 +1,41 @@
+tau	  country	trait	method
+ -1.400	  Belgium	1	1
+ -0.747   Belgium	1	1
+  0.168   Belgium	1	1
+ -1.212   Belgium	2	1
+ -0.729   Belgium	2	1
+  0.147   Belgium	2	1
+  0.021   Belgium	3	1	
+  0.867   Belgium	3	1
+  1.311   Belgium	3	1
+
+ -1.508   Belgium	1	2
+ -0.742   Belgium	1	2
+  0.283   Belgium	1	2
+ -1.579   Belgium	2	2
+ -0.819   Belgium	2	2
+  0.341   Belgium	2	2
+ -0.063   Belgium	3	2
+  0.929   Belgium	3	2
+  1.813   Belgium	3	2
+
+
+-1.839   Slovenia	1	1   
+-0.982   Slovenia	1	1   
+ 0.221   Slovenia	1	1   
+-1.965   Slovenia	2	1   
+-1.055   Slovenia	2	1   
+ 0.213   Slovenia	2	1   
+ 0.924   Slovenia	3	1	
+ 1.857   Slovenia	3	1   
+ 2.808   Slovenia	3	1   
+
+-2.325   Slovenia	1	2
+-1.145   Slovenia	1	2
+ 0.437   Slovenia	1	2
+-2.326   Slovenia	2	2
+-1.207   Slovenia	2	2
+ 0.503   Slovenia	2	2
+-0.079   Slovenia	3	2
+ 1.169   Slovenia	3	2
+ 2.282   Slovenia	3	2

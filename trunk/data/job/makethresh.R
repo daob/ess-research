@@ -28,10 +28,15 @@ for ( it in 1:numtraits ) {
     quest <- questions[questions$trait==traits[it] & questions$method==methods[im] , 1]
        str <- paste(str, "\n\n`", quest, "'\n\n", sep="" )       
   str <- paste(str, "\\begin{scriptsize}\\begin{tabular*}{\\textwidth}{lp{.12\\textwidth}")
-  str <- paste(str, "lp{.12\\textwidth}cp{.12\\textwidth}cp{.12\\textwidth}cp{.12\\textwidth}cp{.12\\textwidth} }&1 & $\\tau_1$ & 2 & $\\tau_2$ & 3 & $\\tau_3$ & 4 & $\\tau_4$ & 5\\\\\n")
-    if(it==1 && im==1) str <-  paste(str, "&\\parbox{.12\\textwidth}{\\centering \\textit{Agree strongly}} & &\\parbox{.12\\textwidth}{\\centering \\textit{Agree}} && \\parbox{.12\\textwidth}{\\centering \\textit{Neither disagree nor agree}} && \\parbox{.12\\textwidth}{\\centering \\textit{Disagree}} && \\parbox{.12\\textwidth}{\\centering \\textit{Disagree strongly}} \\\\\n")
+  str <- paste(str, "lp{.17\\textwidth}cp{.17\\textwidth}cp{.17\\textwidth}cp{.17\\textwidth} }\n")
+    str <- paste(str, "&  \\parbox{.17\\textwidth}{\\centering 1} & $\\tau_1$ &  \\parbox{.17\\textwidth}{\\centering 2} & $\\tau_2$ &  \\parbox{.17\\textwidth}{\\centering 3} & $\\tau_3$ &  \\parbox{.17\\textwidth}{\\centering 4} \\\\\n")
+    cats <- scales[scales$trait==traits[it] & scales$method==methods[im] , 1]
 
-    str <- paste(str, "")
+    for (ik in 1:numcategories) {
+      if (ik > 1)     str <- paste(str, "&")
+      str <- paste( str, "& \\parbox{.17\\textwidth}{\\centering \\textit{", cats[ik],"}}"  )
+    }
+    str <- paste(str, "\\\\\n")
   for( ic in 1:numcountries) {
        tau <- thresholds[thresholds$country==countries[ic] &  thresholds$trait==traits[it] &  thresholds$method==methods[im] ,1]
        nu <- means[means$country==countries[ic] &  means$trait==traits[it] &  means$method==methods[im], 1]

@@ -1,0 +1,31 @@
+scale trait method
+"Not at all true"	1	1
+"A little true"	1	1
+"Quite true"	1	1
+"Very true"	1	1
+
+"Not at all true"	2	1
+"A little true"	2	1
+"Quite true"	2	1
+"Very true"	2	1
+
+"Not at all true"	3	1
+"A little true"	3	1
+"Quite true"	3	1
+"Very true"	3	1
+
+"Not at all varied" 1	2
+"A little varied " 1	2
+"Quite varied " 1	2
+"Very varied " 1	2
+
+"Not at all secure"  2	2
+"A little secure "  2	2
+"Quite secure "  2	2
+"Very secure "  2	2
+
+
+"Not at all at risk"   3	2
+"A little at risk "   3	2
+"Quite a lot at risk "   3	2
+"Very much at risk"    3	2

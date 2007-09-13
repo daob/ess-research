@@ -1,0 +1,10 @@
+question	trait	method
+"There is a lot of variety in my work."	1	1
+"My job is secure."	2	1
+"My health or safety is at risk because of my work."	3	1
+
+"Please choose one of the following to describe how varied your work is."	1	2
+
+"Please choose one of the following to describe how secure your job is."	2	2
+
+"Please choose one of the following to say how much, if at all, your work puts your health and safety at risk."	3	2

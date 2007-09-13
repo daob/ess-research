@@ -1,0 +1,36 @@
+scale	trait	method
+"Never"      	1  	1 
+"Seldom"      	1  	1 
+"Occasionally"	1  	1 
+"Regularly"   	1  	1 
+"Frequently  "	1  	1 
+		
+"Definitely not"      	2  	1 
+"Probably not"        	2  	1 
+"Not sure either way" 	2  	1 
+"Probably"            	2  	1 
+"Definitely"		2  	1 
+				            
+"Very difficult"             3  	1 
+"Difficult"                  3  	1 
+"Neither difficult nor easy" 3  	1 
+"Easy"                       3  	1 
+"Very easy"                  3  	1 
+
+"Agree strongly "		1	2   
+"Agree "			1	2   
+"Neither disagree nor agree "	1	2   
+"Disagree "			1	2   
+"Disagree strongly "		1	2   
+				           
+"Agree strongly "		2	2   
+"Agree "			2	2   
+"Neither disagree nor agree "	2	2   
+"Disagree "			2	2   
+"Disagree strongly "		2	2   
+				            
+"Agree strongly "		3	2   
+"Agree "			3	2   
+"Neither disagree nor agree "	3	2   
+"Disagree "			3	2   
+"Disagree strongly "		3	2   

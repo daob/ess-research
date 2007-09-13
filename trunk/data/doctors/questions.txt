@@ -1,0 +1,7 @@
+question	trait	method
+"Doctors keep the whole truth from their patients."				1	1
+"GPs treat their patients as their equals."					2	1
+"Before doctors decide on a treatment, they discuss it with their patient."	3	1
+"Doctors rarely keep the whole truth from their patients"			1	2
+"GPs rarely treat their patients as their equals"				2	2
+"Before doctors decide on a treatment, they rarely discuss it with their patient"	3	2
