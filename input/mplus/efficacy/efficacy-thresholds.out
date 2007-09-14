@@ -1,0 +1,671 @@
+Mplus VERSION 4.2
+MUTHEN & MUTHEN
+09/07/2007   2:26 PM
+
+INPUT INSTRUCTIONS
+
+  DATA:
+        FILE IS C:/ESS/data/efficacy.dat;
+
+  VARIABLE:
+    NAMES ARE
+     idnum        cntrynum        dweight
+     compl        activ        mind
+     test4        test5        test6
+     test22        test23        test24
+     spltadm        supqadm;
+  USEVARIABLES ARE
+     compl        activ        mind
+     test4        test5        test6
+     test22        test23        test24
+     ;
+
+  CATEGORICAL ARE
+     compl        activ        mind
+     test4        test5        test6
+     test22        test23        test24
+     ;
+
+   USEOBSERVATIONS ARE
+     (dweight NE -9999 AND
+           cntrynum EQ 10 OR cntrynum EQ 17 );
+
+   WEIGHT IS dweight;
+   GROUPING IS cntrynum( 10=UK 17=NL );       !3=CH 6=DK
+   IDVARIABLE = idnum;
+   MISSING ARE ALL(-9999);
+
+  ANALYSIS:
+   TYPE = MISSING MEANSTRUCTURE;
+   ESTIMATOR IS WLS;
+   PROCESSORS=2;
+   PARAMETERIZATION = THETA;
+
+
+  MODEL:
+       L_compl BY compl@1;
+       L_activ BY activ@1;
+       L_mind BY mind@1;
+       L_test4 BY test4@1;
+       L_test5 BY test5@1;
+       L_test6 BY test6@1;
+       L_test22 BY test22@1;
+       L_test23 BY test23@1;
+       L_test24 BY test24@1;
+
+          [test22$1 test22$2 test22$3 test22$3   ];
+          [test23$1 test23$2 test23$3 test23$4   ];
+          [test24$1 test24$2 test24$3 test24$4   ];
+          [test6$1 test6$2 test6$3 test6$3   ];
+          [test5$1 test5$2 test5$3 test5$4   ];
+          [test4$1 test4$2 test4$3 test4$4   ];
+          [mind$1 mind$2 mind$3 mind$4     ];
+          [activ$1 activ$2 activ$3 activ$4   ];
+          [compl$1 compl$2 compl$3 compl$4   ];
+
+
+       L_compl WITH
+          L_activ L_mind
+          L_test4 L_test5 L_test6
+          L_test22 L_test23 L_test24;
+       L_activ WITH
+          L_mind
+          L_test4 L_test5 L_test6
+          L_test22 L_test23 L_test24;
+       L_mind  WITH
+          L_test4 L_test5 L_test6
+          L_test22 L_test23 L_test24;
+       L_test4  WITH
+          L_test5 L_test6
+          L_test22 L_test23 L_test24;
+       L_test5 WITH
+          L_test6
+          L_test22 L_test23 L_test24;
+       L_test6 WITH
+          L_test22 L_test23 L_test24;
+       L_test22 WITH L_test23 L_test24;
+       L_test23 WITH L_test24;
+
+       L_compl L_activ L_mind
+       L_test4 L_test5 L_test6
+       L_test22 L_test23 L_test24;
+
+       [
+         L_compl L_activ L_mind
+         L_test4 L_test5 L_test6
+         L_test22 L_test23 L_test24
+       ];
+       compl@0 activ@0 mind@0
+       test4@0 test5@0 test6@0
+       test22@0 test23@0 test24@0;
+
+  MODEL UK:
+       [ L_compl@0 L_activ@0 L_mind@0
+         L_test4@0 L_test5@0 L_test6@0
+         L_test22@0 L_test23@0 L_test24@0 ];
+
+       L_compl@1 L_activ@1 L_mind@1 L_test4@1 L_test5@1 L_test6@1
+              L_test22@1 L_test23@1 L_test24@1;
+
+       compl@0 activ@0 mind@0
+       test4@0 test5@0 test6@0
+       test22@0 test23@0 test24@0;
+
+       L_compl WITH
+          L_activ L_mind
+          L_test4 L_test5 L_test6
+          L_test22 L_test23 L_test24;
+       L_activ WITH
+          L_mind
+          L_test4 L_test5 L_test6
+          L_test22 L_test23 L_test24;
+       L_mind  WITH
+          L_test4 L_test5 L_test6
+          L_test22 L_test23 L_test24;
+       L_test4  WITH
+          L_test5 L_test6
+          L_test22 L_test23 L_test24;
+       L_test5 WITH
+          L_test6
+          L_test22 L_test23 L_test24;
+       L_test6 WITH
+          L_test22 L_test23 L_test24;
+       L_test22 WITH L_test23 L_test24;
+       L_test23 WITH L_test24;
+
+
+
+  OUTPUT:
+        SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL TECH1 TECH2 TECH3;
+
+  !PLOT:
+  !   TYPE =  PLOT3 PLOT2 PLOT1;
+
+
+
+
+*** WARNING in Output command
+  SAMPSTAT option for TYPE=MISSING requires H1.
+  TYPE=H1 is turned on automatically.
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  1
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group UK                                                   2051
+   Group NL                                                   2364
+
+Number of dependent variables                                    9
+Number of independent variables                                  0
+Number of continuous latent variables                            9
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   COMPL       ACTIV       MIND        TEST4       TEST5       TEST6
+   TEST22      TEST23      TEST24
+
+Continuous latent variables
+   L_COMPL     L_ACTIV     L_MIND      L_TEST4     L_TEST5     L_TEST6
+   L_TEST22    L_TEST23    L_TEST24
+
+Variables with special functions
+
+  Grouping variable     CNTRYNUM
+  Weight variable       DWEIGHT
+  ID variable           IDNUM
+
+Estimator                                                      WLS
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             THETA
+
+Input data file(s)
+  C:/ESS/data/efficacy.dat
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group UK
+     Number of patterns          14
+
+   Group NL
+     Number of patterns          15
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR UK
+
+
+           Covariance Coverage
+              COMPL         ACTIV         MIND          TEST4         TEST5
+              ________      ________      ________      ________      ________
+ COMPL          0.994
+ ACTIV          0.994         1.000
+ MIND           0.991         0.997         0.997
+ TEST4          0.876         0.880         0.878         0.880
+ TEST5          0.876         0.880         0.878         0.880         0.880
+ TEST6          0.875         0.879         0.877         0.878         0.877
+ TEST22         0.874         0.878         0.876         0.874         0.874
+ TEST23         0.874         0.878         0.876         0.874         0.873
+ TEST24         0.874         0.878         0.876         0.874         0.873
+
+
+           Covariance Coverage
+              TEST6         TEST22        TEST23        TEST24
+              ________      ________      ________      ________
+ TEST6          0.879
+ TEST22         0.873         0.878
+ TEST23         0.872         0.878         0.878
+ TEST24         0.872         0.878         0.877         0.878
+
+
+     PROPORTION OF DATA PRESENT FOR NL
+
+
+           Covariance Coverage
+              COMPL         ACTIV         MIND          TEST4         TEST5
+              ________      ________      ________      ________      ________
+ COMPL          0.993
+ ACTIV          0.992         0.998
+ MIND           0.990         0.993         0.994
+ TEST4          0.984         0.989         0.985         0.991
+ TEST5          0.985         0.989         0.986         0.991         0.992
+ TEST6          0.984         0.989         0.985         0.990         0.991
+ TEST22         0.985         0.989         0.985         0.989         0.990
+ TEST23         0.985         0.989         0.986         0.990         0.990
+ TEST24         0.984         0.989         0.985         0.989         0.989
+
+
+           Covariance Coverage
+              TEST6         TEST22        TEST23        TEST24
+              ________      ________      ________      ________
+ TEST6          0.991
+ TEST22         0.989         0.991
+ TEST23         0.989         0.991         0.992
+ TEST24         0.989         0.990         0.991         0.991
+
+
+SUMMARY OF CATEGORICAL DATA PROPORTIONS
+
+  Group UK
+    COMPL
+      Category 1    0.079
+      Category 2    0.152
+      Category 3    0.362
+      Category 4    0.254
+      Category 5    0.153
+    ACTIV
+      Category 1    0.388
+      Category 2    0.253
+      Category 3    0.087
+      Category 4    0.192
+      Category 5    0.079
+    MIND
+      Category 1    0.073
+      Category 2    0.223
+      Category 3    0.320
+      Category 4    0.288
+      Category 5    0.096
+    TEST4
+      Category 1    0.026
+      Category 2    0.125
+      Category 3    0.109
+      Category 4    0.206
+      Category 5    0.035
+      Category 6    0.499
+    TEST5
+      Category 1    0.121
+      Category 2    0.189
+      Category 3    0.088
+      Category 4    0.086
+      Category 5    0.018
+      Category 6    0.499
+    TEST6
+      Category 1    0.028
+      Category 2    0.111
+      Category 3    0.151
+      Category 4    0.188
+      Category 5    0.023
+      Category 6    0.499
+    TEST22
+      Category 1    0.066
+      Category 2    0.195
+      Category 3    0.110
+      Category 4    0.101
+      Category 5    0.021
+      Category 6    0.507
+    TEST23
+      Category 1    0.010
+      Category 2    0.079
+      Category 3    0.104
+      Category 4    0.210
+      Category 5    0.090
+      Category 6    0.507
+    TEST24
+      Category 1    0.025
+      Category 2    0.179
+      Category 3    0.157
+      Category 4    0.105
+      Category 5    0.027
+      Category 6    0.507
+
+  Group NL
+    COMPL
+      Category 1    0.092
+      Category 2    0.224
+      Category 3    0.362
+      Category 4    0.223
+      Category 5    0.099
+    ACTIV
+      Category 1    0.424
+      Category 2    0.238
+      Category 3    0.142
+      Category 4    0.140
+      Category 5    0.056
+    MIND
+      Category 1    0.063
+      Category 2    0.280
+      Category 3    0.342
+      Category 4    0.267
+      Category 5    0.048
+    TEST4
+      Category 1    0.046
+      Category 2    0.154
+      Category 3    0.140
+      Category 4    0.145
+      Category 5    0.021
+      Category 6    0.495
+    TEST5
+      Category 1    0.138
+      Category 2    0.205
+      Category 3    0.070
+      Category 4    0.073
+      Category 5    0.019
+      Category 6    0.495
+    TEST6
+      Category 1    0.044
+      Category 2    0.125
+      Category 3    0.147
+      Category 4    0.166
+      Category 5    0.022
+      Category 6    0.495
+    TEST22
+      Category 1    0.051
+      Category 2    0.144
+      Category 3    0.126
+      Category 4    0.139
+      Category 5    0.033
+      Category 6    0.507
+    TEST23
+      Category 1    0.018
+      Category 2    0.067
+      Category 3    0.076
+      Category 4    0.195
+      Category 5    0.137
+      Category 6    0.506
+    TEST24
+      Category 1    0.039
+      Category 2    0.154
+      Category 3    0.162
+      Category 4    0.106
+      Category 5    0.031
+      Category 6    0.507
+
+
+SAMPLE STATISTICS
+
+
+     ESTIMATED SAMPLE STATISTICS FOR UK
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              COMPL$1       COMPL$2       COMPL$3       COMPL$4       ACTIV$1
+              ________      ________      ________      ________      ________
+      1        -1.411        -0.736         0.236         1.025        -0.284
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ACTIV$2       ACTIV$3       ACTIV$4       MIND$1        MIND$2
+              ________      ________      ________      ________      ________
+      1         0.361         0.608         1.410        -1.455        -0.536
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              MIND$3        MIND$4        TEST4$1       TEST4$2       TEST4$3
+              ________      ________      ________      ________      ________
+      1         0.296         1.306        -1.948        -1.032        -0.645
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST4$4       TEST4$5       TEST5$1       TEST5$2       TEST5$3
+              ________      ________      ________      ________      ________
+      1        -0.086         0.003        -1.171        -0.497        -0.261
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST5$4       TEST5$5       TEST6$1       TEST6$2       TEST6$3
+              ________      ________      ________      ________      ________
+      1        -0.043         0.003        -1.912        -1.084        -0.553
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST6$4       TEST6$5       TEST22$1      TEST22$2      TEST22$3
+              ________      ________      ________      ________      ________
+      1        -0.054         0.003        -1.502        -0.639        -0.328
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST22$4      TEST22$5      TEST23$1      TEST23$2      TEST23$3
+              ________      ________      ________      ________      ________
+      1        -0.068        -0.017        -2.319        -1.344        -0.865
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST23$4      TEST23$5      TEST24$1      TEST24$2      TEST24$3
+              ________      ________      ________      ________      ________
+      1        -0.246        -0.018        -1.961        -0.827        -0.356
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST24$4      TEST24$5
+              ________      ________
+      1        -0.087        -0.018
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              COMPL         ACTIV         MIND          TEST4         TEST5
+              ________      ________      ________      ________      ________
+ COMPL
+ ACTIV         -0.372
+ MIND          -0.394         0.307
+ TEST4          0.224        -0.132        -0.158
+ TEST5         -0.074         0.208         0.091         0.719
+ TEST6         -0.108         0.095         0.159         0.687         0.874
+ TEST22        -0.248         0.136         0.141        -1.000        -1.000
+ TEST23         0.046        -0.204        -0.050        -1.000        -1.000
+ TEST24         0.093        -0.072        -0.188        -1.000        -1.000
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              TEST6         TEST22        TEST23        TEST24
+              ________      ________      ________      ________
+ TEST22        -1.000
+ TEST23        -1.000         0.719
+ TEST24        -1.000         0.706         0.847
+
+
+     ESTIMATED SAMPLE STATISTICS FOR NL
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              COMPL$1       COMPL$2       COMPL$3       COMPL$4       ACTIV$1
+              ________      ________      ________      ________      ________
+      1        -1.327        -0.477         0.463         1.288        -0.192
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              ACTIV$2       ACTIV$3       ACTIV$4       MIND$1        MIND$2
+              ________      ________      ________      ________      ________
+      1         0.417         0.856         1.585        -1.532        -0.404
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              MIND$3        MIND$4        TEST4$1       TEST4$2       TEST4$3
+              ________      ________      ________      ________      ________
+      1         0.483         1.665        -1.690        -0.844        -0.415
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST4$4       TEST4$5       TEST5$1       TEST5$2       TEST5$3
+              ________      ________      ________      ________      ________
+      1        -0.041         0.013        -1.088        -0.403        -0.219
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST5$4       TEST5$5       TEST6$1       TEST6$2       TEST6$3
+              ________      ________      ________      ________      ________
+      1        -0.034         0.013        -1.703        -0.957        -0.478
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST6$4       TEST6$5       TEST22$1      TEST22$2      TEST22$3
+              ________      ________      ________      ________      ________
+      1        -0.044         0.012        -1.632        -0.860        -0.465
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST22$4      TEST22$5      TEST23$1      TEST23$2      TEST23$3
+              ________      ________      ________      ________      ________
+      1        -0.101        -0.017        -2.098        -1.373        -0.989
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST23$4      TEST23$5      TEST24$1      TEST24$2      TEST24$3
+              ________      ________      ________      ________      ________
+      1        -0.368        -0.016        -1.757        -0.865        -0.370
+
+
+           MEANS/INTERCEPTS/THRESHOLDS
+              TEST24$4      TEST24$5
+              ________      ________
+      1        -0.096        -0.017
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              COMPL         ACTIV         MIND          TEST4         TEST5
+              ________      ________      ________      ________      ________
+ COMPL
+ ACTIV         -0.394
+ MIND          -0.491         0.460
+ TEST4          0.248        -0.139        -0.153
+ TEST5         -0.098         0.215         0.127         0.728
+ TEST6         -0.140         0.117         0.198         0.700         0.894
+ TEST22        -0.261         0.173         0.199        -1.000        -1.000
+ TEST23         0.111        -0.247        -0.114        -1.000        -1.000
+ TEST24         0.150        -0.116        -0.215        -1.000        -1.000
+
+
+           CORRELATION MATRIX (WITH VARIANCES ON THE DIAGONAL)
+              TEST6         TEST22        TEST23        TEST24
+              ________      ________      ________      ________
+ TEST22        -1.000
+ TEST23        -1.000         0.691
+ TEST24        -1.000         0.672         0.867
+
+     GROUP 1:
+     WARNING: THE SAMPLE CORRELATION OF TEST22 AND TEST4 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 1:
+     WARNING: THE SAMPLE CORRELATION OF TEST22 AND TEST5 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 1:
+     WARNING: THE SAMPLE CORRELATION OF TEST22 AND TEST6 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 1:
+     WARNING: THE SAMPLE CORRELATION OF TEST23 AND TEST4 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 1:
+     WARNING: THE SAMPLE CORRELATION OF TEST23 AND TEST5 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 1:
+     WARNING: THE SAMPLE CORRELATION OF TEST23 AND TEST6 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 1:
+     WARNING: THE SAMPLE CORRELATION OF TEST24 AND TEST4 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 1:
+     WARNING: THE SAMPLE CORRELATION OF TEST24 AND TEST5 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 1:
+     WARNING: THE SAMPLE CORRELATION OF TEST24 AND TEST6 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 2:
+     WARNING: THE SAMPLE CORRELATION OF TEST22 AND TEST4 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 2:
+     WARNING: THE SAMPLE CORRELATION OF TEST22 AND TEST5 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 2:
+     WARNING: THE SAMPLE CORRELATION OF TEST22 AND TEST6 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 2:
+     WARNING: THE SAMPLE CORRELATION OF TEST23 AND TEST4 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 2:
+     WARNING: THE SAMPLE CORRELATION OF TEST23 AND TEST5 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 2:
+     WARNING: THE SAMPLE CORRELATION OF TEST23 AND TEST6 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 2:
+     WARNING: THE SAMPLE CORRELATION OF TEST24 AND TEST4 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 2:
+     WARNING: THE SAMPLE CORRELATION OF TEST24 AND TEST5 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     GROUP 2:
+     WARNING: THE SAMPLE CORRELATION OF TEST24 AND TEST6 IS -1.000
+     DUE TO ONE OR MORE ZERO CELLS IN THEIR BIVARIATE TABLE.
+     INFORMATION FROM THESE VARIABLES CAN BE USED TO CREATE ONE NEW VARIABLE.
+
+     THE WEIGHT MATRIX FOR GROUP UK IS NOT POSITIVE DEFINITE
+     AS IT SHOULD BE.
+     THE WEIGHT MATRIX FOR GROUP NL IS NOT POSITIVE DEFINITE
+     AS IT SHOULD BE.
+
+
+
+TECHNICAL 1 OUTPUT
+
+
+TECHNICAL 2 OUTPUT
+
+
+     Beginning Time:  14:26:07
+        Ending Time:  14:26:14
+       Elapsed Time:  00:00:07
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2006 Muthen & Muthen

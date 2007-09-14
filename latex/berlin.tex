@@ -33,7 +33,7 @@ In Figure \ref{fig:response} we show the basic response model \citep{Saris_desig
 
 \begin{figure}[htb]
 \centering
-%\includegraphics[width=.7\textwidth]{response_model}
+\includegraphics[width=.7\textwidth]{response_model}
 \caption{The response model used in the MTMM experiments.\label{fig:response}}
 \end{figure}
 
@@ -75,7 +75,7 @@ The three methods are specified by the following response scales:
 
 
 \begin{figure}[htb]\centering
-%\includegraphics[width=.7\textwidth]{mtmm}
+\includegraphics[width=.7\textwidth]{mtmm}
 \caption{\label{fig:mtmm}MTMM model illustrating the true scores and their factors of interest.}
 \end{figure}
 
@@ -134,7 +134,7 @@ T33   &  &  & .88 &  &  & .48 &  & .84  \\
 The response model discussed so far makes no mention of the fact that many of the measures we use are in fact ordinal--that is, they are ordered categories rather than measured on a continuous scale. 
 Broadly speaking, two types of measurement models have been proposed for this situation. The first assumes there is an unobserved categorical variable, and that errors arise from the conditional chances of choosing a category on the survey question given the unobserved score. Such models are often referred to as latent class models \citep{lazarsfeld_latent_1968,hagenaars_applied_2002}.
 
-The second approach deals with the case where a continuous scale or `latent response variable' is thought to underly the observed categorical item. Such models are sometimes called latent trait models. Several possible extensions are possible, but we focus on a special case described by \citet{muthen_general_1984}. This is the model we will use in our subsequent analysis of the data\footnote{It can be shown that analysing polychoric correlations in an MTMM model is a special case of the model we use \citep{muthen_latent_2002}. However, we do not use polychoric correlations because it would be  necessary to assume that the variances of the latent response variables are equal across countries. Since we try to separate categorisation errors from differences in the continuous part of the model, this is not a desirable assumption. The model we use is equivalent to a multi-dimensional two parameter graded response model in item response theory \citep{muthen_latent_2002}.}.
+The second approach deals with the case where a continuous scale or `latent response variable' is thought to underly the observed categorical item. Such models are sometimes called latent trait models. Several possible extensions are possible, but we focus on a special case described by \citet{muthen_general_1984}. This is the model we will use in our subsequent analysis of t2	ºhe data\footnote{It can be shown that analysing polychoric correlations in an MTMM model is a special case of the model we use \citep{muthen_latent_2002}. However, we do not use polychoric correlations because it would be  necessary to assume that the variances of the latent response variables are equal across countries. Since we try to separate categorisation errors from differences in the continuous part of the model, this is not a desirable assumption. The model we use is equivalent to a multi-dimensional two parameter graded response model in item response theory \citep{muthen_latent_2002}.}.
 
 Errors may arise at two stages. The first is the connection between the latent response variable and its latent trait. This part of the error model is completely analagous to factor analysis or MTMM models for continuous data: the scale is modelled as a linear combination of a latent trait, a reaction to the particular method used to measure the trait, and a random error, and interest then focuses on the connection between the trait and the scale, which we again term the `quality coefficient' (see figures \ref{fig:response} and \ref{fig:mtmm}). It should be noted that, because we are interested only in the quality coefficient and not in the separation of the reliability and validity coefficients, we do not make a distinction between the true score and the latent trait as is done in the true score model explained above. The true score and classic MTMM models are, however, equivalent \citep{coenders_testing_2000}.
 
@@ -248,8 +248,8 @@ The first experiment concerned opinions on the role of women in society (see tab
 
 We selected the two countries with the highest and the country with the lowest quality coefficients. In this experiment, the wording of the question reversed in the second method. For example, the statement `When jobs are scarce, men should have more right to a job than women' from the main questionnaire was changed to `When jobs are scarce, women should have the same right to a job as men' in the supplementary questionnaire. The countries with high quality coefficients were, in this case, Portugal and Greece. The lowest coefficients for this experiment were found in Estonia. To be able to separately study misspecifications in the categorisation part of the model, we imposed no restrictions on the covariance matrix of the latent response variables at this stage. 
 
-\begin{table}\caption{\label{card:women}The `women' experiment: questions and threshold estimates (in z-scores).}\fbox{\begin{minipage}{\textwidth}\begin{small}
-%	\input{../output/thresh_Women.tex}
+\begin{table}[bht]\caption{\label{card:women}The `women' experiment: questions and threshold estimates (in z-scores).}\fbox{\begin{minipage}{\textwidth}\begin{small}
+	\input{../output/thresh_Women.tex}
 \end{small}\end{minipage}}\end{table}
 
 In the first analysis, all thresholds were constrained to be equal across the five countries. This yields a likelihood ratio statistic of 507 on 48 degrees of freedom. The country with the highest (128) contribution to this chi-square statistic is Portugal. When we examine the expected parameter changes, it also turns out that in this country these standardised values are very large with some values close to .9 while in other countries the highest obtained and exceptional value is .6. For some reason, the equality constraint on the Portuguese thresholds appears to be a particularly gross misspecification.
@@ -274,7 +274,7 @@ For the third and last trait--the right to a job--the most striking feature of t
 
 The thresholds provide some insight into the nature of categorisation errors. However, the final quality of the measure depends also on other parameters of the categorical response model such as the quality coefficients and the error variances. Since the quality is a complex of different parameters, the discrepancy between the quality obtained in the categorical model and the quality in the continuous model is more informative on the effects of categorisation. As explained above, we operationalise this discrepancy by taking the ratio $q^2_{continuous} / q^2_{categorical} $. Table \ref{tab:women} contains the quality estimates under both models together with this categorisation factor for the three questions in the main questionnaire.
 
-\begin{table}\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on opinions about the role of men and women in society.\label{tab:women}}\begin{tabular}{lllrrr}
+\begin{table}[thb]\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on opinions about the role of men and women in society.\label{tab:women}}\begin{tabular}{lllrrr}
 \hline
  &  &  & \multicolumn{3}{c}{`Women'} \\
  &  &  & CutDown & Respnsib. & MenRight\\
@@ -303,7 +303,7 @@ Having indicated our procedure and points of interest in the results, we now dis
 
 The second experiment concerned some aspects of the respondent's job. Table \ref{card:job} again shows the threshold estimates after acceptable models for the threshold structure  had been found while leaving the covariance matrices free to vary (the test statistics for the two split-ballot groups were 2.4 with 4 $df$, $p=.66$, and 2.8 with 2 $df$, $p=.24$, respectively.).
 
-\begin{table}\caption{\label{card:job}The `job' experiment: questions and threshold estimates (in z-scores).}
+\begin{table}[htb]\caption{\label{card:job}The `job' experiment: questions and threshold estimates (in z-scores).}
 \fbox{\begin{minipage}{\textwidth}\begin{small}
 	\input{../output/thresh_job.tex}
 \end{small}\end{minipage}}\end{table}
@@ -312,7 +312,7 @@ It can be seen that in all cases, the endpoints for Slovenia are further away th
 
 Taking the estimated covariances of the latent response variables as our input, we estimated the quality in order to compare the results of this analysis with the results from the continuous analysis. This model resulted in a test statistic of 40 on 23 degrees of freedom ($p=.01$). The different estimates for the main questionnaire items are presented in table \ref{tab:job}.
 
-\begin{table}\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on certain aspects of the job of the respondent.\label{tab:job}}\begin{tabular}{lllrrr}
+\begin{table}[htb]\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on certain aspects of the job of the respondent.\label{tab:job}}\begin{tabular}{lllrrr}
 \hline
   &    & & \multicolumn{3}{c}{`Job'} \\
  &      &   & Varied & Secure & Risky\\
@@ -337,14 +337,13 @@ For the second and third question, the country with the higher quality estimates
 
 The third experiment concerned the respondent's perception of the behaviour of doctors in general. Table \ref{card:doctors} displays our estimates of the threshold parameters for the different questions.
 
-
 Table \ref{card:doctors} shows that the thresholds appear to be very similar across the two countries, except for threshold $\tau_3$ for the very first question\footnote{The test statistics for the first and second split-ballot groups were 6.3 with 7 $df$, $p=.50$, and 4.5 with 3 $df$, $p=.22$, respectively.}. Considerably more information is provided by this question in Denmark than in Estonia, since in the latter country only the first two categories are less than one standard deviation away from the mean. If we examine the distribution of this variable, this corresponds to a strong difference in skew: in Estonia 85\% of the observations fall in the first two categories, while in Denmark this percentage is a more modest, though still skewed, 72\%. Whether this is due to the thresholds themselves or to a skew in the underlying distribution, we can not say.
 
 In addition, there is a difference between the countries for threshold $\tau_1$ for the third question, `GPs treat their patients as equals'. In Denmark this extreme cutting point is more distant than in Estonia.
 
 We cannot directly deduce much about categorisation error by looking only at the thresholds. Fitting the categorical model produced some surprising results. The likelihood ratio in this case was 26 with 21 degrees of freedom ($p=.19$). Table \ref{tab:doctors} shows the results we obtained for this experiment.
 
-\begin{table}[hb]\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on perception of the behaviour of doctors.\label{tab:doctors}}\begin{tabular}{lllrrr}
+\begin{table}[hbt]\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on perception of the behaviour of doctors.\label{tab:doctors}}\begin{tabular}{lllrrr}
 \hline
 &&&\multicolumn{3}{c}{`Doctors'}\\
  &  &  & Truth & Equals & Discuss\\
@@ -367,19 +366,30 @@ In Estonia the quality using the continuous model is also estimated to be rather
 
 For the other two questions, it is worth noting that while the estimates are slightly lower in Denmark in the continuous model, these differences are reduced in the categorical model. 
 
-\begin{table}[h]\caption{\label{card:doctors}The `doctors' experiment: questions and threshold estimates (in z-scores).}
+\begin{table}[htb]\caption{\label{card:doctors}The `doctors' experiment: questions and threshold estimates (in z-scores).}
 \fbox{\begin{minipage}{\textwidth}\begin{small}
 	\input{../output/thresh_doctors.tex}
 \end{small}\end{minipage}}\end{table}
 
+
 \subsection{Experiment 4}
 
-\begin{table}\caption{The `efficacy' experiment: questions and threshold estimates (in z-scores).\label{card:efficacy}}
+The topic of the last experiment was the subjective feeling of compentence to participate in politics, also called `efficacy'. This was the only experiment we analysed from the first round of the ESS. The results of the threshold model\footnote{The test statistics for the first and second split-ballot groups for this eperiment were 3.3 with 6 $df$ ($p=.78$) and 5.0 with 6 $df$ ($p=.54$), respectively.} are presented in table \ref{card:efficacy}.
+
+\begin{table}[htb]\caption{The `efficacy' experiment: questions and threshold estimates (in z-scores).\label{card:efficacy}}
 \fbox{\begin{minipage}{\textwidth}\begin{small}
    \input{../output/thresh_efficacy.tex}
 \end{small}\end{minipage}}\end{table}
 
-\begin{table}\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on the respondent's subjective political competence (political efficacy).\label{tab:efficacy}}\begin{tabular}{lllrrr}
+For the first two questions belonging to the first trait, no relevant differences were found between the thresholds. The third questions exhibits differences in the sense that the skew of the thresholds in Switzerland and Denmark are in different directions. At the same time, the skew of the fourth question in Switzerland is in the opposite direction as for the third question. This is what might be expected given the answer scales. However, one consequence is that the continuous analysis may contain two variables that are skewed in opposite directions. It has been shown that this situation in particular causes differences between categorical and continuous analyses \citep{johnson_ordinal_1983}. 
+
+The same does not happen in Denmark though; here the fourth question more or less symmetrical thresholds. This is somewhat surprising given the thresholds of the same question using a direct question rather than an agree-disagree scale; if the scales were equally good but simply a reverse way of phrasing then one would expect also a reversal of the thresholds. The fact that this does not occur suggests that other factors play a part besides the categorisation errors, such as the quality coefficients, random errors and method variance.
+
+For the last trait, there are some substantial differences between the thresholds for the direct method, while the agree-disagree scale appears to be more similar across the countries. However, the endpoints of the scale are rather distant in both countries.
+
+The comparison between the categorical and continuous models for this experiment is shown in table \ref{tab:efficacy}.
+
+\begin{table}[htb]\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on the respondent's subjective political competence (political efficacy).\label{tab:efficacy}}\begin{tabular}{lllrrr}
 \hline
  &  &  &  & `Efficacy' & \\
 	   &  &  & Complex & Active & Mind\\
@@ -393,46 +403,55 @@ For the other two questions, it is worth noting that while the estimates are sli
 \multicolumn{2}{l}{Categorisation factor}    &  &  & \\
  &  & Switzerland & 0.79 & 0.86 & 0.81\\
  &  & Denmark & 1.23 & 1.18 & 1.25\\
-
 \hline
 \end{tabular}\end{table}
 
+A seemingly puzzling phenomenon in table \ref{tab:efficacy} is that the estimates for the first question should be so different in the categorical model\footnote{The chi-square test statistic of our final categorical model was 28 with 2 degrees of freedom ($p=.10$).} after we have seen in table \ref{card:efficacy} that for this question the differences between the thresholds are minimal. This stresses again the fact the thresholds alone cannot provide all the necessary information. It can be seen, however, that the categorisation factors and the differences between them across the two countries are very similar for all three questions. 
+
+Another consequence of this can be seen for the `active' question. Though in Switzerland and Denmark similar overall connections to the corresponding trait according to the continuous analysis were found, this similarily was apparently produced from very dissimilar categorisation errors and quality coefficients.
+
+Now that we have presented and discussed the results of the different experiments, the question remains whether there are differences between the countries with regard to the categorisation factors, and what the influence on this factor of the topic and the scale used is. The next section therefore presents the results of a meta-analysis we conducted on the categorisation factors.
+
 \subsection{A meta-analysis of the results}
 
-\begin{table}\centering\caption{A meta-analysis of the categorisation error studies. The table presents a linear regression of the categorisation factor on topic, country, scale and scale position.\label{tab:meta}}
+Using the results presented in the previous sections, we constructed a data set consisting of the categorisation factor for all questions--including those from the supplementary questionnaire not shown above--in the four different experiments for which this index was available. This yielded 78 cases in total. We also recorded the country, topic of the experiment, the type of scale used (agree-disagree, true-false or direct question) and whether the question was phrased as a negative statement or not. The categorisation factors analysed are presented as a histogram in figure \ref{fig:hist_factor}.
+
+\begin{figure}[htb]\caption{Histogram of the categorisation factor.\label{fig:hist_factor}}\centering
+\includegraphics[width=5.5cm]{hist_factor}
+\end{figure}
+
+In order to see what differences could be detected across these variables with respect to the categorisation factor while controlling for the others, we estimated a linear regression of the categorisation factors on country, topic, scale and negatively phrased question or not. An examination of the residuals suggests that there are no large deviations from the assumptions of linearity of the relationships and normality of the residuals\footnote{The largest standardised residual equals .34.}. The overall amount of variance in explained is 55\%. The estimates can be found in table \ref{tab:meta}.
+
+\begin{table}[htb]\centering\caption{A meta-analysis of the categorisation error studies. The table presents a linear regression of the categorisation factor on topic, country, scale and scale position.\label{tab:meta}}
 \begin{minipage}[ht]{.73\textwidth}
 \begin{tabular}{llrrrr}
 \hline
  &  & Estimate & S.E. & lower & upper\\
  \hline
- & (Intercept) & -0.04 & 0.22 & -0.49 & 0.40\\
+ & (Intercept) & 0.53 & 0.19 & 0.16 & 0.90 \\
 \multicolumn{2}{l}{\textit{Topic}}&  &  &  & \\
  & Doctors & (reference category) &  &  & \\
- & Efficacy & 0.14 & 0.12 & -0.11 & 0.39\\
- & Job & 0.20 & 0.19 & -0.18 & 0.57\\
- & Women & 0.45 & 0.17 & 0.11 & 0.79\\
+ & Efficacy & 0.20 & 0.09 & 0.03 & 0.37  \\
+ & Job & 0.23 & 0.19 & -0.13 & 0.58  \\
+ & Women & 0.51 & 0.13 & 0.25 & 0.78 \\
 \multicolumn{2}{l}{\textit{Country  } }&  &  &  & \\
  & Belgium & (reference category) &  &  & \\
- & Slovenia & 0.09 & 0.10 & -0.11 & 0.29\\
- & Czech Republic & 0.28 & 0.15 & -0.02 & 0.59\\
- & Switzerland & 0.31 & 0.15 & 0.01 & 0.61\\
- & Greece & 0.32 & 0.15 & 0.01 & 0.63\\
- & Denmark & 0.33 & 0.17 & -0.02 & 0.67\\
- & Estonia & 0.53 & 0.19 & 0.15 & 0.92\\
-\multicolumn{2}{l}{\textit{Scale   }}&  &  &  & \\
- & Agree-disagree & (reference category) &  &  & \\
- & Direct & 0.12 & 0.09 & -0.07 & 0.30\\
- & True-false & 0.42 & 0.14 & 0.13 & 0.70\\
+ & Slovenia & 0.09 & 0.10 & -0.11 & 0.28 \\
+ & Czech Republic & 0.28 & 0.15 & -0.02 & 0.59 \\
+ & Switzerland & 0.31 & 0.15 & 0.01 & 0.60 \\
+ & Greece & 0.32 & 0.15 & 0.01 & 0.62  \\
+ & Denmark & 0.33 & 0.17 & -0.01 & 0.67 \\
+ & Estonia & 0.53 & 0.19 & 0.15 & 0.91 \\
+\multicolumn{2}{l}{\textit{Scale   }}&  &  &  & \\ 
+ & Agree-disagree & -0.16 & 0.07 & -0.29 & -0.03 \\
+ & Direct  & (reference category) &  &  & \\
+ & True-false & 0.30 & 0.11 & 0.08 & 0.51 \\
 \multicolumn{2}{l}{\textit{Scale position}   }&  &  &  & \\
- & Negative & (reference category) &  &  & \\
- & `Usually' & 0.39 & 0.15 & 0.09 & 0.69\\
- & `Rarely' & 0.41 & 0.15 & 0.11 & 0.71\\
- & Positive & 0.48 & 0.07 & 0.34 & 0.63\\
+ & Negative & -0.50 & 0.07 & -0.62 & -0.33 \\
 \hline
 \end{tabular}
-
-Multiple R-Squared: 0.55; Adjusted R-squared: 0.44; F-test for factor sums of squares: 
-\begin{quote}Topic: $p=.16$; Country: $p=.17$; Scale: $p=.02$; Position: $p<.00001$.\end{quote}
+Multiple R-Squared: 0.55; Adjusted R-squared: 0.46; F-test for factor sums of squares: 
+Topic: $p=.15$; Country: $p=.15$; Scale: $p=.01$; Position: $p<.00001$.
 \end{minipage}
 \end{table}
 
@@ -445,7 +464,7 @@ advice based on this study
 
 future research: o.a. specific causes for differing quality such as education, age, or interviewer effects?
 
-\newpage
+\clearpage
 \bibliography{quality}
 
 \end{document}

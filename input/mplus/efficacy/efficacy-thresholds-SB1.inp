@@ -1,0 +1,116 @@
+TITLE: efficacy round 1 sb group 1
+DATA: 
+      FILE IS C:/ESS/data/efficacy.dat;
+
+VARIABLE: 
+  NAMES ARE     
+   idnum	cntrynum	dweight	
+   compl	activ	mind
+   test4	test5	test6	
+   test22	test23	test24	
+   spltadm	supqadm;
+USEVARIABLES ARE 
+   compl	activ	mind	
+   test4	test5	test6	
+   ;
+
+CATEGORICAL ARE 
+   compl	activ	mind	
+   test4	test5	test6	
+   ;
+
+ USEOBSERVATIONS ARE 
+   (dweight NE -9999 AND 
+	 cntrynum EQ 3 OR cntrynum EQ 6 );
+ 
+ WEIGHT IS dweight;
+ GROUPING IS cntrynum( 3=CH 6=DK );
+ IDVARIABLE = idnum;
+ MISSING ARE ALL(-9999);
+
+ANALYSIS: 
+ TYPE = MISSING MEANSTRUCTURE;
+ ESTIMATOR IS WLS;
+ PROCESSORS=2;
+ PARAMETERIZATION = THETA;
+
+
+MODEL: 
+     L_compl BY compl@1;
+     L_activ BY activ@1;
+     L_mind BY mind@1;
+     L_test4 BY test4@1;
+     L_test5 BY test5@1;
+     L_test6 BY test6@1; 
+
+	[test6$1 test6$2 test6$3 test6$3   ];
+	[test5$1 test5$2 test5$3 test5$4   ];
+	[test4$1 test4$2 test4$3 test4$4   ];
+	[mind$1 mind$2 mind$3 mind$4     ];
+	[activ$1 activ$2 activ$3 activ$4   ];
+	[compl$1 compl$2 compl$3 compl$4   ];
+
+
+     L_compl WITH
+        L_activ L_mind 
+        L_test4 L_test5 L_test6 ;
+     L_activ WITH
+        L_mind 
+        L_test4 L_test5 L_test6 ;
+     L_mind  WITH
+        L_test4 L_test5 L_test6  ;
+     L_test4  WITH
+        L_test5 L_test6 ;
+     L_test5 WITH 
+        L_test6  ;
+     
+     L_compl L_activ L_mind 
+     L_test4 L_test5 L_test6;
+
+     [ 
+       L_compl L_activ L_mind 
+       L_test4 L_test5 L_test6 
+     ];
+     compl@0 activ@0 mind@0 
+     test4@0 test5@0 test6@0 ;
+
+MODEL CH: 
+     [ L_compl@0 L_activ@0 L_mind@0 
+       L_test4@0 L_test5@0 L_test6@0 
+     ];
+     
+     L_compl@1 L_activ@1 L_mind@1 
+     L_test4@1 L_test5@1 L_test6@1;
+     
+     compl@0 activ@0 mind@0 
+     test4@0 test5@0 test6@0 ;
+
+     L_compl WITH
+        L_activ L_mind 
+        L_test4 L_test5 L_test6 ;
+     L_activ WITH
+        L_mind 
+        L_test4 L_test5 L_test6 ;
+     L_mind  WITH
+        L_test4 L_test5 L_test6  ;
+     L_test4  WITH
+        L_test5 L_test6 ;
+     L_test5 WITH 
+        L_test6  ;
+
+    [
+        COMPL$1
+        COMPL$4
+        ACTIV$1
+        ACTIV$4
+        MIND$1
+        MIND$2
+        TEST6$3
+    ];
+
+OUTPUT:
+      SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL TECH1 TECH2 TECH3;
+
+!PLOT:
+!   TYPE =  PLOT3 PLOT2 PLOT1;
+

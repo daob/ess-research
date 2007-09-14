@@ -1,0 +1,14 @@
+mean	country	trait	method	experiment
+ 0.633	Slovenia	1	1	1
+-0.293	Slovenia	2	1	1
+ 0.258	Slovenia	3	1	1
+-0.355	Slovenia	1	2	1
+ 0.340	Slovenia	2	2	1
+-0.327	Slovenia	3	2	1
+
+  0.545	Greece	1	1	1
+  0.181	Greece	2	1	1
+ -0.650	Greece	3	1	1
+ -0.133	Greece	1	2	1
+  0.017	Greece	2	2	1
+  0.272	Greece	3	2	1

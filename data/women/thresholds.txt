@@ -1,0 +1,53 @@
+tau	country	trait	method	experiment
+ -0.761  Slovenia	1	1	1
+  0.537  Slovenia	1	1	1
+  1.194  Slovenia	1	1	1
+  2.386  Slovenia	1	1	1
+ -0.797  Slovenia	2	1	1
+  0.994  Slovenia	2	1	1
+  1.567  Slovenia	2	1	1
+  2.270  Slovenia	2	1	1
+ -1.558  Slovenia	3	1	1
+ -0.515  Slovenia	3	1	1
+ -0.018  Slovenia	3	1	1
+  1.127  Slovenia	3	1	1
+
+ -1.898  Slovenia 	1	2	1
+ -0.367  Slovenia 	1	2	1
+  0.215  Slovenia 	1	2	1
+  1.597  Slovenia 	1	2	1
+ -1.323  Slovenia 	2	2	1
+ -0.404  Slovenia 	2	2	1
+  0.102  Slovenia 	2	2	1
+  1.545  Slovenia 	2	2	1
+ -1.151  Slovenia 	3	2	1
+  0.333  Slovenia 	3	2	1
+  0.799  Slovenia 	3	2	1
+  1.600  Slovenia 	3	2	1
+
+-0.603	Greece	1	1	1
+ 0.376	Greece	1	1	1 
+ 1.003 	Greece	1	1	1
+ 1.978 	Greece	1	1	1
+-0.437 	Greece	2	1	1
+ 0.908	Greece	2	1	1
+ 1.741	Greece	2	1	1 
+ 2.496	Greece	2	1	1 
+-1.541 	Greece	3	1	1 
+-0.545	Greece	3	1	1 
+-0.020	Greece	3	1	1 
+ 0.733 	Greece	3	1	1 
+
+-1.590 	Greece 	1	2	1
+-0.422	Greece 	1	2	1
+ 0.289	Greece 	1	2	1
+ 1.338	Greece 	1	2	1
+-1.599 	Greece 	2	2	1
+-0.488 	Greece 	2	2	1
+ 0.046 	Greece 	2	2	1
+ 1.434  Greece 	2	2	1
+-0.854  Greece 	3	2	1
+ 0.158  Greece 	3	2	1
+ 0.937 	Greece 	3	2	1
+ 2.287 	Greece 	3	2	1
+

@@ -44,7 +44,7 @@ for ( it in 1:numtraits ) {
        str <- paste( str, countries[ic] )
        for( i in 1:length(tau) ) {
          
-         str <- paste( str, "&&", sprintf(paste("%.",digits,"f"), tau[i]) )
+         str <- paste( str, "&&", sprintf(paste("%.",digits,"f",sep=""), tau[i]) )
        }
        str <- paste(str, "\\\\\n")       
   } 
