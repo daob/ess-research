@@ -1,7 +1,6 @@
-thresholds <- read.table("c:/ess/berlin/data/job/thresholds.txt", header=T)
-means <- read.table("c:/ess/berlin/data/job/means.txt", header=T)
-questions <- read.table("c:/ess/berlin/data/job/questions.txt", header=T, as.is=c(1,2,3))
-scales <- read.table("c:/ess/berlin/data/job/scales.txt", header=T, as.is=c(1,2,3))
+thresholds <- read.table("c:/ess/berlin/data/women/thresholds.txt", header=T)
+means <- read.table("c:/ess/berlin/data/women/means.txt", header=T)
+questions <- read.table("c:/ess/berlin/data/women/questions.txt", header=T, as.is=c(1,2,3))
 
 stopifnot(length(unique(means$trait)) == length(unique(thresholds$trait)))
 stopifnot(length(unique(means$method)) == length(unique(thresholds$method)))
@@ -18,7 +17,7 @@ numcategories <- 4
 digits <- 1
 str <- ""
 iquestions <- 1
-experiments <- "job"
+experiments <- "women"
 numexperiments <- 1
 
 for (ie in 1:numexperiments) {
@@ -28,7 +27,8 @@ for ( it in 1:numtraits ) {
     quest <- questions[questions$trait==traits[it] & questions$method==methods[im] , 1]
        str <- paste(str, "\n\n`", quest, "'\n\n", sep="" )       
   str <- paste(str, "\\begin{scriptsize}\\begin{tabular*}{\\textwidth}{lp{.12\\textwidth}")
-  str <- paste(str, "lp{.12\\textwidth}cp{.12\\textwidth}cp{.12\\textwidth}cp{.12\\textwidth}cp{.12\\textwidth} }&1 & $\\tau_1$ & 2 & $\\tau_2$ & 3 & $\\tau_3$ & 4 & $\\tau_4$ & 5\\\\\n")
+  str <- paste(str, "lp{.12\\textwidth}cp{.12\\textwidth}cp{.12\\textwidth}cp{.12\\textwidth}cp{.12\\textwidth} }\n")
+  str <- paste(str, "&  \\parbox{.10\\textwidth}{\\centering 1} & $\\tau_1$ &  \\parbox{.10\\textwidth}{\\centering 2} & $\\tau_2$ &  \\parbox{.10\\textwidth}{\\centering 3} & $\\tau_3$ &  \\parbox{.10\\textwidth}{\\centering 4} & $\\tau_4$ &  \\parbox{.10\\textwidth}{\\centering 5}\\\\\n")
     if(it==1 && im==1) str <-  paste(str, "&\\parbox{.12\\textwidth}{\\centering \\textit{Agree strongly}} & &\\parbox{.12\\textwidth}{\\centering \\textit{Agree}} && \\parbox{.12\\textwidth}{\\centering \\textit{Neither disagree nor agree}} && \\parbox{.12\\textwidth}{\\centering \\textit{Disagree}} && \\parbox{.12\\textwidth}{\\centering \\textit{Disagree strongly}} \\\\\n")
 
     str <- paste(str, "")
@@ -39,7 +39,7 @@ for ( it in 1:numtraits ) {
        str <- paste( str, countries[ic] )
        for( i in 1:length(tau) ) {
          
-         str <- paste( str, "&&", sprintf(paste("%.",digits,"f"), tau[i]) )
+         str <- paste( str, "&&", sprintf(paste("%.",digits,"f",sep=""), tau[i]) )
        }
        str <- paste(str, "\\\\\n")       
   } 

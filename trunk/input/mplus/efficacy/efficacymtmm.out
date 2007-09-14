@@ -1,0 +1,1998 @@
+1
+  EQS, A STRUCTURAL EQUATION PROGRAM          MULTIVARIATE SOFTWARE, INC.
+  COPYRIGHT BY P.M. BENTLER                   VERSION 6.1 (C) 1985 - 2006 (B91).
+
+
+    PROGRAM CONTROL INFORMATION
+
+     1  /TITLE                                                                          
+     2     CH: docs SB1 MTMM                                                            
+     3  /SPECIFICATIONS                                                                 
+     4     VARIABLES=6; CASES=723;                                                      
+     5     DATA_FILE = 'C:\ESS\berlin\data\efficacy_SB1_CH.cov';                        
+     6     METHODS=ML; MATRIX=COV; GROUPS=4;                                            
+     7  /EQUATIONS                                                                      
+     8     V1 = F1 + F4 + E1;                                                           
+     9     V2 = F2 + F4 + E2;                                                           
+    10     V3 = F3 + F4 + E3;                                                           
+    11                                                                                  
+    12     V4 = *F1 + F5 + E4;                                                          
+    13     V5 = *F2 + F5 + E5;                                                          
+    14     V6 = *F3 + F5 + E6;                                                          
+    15  /VARIANCES                                                                      
+    16     E1 TO E6 = .5*;                                                              
+    17     F1 TO F4 = .5*;                                                              
+    18  /COVARIANCES                                                                    
+    19     F1 TO F3 = .5*;                                                              
+    20  	E6,E1=*;                                                                       
+    21  	E5,E4=*;                                                                       
+    22  /END                                                                            
+
+
+       22 CUMULATED RECORDS OF INPUT MODEL FILE WERE READ (GROUP   1)
+
+ 07-Sep-07      PAGE :  2  EQS     Licensee:                               
+  TITLE:                                                               
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+
+
+    PROGRAM CONTROL INFORMATION
+
+    23                                                                                  
+    24                                                                                  
+    25  /TITLE                                                                          
+    26     CH: docs SB2 MTMM                                                            
+    27  /SPECIFICATIONS                                                                 
+    28     VARIABLES=6; CASES=844;                                                      
+    29     DATA_FILE = 'C:\ESS\berlin\data\efficacy_SB2_CH.cov';                        
+    30     METHODS=ML; MATRIX=COV;                                                      
+    31  /EQUATIONS                                                                      
+    32     V1 = F1 + F4 + E1;                                                           
+    33     V2 = F2 + F4 + E2;                                                           
+    34     V3 = F3 + *F4 + E3;                                                          
+    35                                                                                  
+    36     V4 = *F1 + *F5 + E4;                                                         
+    37     V5 = *F2 + F5 + E5;                                                          
+    38     V6 = *F3 + F5 + E6;                                                          
+    39  /VARIANCES                                                                      
+    40     E1 TO E6 = *;                                                                
+    41     F1 TO F4 = *;                                                                
+    42  /COVARIANCES                                                                    
+    43     F1 TO F3 = *;                                                                
+    44  	E6,E2=*;                                                                       
+    45  /END                                                                            
+
+
+       45 CUMULATED RECORDS OF INPUT MODEL FILE WERE READ (GROUP   2)
+
+ 07-Sep-07      PAGE :  3  EQS     Licensee:                               
+  TITLE:                                                               
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+
+
+    PROGRAM CONTROL INFORMATION
+
+    46                                                                                  
+    47                                                                                  
+    48  /TITLE                                                                          
+    49     DK: docs SB1 MTMM                                                            
+    50  /SPECIFICATIONS                                                                 
+    51     VARIABLES=6; CASES=749;                                                      
+    52     DATA_FILE = 'C:\ESS\berlin\data\efficacy_SB1_DK.cov';                        
+    53     METHODS=ML; MATRIX=COV;                                                      
+    54  /EQUATIONS                                                                      
+    55     V1 = F1 + F4 + E1;                                                           
+    56     V2 = F2 + F4 + E2;                                                           
+    57     V3 = F3 + F4 + E3;                                                           
+    58                                                                                  
+    59     V4 = *F1 + F5 + E4;                                                          
+    60     V5 = *F2 + F5 + E5;                                                          
+    61     V6 = *F3 + F5 + E6;                                                          
+    62  /VARIANCES                                                                      
+    63     E1 TO E6 = *;                                                                
+    64     F1 TO F4 = *;                                                                
+    65  /COVARIANCES                                                                    
+    66     F1 TO F3 = *;                                                                
+    67  	E5,E3=*;                                                                       
+    68  /END                                                                            
+
+
+       68 CUMULATED RECORDS OF INPUT MODEL FILE WERE READ (GROUP   3)
+
+ 07-Sep-07      PAGE :  4  EQS     Licensee:                               
+  TITLE:                                                               
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+
+
+    PROGRAM CONTROL INFORMATION
+
+    69                                                                                  
+    70  /TITLE                                                                          
+    71     DK: docs SB2 MTMM                                                            
+    72  /SPECIFICATIONS                                                                 
+    73     VARIABLES=6; CASES=880;                                                      
+    74     DATA_FILE = 'C:\ESS\berlin\data\efficacy_SB2_DK.cov';                        
+    75     METHODS=ML; MATRIX=COV;                                                      
+    76  /EQUATIONS                                                                      
+    77     V1 = F1 + F4 + E1;                                                           
+    78     V2 = F2 + F4 + E2;                                                           
+    79     V3 = F3 + F4 + E3;                                                           
+    80                                                                                  
+    81     V4 = *F1 + *F5 + E4;                                                         
+    82     V5 = *F2 + F5 + E5;                                                          
+    83     V6 = *F3 + F5 + E6;                                                          
+    84  /VARIANCES                                                                      
+    85     E1 TO E6 = *;                                                                
+    86     F1 TO F4 = *;                                                                
+    87  /COVARIANCES                                                                    
+    88     F1 TO F3 = *;                                                                
+    89  	E6,E5=*;                                                                       
+    90  /CONSTRAINTS                                                                    
+    91                                                                                  
+    92                                                                                  
+    93  ! Phi equals phi in the following group                                         
+    94     (1,F4,F4)= (2,F4,F4);                                                        
+    95     (1,F1,F1)= (2,F1,F1);                                                        
+    96     (1,F2,F2)= (2,F2,F2);                                                        
+    97     (1,F1,F3)= (2,F1,F3);                                                        
+    98     (1,F1,F2)= (2,F1,F2);                                                        
+    99     (1,F1,F3)= (2,F1,F3);                                                        
+   100     (1,F2,F3)= (2,F2,F3);                                                        
+   101                                                                                  
+   102     (3,F4,F4)= (4,F4,F4);                                                        
+   103     (3,F1,F1)= (4,F1,F1);                                                        
+   104     (3,F2,F2)= (4,F2,F2);                                                        
+   105     (3,F3,F3)= (4,F3,F3);                                                        
+   106     (3,F1,F2)= (4,F1,F2);                                                        
+   107     (3,F1,F3)= (4,F1,F3);                                                        
+   108     (3,F2,F3)= (4,F2,F3);                                                        
+   109                                                                                  
+   110  /TECHNICAL                                                                      
+   111     ITR=150;   	                                                                 
+   112                                                                                  
+   113  /LMTEST                                                                         
+   114     SET =PEE, PFF, PFV;                                                          
+   115                                                                                  
+   116  /END                                                                            
+
+
+      116 CUMULATED RECORDS OF INPUT MODEL FILE WERE READ (GROUP   4)
+
+ 07-Sep-07      PAGE :  5  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  COVARIANCE  MATRIX TO BE ANALYZED:   6 VARIABLES (SELECTED FROM   6 VARIABLES)
+  BASED ON   723 CASES.
+
+
+                      V1         V2         V3         V4         V5   
+        V1           1.000
+        V2           -.369      1.000
+        V3           -.463       .420      1.000
+        V4            .570      -.362      -.462      1.000
+        V5           -.318       .828       .362      -.393      1.000
+        V6           -.358       .437       .695      -.493       .429
+
+
+                      V6   
+        V6           1.000
+
+
+
+  BENTLER-WEEKS STRUCTURAL REPRESENTATION:
+
+        NUMBER OF DEPENDENT VARIABLES =  6
+            DEPENDENT V'S :     1    2    3    4    5    6
+
+        NUMBER OF INDEPENDENT VARIABLES = 11
+            INDEPENDENT F'S :     1    2    3    4    5
+            INDEPENDENT E'S :     1    2    3    4    5    6
+
+        NUMBER OF FREE PARAMETERS =  19
+        NUMBER OF FIXED NONZERO PARAMETERS =  15
+
+ 07-Sep-07      PAGE :  6  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  COVARIANCE  MATRIX TO BE ANALYZED:   6 VARIABLES (SELECTED FROM   6 VARIABLES)
+  BASED ON   844 CASES.
+
+
+                      V1         V2         V3         V4         V5   
+        V1           1.000
+        V2           -.368      1.000
+        V3           -.464       .420      1.000
+        V4           -.635       .352       .461      1.000
+        V5            .310      -.793      -.342      -.336      1.000
+        V6            .558      -.423      -.585      -.534       .463
+
+
+                      V6   
+        V6           1.000
+
+
+
+  BENTLER-WEEKS STRUCTURAL REPRESENTATION:
+
+        NUMBER OF DEPENDENT VARIABLES =  6
+            DEPENDENT V'S :     1    2    3    4    5    6
+
+        NUMBER OF INDEPENDENT VARIABLES = 11
+            INDEPENDENT F'S :     1    2    3    4    5
+            INDEPENDENT E'S :     1    2    3    4    5    6
+
+        NUMBER OF FREE PARAMETERS =  20
+        NUMBER OF FIXED NONZERO PARAMETERS =  13
+
+ 07-Sep-07      PAGE :  7  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  COVARIANCE  MATRIX TO BE ANALYZED:   6 VARIABLES (SELECTED FROM   6 VARIABLES)
+  BASED ON   749 CASES.
+
+
+                      V1         V2         V3         V4         V5   
+        V1           1.134
+        V2           -.610      1.726
+        V3           -.593       .682      1.202
+        V4            .657      -.551      -.521       .874
+        V5           -.437       .893       .469      -.442       .851
+        V6           -.615       .745       .827      -.583       .578
+
+
+                      V6   
+        V6           1.250
+
+
+
+  BENTLER-WEEKS STRUCTURAL REPRESENTATION:
+
+        NUMBER OF DEPENDENT VARIABLES =  6
+            DEPENDENT V'S :     1    2    3    4    5    6
+
+        NUMBER OF INDEPENDENT VARIABLES = 11
+            INDEPENDENT F'S :     1    2    3    4    5
+            INDEPENDENT E'S :     1    2    3    4    5    6
+
+        NUMBER OF FREE PARAMETERS =  18
+        NUMBER OF FIXED NONZERO PARAMETERS =  15
+
+ 07-Sep-07      PAGE :  8  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  COVARIANCE  MATRIX TO BE ANALYZED:   6 VARIABLES (SELECTED FROM   6 VARIABLES)
+  BASED ON   880 CASES.
+
+
+                      V1         V2         V3         V4         V5   
+        V1           1.060
+        V2           -.591      1.734
+        V3           -.569       .677      1.186
+        V4           -.810       .672       .608      1.162
+        V5            .461     -1.040      -.509      -.569       .978
+        V6            .629      -.803      -.867      -.726       .725
+
+
+                      V6   
+        V6           1.283
+
+
+
+  BENTLER-WEEKS STRUCTURAL REPRESENTATION:
+
+        NUMBER OF DEPENDENT VARIABLES =  6
+            DEPENDENT V'S :     1    2    3    4    5    6
+
+        NUMBER OF INDEPENDENT VARIABLES = 11
+            INDEPENDENT F'S :     1    2    3    4    5
+            INDEPENDENT E'S :     1    2    3    4    5    6
+
+        NUMBER OF FREE PARAMETERS =  19
+        NUMBER OF FIXED NONZERO PARAMETERS =  14
+
+ *** WARNING MESSAGES ABOVE, IF ANY, REFER TO THE MODEL PROVIDED.
+     CALCULATIONS FOR INDEPENDENCE MODEL NOW BEGIN.
+
+ *** WARNING MESSAGES ABOVE, IF ANY, REFER TO INDEPENDENCE MODEL.
+     CALCULATIONS FOR USER'S MODEL NOW BEGIN.
+
+
+  3RD STAGE OF COMPUTATION REQUIRED     17765 WORDS OF MEMORY.
+  PROGRAM ALLOCATED   2000000 WORDS
+
+  DETERMINANT OF INPUT MATRIX IN GROUP  1 IS    .52124D-01
+
+  DETERMINANT OF INPUT MATRIX IN GROUP  2 IS    .61035D-01
+
+  DETERMINANT OF INPUT MATRIX IN GROUP  3 IS    .10799D+00
+
+  DETERMINANT OF INPUT MATRIX IN GROUP  4 IS    .84053D-01
+
+ IN ITERATION #  2, MATRIX W_CFUNCT MAY NOT BE POSITIVE DEFINITE.
+
+ IN ITERATION #  3, MATRIX W_CFUNCT MAY NOT BE POSITIVE DEFINITE.
+
+ 07-Sep-07      PAGE :  9  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  RELIABILITY COEFFICIENTS
+  ------------------------
+  CRONBACH'S ALPHA                    =      .178
+  RELIABILITY COEFFICIENT RHO         =      .749
+
+  STANDARDIZED FACTOR LOADINGS FOR THE FACTOR THAT GENERATES
+  MAXIMAL RELIABILITY FOR THE UNIT-WEIGHT COMPOSITE
+  BASED ON THE MODEL (RHO):
+     V1        V2        V3        V4        V5        V6   
+     -.122      .813      .481     -.195      .708      .651
+
+
+  PARAMETER ESTIMATES APPEAR IN ORDER,
+  NO SPECIAL PROBLEMS WERE ENCOUNTERED DURING OPTIMIZATION.
+
+
+
+  RESIDUAL COVARIANCE MATRIX  (S-SIGMA) :       
+
+
+                      V1         V2         V3         V4         V5   
+        V1           -.044
+        V2           -.001       .008
+        V3            .021       .019       .005
+        V4           -.040      -.010       .000      -.015
+        V5            .011       .006       .014      -.005       .006
+        V6            .013      -.003       .008      -.016       .005
+
+
+                      V6   
+        V6            .009
+
+                                  AVERAGE ABSOLUTE RESIDUAL =          .0123
+                     AVERAGE OFF-DIAGONAL ABSOLUTE RESIDUAL =          .0115
+
+
+
+  STANDARDIZED RESIDUAL MATRIX:                 
+
+
+                      V1         V2         V3         V4         V5   
+        V1           -.044
+        V2           -.001       .008
+        V3            .021       .019       .005
+        V4           -.040      -.010       .000      -.015
+        V5            .011       .006       .014      -.005       .006
+        V6            .013      -.003       .008      -.016       .005
+
+
+                      V6   
+        V6            .009
+
+                     AVERAGE ABSOLUTE STANDARDIZED RESIDUAL =          .0123
+        AVERAGE OFF-DIAGONAL ABSOLUTE STANDARDIZED RESIDUAL =          .0115
+
+ 07-Sep-07      PAGE : 10  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  LARGEST STANDARDIZED RESIDUALS:
+
+      NO.    PARAMETER   ESTIMATE      NO.    PARAMETER   ESTIMATE
+      ---    ---------   --------      ---    ---------   --------
+       1     V1,  V1        -.044      11     V6,  V6         .009
+       2     V4,  V1        -.040      12     V2,  V2         .008
+       3     V3,  V1         .021      13     V6,  V3         .008
+       4     V3,  V2         .019      14     V5,  V2         .006
+       5     V6,  V4        -.016      15     V5,  V5         .006
+       6     V4,  V4        -.015      16     V5,  V4        -.005
+       7     V5,  V3         .014      17     V3,  V3         .005
+       8     V6,  V1         .013      18     V6,  V5         .005
+       9     V5,  V1         .011      19     V6,  V2        -.003
+      10     V4,  V2        -.010      20     V2,  V1        -.001
+
+
+
+  DISTRIBUTION OF STANDARDIZED RESIDUALS
+
+
+
+     ----------------------------------------                     
+     !                                      !                     
+   20-                                      -                     
+     !                                      !                     
+     !                                      !                     
+     !                                      !                     
+     !                                      !            RANGE      FREQ PERCENT
+   15-                                      -                     
+     !                                      !    1   -0.5  -  --       0    .00%
+     !                                      !    2   -0.4  -  -0.5     0    .00%
+     !                    *                 !    3   -0.3  -  -0.4     0    .00%
+     !                    *                 !    4   -0.2  -  -0.3     0    .00%
+   10-                    *                 -    5   -0.1  -  -0.2     0    .00%
+     !                 *  *                 !    6    0.0  -  -0.1     9  42.86%
+     !                 *  *                 !    7    0.1  -   0.0    12  57.14%
+     !                 *  *                 !    8    0.2  -   0.1     0    .00%
+     !                 *  *                 !    9    0.3  -   0.2     0    .00%
+    5-                 *  *                 -    A    0.4  -   0.3     0    .00%
+     !                 *  *                 !    B    0.5  -   0.4     0    .00%
+     !                 *  *                 !    C     ++  -   0.5     0    .00%
+     !                 *  *                 !    -------------------------------
+     !                 *  *                 !            TOTAL        21 100.00%
+     ----------------------------------------                     
+        1  2  3  4  5  6  7  8  9  A  B  C    EACH "*" REPRESENTS    1 RESIDUALS
+
+ 07-Sep-07      PAGE : 11  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  MEASUREMENT EQUATIONS WITH STANDARD ERRORS AND TEST STATISTICS
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+
+
+    V1   =V1  =    1.000 F1    +  1.000 F4    +  1.000 E1  
+                                                       
+                                                       
+
+    V2   =V2  =    1.000 F2    +  1.000 F4    +  1.000 E2  
+                                                       
+                                                       
+
+    V3   =V3  =    1.000 F3    +  1.000 F4    +  1.000 E3  
+                                                       
+                                                       
+
+    V4   =V4  =     .944*F1    +  1.000 F5    +  1.000 E4  
+                    .056                               
+                  16.736@                              
+
+    V5   =V5  =     .881*F2    +  1.000 F5    +  1.000 E5  
+                    .040                               
+                  22.018@                              
+
+    V6   =V6  =    1.113*F3    +  1.000 F5    +  1.000 E6  
+                    .057                               
+                  19.370@                              
+
+
+ 07-Sep-07      PAGE : 12  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  VARIANCES OF INDEPENDENT VARIABLES
+  ----------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  V                                F
+                 ---                              ---
+                                I F1  -   F1                .646*I              
+                                I                           .042 I              
+                                I                         15.406@I              
+                                I                                I              
+                                I F2  -   F2                .933*I              
+                                I                           .048 I              
+                                I                         19.268@I              
+                                I                                I              
+                                I F3  -   F3                .617*I              
+                                I                           .045 I              
+                                I                         13.662@I              
+                                I                                I              
+                                I F4  -   F4                .005*I              
+                                I                           .009 I              
+                                I                           .580 I              
+                                I                                I              
+                                I F5  -   F5                .036*I              
+                                I                           .014 I              
+                                I                          2.673@I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 13  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  VARIANCES OF INDEPENDENT VARIABLES
+  ----------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  E                                D
+                 ---                              ---
+ E1  -   V1                .392*I                                I              
+                           .046 I                                I              
+                          8.541@I                                I              
+                                I                                I              
+ E2  -   V2                .053*I                                I              
+                           .039 I                                I              
+                          1.375 I                                I              
+                                I                                I              
+ E3  -   V3                .372*I                                I              
+                           .033 I                                I              
+                         11.189@I                                I              
+                                I                                I              
+ E4  -   V4                .403*I                                I              
+                           .044 I                                I              
+                          9.169@I                                I              
+                                I                                I              
+ E5  -   V5                .234*I                                I              
+                           .030 I                                I              
+                          7.796@I                                I              
+                                I                                I              
+ E6  -   V6                .190*I                                I              
+                           .042 I                                I              
+                          4.562@I                                I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 14  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  COVARIANCES AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  V                                F
+                 ---                              ---
+                                I F2  -   F2               -.373*I              
+                                I F1  -   F1                .027 I              
+                                I                        -13.862@I              
+                                I                                I              
+                                I F3  -   F3               -.489*I              
+                                I F1  -   F1                .028 I              
+                                I                        -17.191@I              
+                                I                                I              
+                                I F3  -   F3                .395*I              
+                                I F2  -   F2                .028 I              
+                                I                         14.292@I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 15  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  COVARIANCES AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  E                                D
+                 ---                              ---
+ E6  -   V6                .173*I                                I              
+ E1  -   V1                .029 I                                I              
+                          5.970@I                                I              
+                                I                                I              
+ E5  -   V5               -.114*I                                I              
+ E4  -   V4                .024 I                                I              
+                         -4.822@I                                I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 16  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  STANDARDIZED SOLUTION:                                              R-SQUARED
+
+
+
+    V1   =V1  =   .787 F1    + .072 F4    + .613 E1                        .624 
+    V2   =V2  =   .970 F2    + .074 F4    + .232 E2                        .946 
+    V3   =V3  =   .788 F3    + .074 F4    + .611 E3                        .626 
+    V4   =V4  =   .753*F1    + .190 F5    + .630 E4                        .603 
+    V5   =V5  =   .853*F2    + .192 F5    + .485 E5                        .765 
+    V6   =V6  =   .878*F3    + .192 F5    + .438 E6                        .809 
+
+ 07-Sep-07      PAGE : 17  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  CORRELATIONS AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+
+                  V                                F
+                 ---                              ---
+                                I F2  -   F2               -.481*I              
+                                I F1  -   F1                     I              
+                                I                                I              
+                                I F3  -   F3               -.774*I              
+                                I F1  -   F1                     I              
+                                I                                I              
+                                I F3  -   F3                .521*I              
+                                I F2  -   F2                     I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 18  EQS     Licensee:                               
+  TITLE:      CH: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  1
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  CORRELATIONS AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+
+                  E                                D
+                 ---                              ---
+ E6  -   V6                .635*I                                I              
+ E1  -   V1                     I                                I              
+                                I                                I              
+ E5  -   V5               -.370*I                                I              
+ E4  -   V4                     I                                I              
+                                I                                I              
+
+
+
+
+
+
+
+
+ -------------------------------------------------------------------------------
+                           E N D    O F    M E T H O D
+ -------------------------------------------------------------------------------
+
+ 07-Sep-07      PAGE : 19  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  RELIABILITY COEFFICIENTS
+  ------------------------
+  CRONBACH'S ALPHA                    =    -2.121
+  RELIABILITY COEFFICIENT RHO         =      .266
+
+  STANDARDIZED FACTOR LOADINGS FOR THE FACTOR THAT GENERATES
+  MAXIMAL RELIABILITY FOR THE UNIT-WEIGHT COMPOSITE
+  BASED ON THE MODEL (RHO):
+     V1        V2        V3        V4        V5        V6   
+      .094      .160      .261     -.101      .117      .245
+
+
+  PARAMETER ESTIMATES APPEAR IN ORDER,
+  NO SPECIAL PROBLEMS WERE ENCOUNTERED DURING OPTIMIZATION.
+
+
+
+  RESIDUAL COVARIANCE MATRIX  (S-SIGMA) :       
+
+
+                      V1         V2         V3         V4         V5   
+        V1            .031
+        V2            .000      -.007
+        V3           -.005      -.005      -.006
+        V4           -.024      -.001      -.001       .010
+        V5           -.009       .005      -.004      -.005      -.003
+        V6            .020       .003       .000       .004      -.001
+
+
+                      V6   
+        V6            .002
+
+                                  AVERAGE ABSOLUTE RESIDUAL =          .0070
+                     AVERAGE OFF-DIAGONAL ABSOLUTE RESIDUAL =          .0059
+
+
+
+  STANDARDIZED RESIDUAL MATRIX:                 
+
+
+                      V1         V2         V3         V4         V5   
+        V1            .031
+        V2            .000      -.007
+        V3           -.005      -.005      -.006
+        V4           -.024      -.001      -.001       .010
+        V5           -.009       .005      -.004      -.005      -.003
+        V6            .020       .003       .000       .004      -.001
+
+
+                      V6   
+        V6            .002
+
+                     AVERAGE ABSOLUTE STANDARDIZED RESIDUAL =          .0070
+        AVERAGE OFF-DIAGONAL ABSOLUTE STANDARDIZED RESIDUAL =          .0059
+
+ 07-Sep-07      PAGE : 20  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  LARGEST STANDARDIZED RESIDUALS:
+
+      NO.    PARAMETER   ESTIMATE      NO.    PARAMETER   ESTIMATE
+      ---    ---------   --------      ---    ---------   --------
+       1     V1,  V1         .031      11     V5,  V2         .005
+       2     V4,  V1        -.024      12     V6,  V4         .004
+       3     V6,  V1         .020      13     V5,  V3        -.004
+       4     V4,  V4         .010      14     V5,  V5        -.003
+       5     V5,  V1        -.009      15     V6,  V2         .003
+       6     V2,  V2        -.007      16     V6,  V6         .002
+       7     V3,  V3        -.006      17     V4,  V3        -.001
+       8     V3,  V2        -.005      18     V6,  V5        -.001
+       9     V5,  V4        -.005      19     V4,  V2        -.001
+      10     V3,  V1        -.005      20     V6,  V3         .000
+
+
+
+  DISTRIBUTION OF STANDARDIZED RESIDUALS
+
+
+
+     ----------------------------------------                     
+     !                                      !                     
+   20-                                      -                     
+     !                                      !                     
+     !                                      !                     
+     !                                      !                     
+     !                                      !            RANGE      FREQ PERCENT
+   15-                                      -                     
+     !                                      !    1   -0.5  -  --       0    .00%
+     !                 *                    !    2   -0.4  -  -0.5     0    .00%
+     !                 *                    !    3   -0.3  -  -0.4     0    .00%
+     !                 *                    !    4   -0.2  -  -0.3     0    .00%
+   10-                 *                    -    5   -0.1  -  -0.2     0    .00%
+     !                 *                    !    6    0.0  -  -0.1    13  61.90%
+     !                 *  *                 !    7    0.1  -   0.0     8  38.10%
+     !                 *  *                 !    8    0.2  -   0.1     0    .00%
+     !                 *  *                 !    9    0.3  -   0.2     0    .00%
+    5-                 *  *                 -    A    0.4  -   0.3     0    .00%
+     !                 *  *                 !    B    0.5  -   0.4     0    .00%
+     !                 *  *                 !    C     ++  -   0.5     0    .00%
+     !                 *  *                 !    -------------------------------
+     !                 *  *                 !            TOTAL        21 100.00%
+     ----------------------------------------                     
+        1  2  3  4  5  6  7  8  9  A  B  C    EACH "*" REPRESENTS    1 RESIDUALS
+
+ 07-Sep-07      PAGE : 21  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  MEASUREMENT EQUATIONS WITH STANDARD ERRORS AND TEST STATISTICS
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+
+
+    V1   =V1  =    1.000 F1    +  1.000 F4    +  1.000 E1  
+                                                       
+                                                       
+
+    V2   =V2  =    1.000 F2    +  1.000 F4    +  1.000 E2  
+                                                       
+                                                       
+
+    V3   =V3  =    1.000 F3    +  5.534*F4    +  1.000 E3  
+                                  9.799                
+                                   .565                
+
+    V4   =V4  =    -.945*F1    -   .317*F5    +  1.000 E4  
+                    .048           .171                
+                 -19.644@        -1.859                
+
+    V5   =V5  =    -.855*F2    +  1.000 F5    +  1.000 E5  
+                    .043                               
+                 -19.781@                              
+
+    V6   =V6  =   -1.101*F3    +  1.000 F5    +  1.000 E6  
+                    .057                               
+                 -19.201@                              
+
+
+ 07-Sep-07      PAGE : 22  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  VARIANCES OF INDEPENDENT VARIABLES
+  ----------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  V                                F
+                 ---                              ---
+                                I F1  -   F1                .646*I              
+                                I                           .042 I              
+                                I                         15.406@I              
+                                I                                I              
+                                I F2  -   F2                .933*I              
+                                I                           .048 I              
+                                I                         19.268@I              
+                                I                                I              
+                                I F3  -   F3                .531*I              
+                                I                           .040 I              
+                                I                         13.238@I              
+                                I                                I              
+                                I F4  -   F4                .005*I              
+                                I                           .009 I              
+                                I                           .580 I              
+                                I                                I              
+                                I F5  -   F5                .092*I              
+                                I                           .030 I              
+                                I                          3.040@I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 23  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  VARIANCES OF INDEPENDENT VARIABLES
+  ----------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  E                                D
+                 ---                              ---
+ E1  -   V1                .317*I                                I              
+                           .036 I                                I              
+                          8.893@I                                I              
+                                I                                I              
+ E2  -   V2                .069*I                                I              
+                           .045 I                                I              
+                          1.532 I                                I              
+                                I                                I              
+ E3  -   V3                .308*I                                I              
+                           .326 I                                I              
+                           .944 I                                I              
+                                I                                I              
+ E4  -   V4                .404*I                                I              
+                           .030 I                                I              
+                         13.235@I                                I              
+                                I                                I              
+ E5  -   V5                .229*I                                I              
+                           .040 I                                I              
+                          5.769@I                                I              
+                                I                                I              
+ E6  -   V6                .261*I                                I              
+                           .033 I                                I              
+                          7.937@I                                I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 24  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  COVARIANCES AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  V                                F
+                 ---                              ---
+                                I F2  -   F2               -.373*I              
+                                I F1  -   F1                .027 I              
+                                I                        -13.862@I              
+                                I                                I              
+                                I F3  -   F3               -.489*I              
+                                I F1  -   F1                .028 I              
+                                I                        -17.191@I              
+                                I                                I              
+                                I F3  -   F3                .395*I              
+                                I F2  -   F2                .028 I              
+                                I                         14.292@I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 25  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  COVARIANCES AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  E                                D
+                 ---                              ---
+ E6  -   V6                .009*I                                I              
+ E2  -   V2                .032 I                                I              
+                           .292 I                                I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 26  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  STANDARDIZED SOLUTION:                                              R-SQUARED
+
+
+
+    V1   =V1  =    .817 F1    +  .075 F4    +  .572 E1                     .673 
+    V2   =V2  =    .963 F2    +  .073 F4    +  .261 E2                     .932 
+    V3   =V3  =    .727 F3    +  .407*F4    +  .553 E3                     .694 
+    V4   =V4  =   -.764*F1    -  .097*F5    +  .638 E4                     .592 
+    V5   =V5  =   -.825*F2    +  .303 F5    +  .478 E5                     .772 
+    V6   =V6  =   -.804*F3    +  .303 F5    +  .512 E6                     .738 
+
+ 07-Sep-07      PAGE : 27  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  CORRELATIONS AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+
+                  V                                F
+                 ---                              ---
+                                I F2  -   F2               -.481*I              
+                                I F1  -   F1                     I              
+                                I                                I              
+                                I F3  -   F3               -.834*I              
+                                I F1  -   F1                     I              
+                                I                                I              
+                                I F3  -   F3                .561*I              
+                                I F2  -   F2                     I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 28  EQS     Licensee:                               
+  TITLE:      CH: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  2
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  CORRELATIONS AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+
+                  E                                D
+                 ---                              ---
+ E6  -   V6                .070*I                                I              
+ E2  -   V2                     I                                I              
+                                I                                I              
+
+
+
+
+
+
+
+
+ -------------------------------------------------------------------------------
+                           E N D    O F    M E T H O D
+ -------------------------------------------------------------------------------
+
+ 07-Sep-07      PAGE : 29  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  RELIABILITY COEFFICIENTS
+  ------------------------
+  CRONBACH'S ALPHA                    =      .149
+  RELIABILITY COEFFICIENT RHO         =      .754
+
+  STANDARDIZED FACTOR LOADINGS FOR THE FACTOR THAT GENERATES
+  MAXIMAL RELIABILITY FOR THE UNIT-WEIGHT COMPOSITE
+  BASED ON THE MODEL (RHO):
+     V1        V2        V3        V4        V5        V6   
+     -.311      .739      .608     -.330      .770      .674
+
+
+  PARAMETER        CONDITION CODE
+    F4,F4          CONSTRAINED AT LOWER BOUND
+    F5,F5          CONSTRAINED AT LOWER BOUND
+
+ 07-Sep-07      PAGE : 30  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+    F4,F4          VARIANCE OF PARAMETER ESTIMATE IS SET TO ZERO.
+    F5,F5          VARIANCE OF PARAMETER ESTIMATE IS SET TO ZERO.
+
+
+
+  RESIDUAL COVARIANCE MATRIX  (S-SIGMA) :       
+
+
+                      V1         V2         V3         V4         V5   
+        V1           -.016
+        V2           -.005      -.085
+        V3           -.034      -.003      -.004
+        V4           -.013       .009      -.004       .000
+        V5            .012      -.048       .013      -.027      -.016
+        V6           -.004      -.004      -.008      -.018       .023
+
+
+                      V6   
+        V6            .005
+
+                                  AVERAGE ABSOLUTE RESIDUAL =          .0165
+                     AVERAGE OFF-DIAGONAL ABSOLUTE RESIDUAL =          .0148
+
+
+
+  STANDARDIZED RESIDUAL MATRIX:                 
+
+
+                      V1         V2         V3         V4         V5   
+        V1           -.014
+        V2           -.003      -.049
+        V3           -.029      -.002      -.003
+        V4           -.013       .007      -.004      -.001
+        V5            .012      -.039       .012      -.031      -.019
+        V6           -.003      -.002      -.006      -.017       .022
+
+
+                      V6   
+        V6            .004
+
+                     AVERAGE ABSOLUTE STANDARDIZED RESIDUAL =          .0140
+        AVERAGE OFF-DIAGONAL ABSOLUTE STANDARDIZED RESIDUAL =          .0136
+
+ 07-Sep-07      PAGE : 31  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  LARGEST STANDARDIZED RESIDUALS:
+
+      NO.    PARAMETER   ESTIMATE      NO.    PARAMETER   ESTIMATE
+      ---    ---------   --------      ---    ---------   --------
+       1     V2,  V2        -.049      11     V5,  V1         .012
+       2     V5,  V2        -.039      12     V4,  V2         .007
+       3     V5,  V4        -.031      13     V6,  V3        -.006
+       4     V3,  V1        -.029      14     V6,  V6         .004
+       5     V6,  V5         .022      15     V4,  V3        -.004
+       6     V5,  V5        -.019      16     V6,  V1        -.003
+       7     V6,  V4        -.017      17     V3,  V3        -.003
+       8     V1,  V1        -.014      18     V2,  V1        -.003
+       9     V4,  V1        -.013      19     V6,  V2        -.002
+      10     V5,  V3         .012      20     V3,  V2        -.002
+
+
+
+  DISTRIBUTION OF STANDARDIZED RESIDUALS
+
+
+
+     ----------------------------------------                     
+     !                                      !                     
+   20-                                      -                     
+     !                                      !                     
+     !                                      !                     
+     !                                      !                     
+     !                 *                    !            RANGE      FREQ PERCENT
+   15-                 *                    -                     
+     !                 *                    !    1   -0.5  -  --       0    .00%
+     !                 *                    !    2   -0.4  -  -0.5     0    .00%
+     !                 *                    !    3   -0.3  -  -0.4     0    .00%
+     !                 *                    !    4   -0.2  -  -0.3     0    .00%
+   10-                 *                    -    5   -0.1  -  -0.2     0    .00%
+     !                 *                    !    6    0.0  -  -0.1    16  76.19%
+     !                 *                    !    7    0.1  -   0.0     5  23.81%
+     !                 *                    !    8    0.2  -   0.1     0    .00%
+     !                 *                    !    9    0.3  -   0.2     0    .00%
+    5-                 *  *                 -    A    0.4  -   0.3     0    .00%
+     !                 *  *                 !    B    0.5  -   0.4     0    .00%
+     !                 *  *                 !    C     ++  -   0.5     0    .00%
+     !                 *  *                 !    -------------------------------
+     !                 *  *                 !            TOTAL        21 100.00%
+     ----------------------------------------                     
+        1  2  3  4  5  6  7  8  9  A  B  C    EACH "*" REPRESENTS    1 RESIDUALS
+
+ 07-Sep-07      PAGE : 32  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  MEASUREMENT EQUATIONS WITH STANDARD ERRORS AND TEST STATISTICS
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+
+
+    V1   =V1  =         1.000 F1    +       1.000 F4    +       1.000 E1  
+                                                                      
+                                                                      
+
+    V2   =V2  =         1.000 F2    +       1.000 F4    +       1.000 E2  
+                                                                      
+                                                                      
+
+    V3   =V3  =         1.000 F3    +       1.000 F4    +       1.000 E3  
+                                                                      
+                                                                      
+
+    V4   =V4  =          .925*F1    +       1.000 F5    +       1.000 E4  
+                         .042                                         
+                       21.959@                                        
+
+    V5   =V5  =          .742*F2    +       1.000 F5    +       1.000 E5  
+                         .029                                         
+                       25.315@                                        
+
+    V6   =V6  =         1.093*F3    +       1.000 F5    +       1.000 E6  
+                         .045                                         
+                       24.149@                                        
+
+
+ 07-Sep-07      PAGE : 33  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  VARIANCES OF INDEPENDENT VARIABLES
+  ----------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  V                                F
+                 ---                              ---
+                                I F1  -   F1                .725*I              
+                                I                           .041 I              
+                                I                         17.496@I              
+                                I                                I              
+                                I F2  -   F2               1.268*I              
+                                I                           .066 I              
+                                I                         19.262@I              
+                                I                                I              
+                                I F3  -   F3                .764*I              
+                                I                           .043 I              
+                                I                         17.715@I              
+                                I                                I              
+                                I F4  -   F4                .000*I              
+                                I                           .000 I              
+                                I                        1.0E+38@I              
+                                I                                I              
+                                I F5  -   F5                .000*I              
+                                I                           .000 I              
+                                I                        1.0E+38@I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 34  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  VARIANCES OF INDEPENDENT VARIABLES
+  ----------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  E                                D
+                 ---                              ---
+ E1  -   V1                .425*I                                I              
+                           .039 I                                I              
+                         11.030@I                                I              
+                                I                                I              
+ E2  -   V2                .543*I                                I              
+                           .052 I                                I              
+                         10.492@I                                I              
+                                I                                I              
+ E3  -   V3                .442*I                                I              
+                           .036 I                                I              
+                         12.334@I                                I              
+                                I                                I              
+ E4  -   V4                .255*I                                I              
+                           .033 I                                I              
+                          7.703@I                                I              
+                                I                                I              
+ E5  -   V5                .169*I                                I              
+                           .027 I                                I              
+                          6.345@I                                I              
+                                I                                I              
+ E6  -   V6                .333*I                                I              
+                           .037 I                                I              
+                          9.002@I                                I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 35  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  COVARIANCES AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  V                                F
+                 ---                              ---
+                                I F2  -   F2               -.605*I              
+                                I F1  -   F1                .036 I              
+                                I                        -16.972@I              
+                                I                                I              
+                                I F3  -   F3               -.559*I              
+                                I F1  -   F1                .031 I              
+                                I                        -18.214@I              
+                                I                                I              
+                                I F3  -   F3                .685*I              
+                                I F2  -   F2                .038 I              
+                                I                         17.948@I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 36  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  COVARIANCES AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  E                                D
+                 ---                              ---
+ E5  -   V5               -.052*I                                I              
+ E3  -   V3                .019 I                                I              
+                         -2.793@I                                I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 37  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  STANDARDIZED SOLUTION:                                              R-SQUARED
+
+
+
+    V1   =V1  =   .794 F1    + .000 F4    + .608 E1                        .630 
+    V2   =V2  =   .837 F2    + .000 F4    + .547 E2                        .700 
+    V3   =V3  =   .796 F3    + .000 F4    + .605 E3                        .634 
+    V4   =V4  =   .842*F1    + .000 F5    + .540 E4                        .709 
+    V5   =V5  =   .897*F2    + .000 F5    + .442 E5                        .805 
+    V6   =V6  =   .856*F3    + .000 F5    + .517 E6                        .732 
+
+ 07-Sep-07      PAGE : 38  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  CORRELATIONS AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+
+                  V                                F
+                 ---                              ---
+                                I F2  -   F2               -.632*I              
+                                I F1  -   F1                     I              
+                                I                                I              
+                                I F3  -   F3               -.752*I              
+                                I F1  -   F1                     I              
+                                I                                I              
+                                I F3  -   F3                .696*I              
+                                I F2  -   F2                     I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 39  EQS     Licensee:                               
+  TITLE:      DK: docs SB1 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  3
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  CORRELATIONS AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+
+                  E                                D
+                 ---                              ---
+ E5  -   V5               -.190*I                                I              
+ E3  -   V3                     I                                I              
+                                I                                I              
+
+
+
+
+
+
+
+
+ -------------------------------------------------------------------------------
+                           E N D    O F    M E T H O D
+ -------------------------------------------------------------------------------
+
+ 07-Sep-07      PAGE : 40  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  RELIABILITY COEFFICIENTS
+  ------------------------
+  CRONBACH'S ALPHA                    =    -3.289
+  RELIABILITY COEFFICIENT RHO         =      .040
+
+  STANDARDIZED FACTOR LOADINGS FOR THE FACTOR THAT GENERATES
+  MAXIMAL RELIABILITY FOR THE UNIT-WEIGHT COMPOSITE
+  BASED ON THE MODEL (RHO):
+     V1        V2        V3        V4        V5        V6   
+     -.253      .374      .178      .190     -.156      .006
+
+
+  PARAMETER        CONDITION CODE
+    F4,F4          CONSTRAINED AT LOWER BOUND
+    E4,E4          LINEARLY DEPENDENT ON OTHER PARAMETERS
+
+ 07-Sep-07      PAGE : 41  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  ALL EQUALITY CONSTRAINTS WERE CORRECTLY IMPOSED
+
+  NOTE:   2 CONSTRAINTS APPEAR TO BE LINEARLY DEPENDENT.
+            THE DEGREES OF FREEDOM HAVE BEEN ADJUSTED.
+    F4,F4          VARIANCE OF PARAMETER ESTIMATE IS SET TO ZERO.
+    E4,E4          VARIANCE OF PARAMETER ESTIMATE IS SET TO ZERO.
+
+
+
+  RESIDUAL COVARIANCE MATRIX  (S-SIGMA) :       
+
+
+                      V1         V2         V3         V4         V5   
+        V1            .010
+        V2            .014       .060
+        V3           -.010      -.008       .000
+        V4           -.007       .001      -.012      -.003
+        V5           -.017      -.039       .032       .005       .018
+        V6           -.012      -.018       .009       .029      -.010
+
+
+                      V6   
+        V6           -.018
+
+                                  AVERAGE ABSOLUTE RESIDUAL =          .0158
+                     AVERAGE OFF-DIAGONAL ABSOLUTE RESIDUAL =          .0148
+
+
+
+  STANDARDIZED RESIDUAL MATRIX:                 
+
+
+                      V1         V2         V3         V4         V5   
+        V1            .010
+        V2            .011       .035
+        V3           -.009      -.006       .000
+        V4           -.006       .001      -.010      -.002
+        V5           -.017      -.030       .030       .005       .018
+        V6           -.010      -.012       .007       .024      -.009
+
+
+                      V6   
+        V6           -.014
+
+                     AVERAGE ABSOLUTE STANDARDIZED RESIDUAL =          .0126
+        AVERAGE OFF-DIAGONAL ABSOLUTE STANDARDIZED RESIDUAL =          .0123
+
+ 07-Sep-07      PAGE : 42  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  LARGEST STANDARDIZED RESIDUALS:
+
+      NO.    PARAMETER   ESTIMATE      NO.    PARAMETER   ESTIMATE
+      ---    ---------   --------      ---    ---------   --------
+       1     V2,  V2         .035      11     V4,  V3        -.010
+       2     V5,  V3         .030      12     V1,  V1         .010
+       3     V5,  V2        -.030      13     V6,  V5        -.009
+       4     V6,  V4         .024      14     V3,  V1        -.009
+       5     V5,  V5         .018      15     V6,  V3         .007
+       6     V5,  V1        -.017      16     V4,  V1        -.006
+       7     V6,  V6        -.014      17     V3,  V2        -.006
+       8     V6,  V2        -.012      18     V5,  V4         .005
+       9     V2,  V1         .011      19     V4,  V4        -.002
+      10     V6,  V1        -.010      20     V4,  V2         .001
+
+
+
+  DISTRIBUTION OF STANDARDIZED RESIDUALS
+
+
+
+     ----------------------------------------                     
+     !                                      !                     
+   20-                                      -                     
+     !                                      !                     
+     !                                      !                     
+     !                                      !                     
+     !                                      !            RANGE      FREQ PERCENT
+   15-                                      -                     
+     !                                      !    1   -0.5  -  --       0    .00%
+     !                                      !    2   -0.4  -  -0.5     0    .00%
+     !                 *                    !    3   -0.3  -  -0.4     0    .00%
+     !                 *                    !    4   -0.2  -  -0.3     0    .00%
+   10-                 *                    -    5   -0.1  -  -0.2     0    .00%
+     !                 *  *                 !    6    0.0  -  -0.1    12  57.14%
+     !                 *  *                 !    7    0.1  -   0.0     9  42.86%
+     !                 *  *                 !    8    0.2  -   0.1     0    .00%
+     !                 *  *                 !    9    0.3  -   0.2     0    .00%
+    5-                 *  *                 -    A    0.4  -   0.3     0    .00%
+     !                 *  *                 !    B    0.5  -   0.4     0    .00%
+     !                 *  *                 !    C     ++  -   0.5     0    .00%
+     !                 *  *                 !    -------------------------------
+     !                 *  *                 !            TOTAL        21 100.00%
+     ----------------------------------------                     
+        1  2  3  4  5  6  7  8  9  A  B  C    EACH "*" REPRESENTS    1 RESIDUALS
+
+ 07-Sep-07      PAGE : 43  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  MEASUREMENT EQUATIONS WITH STANDARD ERRORS AND TEST STATISTICS
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+
+
+    V1   =V1  =         1.000 F1    +       1.000 F4    +       1.000 E1  
+                                                                      
+                                                                      
+
+    V2   =V2  =         1.000 F2    +       1.000 F4    +       1.000 E2  
+                                                                      
+                                                                      
+
+    V3   =V3  =         1.000 F3    +       1.000 F4    +       1.000 E3  
+                                                                      
+                                                                      
+
+    V4   =V4  =        -1.108*F1    -       1.118*F5    +       1.000 E4  
+                         .044                .492                     
+                      -24.988@             -2.273@                    
+
+    V5   =V5  =         -.790*F2    +       1.000 F5    +       1.000 E5  
+                         .028                                         
+                      -28.169@                                        
+
+    V6   =V6  =        -1.146*F3    +       1.000 F5    +       1.000 E6  
+                         .043                                         
+                      -26.676@                                        
+
+
+ 07-Sep-07      PAGE : 44  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  VARIANCES OF INDEPENDENT VARIABLES
+  ----------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  V                                F
+                 ---                              ---
+                                I F1  -   F1                .725*I              
+                                I                           .041 I              
+                                I                         17.496@I              
+                                I                                I              
+                                I F2  -   F2               1.268*I              
+                                I                           .066 I              
+                                I                         19.262@I              
+                                I                                I              
+                                I F3  -   F3                .764*I              
+                                I                           .043 I              
+                                I                         17.715@I              
+                                I                                I              
+                                I F4  -   F4                .000*I              
+                                I                           .000 I              
+                                I                        1.0E+38@I              
+                                I                                I              
+                                I F5  -   F5                .040*I              
+                                I                           .017 I              
+                                I                          2.315@I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 45  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  VARIANCES OF INDEPENDENT VARIABLES
+  ----------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  E                                D
+                 ---                              ---
+ E1  -   V1                .325*I                                I              
+                           .033 I                                I              
+                          9.720@I                                I              
+                                I                                I              
+ E2  -   V2                .406*I                                I              
+                           .044 I                                I              
+                          9.288@I                                I              
+                                I                                I              
+ E3  -   V3                .422*I                                I              
+                           .032 I                                I              
+                         13.194@I                                I              
+                                I                                I              
+ E4  -   V4                .225*I                                I              
+                           .000 I                                I              
+                        1.0E+38@I                                I              
+                                I                                I              
+ E5  -   V5                .130*I                                I              
+                           .021 I                                I              
+                          6.133@I                                I              
+                                I                                I              
+ E6  -   V6                .257*I                                I              
+                           .029 I                                I              
+                          8.973@I                                I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 46  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  COVARIANCES AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  V                                F
+                 ---                              ---
+                                I F2  -   F2               -.605*I              
+                                I F1  -   F1                .036 I              
+                                I                        -16.972@I              
+                                I                                I              
+                                I F3  -   F3               -.559*I              
+                                I F1  -   F1                .031 I              
+                                I                        -18.214@I              
+                                I                                I              
+                                I F3  -   F3                .685*I              
+                                I F2  -   F2                .038 I              
+                                I                         17.948@I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 47  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  COVARIANCES AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+  STATISTICS SIGNIFICANT AT THE 5% LEVEL ARE MARKED WITH @.
+
+                  E                                D
+                 ---                              ---
+ E6  -   V6                .075*I                                I              
+ E5  -   V5                .000 I                                I              
+                        1.3E+08@I                                I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 48  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  STANDARDIZED SOLUTION:                                              R-SQUARED
+
+
+
+    V1   =V1  =    .831 F1    +  .000 F4    +  .556 E1                     .690 
+    V2   =V2  =    .870 F2    +  .000 F4    +  .493 E2                     .757 
+    V3   =V3  =    .803 F3    +  .000 F4    +  .597 E3                     .644 
+    V4   =V4  =   -.874*F1    -  .207*F5    +  .440 E4                     .807 
+    V5   =V5  =   -.907*F2    +  .204 F5    +  .368 E5                     .865 
+    V6   =V6  =   -.878*F3    +  .175 F5    +  .445 E6                     .802 
+
+ 07-Sep-07      PAGE : 49  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  CORRELATIONS AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+
+                  V                                F
+                 ---                              ---
+                                I F2  -   F2               -.632*I              
+                                I F1  -   F1                     I              
+                                I                                I              
+                                I F3  -   F3               -.752*I              
+                                I F1  -   F1                     I              
+                                I                                I              
+                                I F3  -   F3                .696*I              
+                                I F2  -   F2                     I              
+                                I                                I              
+
+ 07-Sep-07      PAGE : 50  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  CORRELATIONS AMONG INDEPENDENT VARIABLES
+  ---------------------------------------
+
+                  E                                D
+                 ---                              ---
+ E6  -   V6                .410*I                                I              
+ E5  -   V5                     I                                I              
+                                I                                I              
+
+
+
+
+
+
+
+
+ -------------------------------------------------------------------------------
+                           E N D    O F    M E T H O D
+ -------------------------------------------------------------------------------
+
+ 07-Sep-07      PAGE : 51  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MULTIPLE POPULATION ANALYSIS, INFORMATION IN GROUP  4
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+  STATISTICS FOR MULTIPLE POPULATION ANALYSIS
+
+  ALL EQUALITY CONSTRAINTS WERE CORRECTLY IMPOSED
+
+  NOTE: CONSTRAINTS APPEAR TO BE LINEARILY DEPENDENT,  2 DEGREE(S) OF FREEDOM ADJUSTED
+
+  *** WARNING *** TEST RESULTS MAY NOT BE APPROPRIATE DUE TO CONDITION CODE
+
+
+
+  GOODNESS OF FIT SUMMARY FOR METHOD = ML    
+
+  INDEPENDENCE MODEL CHI-SQUARE        =    9933.545 ON    60 DEGREES OF FREEDOM
+
+  INDEPENDENCE AIC =    9813.545   INDEPENDENCE CAIC =    9389.366
+         MODEL AIC =     -11.733          MODEL CAIC =    -153.126
+
+  CHI-SQUARE =       28.267 BASED ON      20 DEGREES OF FREEDOM
+  PROBABILITY VALUE FOR THE CHI-SQUARE STATISTIC IS       .10323
+
+  FIT INDICES
+  -----------
+  BENTLER-BONETT     NORMED FIT INDEX =      .997
+  BENTLER-BONETT NON-NORMED FIT INDEX =      .997
+  COMPARATIVE FIT INDEX (CFI)         =      .999
+
+
+
+                         ITERATIVE SUMMARY
+
+                     PARAMETER
+  ITERATION          ABS CHANGE         ALPHA                FUNCTION
+      1                .652650         1.00000               3.07734
+      2                .644406          .50000               1.79847
+      3                .507664          .50000               1.01359
+      4                .195308         1.00000                .02893
+      5                .034531         1.00000                .00972
+      6                .016079         1.00000                .00887
+      7                .002079         1.00000                .00886
+      8                .000509         1.00000                .00886
+
+ 07-Sep-07      PAGE : 52  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  LAGRANGE MULTIPLIER TEST (FOR RELEASING CONSTRAINTS)
+
+
+  CONSTRAINTS TO BE RELEASED ARE:                     
+
+  *** WARNING *** TEST RESULTS MAY NOT BE APPROPRIATE DUE TO CONDITION CODE
+
+
+          CONSTRAINTS FROM GROUP  4
+
+          CONSTR:    1   (1,F4,F4)-(2,F4,F4)=0;
+          CONSTR:    2   (1,F1,F1)-(2,F1,F1)=0;
+          CONSTR:    3   (1,F2,F2)-(2,F2,F2)=0;
+          CONSTR:    4   (1,F1,F3)-(2,F1,F3)=0;
+          CONSTR:    5   (1,F1,F2)-(2,F1,F2)=0;
+          CONSTR:    6   (1,F1,F3)-(2,F1,F3)=0;
+          CONSTR:    7   (1,F2,F3)-(2,F2,F3)=0;
+          CONSTR:    8   (3,F4,F4)-(4,F4,F4)=0;
+          CONSTR:    9   (3,F1,F1)-(4,F1,F1)=0;
+          CONSTR:   10   (3,F2,F2)-(4,F2,F2)=0;
+          CONSTR:   11   (3,F3,F3)-(4,F3,F3)=0;
+          CONSTR:   12   (3,F1,F2)-(4,F1,F2)=0;
+          CONSTR:   13   (3,F1,F3)-(4,F1,F3)=0;
+          CONSTR:   14   (3,F2,F3)-(4,F2,F3)=0;
+
+
+           UNIVARIATE TEST STATISTICS:
+
+   NO    CONSTRAINT    CHI-SQUARE   PROBABILITY  
+   --    -----------   ----------   -----------  
+
+    1    CONSTR:   1         .806        .369
+    2    CONSTR:   2        2.430        .119
+    3    CONSTR:   3         .015        .904
+    4    CONSTR:   4    NOT TESTED DUE TO NUMERICAL PROBLEMS.
+    5    CONSTR:   5         .168        .681
+    6    CONSTR:   6         .052        .820
+    7    CONSTR:   7         .020        .888
+    8    CONSTR:   8        2.018        .155
+    9    CONSTR:   9        1.225        .268
+   10    CONSTR:  10        6.577        .010
+   11    CONSTR:  11        2.490        .115
+   12    CONSTR:  12         .188        .665
+   13    CONSTR:  13         .676        .411
+   14    CONSTR:  14        3.371        .066
+
+
+
+         CUMULATIVE MULTIVARIATE STATISTICS              UNIVARIATE INCREMENT
+         ----------------------------------              --------------------
+
+  STEP  PARAMETER   CHI-SQUARE  D.F.  PROBABILITY       CHI-SQUARE  PROBABILITY 
+  ---- -----------  ----------  ----  -----------       ----------  -----------
+
+    1  CONSTR:  10      6.577      1       .010             6.577        .010
+    2  CONSTR:   2      9.008      2       .011             2.430        .119
+    3  CONSTR:   8     11.210      3       .011             2.203        .138
+    4  CONSTR:  13     12.888      4       .012             1.678        .195
+    5  CONSTR:   1     13.443      5       .020              .554        .457
+    6  CONSTR:  14     13.939      6       .030              .496        .481
+    7  CONSTR:   3     14.022      7       .051              .083        .773
+    8  CONSTR:   7     14.137      8       .078              .115        .734
+    9  CONSTR:   9     14.206      9       .115              .068        .794
+   10  CONSTR:  12     14.506     10       .151              .300        .584
+   11  CONSTR:   5     14.562     11       .203              .056        .813
+   12  CONSTR:   6     14.574     12       .266              .012        .912
+   13  CONSTR:  11     14.575     13       .335              .000        .984
+
+ 07-Sep-07      PAGE : 53  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  LAGRANGE MULTIPLIER TEST (FOR ADDING PARAMETERS)
+
+
+  ORDERED UNIVARIATE TEST STATISTICS:             
+
+  *** WARNING *** TEST RESULTS MAY NOT BE APPROPRIATE DUE TO CONDITION CODE
+
+                                                   HANCOCK             STANDAR-
+                                  CHI-              20 DF   PARAMETER   DIZED 
+   NO    CODE     PARAMETER      SQUARE     PROB.    PROB.    CHANGE    CHANGE
+   --   ------    ---------      ------     -----  -------- ---------  --------
+    1    2   6    3,  E5,E4       5.593      .018      .999     -.035     -.169
+    2    2   6    3,  E5,E2       5.508      .019      .999     -.128     -.422
+    3    2   6    4,  E5,E2       5.508      .019      .999     -.136     -.593
+    4    2   3    4,  F5,F3       5.496      .019      .999      .035      .199
+    5    2   6    3,  E5,E1       4.272      .039     1.000      .036      .133
+    6    2   6    4,  E5,E3       4.217      .040     1.000      .041      .173
+    7    2   3    4,  F5,F2       3.779      .052     1.000     -.037     -.164
+    8    2   0    4,  V2,F2       3.763      .052     1.000      .096      .066
+    9    2   0    3,  V2,F2       3.763      .052     1.000     -.096     -.063
+   10    2   6    3,  E3,E1       3.303      .069     1.000     -.043     -.098
+   11    2   6    3,  E2,E1       3.048      .081     1.000     -.043     -.090
+   12    2   0    1,  V1,F1       2.506      .113     1.000     -.100     -.122
+   13    2   0    2,  V1,F1       2.506      .113     1.000      .100      .126
+   14    2   6    1,  E4,E1       2.430      .119     1.000     -.081     -.203
+   15    2   6    2,  E4,E1       2.430      .119     1.000     -.081     -.226
+   16    2   3    2,  F4,F3       2.427      .119     1.000     -.045     -.831
+   17    2   6    2,  E5,E4       2.427      .119     1.000     -.046     -.153
+   18    2   6    2,  E6,E4       2.427      .119     1.000      .046      .143
+   19    2   6    2,  E6,E1       2.427      .119     1.000      .049      .171
+   20    2   0    2,  V6,F5       2.427      .119     1.000    -1.597    -5.276
+   21    2   0    2,  V5,F5       2.427      .119     1.000     1.597     5.262
+   22    2   6    3,  E4,E2       2.414      .120     1.000      .033      .089
+   23    2   6    4,  E4,E1       2.322      .128     1.000     -.072     -.265
+   24    2   6    3,  E4,E1       2.322      .128     1.000     -.060     -.182
+   25    2   6    2,  E5,E1       2.247      .134     1.000     -.029     -.107
+   26    2   0    1,  V3,F4       2.187      .139     1.000     5.876    79.889
+   27    2   6    3,  E6,E3       2.110      .146     1.000     -.063     -.165
+   28    2   6    4,  E6,E3       2.110      .146     1.000     -.066     -.201
+   29    2   0    1,  V4,F5       2.020      .155     1.000    -1.759    -9.138
+   30    2   0    1,  V5,F5       2.020      .155     1.000     1.759     9.235
+   31    2   6    1,  E6,E4       2.020      .155     1.000     -.064     -.232
+   32    2   6    1,  E6,E5       2.020      .155     1.000      .064      .305
+   33    2   6    1,  E6,E2       2.020      .155     1.000     -.031     -.311
+   34    2   6    1,  E3,E2       1.805      .179     1.000      .035      .246
+   35    2   3    3,  F4,F3       1.749      .186     1.000     -.022      .000
+   36    2   0    4,  V6,F5       1.475      .225     1.000     -.528    -2.317
+   37    2   6    4,  E5,E4       1.475      .225     1.000     -.024     -.138
+   38    2   0    4,  V5,F5       1.475      .225     1.000      .528     2.696
+   39    2   6    4,  E6,E4       1.475      .225     1.000      .024      .098
+   40    2   3    3,  F4,F1       1.369      .242     1.000     -.018      .000
+   41    2   6    3,  E6,E5       1.312      .252     1.000      .026      .108
+   42    2   3    3,  F5,F4       1.289      .256     1.000      .009      .000
+   43    2   3    3,  F5,F2       1.202      .273     1.000     -.021      .000
+   44    2   3    1,  F5,F4       1.175      .278     1.000     -.013     -.906
+   45    2   6    2,  E4,E2        .980      .322     1.000     -.030     -.178
+   46    2   0    2,  V2,F4        .899      .343     1.000     -.961   -12.984
+   47    2   3    1,  F5,F2        .883      .347     1.000     -.020     -.109
+   48    2   6    4,  E3,E1        .870      .351     1.000     -.018     -.050
+   49    2   3    3,  F5,F1        .864      .353     1.000     -.012      .000
+   50    2   6    3,  E4,E3        .854      .355     1.000      .019      .056
+   51    2   6    2,  E3,E1        .826      .363     1.000      .036      .114
+   52    2   6    2,  E3,E2        .826      .363     1.000     -.036     -.245
+   53    2   6    2,  E2,E1        .806      .369     1.000     -.018     -.125
+   54    2   6    2,  E5,E3        .776      .378     1.000     -.025     -.094
+   55    2   3    1,  F4,F1        .760      .383     1.000     -.018     -.298
+   56    2   3    2,  F5,F4        .740      .390     1.000     -.004     -.171
+   57    2   6    3,  E6,E4        .734      .392     1.000     -.017     -.059
+   58    2   3    1,  F5,F1        .693      .405     1.000     -.019     -.126
+   59    2   6    4,  E6,E2        .635      .425     1.000     -.025     -.077
+   60    2   0    2,  V1,F4        .611      .434     1.000     1.330    18.329
+   61    2   3    1,  F4,F2        .529      .467     1.000      .015      .209
+   62    2   6    3,  E6,E1        .518      .471     1.000      .016      .044
+   63    2   0    4,  V1,F1        .517      .472     1.000      .039      .044
+   64    2   0    3,  V1,F1        .517      .472     1.000     -.039     -.042
+   65    2   3    4,  F4,F1        .449      .503     1.000      .010      .000
+   66    2   6    4,  E2,E1        .425      .514     1.000      .014      .039
+   67    2   3    2,  F4,F1        .417      .518     1.000      .004      .072
+   68    2   6    1,  E5,E1        .379      .538     1.000      .016      .052
+   69    2   6    1,  E3,E1        .350      .554     1.000      .021      .056
+   70    2   6    1,  E2,E1        .326      .568     1.000     -.013     -.091
+   71    2   6    4,  E5,E1        .289      .591     1.000     -.008     -.038
+   72    2   3    2,  F5,F1        .278      .598     1.000     -.015     -.060
+   73    2   0    1,  V2,F4        .250      .617     1.000     1.677    22.836
+   74    2   3    4,  F4,F3        .240      .624     1.000      .007      .000
+   75    2   6    1,  E5,E3        .232      .630     1.000     -.014     -.048
+   76    2   6    4,  E4,E2        .206      .650     1.000     -.012     -.040
+   77    2   0    2,  V3,F3        .203      .652     1.000     -.034     -.047
+   78    2   0    1,  V3,F3        .203      .652     1.000      .034      .044
+   79    2   3    2,  F5,F3        .187      .666     1.000     -.012     -.054
+   80    2   3    4,  F4,F2        .117      .733     1.000      .006      .000
+   81    2   6    4,  E3,E2        .094      .759     1.000      .008      .019
+   82    2   0    2,  V2,F2        .091      .763     1.000     -.016     -.016
+   83    2   0    1,  V2,F2        .091      .763     1.000      .016      .016
+   84    2   3    3,  F5,F3        .082      .774     1.000      .004      .000
+   85    2   3    1,  F5,F3        .078      .781     1.000     -.005     -.036
+   86    2   3    2,  F4,F2        .077      .781     1.000      .002      .027
+   87    2   6    3,  E3,E2        .065      .799     1.000      .009      .019
+   88    2   6    1,  E4,E2        .064      .801     1.000     -.007     -.050
+   89    2   6    2,  E4,E3        .062      .804     1.000      .007      .020
+   90    2   3    4,  F5,F4        .061      .804     1.000      .002      .000
+   91    2   0    1,  V1,F4        .049      .825     1.000    -1.100   -14.592
+   92    2   6    3,  E6,E2        .041      .840     1.000     -.006     -.013
+   93    2   0    3,  V3,F3        .030      .863     1.000     -.009     -.010
+   94    2   0    4,  V3,F3        .030      .863     1.000      .009      .010
+   95    2   3    3,  F4,F2        .016      .899     1.000     -.003      .000
+   96    2   6    1,  E5,E2        .015      .904     1.000      .009      .077
+   97    2   6    2,  E5,E2        .015      .904     1.000      .008      .067
+   98    2   3    4,  F5,F1        .012      .911     1.000     -.002     -.012
+   99    2   3    2,  F5,F2        .012      .914     1.000     -.006     -.020
+  100    2   6    4,  E4,E3        .011      .915     1.000     -.002     -.007
+  101    2   6    4,  E6,E1        .010      .922     1.000     -.002     -.006
+  102    2   3    1,  F4,F3        .006      .940     1.000     -.002     -.029
+  103    2   6    1,  E4,E3        .003      .959     1.000      .001      .004
+  104    2   0    1,  V6,F5        .000     1.000     1.000      .000      .000
+  105    2   0    4,  V3,F4        .000     1.000     1.000      .000      .000
+  106    2   6    1,  E6,E3        .000     1.000     1.000      .000      .000
+  107    2   0    4,  V2,F4        .000     1.000     1.000      .000      .000
+  108    2   0    4,  V1,F4        .000     1.000     1.000      .000      .000
+  109    2   0    3,  V1,F4        .000     1.000     1.000      .000      .000
+  110    2   6    2,  E6,E5        .000     1.000     1.000      .000      .000
+  111    2   6    2,  E6,E3        .000     1.000     1.000      .000      .000
+  112    2   0    3,  V2,F4        .000     1.000     1.000      .000      .000
+  113    2   0    3,  V3,F4        .000     1.000     1.000      .000      .000
+  114    2   0    3,  V4,F5        .000     1.000     1.000      .000      .000
+  115    2   0    3,  V6,F5        .000     1.000     1.000      .000      .000
+  116    2   0    3,  V5,F5        .000     1.000     1.000      .000      .000
+
+ 07-Sep-07      PAGE : 54  EQS     Licensee:                               
+  TITLE:      DK: docs SB2 MTMM                                        
+
+  MAXIMUM LIKELIHOOD SOLUTION (NORMAL DISTRIBUTION THEORY)
+
+
+  MULTIVARIATE LAGRANGE MULTIPLIER TEST BY SIMULTANEOUS PROCESS IN STAGE  1
+
+  PARAMETER SETS (SUBMATRICES) ACTIVE AT THIS STAGE ARE:
+
+     PFV PFF PEE
+
+
+
+        CUMULATIVE MULTIVARIATE STATISTICS      UNIVARIATE INCREMENT
+        ----------------------------------      ------------------------------
+                                                                    HANCOCK'S
+                                                                    SEQUENTIAL
+ STEP   PARAMETER   CHI-SQUARE  D.F.   PROB.   CHI-SQUARE   PROB.  D.F.   PROB.
+ ----  -----------  ----------  ----   -----   ----------   -----  ----   -----
+    1   3,  E5,E4        5.593     1    .018        5.593    .018    20    .999
+    2   4,  F5,F3       10.928     2    .004        5.335    .021    19    .999
+
+
+  LAGRANGIAN MULTIPLIER TEST REQUIRED    54921 WORDS OF MEMORY.
+  PROGRAM ALLOCATES  2000000 WORDS.
+1
+  Execution begins at 15:02:00   
+  Execution ends   at 15:02:01   
+  Elapsed time =       1.00 seconds 

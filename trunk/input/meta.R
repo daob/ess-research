@@ -1,4 +1,4 @@
-meta <- read.table("~/current-project/data/meta.dat", header=T)
+meta <- read.table("c:/ess/berlin/data/meta.dat", header=T)
  attach(meta)
 boxplot(factor~scale)
  m=lm(( factor )~topic+country+scale+position, data=meta[-c(28,64,37,2,8,11),])
@@ -39,3 +39,9 @@ positionnegative -0.48418 0.07301 0.0007301      0.0008210
 positionrarely   -0.07176 0.14547 0.0014547      0.0013554
 positionusually  -0.09638 0.14611 0.0014611      0.0013895
 sigma2            0.03496 0.00684 0.0000684      0.0000836
+
+
+dm <- model.matrix(factor ~ topic + country + scale + position, data=meta)
+meta$negative <- dm[,13]
+m=lm(( factor )~ topic + country + scale + negative, data=meta[-c(28,64,37,2,8,11),])
+
