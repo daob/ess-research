@@ -2,12 +2,7 @@
 \usepackage{fullpage}
 \usepackage{ucs}
 \usepackage{natbib}
-\usepackage{ifpdf}
 \usepackage{graphicx}
-\usepackage[usenames]{color}
-
-\usepackage{longtable}
-\usepackage{hyperref}
 \bibliographystyle{apalike}
 \author{Willem E. Saris\\Daniel Oberski\\ESADE, Universitat Ramon Llull\\\\Jacques Hagenaars\\Tilburg University}
 
@@ -38,11 +33,7 @@ In Figure \ref{fig:response} we show the basic response model \citep{Saris_desig
 
 \begin{figure}[htb]
 \centering
-\ifpdf
-\includegraphics[width=.7\textwidth]{response_model.pdf}
-\else
-\includegraphics[width=.7\textwidth]{response_model.eps}
-\fi
+%\includegraphics[width=.7\textwidth]{response_model}
 \caption{The response model used in the MTMM experiments.\label{fig:response}}
 \end{figure}
 
@@ -84,11 +75,7 @@ The three methods are specified by the following response scales:
 
 
 \begin{figure}[htb]\centering
-\ifpdf
-\includegraphics[width=.7\textwidth]{mtmm.pdf}
-\else
-\includegraphics[width=.7\textwidth]{mtmm.eps}
-\fi
+%\includegraphics[width=.7\textwidth]{mtmm}
 \caption{\label{fig:mtmm}MTMM model illustrating the true scores and their factors of interest.}
 \end{figure}
 
@@ -172,11 +159,11 @@ As noted before, the quality (or reliability ratio) of a variable is defined as 
 \begin{equation}
 q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
 \end{equation}
-However, we have now seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation \ref{eqn:relratio} can be decomposed into
+However, we have now seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation \ref{eqn:relratio} can be `decomposed' into
 \begin{equation}
 q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
 \end{equation}
-The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2$, the quality from the continuous analyis, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis, have been obtained. So the effect of categorisation on the quality estimate can be derived.
+The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2$, the quality from the continuous analyis, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis, have been obtained. So the effect of categorisation on the quality estimate can be derived. We attach no specific significance to this number other than that it is a useful index of the relative differences between the quality estimates of the continuous and categorical models.
 
 In the present study, we estimate this `categorisation factor' for different countries and experiments, and examine to what extent it can explain the differences in quality across countries. First, however, we give an overview of the data we use.
 
@@ -245,31 +232,49 @@ Thus, in some cases we found artificial differences in quality which are likely 
 
 \section{Methods}
 
+...
+
+The estimation was done using the weighted least squares approach described by \citet{flora_empirical_2004}.
+
+There is a simple relationship between the threshold and quality coefficients of our model and difficulty and discrimination parameters in IRT models: the quality coefficients are scaled discrimination parameters, while a scaled difficulty for each category can be obtained by dividing each threshold by the corresponding quality coefficient \citep{muthen_latent_2002}.
 
 \section{Results}
 
-[this part needs to be re-written...]
-
-%\color{Gray}
-
-We first turn to the hypothesis that all thresholds are equal across different countries. We selected the three countries with the highest and the two countries with the lowest quality coefficients for the `women' experiment. In this experiment wording of the question reversed in the second method. For example, the statement `When jobs are scarce, men should have more right to a job than women' from the main questionnaire was changed to `When jobs are scarce, women should have the same right to a job as men' in the supplementary questionnaire. The countries with high quality coefficients were, in this case, Portugal, Greece, and Switzerland. The lowest coefficients for this experiment were found in Estonia and the Czech Republic. To be able to separately study misspecifications in the categorization part of the model, we imposed no restrictions on the covariance matrix of the latent response variables at this stage. The estimation was done using the weighted least squares approach described by Flora \& Curran (2004)*.
-
-In the first analysis, all thresholds were constrained to be equal across the five countries. This yields a likelihood ratio statistic of 507 on 48 degrees of freedom. The country with the highest (128) contribution to this chi-square statistic is Portugal. When we examine the expected parameter changes, it also turns out that in this country these standardised values are very large with some values close to .9 while in other countries the highest obtained and exceptional value is .6. At the same time, there is nothing about this group that makes the power particularly high. There are a few very high power values of .97 for large expected changes, but the average power is .37. For some reason, the equality constraint on the Portuguese thresholds appears to be a particularly gross misspecification.
-
-This misspecification is very likely due to a translation error. The intention of the experiment was to reverse the wording of the question in the second method. But in Portugal the reverse wording was not used, and the same version was presented as in the main questionnaire. The supplementary questions mean something else in Portugal and therefore it makes sense that the thresholds should differ from those found in the other countries. To prevent incomparability when the MTMM model is estimated, we omit Portugal from our further analyses and continue with four countries. We should note, however, that the resulting experiment does provide a good opportunity to examine the effect of a repetition on the threshold structure.
-
-Continuing our analysis with four countries, the model where all thresholds are constrained to be equal yields a likelihood ratio of 351 and 36 degrees of freedom. We approximate the power of the score test (modification index) to detect a standardised difference of at least .1, and examine the modification indices and expected parameter changes. 
-
-Using the above criteria, it is clear that the equality model contains severe misspecifications. We formulated a new model in which some thresholds were constrained to be equal, while others were freed to vary. However, we found that too many parameters were freed for Greece and some parameters could again be constrained to be equal: the expected parameter change which led us to free these parameters is an estimate, which need not equal the actual parameter change. For some thresholds the actual change was negligible (although still within a 95\% confidence interval for the expected change) and we constrained these four parameters again. The resulting model has an approximate likelihood ratio of 2.8 on 2 degrees of freedom ($p=.24$)3. 
-%\color{Black}
+We estimated the quality of the measures based on the continuous model and based on the categorical model for four experiments which used an answer scale of five categories or less in the main questionnaire. For each of these questions we took the ratio of the two different quality measures as an index of the effect that categorisation has on the continuous quality estimates. The first experiment's results will be described in some detail, while we provide the results of the other experiments more briefly.
 
 \subsection{Experiment 1}
 
-\fbox{\begin{minipage}{\textwidth}\begin{small}
-	\input{c:/ess/berlin/output/thresh_Women.tex}
-\end{small}\end{minipage}}
+The first experiment concerned opinions on the role of women in society (see table \ref{card:women}). We first turn to the hypothesis that all thresholds are equal across different countries. If this hypothesis cannot be rejected then there is also little reason to think that the categorisation is causing differences in the quality coefficients. 
 
-\begin{table}\centering\caption{\label{tab:women}}\begin{tabular}{lllrrr}
+We selected the two countries with the highest and the country with the lowest quality coefficients. In this experiment, the wording of the question reversed in the second method. For example, the statement `When jobs are scarce, men should have more right to a job than women' from the main questionnaire was changed to `When jobs are scarce, women should have the same right to a job as men' in the supplementary questionnaire. The countries with high quality coefficients were, in this case, Portugal and Greece. The lowest coefficients for this experiment were found in Estonia. To be able to separately study misspecifications in the categorisation part of the model, we imposed no restrictions on the covariance matrix of the latent response variables at this stage. 
+
+\begin{table}\caption{\label{card:women}The `women' experiment: questions and threshold estimates (in z-scores).}\fbox{\begin{minipage}{\textwidth}\begin{small}
+%	\input{../output/thresh_Women.tex}
+\end{small}\end{minipage}}\end{table}
+
+In the first analysis, all thresholds were constrained to be equal across the five countries. This yields a likelihood ratio statistic of 507 on 48 degrees of freedom. The country with the highest (128) contribution to this chi-square statistic is Portugal. When we examine the expected parameter changes, it also turns out that in this country these standardised values are very large with some values close to .9 while in other countries the highest obtained and exceptional value is .6. For some reason, the equality constraint on the Portuguese thresholds appears to be a particularly gross misspecification.
+
+As it turns out, this particular misspecification is very likely due to a translation error. The intention of the experiment was to reverse the wording of the question in the second method. But in Portugal the reverse wording was not used, and the same version was presented as in the main questionnaire. The supplementary questions mean something else in Portugal and therefore it makes sense that the thresholds should differ from those found in the other countries. To prevent incomparability when the MTMM model is estimated, we omit Portugal from our further analyses and continue with four countries. We should note, however, that the resulting experiment does provide a good opportunity to examine the effect of a repetition on the threshold structure. In addition, our analysis of the measurement model has revealed an item that was incorrectly translated in the supplementary questionnaire but had (as far as we know) gone undetected so far.
+
+Continuing our analysis with two countries, the model where all thresholds are constrained to be equal yields a likelihood ratio of 351 and 36 degrees of freedom ($p<.00001$). This model should therefore be rejected: the thresholds are significantly different across countries. 
+
+We formulated a new model in which some thresholds were constrained to be equal, while others were freed to vary. However, we found that too many parameters were freed for Greece and some parameters could again be constrained to be equal: the expected parameter change which led us to free these parameters is an estimate, which need not equal the actual parameter change. For some thresholds the actual change was negligible (although still within a 95\% confidence interval for the expected change) and we constrained these four parameters again. The resulting model has an approximate likelihood ratio of 2.8 on 2 degrees of freedom ($p=.24$)\footnote{It is also possible to free more parameters and put no restrictions at all on the model. This might lead us to find differences between countries more easily, since the parameters are allowed to vary. However, we prefer to aid our estimation by imposing these restrictions: if they do not hold in the population, this leads us to be conservative in ascribing differences between countries to the categorisation.}. The resulting estimates of the threshold parameters are presented in table \ref{card:women}. These estimates have been expressed as z-scores in order to make them comparable.
+
+Table \ref{card:women} presents three different traits, each asked in two different forms. The first form of each trait is the form asked in the main questionnaire, while the second form was asked in the supplementary questionnaire (the third form has been omitted for brevity). 
+
+Looking at the first question, it can be seen that the endpoints are somewhat distant, especially in Slovenia: there the category `disagree strongly' is 1.8 standard deviations or more away from the mean, reducing the number of scale points that are available for some people. The remaining categories, however, are reasonably similar, not too far away from the distribution of the opinion, and not very unequally spaced.
+
+The second form of the same question is similar to the first form in this respect, except that here both of the endpoints are rather distant in both countries, again reducing the number of scale points. As noted above, a reduction in scale points can be expected to increase grouping errors.
+
+The second trait (`responsibility') presents a radically different picture. In both countries the `disagree' and `disagree strongly' categories are quite far away from the mean. This again reduces the number scale points, while, at the same time, the scale is cut off in this manner only from one side. This may be because of a strong skew in the distribution of the opinion. Large transformation errors can be expected. Moreover, in Slovenia this effect is much worse than in Greece: the category `neither disagree nor agree' is already 1.3 standard deviations or more away from the mean,  reducing the amount of information provided by this variable in Slovenia even further. Thus, the problem with this particular question may be that it is very hard not to agree with it, and more so in Slovenia than in Greece.
+
+The second phrasing of this question is, perhaps, more polemic and seems to provide a better coverage of the prevailing opinions on women and men's responsibility for the home and children.
+
+For the third and last trait--the right to a job--the most striking feature of the thresholds is that in Slovenia, the first three categories represent opinions below the mean, while in Greece only the first category does. Beyond this, it is difficult to say which scale might produce fewer categorisation errors. Surprising, however, is that the second form of the same question seems to produce much more comparable scales with respect to the thresholds than the first one.
+
+The thresholds provide some insight into the nature of categorisation errors. However, the final quality of the measure depends also on other parameters of the categorical response model such as the quality coefficients and the error variances. Since the quality is a complex of different parameters, the discrepancy between the quality obtained in the categorical model and the quality in the continuous model is more informative on the effects of categorisation. As explained above, we operationalise this discrepancy by taking the ratio $q^2_{continuous} / q^2_{categorical} $. Table \ref{tab:women} contains the quality estimates under both models together with this categorisation factor for the three questions in the main questionnaire.
+
+\begin{table}\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on opinions about the role of men and women in society.\label{tab:women}}\begin{tabular}{lllrrr}
 \hline
  &  &  & \multicolumn{3}{c}{`Women'} \\
  &  &  & CutDown & Respnsib. & MenRight\\
@@ -286,14 +291,28 @@ Using the above criteria, it is clear that the equality model contains severe mi
 \hline
 \end{tabular}\end{table}
 
+The top two rows of table \ref{tab:women} show that the quality in Greece was higher than in Slovenia using the continuous model; this is, indeed, the reason we chose these particular countries to compare. The quality in Slovenia is lower for the first question, dramatically lower for the second question, and very similar for the third question. This is in principle in line with the descriptions given above of our expectations of categorisation errors.
+
+However, table \ref{tab:women} also shows that such interpretations of the possible influence of the thresholds are not as straightforward as they might seem. We fitted the MTMM model to the estimated covariance matrix of the latent response variables, and obtained a model which seemed to fit reasonably well ($\chi^2 = 20$, $df=10$, $p=.02$). While for the first and second questions the low qualities are indeed corrected upwards somewhat after the categorisation has been taken into account, the opposite happens in Greece. In that country all of the quality coefficients are lower using the categorical analysis than they are in the continuous analysis. This indicates that at least in this country, and perhaps in both, the quality estimates from the linear model have been artificially inflated by the categorisation. 
+
+A consequence of this is that, using the continuous model, a higher quality is obtained in Greece than in Slovenia, while the reverse is true in the categorical model for the first and last items. This is rather striking given that, taken over all questions in the main questionnaire, Greece had a substantially higher quality estimate than Slovenia (see table \ref{tab:countries}).
+
+Having indicated our procedure and points of interest in the results, we now discuss the remaining three experiments in less detail; they have been analysed in the same manner.
+
 \subsection{Experiment 2}
 
+The second experiment concerned some aspects of the respondent's job. Table \ref{card:job} again shows the threshold estimates after acceptable models for the threshold structure  had been found while leaving the covariance matrices free to vary (the test statistics for the two split-ballot groups were 2.4 with 4 $df$, $p=.66$, and 2.8 with 2 $df$, $p=.24$, respectively.).
 
+\begin{table}\caption{\label{card:job}The `job' experiment: questions and threshold estimates (in z-scores).}
 \fbox{\begin{minipage}{\textwidth}\begin{small}
-	\input{c:/ess/berlin/output/thresh_job.tex}
-\end{small}\end{minipage}}
+	\input{../output/thresh_job.tex}
+\end{small}\end{minipage}}\end{table}
 
-\begin{table}\centering\caption{\label{tab:job}}\begin{tabular}{lllrrr}
+It can be seen that in all cases, the endpoints for Slovenia are further away than the same endpoints for Belgium. Therefore we can expect more grouping errors in this country. Transformation errors are also present, as the thresholds are sometimes one-sided or not equidistant. In spite of these differences, the thresholds do not suggest a particularly low measurement quality due to categorisation.
+
+Taking the estimated covariances of the latent response variables as our input, we estimated the quality in order to compare the results of this analysis with the results from the continuous analysis. This model resulted in a test statistic of 40 on 23 degrees of freedom ($p=.01$). The different estimates for the main questionnaire items are presented in table \ref{tab:job}.
+
+\begin{table}\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on certain aspects of the job of the respondent.\label{tab:job}}\begin{tabular}{lllrrr}
 \hline
   &    & & \multicolumn{3}{c}{`Job'} \\
  &      &   & Varied & Secure & Risky\\
@@ -310,10 +329,22 @@ Using the above criteria, it is clear that the equality model contains severe mi
 \hline
 \end{tabular}\end{table}
 
+The low quality of .21 for the second item in Slovenia catches the eye in table \ref{tab:job}. Interestingly, there is nothing in the thresholds to suggest where such a low quality should come from. It therefore appears to be the quality coefficient (discrimination parameter) which is causing the difference rather than the categorisation \textit{per se}. This is borne out by the fact that the change in this coefficient when using the categorical model is not large, going from .21 to .29. 
+
+For the second and third question, the country with the higher quality estimates in the continuous analysis again finds its estimates in the categorical model corrected substantially downwards. Belgium retains its position as the country with higher quality measurements according to this model, however.
+
 \subsection{Experiment 3}
 
-\begin{table}\centering\caption{\label{tab:doctors}}\begin{tabular}{lllrrr}
+The third experiment concerned the respondent's perception of the behaviour of doctors in general. Table \ref{card:doctors} displays our estimates of the threshold parameters for the different questions.
 
+
+Table \ref{card:doctors} shows that the thresholds appear to be very similar across the two countries, except for threshold $\tau_3$ for the very first question\footnote{The test statistics for the first and second split-ballot groups were 6.3 with 7 $df$, $p=.50$, and 4.5 with 3 $df$, $p=.22$, respectively.}. Considerably more information is provided by this question in Denmark than in Estonia, since in the latter country only the first two categories are less than one standard deviation away from the mean. If we examine the distribution of this variable, this corresponds to a strong difference in skew: in Estonia 85\% of the observations fall in the first two categories, while in Denmark this percentage is a more modest, though still skewed, 72\%. Whether this is due to the thresholds themselves or to a skew in the underlying distribution, we can not say.
+
+In addition, there is a difference between the countries for threshold $\tau_1$ for the third question, `GPs treat their patients as equals'. In Denmark this extreme cutting point is more distant than in Estonia.
+
+We cannot directly deduce much about categorisation error by looking only at the thresholds. Fitting the categorical model produced some surprising results. The likelihood ratio in this case was 26 with 21 degrees of freedom ($p=.19$). Table \ref{tab:doctors} shows the results we obtained for this experiment.
+
+\begin{table}[hb]\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on perception of the behaviour of doctors.\label{tab:doctors}}\begin{tabular}{lllrrr}
 \hline
 &&&\multicolumn{3}{c}{`Doctors'}\\
  &  &  & Truth & Equals & Discuss\\
@@ -330,13 +361,25 @@ Using the above criteria, it is clear that the equality model contains severe mi
 \hline
 \end{tabular}\end{table}
 
+An extremely low quality for the first question was obtained in Denmark; this variable had very low correlations with its repetitions--and every other variable in the model. These low correlations were corrected upwards somewhat after taking the categorisation into account, but they remained low, producing an also low quality of .05 in the continuous and .12 in the categorical analysis\footnote{The data were subjected to a search for mistakes, but no coding or other such errors became apparent.}. As suggested before, an explanation for this is that the random errors are very large for this question.
+
+In Estonia the quality using the continuous model is also estimated to be rather low. However, the categorical model estimates the quality of the underlying scale at a level similar to that of the other two questions. This again suggests that the low quality was at least partly due to categorisation errors rather than random errors or method variance.
+
+For the other two questions, it is worth noting that while the estimates are slightly lower in Denmark in the continuous model, these differences are reduced in the categorical model. 
+
+\begin{table}[h]\caption{\label{card:doctors}The `doctors' experiment: questions and threshold estimates (in z-scores).}
 \fbox{\begin{minipage}{\textwidth}\begin{small}
-	\input{c:/ess/berlin/output/thresh_doctors.tex}
-\end{small}\end{minipage}}
+	\input{../output/thresh_doctors.tex}
+\end{small}\end{minipage}}\end{table}
 
 \subsection{Experiment 4}
 
-\begin{table}\centering\caption{\label{tab:efficacy}}\begin{tabular}{lllrrr}
+\begin{table}\caption{The `efficacy' experiment: questions and threshold estimates (in z-scores).\label{card:efficacy}}
+\fbox{\begin{minipage}{\textwidth}\begin{small}
+   \input{../output/thresh_efficacy.tex}
+\end{small}\end{minipage}}\end{table}
+
+\begin{table}\centering\caption{Quality according to the continuous and categorical models, with categorisation factors for the experiment on the respondent's subjective political competence (political efficacy).\label{tab:efficacy}}\begin{tabular}{lllrrr}
 \hline
  &  &  &  & `Efficacy' & \\
 	   &  &  & Complex & Active & Mind\\
@@ -354,10 +397,7 @@ Using the above criteria, it is clear that the equality model contains severe mi
 \hline
 \end{tabular}\end{table}
 
-\fbox{\begin{minipage}{\textwidth}\begin{small}
-	\input{c:/ess/berlin/output/thresh_efficacy.tex}
-\end{small}\end{minipage}}
-
+\subsection{A meta-analysis of the results}
 
 \begin{table}\centering\caption{A meta-analysis of the categorisation error studies. The table presents a linear regression of the categorisation factor on topic, country, scale and scale position.\label{tab:meta}}
 \begin{minipage}[ht]{.73\textwidth}
