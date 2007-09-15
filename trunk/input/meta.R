@@ -1,4 +1,4 @@
-meta <- read.table("c:/ess/berlin/data/meta.dat", header=T)
+meta <- read.table("../data/meta.dat", header=T)
  attach(meta)
 boxplot(factor~scale)
  m=lm(( factor )~topic+country+scale+position, data=meta[-c(28,64,37,2,8,11),])
@@ -45,3 +45,7 @@ dm <- model.matrix(factor ~ topic + country + scale + position, data=meta)
 meta$negative <- dm[,13]
 m=lm(( factor )~ topic + country + scale + negative, data=meta[-c(28,64,37,2,8,11),])
 
+
+
+me$id <- as.numeric(paste(as.numeric(me$country),me$trait,me$method,sep=""))
+me.wide <- reshape(me, v.names="methodeffect", idvar="id", timevar="analysis", direction="wide")
