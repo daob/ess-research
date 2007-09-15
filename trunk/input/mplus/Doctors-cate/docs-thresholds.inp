@@ -1,5 +1,5 @@
 DATA: 
-      FILE IS C:/ESS/berlin/data/w2exponly.dat;
+      FILE IS z:/home/daob/work/newberlin/trunk/data/w2exponly.dat;
 
 VARIABLE: 
     NAMES ARE     
