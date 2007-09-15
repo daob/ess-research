@@ -49,3 +49,13 @@ m=lm(( factor )~ topic + country + scale + negative, data=meta[-c(28,64,37,2,8,1
 
 me$id <- as.numeric(paste(as.numeric(me$country),me$trait,me$method,sep=""))
 me.wide <- reshape(me, v.names="methodeffect", idvar="id", timevar="analysis", direction="wide")
+
+opar=par
+ par(mar=c(3,2,0,1))
+
+
+meta <- read.csv("../output/meta3.csv", header=T,sep="\t")
+
+boxplot(d[,1]~high, horizontal=T, boxwex=.5, names=c("Low","High"), frame.plot=F)
+
+par(opar)

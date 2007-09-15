@@ -163,7 +163,7 @@ However, we have now seen that $y$ is itself a categorization of an unobserved c
 \begin{equation}
 q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
 \end{equation}
-The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2$, the quality from the continuous analyis, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis, have been obtained. So the effect of categorisation on the quality estimate can be derived. We attach no specific significance to this number other than that it is a useful index of the relative differences between the quality estimates of the continuous and categorical models.
+The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2_{cont.}$, the quality from the continuous analyis, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis ($q^2_{cat.}$), have been obtained. So the effect of categorisation on the quality estimate can be derived. We attach no specific significance to this number other than that it is a useful index of the relative differences between the quality estimates of the continuous and categorical models.
 
 In the present study, we estimate this `categorisation factor' for different countries and experiments, and examine to what extent it can explain the differences in quality across countries. First, however, we give an overview of the data we use.
 
@@ -244,6 +244,8 @@ This approach has the advantage that consistent and numerically precise estimate
 
 We note here that the categorical MTMM model is equivalent to the `graded response model' in item response theory. There is a simple relationship between the threshold and quality coefficients of our model and difficulty and discrimination parameters in IRT models: the quality coefficients are scaled discrimination parameters, while a scaled difficulty for each category can be obtained by dividing each threshold by the corresponding quality coefficient \citep{muthen_latent_2002}.
 
+The two models are the same with respect to the covariance structure of the response variables (the `MTMM part' of the model). However, while in the continuous model it is necessary to assume that the variables are not categorical, in the categorical model it is necessary to assume that the unobserved response variables follow a multivariate normal distribution. While in principle the continuous model makes the same assumption, it has been shown that the continuous model is in many cases highly robust to violations of the normality assumption \citep{satorra_robustness_1990}. At the same time, the categorical model is known to be more sensitive to violations of this assumption, particularly when the variables are skewed in opposite directions \citep{coenders_structural_1996}. Thus, it depends on the structure of the data whether one model or the other provides a more adequate estimate of the quality of the questions. This should be kept in mind in the interpretations of the results.
+
 %\begin{figure}[hb]\centering\caption{\label{fig:sb_missing}Missing data in the split-ballot experiment.}\includegraphics[width=1.5cm]{sb_missing}\end{figure}
 
 \section{Results}
@@ -272,7 +274,7 @@ We formulated a new model in which some thresholds were constrained to be equal,
 
 Table \ref{card:women} presents three different traits, each asked in two different forms. The first form of each trait is the form asked in the main questionnaire, while the second form was asked in the supplementary questionnaire (the third form has been omitted for brevity). 
 
-\begin{table}\centering\caption{Quality ($q^2$) and method effects ($m$) according to the continuous and categorical models, with categorisation factors for the experiment on opinions about the role of men and women in society.\label{tab:women}}\begin{tabular}{lllrrr}
+\begin{table}\centering\begin{scriptsize}\caption{Quality ($q^2$) and method effects ($m$) according to the continuous and categorical models, with categorisation factors for the experiment on opinions about the role of men and women in society.\label{tab:women}}\begin{tabular}{lllrrr}
 \hline
  &  &  & \multicolumn{3}{c}{`Women'} \\
  &  &  & CutDown & Respnsib. & MenRight\\
@@ -291,7 +293,7 @@ Table \ref{card:women} presents three different traits, each asked in two differ
  &  & Greece & 1.4 & 1.9 & 1.5\\
  &  & Slovenia & 0.8 & 0.9 & 1.0\\
 \hline
-\end{tabular}\end{table}
+\end{tabular}\end{scriptsize}\end{table}
 
 Looking at the first question, it can be seen that the endpoints are somewhat distant, especially in Slovenia: there the category `disagree strongly' is 1.8 standard deviations or more away from the mean, reducing the number of scale points that are available for some people. The remaining categories, however, are reasonably similar, not too far away from the distribution of the opinion, and not very unequally spaced.
 
@@ -391,7 +393,7 @@ Not everything about categorisation error can directly deduced by looking only a
 
 An extremely low quality for the first question was obtained in Denmark; this variable had very low correlations with its repetitions--and every other variable in the model. These low correlations were corrected upwards somewhat after taking the categorisation into account, but they remained low, producing an also low quality of .05 in the continuous and .12 in the categorical analysis\footnote{The data were subjected to a search for mistakes, but no coding or other such errors became apparent.}. As suggested before, an explanation for this is that the random errors are very large for this question.
 
-In Estonia the quality using the continuous model is also estimated to be rather low. However, the categorical model estimates the quality of the underlying scale at a level similar to that of the other two questions. This again suggests that the low quality was at least partly due to categorisation errors rather than random errors or method variance.
+In Estonia the quality using the continuous model is also estimated to be rather low. However, the categorical model estimates the quality of the underlying scale at a level similar to that of the other two questions.
 
 For the other two questions, it is worth noting that while the estimates are slightly lower in Denmark in the continuous model, these differences are reduced in the categorical model. 
 
@@ -443,9 +445,9 @@ Now that we have presented and discussed the results of the different experiment
 
 \subsection{A meta-analysis of the results}
 
-Using the results presented in the previous sections, we constructed a data set consisting of the categorisation factor for all questions--including those from the supplementary questionnaire not shown above--in the four different experiments for which this index was available. This yielded 78 cases in total. We also recorded the country, topic of the experiment, the type of scale used (agree-disagree, true-false or direct question) and whether the question was phrased as a negative statement or not. The categorisation factors analysed are presented as a histogram in figure \ref{fig:hist_factor}.
+Using the results presented in the previous sections, we constructed a data set consisting of the categorisation factor for all questions--including those from the supplementary questionnaire not shown above--in the four different experiments for which this index was available. We also added data on questions from Switzerland and the Czech Republic for the `women' experiment. This yielded 78 cases in total. We also recorded the country, topic of the experiment, the type of scale used (agree-disagree, true-false or direct question) and whether the question was phrased as a negative statement or not. The categorisation factors analysed are presented as a histogram in figure \ref{fig:hist_factor}. Figure \ref{fig:box_factor} shows a plot of the quality obtained in the continuous analysis and the categorisation factor.
 
-\begin{figure}[htb]
+\begin{figure}[hbt]
 \begin{minipage}[b]{0.5\linewidth} 
 \centering\includegraphics[width=5.5cm]{hist_factor}
 \caption{Histogram of the categorisation factor.\label{fig:hist_factor}}\centering
@@ -453,11 +455,14 @@ Using the results presented in the previous sections, we constructed a data set 
 \hspace{0.5cm} 
 \begin{minipage}[b]{0.5\linewidth}
 \centering\includegraphics[width=6cm]{box_factor.pdf}
-\caption{Boxplot of the categorisation factor for the high and low quality group.}
+\caption{Scatterplot of $q^2_{continuous}$ and the categorisation factor.\label{fig:box_factor}}
 \end{minipage}
 \end{figure}
 
-In order to see what differences could be detected across these variables with respect to the categorisation factor while controlling for the others, we estimated a linear regression of the categorisation factors on country, topic, scale and negatively phrased question or not. An examination of the residuals suggests that there are no large deviations from the assumptions of linearity of the relationships and normality of the residuals\footnote{The largest standardised residual equals .34.}. The overall amount of variance in explained is 55\%. The estimates can be found in table \ref{tab:meta}.
+The categorisation factor is of course calculated using $q^2_{cont.}$, but a relationship is only to be expected when the qualities under the categorical and continuous models are not constantly proportional to each other. Figure \ref{fig:box_factor} shows that with one exception, categorisation factors above one occur only when the quality is relatively high. It can also be seen that the absolute level of the quality and the discrepancies between the quality under the two models are related. If the sample is split according to whether the quality was `high'  or `low' (above or below the median 0.56), the means of the two groups are 1.11 and 0.73, respectively ($t=5.7$, $df \approx 38$, $p<.00001$).
+
+In order to see what differences in the categorisation factors could be detected, we estimated a linear regression of the categorisation factors on country, topic, scale and whether the question was negatively phrased or not. An examination of the residuals suggests that there are no large deviations from the assumptions of linearity of the relationships and normality of the residuals\footnote{The largest standardised residual equals .34.}. The overall amount of variance in explained is 55\%. The estimates can be found in table \ref{tab:meta}.
+This analysis is necessarily limited by the design of the experiments. For example, true-false scales were only used for the `job' items--although this was of course not the only scale used in that experiment. 
 
 \begin{table}[htb]\centering\caption{A meta-analysis of the categorisation error studies. The table presents a linear regression of the categorisation factor on topic, country, scale and scale position.\label{tab:meta}}
 \begin{minipage}[ht]{.73\textwidth}
@@ -491,6 +496,15 @@ Multiple R-Squared: 0.55; Adjusted R-squared: 0.46; F-test for factor sums of sq
 Topic: $p=.15$; Country: $p=.15$; Scale: $p=.01$; Position: $p<.00001$.
 \end{minipage}
 \end{table}
+
+The categorisation factors did not differ very much across the different topics, except for the experiment on the role of women in society. In general, controlling for country and scale\footnote{No negatively phrased questions were used in this experiment; consequently, we cannot control for this variable.}, the lowest categorisation factors were found in the `doctors' experiment.
+
+The country explains little of the variation in the categorisation factor. The exception however, is Estonia where a large coefficient was found which is likely to be different from zero. The average categorisation factor for this country keeping all other variables at zero is above one, indicating that the quality under the categorical model in this country was lower than the same quality estimate under the continuous model, scale, negative phrasing, and topic being equal. We should also note the higher standard errors for these coefficients. Given the relationship between the categorisation factor and the quality and the fact that the quality differs across the countries, it is likely that the coefficients are in fact higher than a statistical test would indicate at this point\footnote{A bayesian analysis of this model using uniform priors on the coefficients suggests that the probability that the country effects are larger than 0.1 is around .8.}.
+
+
+
+
+
 
 
 \section{Discussion and conclusion}
