@@ -1,7 +1,7 @@
 question	trait	method
-"Sometimes politics seems so complicated that I can’t really understand what is going on."				1	2
+"Sometimes politics seems so complicated that I can't really understand what is going on."				1	2
 "I think I could take an active role in a group involved with political issues"					2	2
 "I find it easy to make my mind up about political issues"	3	2
-"How often does politics seem so complicated that you can’t really understand what is going on?"			1	1
+"How often does politics seem so complicated that you can't really understand what is going on?"			1	1
 "Do you think that you could take an active role in a group involved with political issues?"				2	1
 "How difficult or easy do you find it to make your mind up about political issues?"	3	1
