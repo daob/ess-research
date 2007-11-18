@@ -1,8 +1,8 @@
 rm(list=ls())
-thresholds <- read.table("c:/ess/berlin/data/efficacy/thresholds.txt", header=T)
-means <- read.table("c:/ess/berlin/data/efficacy/means.txt", header=T)
-questions <- read.table("c:/ess/berlin/data/efficacy/questions.txt", header=T, as.is=c(1,2,3))
-scales <- read.table("c:/ess/berlin/data/efficacy/scales.txt", header=T, as.is=c(1,2,3))
+thresholds <- read.table("~/current-project/data/efficacy/thresholds.txt", header=T)
+means <- read.table("~/current-project/data/efficacy/means.txt", header=T)
+questions <- read.table("~/current-project/data/efficacy/questions.txt", header=T, as.is=c(1,2,3))
+scales <- read.table("~/current-project/data/efficacy/scales.txt", header=T, as.is=c(1,2,3))
 
 stopifnot(length(unique(means$trait)) == length(unique(thresholds$trait)))
 stopifnot(length(unique(means$method)) == length(unique(thresholds$method)))
@@ -53,6 +53,6 @@ for ( it in 1:numtraits ) {
 }
 }
 
-write(str, paste("c:/ess/berlin/output/thresh_", experiments[ie], ".tex",sep=""))
+write(str, paste("~/current-project/output/thresh_", experiments[ie], ".tex",sep=""))
 
 }
