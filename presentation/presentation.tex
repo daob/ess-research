@@ -9,7 +9,7 @@
 \usecolortheme{beetle}
 
 \title{Prediction of reliability and method effects in surveys from characteristics of the questions}
-\author{Daniel Oberski}
+%\author{Daniel Oberski}
 \institute
 {
   \inst{}%
@@ -43,38 +43,106 @@
 \section{Multitrait-multimethod experiments}
 
 \begin{frame}
-	\frametitle{An example experiment}
+	\frametitle{The basic response model}
+	\includegraphics[height=7cm]{i/response-model.pdf}\\
+\end{frame}
+
+\subsection{An example experiment}
+\begin{frame}
+	\frametitle{First trait measured with three methods}
+	\begin{tabular}{l}
+		\hline
+		\includegraphics[width=8cm]{i/trait-1-m-1.pdf} \\\hline
+		\includegraphics[width=8cm]{i/trait-1-m-2.pdf} \\\hline
+		 \includegraphics[width=8cm]{i/trait-1-m-3.pdf}\\
+		\hline
+	\end{tabular}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Three traits measured with first method}
+		\includegraphics[width=11.2cm]{i/method-1.pdf}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Three traits measured with second method}
+		\includegraphics[height=7cm]{i/method-2.pdf}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Three traits measured with third method}
+		\includegraphics[height=7cm]{i/method-3.pdf}
 \end{frame}
 
 \subsection{Designs}
 
 \begin{frame}	
-	\frametitle{An oversimplified design}
-\end{frame}	
-\begin{frame}	
-	\frametitle{a full 3 trait 3 method design}
-\end{frame}	
-\begin{frame}	
-	\frametitle{a panel design}
-\end{frame}	
-\begin{frame}	
-	\frametitle{a split ballot design}
+	\frametitle{Split ballot design}
+
+	\begin{itemize}[<alert@+>]
+		\item Different designs are possible
+		\item If 3 traits are asked using 3 methods, the respondent has to answer 
+			$3 \times 3 = 9$ questions per experiment
+		\item Answering the same question 9 times is a large response burden
+		\item The solution: split ballot MTMM design.
+\item<5-|alert@5> {
+	Split the sample into groups A and B:
+
+	\begin{tabular}{llccc}
+\hline
+		&&\multicolumn{3}{c}{Trait}\\
+		& Method & 1 & 2 & 3\\
+\hline
+		Main quest. 	& 1 & A,B & A,B & A,B\\
+		Supplementary quest.	& 2 & A & A & A\\
+							& 2 & B & B & B\\
+\hline
+	\end{tabular}	}
+	\end{itemize}
+
 \end{frame}	
 
 \subsection{Models}
 
 \begin{frame}	
-	\frametitle{c-u}
+	\frametitle{Different models for MTMM experiments}
+	\begin{itemize}[<alert@+>]
+		\item Classic MTMM model
+		\item Correlated uniqueness (Kenny \& Judd)
+		\item Direct product (Browne)
+		\item True score model
+		\item MTM-1 (Eid 2000)
+	\end{itemize}
 \end{frame}	
 \begin{frame}	
-	\frametitle{direct product}
-\end{frame}	
-\begin{frame}	
-	\frametitle{MTM-1}
+	\frametitle{Different models for MTMM experiments}
+	\begin{itemize}[<alert@+>]
+		\item We use the true score model
+		\item Equivalent to the classic MTMM model
+		\item Sometimes it is necessary to fix the variance of one factor to 0;
+		\item In that case our model is the same as Eid's MTM-1 model.
+	\end{itemize}
 \end{frame}	
 \begin{frame}	
 	\frametitle{true score uncorrelated methods}
+	\includegraphics[height=7cm]{i/MTMM.pdf}
+
+	\framezoom<1><2>(0cm,1.85cm)(.5cm,4.5cm)
+	\framezoom<1><3>(0cm,0cm)(1cm,3cm)
 \end{frame}	
+
+\begin{frame}	
+	\frametitle{True score model assumptions}
+	\begin{itemize}[<alert@+>]
+		\item No correlations among methods
+		\item No correlations between traits and methods
+		\item Equal method effects
+		\item Linear and additive effects
+		\item Normal errors, independent of all unobserved variables
+		\item All variables are continuous
+	\end{itemize}
+\end{frame}	
+
 
 \section{What has been done already}
 
