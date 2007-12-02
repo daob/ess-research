@@ -28,12 +28,12 @@ s <- persp(x, y, z, theta = 20, phi = 40, expand = 0.45, col = p[80],
 
 for(i in 1:length(thresh.x)) {
   xx <- rep(thresh.x[i], res)
-  points( trans3d( xx, y, f(xx,y), pmat=s ), pch=20, col=p )
+  lines( trans3d( xx, y, f(xx,y), pmat=s ), pch=20, col=p )
 }
 
 for(i in 1:length(thresh.y)) {
   yy <- rep(thresh.y[i], res)
-  points( trans3d( x, yy, f(x,yy), pmat=s ), pch=20, col=p[length(p):1])
+  lines( trans3d( x, yy, f(x,yy), pmat=s ), pch=20, col=p)
 }
 
 

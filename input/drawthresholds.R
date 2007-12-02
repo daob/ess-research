@@ -37,7 +37,13 @@ for (ie in 1:length(experiments.vector)) {
       quest <- questions[questions$trait==traits[it] & questions$method==methods[im] , 1]
       for( ic in 1:numcountries) {
         tau <- thresholds[thresholds$country==countries[ic] &  thresholds$trait==traits[it] &  thresholds$method==methods[im] ,1]
+
         nu <- means[means$country==countries[ic] &  means$trait==traits[it] &  means$method==methods[im], 1]
+        
+        print(paste('country:',countries[ic], "method:", methods[im], 'trait:',traits[it]))
+        print(questions[numtraits*(im-1)+it,1])
+        print(paste('mean:',nu))
+        
         tau <- tau - nu
         numtau <- length(tau)
         tau.mat <- rbind(tau.mat, c(tau,countries[ic],traits[it],methods[im]))
@@ -100,15 +106,15 @@ for (ie in 1:length(experiments.vector)) {
   }                                        
 
   dev.off()
+} # loop to next experiment
 
-}# loop to next experiment
 
-                                        # men gebruikt dat deel van de schaal waar men het mee eens is
-                                        # 'negatieve' vraagstelling beinvloedt de overgangen
-                                        # verschillende normen bijv. gelijkheid mannen en vrouwen zorgen voor verschillen in
-                                        # categorieen op verschillende manieren gebruikt
-                                        #   1 door verschillen in hun ware positie zie boven
-                                        #   2 door verchillen in de positie van de vraag (in dat land)
-                                        # dit veroorzaakt verschillen in de true score door methoden
-                                        # dus na correctie veranderen methoden effecten
-                                        # kan beide kanten op
+# men gebruikt dat deel van de schaal waar men het mee eens is
+# 'negatieve' vraagstelling beinvloedt de overgangen
+# verschillende normen bijv. gelijkheid mannen en vrouwen zorgen voor verschillen in
+# categorieen op verschillende manieren gebruikt
+#   1 door verschillen in hun ware positie zie boven
+#   2 door verchillen in de positie van de vraag (in dat land)
+# dit veroorzaakt verschillen in de true score door methoden
+# dus na correctie veranderen methoden effecten
+# kan beide kanten op

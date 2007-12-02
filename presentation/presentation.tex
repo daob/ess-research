@@ -378,7 +378,26 @@ What we studied already:
 \end{frame}
 
 \begin{frame}
-\frametitle{Does categorisation explain differences across countries}
+	\frametitle{Categorisation of continuous variables}
+
+    \begin{itemize}
+    \item Our model assumes that there are \emph{unobserved} continuous latent response variables (LRV) that have been categorised into the \emph{observed} categorical variables.
+    \item These continuous latent response variables are related to each other according to the MTMM model.
+    \item Equivalent to a 2 parameter graded response model in IRT (Muth\'en & Asparouhov).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Categorisation of continuous variables}	 
+    \begin{columns}[T]
+    	\begin{column}{5cm}\includegraphics[width=5.1cm]{i/LRV-8cat.pdf}\end{column}
+    	\begin{column}<2->{5cm}\includegraphics[width=5.1cm]{i/LRV-skew.pdf}
+    	\end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consequences of categorisation for the MTMM model}
 
 	\begin{itemize}
 		\item 
@@ -387,12 +406,84 @@ What we studied already:
 \end{frame}
 
 \begin{frame}
-	\frametitle{The categorization model}
-\begin{columns}[T]
-	\begin{column}{5cm}\includegraphics[width=5.1cm]{i/LRV-8cat.pdf}\end{column}
-	\begin{column}<2->{5cm}\includegraphics[width=5.1cm]{i/LRV-skew.pdf}
-	\end{column}
-\end{columns}
+\frametitle{Consequences of categorisation for the MTMM model}
+
+Efficacy experiment: Denmark
+
+Polychoric correlations
+
+\begin{tabular}{rrrrrr}
+ \hline
+      [,1]  [,2]  [,3]  [,4] [,5] [,6]
+[1,]  1.00    NA    NA    NA   NA   NA
+[2,] -0.44  1.00    NA    NA   NA   NA
+[3,] -0.51  0.47  1.00    NA   NA   NA
+[4,]  0.66 -0.45 -0.51  1.00   NA   NA
+[5,] -0.44  0.74  0.46 -0.51 1.00   NA
+[6,] -0.52  0.51  0.67 -0.56 0.56    1
+ \hline
+ \end{tabular} 
+ 
+Pearson correlations
+
+\begin{tabular}{rrrrrr}
+ \hline
+      [,1]  [,2]  [,3]  [,4] [,5] [,6]
+[1,]  1.00    NA    NA    NA   NA   NA
+[2,] -0.40  1.00    NA    NA   NA   NA
+[3,] -0.47  0.37  1.00    NA   NA   NA
+[4,]  0.60 -0.37 -0.44  1.00   NA   NA
+[5,] -0.39  0.67  0.40 -0.43 1.00   NA
+[6,] -0.46  0.43  0.62 -0.49 0.48    1
+ \hline
+ \end{tabular}
+\end{frame}
+
+\begin{frame}
+\frametitle{\% Increase in the correlations after correction for categorisation}
+
+Efficacy experiment: Denmark
+
+> 100*round((Rr.poly -R.pears)/ R.pears,2)
+
+\begin{tabular}{rrrrrr}
+\hline
+     [,1] [,2] [,3] [,4] [,5] [,6]
+[1,]    0   NA   NA   NA   NA   NA
+[2,]    8\%    0   NA   NA   NA   NA
+[3,]    8\%   29\%    0   NA   NA   NA
+[4,]   10   22   16    0   NA   NA
+[5,]   13   10   16   19\%    0   NA
+[6,]   13   19   10   15\%   16\%    0
+\hline
+ \end{tabular}
+ 
+Mean increase of the polychoric correlations: 11\%
+
+%> approx.power(2.187, 79.889, alpha=.05)
+%[1] 0.05
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Consequences of correction for categorisation: conclusions}
+
+	\begin{itemize}
+		\item The monomethod correlations for the second method increase more than those of the first method
+		\item The method effects 
+	\end{itemize}
+ 
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Does categorisation explain differences across countries}
+
+	\begin{itemize}
+		\item 
+	\end{itemize}
+ 
 \end{frame}
 
 
