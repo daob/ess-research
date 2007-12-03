@@ -378,7 +378,26 @@ What we studied already:
 \end{frame}
 
 \begin{frame}
-\frametitle{Does categorisation explain differences across countries}
+	\frametitle{Categorisation of continuous variables}
+
+    \begin{itemize}
+    \item Our model assumes that there are \emph{unobserved} continuous latent response variables (LRV) that have been categorised into the \emph{observed} categorical variables.
+    \item These continuous latent response variables are related to each other according to the MTMM model.
+    \item Equivalent to a 2 parameter graded response model in IRT (Muth\'en \& Asparouhov).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Categorisation of continuous variables}	 
+    \begin{columns}[T]
+    	\begin{column}{5cm}\includegraphics[width=5.1cm]{i/LRV-8cat.pdf}\end{column}
+    	\begin{column}<2->{5cm}\includegraphics[width=5.1cm]{i/LRV-skew.pdf}
+    	\end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consequences of categorisation for the MTMM model}
 
 	\begin{itemize}
 		\item 
@@ -387,12 +406,111 @@ What we studied already:
 \end{frame}
 
 \begin{frame}
-	\frametitle{The categorization model}
-\begin{columns}[T]
-	\begin{column}{5cm}\includegraphics[width=5.1cm]{i/LRV-8cat.pdf}\end{column}
-	\begin{column}<2->{5cm}\includegraphics[width=5.1cm]{i/LRV-skew.pdf}
-	\end{column}
-\end{columns}
+\frametitle{Efficacy experiment: Denmark}
+
+Polychoric correlations
+
+\begin{footnotesize}
+\begin{tabular}{llrrrrrr}
+ \hline
+ &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
+ &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$}\\
+Method 1	& Complex 	& 1.00 &  &  &  &  & \\
+			& Active 	& -0.44 & 1.00 &  &  &  & \\
+			& Mind 		& -0.51 & 0.47 & 1.00 &  &  & \\
+Method 2	& Complex 	& 0.66 & -0.45 & -0.51 & 1.00 &  & \\
+			& Active 	& -0.44 & 0.74 & 0.46 & -0.51 & 1.00 & \\
+			& Mind 		& -0.52 & 0.51 & 0.67 & -0.56 & 0.56 & 1.00\\
+ \hline
+ \end{tabular} 
+ \end{footnotesize}
+
+Pearson correlations
+
+\begin{footnotesize}\begin{tabular}{llrrrrrr}
+ \hline
+ &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
+
+ &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$}\\
+Method 1	& Complex 	&  1.00 &  &  &  &  & \\
+			& Active 	& -0.40 & 1.00 &  &  &  & \\
+			& Mind 		& -0.47 & 0.37 & 1.00 &  &  & \\
+Method 2	& Complex 	&  0.60 & -0.37 & -0.44 & 1.00 &  & \\
+			& Active 	& -0.39 & 0.67 & 0.40 & -0.43 & 1.00 & \\
+			& Mind 		& -0.46 & 0.43 & 0.62 & -0.49 & 0.48 & 1.00\\
+ \hline
+ \end{tabular} \end{footnotesize}
+\end{frame}
+
+\begin{frame}
+\frametitle{\% Increase in the correlations after correction for categorisation}
+
+Efficacy experiment: Denmark
+
+\begin{tabular}{llrrrrrr}
+\hline
+ &&\multicolumn{3}{c}{Method 1} & \multicolumn{2}{c}{Method 2}  \\
+&&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{60pt}}$}\\
+ Method 1	& Complex 	& &  &  &  &  & \\
+ 			& Active 	& \textbf{8}\% &  &  &  & \\
+ 			& Mind 		& \textbf{8}\% & \textbf{29}\% &  &  & \\
+ Method 2	& Complex 	& 10\%& 22\%& 16\%&  & \\
+ 			& Active 	& 13\%& 10\%& 16\%& \textbf{19}\%  & \\
+ 			& Mind 		& 13\%& 19\%& 10\%& \textbf{15}\% & \textbf{16}\% &  \\
+\hline
+\end{tabular}
+
+Mean percentage increase of the polychoric correlations: 11\%
+
+%> approx.power(2.187, 79.889, alpha=.05)
+%[1] 0.05
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Quality ($q^2$) and method effects ($m$) according to the continuous and categorical models, with categorisation factors for the experiment on the respondent's subjective political competence (political efficacy).}
+
+\begin{f\begin{tabular}{lllrrr}
+\hline
+ &  &  &  & `Efficacy' & \\
+	   &  &  & Complex & Active & Mind\\
+	   \hline
+ \multicolumn{2}{l}{Continuous analysis}\\
+ &  $q^2$& Denmark & 0.77 & 0.83 & 0.79\\
+ &  & Switzerland & 0.49 & 0.81 & 0.50\\
+ &  $m$& Denmark & 0.00 & 0.00 & 0.00\\
+ &  & Switzerland & 0.00 & 0.00 & 0.00\\
+\multicolumn{2}{l}{Categorical analysis}   &  &  &  & \\
+ &  $q^2$& Denmark & 0.63 & 0.70 & 0.63\\
+ &  & Switzerland & 0.62 & 0.94 & 0.62\\
+ &  $m$& Denmark & 0.11 & 0.08 & 0.11\\
+ &  & Switzerland & 0.00 & 0.00 & 0.00\\
+\multicolumn{2}{l}{Categorisation factor}    &  &  & \\
+ &  & Denmark & 1.23 & 1.18 & 1.25\\
+ &  & Switzerland & 0.79 & 0.86 & 0.81\\
+\hline
+\end{tabular}\end{footnotesize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consequences of correction for categorisation: conclusions}
+
+	\begin{itemize}
+		\item The monomethod correlations for the second method increase more than those of the first method
+		\item The method effects 
+	\end{itemize}
+ 
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Does categorisation explain differences across countries}
+
+	\begin{itemize}
+		\item h
+	\end{itemize}
+ 
 \end{frame}
 
 
@@ -404,6 +522,11 @@ What we studied already:
 		\item The more skew, the smaller the Pearson correlation
 	\end{itemize}
  
+	Therefore,
+	\begin{itemize}[<alert@+>]
+		\item b
+	\end{itemize}
+
 \end{frame}
 
 

@@ -6,4 +6,4 @@
 \beamer@subsectionintoc {3}{1}{The international research project 1984--1996}{26}{0}{2}
 \beamer@subsectionintoc {3}{2}{Experiments in the European Social Survey}{27}{0}{2}
 \beamer@sectionintoc {4}{Why are there differences between countries?}{32}{0}{3}
-\beamer@sectionintoc {5}{The final goal: SQP}{43}{0}{4}
+\beamer@sectionintoc {5}{The final goal: SQP}{52}{0}{4}
