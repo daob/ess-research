@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.30.6-2.2 (MiKTeX 2.5) (preloaded format=pdflatex 2006.11.23)  3 DEC 2007 20:05
+This is pdfeTeX, Version 3.141592-1.30.6-2.2 (MiKTeX 2.5) (preloaded format=pdflatex 2006.11.23)  3 DEC 2007 20:53
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -819,19 +819,23 @@ LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <6> not available
 LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <5> not available
 (Font)              Font shape `T1/pfu/m/sl' tried instead on input line 34.
 
-<i/uvttransparent.png, id=55, 200.9106pt x 45.771pt>
-File: i/uvttransparent.png Graphic file (type png)
+<i/uvt.pdf, id=55, 670.505pt x 153.57375pt>
+File: i/uvt.pdf Graphic file (type pdf)
+ <use i/uvt.pdf>
+<i/esade.pdf, id=56, 482.80376pt x 250.82686pt>
+File: i/esade.pdf Graphic file (type pdf)
+ <use i/esade.pdf> [1{psfonts.map}
 
-<use i/uvttransparent.png> <i/esade.png, id=56, 289.08pt x 150.3216pt>
-File: i/esade.png Graphic file (type png)
-
-<use i/esade.png> [1{psfonts.map}
-
- <i/uvttransparent.png> <i/esade.png>]
-(presentation.toc) [2
+ <i/uvt.pdf
+Warning:  (file i/uvt.pdf): pdf inclusion: Page Group detected which pdfTeX can
+'t handle. Ignoring it.
+> <i/esade.pdf
+Warning:  (file i/esade.pdf): pdf inclusion: Page Group detected which pdfTeX c
+an't handle. Ignoring it.
+>] (presentation.toc) [2
 
 ]
-<i/response-model.pdf, id=134, 344.45004pt x 242.83119pt>
+<i/response-model.pdf, id=144, 344.45004pt x 242.83119pt>
 File: i/response-model.pdf Graphic file (type pdf)
 
 <use i/response-model.pdf> [3
@@ -848,19 +852,19 @@ LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <10.95> not available
 ] [7
 
 ]
-<i/trait-1-m-1.pdf, id=279, 450.68375pt x 95.35625pt>
+<i/trait-1-m-1.pdf, id=289, 450.68375pt x 95.35625pt>
 File: i/trait-1-m-1.pdf Graphic file (type pdf)
  <use i/trait-1-m-1.pdf>
-<i/trait-1-m-2.pdf, id=280, 454.69875pt x 135.45154pt>
+<i/trait-1-m-2.pdf, id=290, 454.69875pt x 135.45154pt>
 File: i/trait-1-m-2.pdf Graphic file (type pdf)
  <use i/trait-1-m-2.pdf>
-<i/trait-1-m-3.pdf, id=281, 498.86375pt x 123.46124pt>
+<i/trait-1-m-3.pdf, id=291, 498.86375pt x 123.46124pt>
 File: i/trait-1-m-3.pdf Graphic file (type pdf)
  <use i/trait-1-m-3.pdf>
 [8
 
  <i/trait-1-m-1.pdf> <i/trait-1-m-2.pdf> <i/trait-1-m-3.pdf>]
-<i/method-1.pdf, id=341, 458.71375pt x 172.645pt>
+<i/method-1.pdf, id=351, 458.71375pt x 172.645pt>
 File: i/method-1.pdf Graphic file (type pdf)
  <use i/method-1.pdf>
 Overfull \hbox (11.3809pt too wide) in paragraph at lines 75--75
@@ -869,13 +873,13 @@ Overfull \hbox (11.3809pt too wide) in paragraph at lines 75--75
 
 [9
 
- <i/method-1.pdf>] <i/method-2.pdf, id=376, 434.62375pt x 476.23091pt>
+ <i/method-1.pdf>] <i/method-2.pdf, id=386, 434.62375pt x 476.23091pt>
 File: i/method-2.pdf Graphic file (type pdf)
 
 <use i/method-2.pdf> [10
 
  <i/method-2.pdf>]
-<i/method-3.pdf, id=410, 501.875pt x 616.3025pt>
+<i/method-3.pdf, id=420, 501.875pt x 616.3025pt>
 File: i/method-3.pdf Graphic file (type pdf)
  <use i/method-3.pdf> [11
 
@@ -898,7 +902,7 @@ File: i/method-3.pdf Graphic file (type pdf)
 ] [20
 
 ]
-<i/MTMM.pdf, id=685, 353.74722pt x 225.35275pt>
+<i/MTMM.pdf, id=695, 353.74722pt x 225.35275pt>
 File: i/MTMM.pdf Graphic file (type pdf)
  <use i/MTMM.pdf>
 Overfull \hbox (5.36346pt too wide) in paragraph at lines 147--147
@@ -948,7 +952,7 @@ l.147 \end{frame}
 ] [29
 
 ]
-<i/andrews-etal.pdf, id=932, 566.78271pt x 336.46362pt>
+<i/andrews-etal.pdf, id=942, 566.78271pt x 336.46362pt>
 File: i/andrews-etal.pdf Graphic file (type pdf)
 
 <use i/andrews-etal.pdf> [30
@@ -956,7 +960,7 @@ File: i/andrews-etal.pdf Graphic file (type pdf)
  <i/andrews-etal.pdf
 Warning:  (file i/andrews-etal.pdf): pdf inclusion: Page Group detected which p
 dfTeX can't handle. Ignoring it.
->] <i/ess-logo.pdf, id=1159, 147.27185pt x 47.60461pt>
+>] <i/ess-logo.pdf, id=1169, 147.27185pt x 47.60461pt>
 File: i/ess-logo.pdf Graphic file (type pdf)
  <use i/ess-logo.pdf>
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 197.
@@ -969,7 +973,7 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
  <i/ess-logo.pdf
 Warning:  (file i/ess-logo.pdf): pdf inclusion: Page Group detected which pdfTe
 X can't handle. Ignoring it.
->] <i/round1.pdf, id=1192, 322.46492pt x 395.4638pt>
+>] <i/round1.pdf, id=1202, 322.46492pt x 395.4638pt>
 File: i/round1.pdf Graphic file (type pdf)
  <use i/round1.pdf>
 Overfull \hbox (1.39601pt too wide) detected at line 242
@@ -991,7 +995,7 @@ Overfull \hbox (1.39601pt too wide) detected at line 242
  <i/round1.pdf
 Warning:  (file i/round1.pdf): pdf inclusion: Page Group detected which pdfTeX 
 can't handle. Ignoring it.
->] <i/round2.pdf, id=1221, 322.04747pt x 337.85059pt>
+>] <i/round2.pdf, id=1231, 322.04747pt x 337.85059pt>
 File: i/round2.pdf Graphic file (type pdf)
  <use i/round2.pdf>
 Overfull \hbox (1.39601pt too wide) detected at line 291
@@ -1018,7 +1022,7 @@ Overfull \hbox (1.39601pt too wide) detected at line 291
  <i/round2.pdf
 Warning:  (file i/round2.pdf): pdf inclusion: Page Group detected which pdfTeX 
 can't handle. Ignoring it.
->] <i/round3.pdf, id=1250, 322.23972pt x 343.54808pt>
+>] <i/round3.pdf, id=1260, 322.23972pt x 343.54808pt>
 File: i/round3.pdf Graphic file (type pdf)
  <use i/round3.pdf>
 Overfull \hbox (1.39601pt too wide) detected at line 339
@@ -1062,10 +1066,10 @@ LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <9> not available
 ] [43
 
 ]
-<i/LRV-8cat.pdf, id=1515, 574.4074pt x 619.14938pt>
+<i/LRV-8cat.pdf, id=1525, 574.4074pt x 619.14938pt>
 File: i/LRV-8cat.pdf Graphic file (type pdf)
  <use i/LRV-8cat.pdf>
-<i/LRV-skew.pdf, id=1516, 572.6006pt x 610.24202pt>
+<i/LRV-skew.pdf, id=1526, 572.6006pt x 610.24202pt>
 File: i/LRV-skew.pdf Graphic file (type pdf)
  <use i/LRV-skew.pdf>
 [44
@@ -1104,17 +1108,20 @@ File: i/LRV-skew.pdf Graphic file (type pdf)
 ] [53
 
 ]
-<i/topics.png, id=1785, 853.1875pt x 216.81pt>
-File: i/topics.png Graphic file (type png)
- <use i/topics.png> [54
+<i/topics.pdf, id=1795, 737.75626pt x 162.6075pt>
+File: i/topics.pdf Graphic file (type pdf)
+ <use i/topics.pdf> [54
 
- <i/topics.png>]
-File: i/topics.png Graphic file (type png)
- <use i/topics.png> [55
+ <i/topics.pdf
+Warning:  (file i/topics.pdf): pdf inclusion: Page Group detected which pdfTeX 
+can't handle. Ignoring it.
+>]
+File: i/topics.pdf Graphic file (type pdf)
+ <use i/topics.pdf> [55
 
 ]
-File: i/topics.png Graphic file (type png)
- <use i/topics.png> [56
+File: i/topics.pdf Graphic file (type pdf)
+ <use i/topics.pdf> [56
 
 ]
 LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <14.4> not available
@@ -1134,14 +1141,14 @@ LaTeX Font Info:    Font shape `T1/pfu/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pfu/b/n' tried instead on input line 566.
  [60
 
-]
-[61
+] [61
 
-] [62
+]
+[62
 
 ] [63
 
-] <../latex/box.pdf, id=2054, 433.62pt x 433.62pt>
+] <../latex/box.pdf, id=2081, 433.62pt x 433.62pt>
 File: ../latex/box.pdf Graphic file (type pdf)
 
 <use ../latex/box.pdf> [64
@@ -1165,10 +1172,10 @@ File: ../latex/box.pdf Graphic file (type pdf)
 
 ] [73
 
-] <i/uvt_fac.jpg, id=2325, 240.9pt x 180.675pt>
+] <i/uvt_fac.jpg, id=2352, 240.9pt x 180.675pt>
 File: i/uvt_fac.jpg Graphic file (type jpg)
 
-<use i/uvt_fac.jpg> <i/esade_fac.jpg, id=2326, 301.125pt x 225.84375pt>
+<use i/uvt_fac.jpg> <i/esade_fac.jpg, id=2353, 301.125pt x 225.84375pt>
 File: i/esade_fac.jpg Graphic file (type jpg)
 
 <use i/esade_fac.jpg> [74
@@ -1180,14 +1187,14 @@ File: i/esade_fac.jpg Graphic file (type jpg)
  (presentation.aux) ) 
 Here is how much of TeX's memory you used:
  9849 strings out of 95419
- 164413 string characters out of 1187093
+ 164358 string characters out of 1187093
  237670 words of memory out of 1229594
  12153 multiletter control sequences out of 60000
  37951 words of font info for 87 fonts, out of 1000000 for 2000
  14 hyphenation exceptions out of 8191
  41i,16n,60p,320b,962s stack positions out of 5000i,500n,10000p,200000b,32768s
 PDF statistics:
- 2351 PDF objects out of 300000
+ 2378 PDF objects out of 300000
  163 named destinations out of 300000
  230 words of extra memory for PDF output out of 10000
 <C:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm
@@ -1199,4 +1206,4 @@ ura/lfub8a.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmex1
 fb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmss10.pfb><C:/Ar
 chivos de programa/MiKTeX 2.5/fonts/type1/linotype/futura/lfuko8a.pfb><C:/Archi
 vos de programa/MiKTeX 2.5/fonts/type1/linotype/futura/lfuk8a.pfb>
-Output written on presentation.pdf (74 pages, 2373218 bytes).
+Output written on presentation.pdf (74 pages, 13013047 bytes).
