@@ -28,8 +28,8 @@
 \begin{frame}
 	\titlepage
 	\begin{center}
-	 \includegraphics[width=4.5cm]{i/uvttransparent.png}\hspace{.2cm}
-	 \includegraphics[width=2.8cm]{i/esade.png}	
+	 \includegraphics[width=4.5cm]{i/uvt}\hspace{.2cm}
+	 \includegraphics[width=2.8cm]{i/esade}	
   \end{center}	
 \end{frame}
 
@@ -433,9 +433,9 @@ What we studied already:
 
 	\begin{itemize}[<alert@+>]
 		\item We analysed the 4 experiments from the ESS which involved variables with 5 categories or less
-		\item The topics: role of women in society, GP's, political efficacy, job.
+		\item The topics: role of women, GP's, political efficacy, job.
 
-			\includegraphics[width=10cm]{i/topics.png} 
+			\includegraphics[width=10cm]{i/topics} 
 
 	\item Compare the country with the highest quality to the country with the lowest quality for that experiment
 	\end{itemize}
@@ -681,7 +681,7 @@ Multiple R-Squared: 0.45; Adjusted R-squared: 0.35
 \frametitle{Recommendations}
 	\begin{itemize}[<alert@+>]
 				\item One way to prevent categorisation errors is to use continuous or near-continuous scales;
-				\item Don't use categories which are difficult to choose in some countries but not in others (e.g. disagree that ‘Men should take as much responsibility as women for the home and children.’ in Slovenia vs. Greece.)
+				\item Don't use categories which are difficult to choose in some countries but not in others (e.g. disagree that `Men should take as much responsibility as women for the home and children.' in Slovenia vs. Greece.)
 				\item High-quality questions may not be as affected by categorisation errors as low-quality ones!
 			\end{itemize}
 \end{frame}
