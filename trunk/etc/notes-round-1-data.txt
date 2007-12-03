@@ -1,0 +1,9 @@
+1	Ireland and Sweden have 40% missing design weights..
+2	Countries with highly variable design weights: AT,CZ,ES,FR,UK,IL,PT
+3	Countries where respondents were allowed to send in the supplementary questionnaire by mail: FI (all), UK(214), IE(17), NL(38) NO(885) SE(1820)
+4	HU did 'SC No split' for all respondents
+5	Italy did 'FF No split' for all respondents
+6	Countries which split the SB into 2 ballots rather than 6: FI, FR, UK, NL, SE (SC); AT, CZ, DK, GR, PL (FF).
+7	HU did not implement 3rd method
+8	LU did not do any experiments
+9	Denmark has faulty score 10 for test22-test24 on some cases.
