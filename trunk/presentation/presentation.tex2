@@ -1,12 +1,13 @@
 % To produce handouts, uncomment the following:
-%% \documentclass[handout]{beamer}
-%% \usepackage{pgfpages}
-%% \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+ \documentclass[handout]{beamer}
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 
-\documentclass{beamer}
+%\documentclass{beamer}
 
 \usepackage[T1]{fontenc}
 \usepackage{textcomp} 
+
 
 \usepackage{futura}
 \usetheme{Antibes}
@@ -699,7 +700,7 @@ Multiple R-Squared: 0.45; Adjusted R-squared: 0.35
 
 	\begin{itemize}[<alert@+>]
 				\item Differences in data quality between countries are reduced after the categorisation is taken into account.
-				\item Differences in use of the scale seems to play a large role in causing differences between countries.
+				\item Differences in use of the scale play a large role in causing differences between countries.
 			\end{itemize}
 \end{frame}
 
