@@ -1,5 +1,9 @@
-\documentclass{beamer}
+% To produce handouts, uncomment the following:
+%% \documentclass[handout]{beamer}
+%% \usepackage{pgfpages}
+%% \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 
+\documentclass{beamer}
 
 \usepackage[T1]{fontenc}
 \usepackage{textcomp} 
@@ -7,6 +11,8 @@
 \usepackage{futura}
 \usetheme{Antibes}
 \usecolortheme{beetle}
+
+
 
 \title{Survey data quality in different countries}
 \author{Daniel Oberski}
@@ -413,8 +419,8 @@ What we studied already:
 \frametitle{Consequences of categorisation for the correlations between observed variables}
 
 	\begin{itemize}[<alert@+>]
-		\item The fewer categories, the smaller the Pearson correlation
-		\item The more skew in observed variables, the smaller the Pearson correlation
+		\item The fewer categories, the smaller the Pearson correlation;
+		\item The more skew in observed variables, the smaller the Pearson correlation;
 		\item The corrected (`polychoric') correlations are always higher than the Pearson correlations, but not necessarily equally so for all variables.
 	\end{itemize}
 \end{frame}
@@ -422,9 +428,9 @@ What we studied already:
 \begin{frame} 
 	Therefore,
 	\begin{itemize}[<alert@+>]
-		\item If the skewness of observed variables is higher for variables measured by one particular method, then the corrected correlations between those variables will go up more than the others, and the method effects in the categorical model will be higher.
-		\item Higher estimated method effects can lower the estimate of quality in the categorical model.
-		\item If this differs across countries, the process can possibly explain differences in the quality.
+		\item If the skewness of observed variables is higher for variables measured by one particular method, then the corrected correlations between those variables will go up more than the others, and the method effects in the categorical model will be higher;
+		\item As method-induced correlation goes up, the estimates of the quality will go down;
+		\item If this differs across countries, the process can explain differences in the quality.
 	\end{itemize} 
 \end{frame}
 
@@ -467,49 +473,50 @@ Continuous MTMM model, main questionnaire (first method)
 
 \begin{frame}
 \frametitle{Efficacy experiment: Denmark}
-
-Polychoric correlations
-
 \begin{footnotesize}
+Polychoric correlations
 \begin{tabular}{llrrrrrr}
  \hline
  &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
  &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$}\\
-Method 1	& Complex 	& 1.00 &  &  &  &  & \\
-			& Active 	& -0.44 & 1.00 &  &  &  & \\
-			& Mind 		& -0.51 & 0.47 & 1.00 &  &  & \\
-Method 2	& Complex 	& 0.66 & -0.45 & -0.51 & 1.00 &  & \\
-			& Active 	& -0.44 & 0.74 & 0.46 & -0.51 & 1.00 & \\
+Method 1	& Complex 	& 1.00 \\
+			& Active 	& -0.44 & 1.00 \\
+			& Mind 		& -0.51 & 0.47 & 1.00 \\
+Method 2	& Complex 	& 0.66 & -0.45 & -0.51 & 1.00 \\
+			& Active 	& -0.44 & 0.74 & 0.46 & -0.51 & 1.00  \\
 			& Mind 		& -0.52 & 0.51 & 0.67 & -0.56 & 0.56 & 1.00\\
  \hline
- \end{tabular} 
- \end{footnotesize}
+ \end{tabular}
 
 Pearson correlations
 
-\begin{footnotesize}\begin{tabular}{llrrrrrr}
+\begin{tabular}{llrrrrrr}
  \hline
  &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
 
  &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$}\\
-Method 1	& Complex 	&  1.00 &  &  &  &  & \\
-			& Active 	& -0.40 & 1.00 &  &  &  & \\
-			& Mind 		& -0.47 & 0.37 & 1.00 &  &  & \\
-Method 2	& Complex 	&  0.60 & -0.37 & -0.44 & 1.00 &  & \\
-			& Active 	& -0.39 & 0.67 & 0.40 & -0.43 & 1.00 & \\
-			& Mind 		& -0.46 & 0.43 & 0.62 & -0.49 & 0.48 & 1.00\\
+Method 1	& Complex 	& 1.00\\
+			& Active 	&-0.38 & 1.00\\
+			& Mind 		&-0.46 & 0.41 & 1.00\\
+Method 2	& Complex 	& 0.60 & -0.37 & -0.44 & 1.00\\
+			& Active 	&-0.39 & 0.67 & 0.40 & -0.43 & 1.00\\
+			& Mind 		&-0.46 & 0.43 & 0.62 & -0.49 & 0.48 & 1.00\\
  \hline
- \end{tabular} \end{footnotesize}
+ \end{tabular} 
+
+$n \approx 916$
+\end{footnotesize}
+
 \end{frame}
 
 
 
 \begin{frame}
 \frametitle{Efficacy experiment: Switzerland}
+\begin{footnotesize}
 
 Polychoric correlations
 
-\begin{footnotesize}
 \begin{tabular}{llrrrrrr}
  \hline
  &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
@@ -522,23 +529,24 @@ Method 2	& Complex 	& 0.57 & -0.36 & -0.46 & 1.00 & \\
 			& Mind 		& -0.36 & 0.44 & 0.69 & -0.49 & 0.43 & 1.00\\
  \hline
  \end{tabular} 
- \end{footnotesize}
 
 Pearson correlations
 
-\begin{footnotesize}\begin{tabular}{llrrrrrr}
+\begin{tabular}{llrrrrrr}
  \hline
  &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
-
  &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$}\\
-Method 1	& Complex 	& 1.00 & \\
-			& Active 	& -0.33 & 1.00 & \\
-			& Mind 		& -0.34 & 0.36 & 1.00 & \\
-Method 2	& Complex 	& 0.55 & -0.35 & -0.45 & 1.00 & \\
-			& Active 	& -0.30 & 0.82 & 0.33 & -0.34 & 1.00 & \\
+Method 1	& Complex 	&  1.00\\
+			& Active 	& -0.33 & 1.00\\
+			& Mind 		& -0.43 & 0.36 & 1.00\\
+Method 2	& Complex 	&  0.55 & -0.35 & -0.45 & 1.00\\
+			& Active 	& -0.30 & 0.82 & 0.33 & -0.34 & 1.00\\
 			& Mind 		& -0.35 & 0.41 & 0.62 & -0.48 & 0.39 & 1.00\\
  \hline
- \end{tabular} \end{footnotesize}
+ \end{tabular} 
+
+$n \approx 779$
+\end{footnotesize}
 \end{frame}
 
 \begin{frame}
@@ -550,16 +558,16 @@ Efficacy experiment: Denmark
 \hline
  &&\multicolumn{3}{c}{Method 1} & \multicolumn{2}{c}{Method 2}  \\
 &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{60pt}}$}\\
- Method 1	& Complex 	& &  &  &  &  & \\
- 			& Active 	& \textbf{8}\% &  &  &  & \\
- 			& Mind 		& \textbf{8}\% & \textbf{29}\% &  &  & \\
- Method 2	& Complex 	& 10\%& 22\%& 16\%&  & \\
- 			& Active 	& 13\%& 10\%& 16\%& \textbf{19}\%  & \\
- 			& Mind 		& 13\%& 19\%& 10\%& \textbf{15}\% & \textbf{16}\% &  \\
+Method 1	& Complex 	& \\
+			& Active 	& \textbf{16}\%\\
+			& Mind 		& \textbf{11}\% & \textbf{15}\%\\
+Method 2	& Complex 	& 10\% & 22\% & 16\%\\
+			& Active 	& 13\% & 10\% & 15\% & \textbf{19}\%\\
+			& Mind 		& 13\% & 19\% & 8\% &  \textbf{14}\% & \textbf{17}\%\\
 \hline
 \end{tabular}
 
-Mean percentage increase of the polychoric correlations: 11\%
+Mean percentage increase of the polychoric correlations:  14.5\%
 
 %> approx.power(2.187, 79.889, alpha=.05)
 %[1] 0.05
@@ -577,17 +585,28 @@ Efficacy experiment: Switzerland
 \hline
  &&\multicolumn{3}{c}{Method 1} & \multicolumn{2}{c}{Method 2}  \\
 &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{60pt}}$}\\
- Method 1	& Complex 	& &  &  &  &  & \\
- 			& Active 	& \textbf{1}\% & \\
- 			& Mind 		& \textbf{36}\% & \textbf{17}\% & \\
- Method 2	& Complex &	3\% & 3\% & 2\% & \\
- 			& Active 	& 5\% & 1\% & 9\% & \textbf{17}\% & \\
- 			& Mind 		& 1\% & 6\% & 13\% & \textbf{3}\% & \textbf{11}\% & \\
+Method 1	& Complex 	&    &  &  &  &  & \\
+			& Active 	& \textbf{12}\% &  &  &  &  & \\
+			& Mind 		&   \textbf{8}\% & \textbf{17}\% &  &  &  & \\
+Method 2	& Complex 	&   4\% & 3\% & 3\% &  &  & \\
+			& Active 	&   6\% & 1\% & 1\% & \textbf{16}\% &  & \\
+			& Mind 		&   2\% & 7\% & 12\% & \textbf{3}\% & \textbf{1}\% & \\
 \hline
 \end{tabular}
 
-Mean percentage increase of the polychoric correlations: 6.5\%
+Mean percentage increase of the polychoric correlations: 7.6\%
 \end{frame}
+
+\begin{frame}
+\frametitle{Consequences of correction for categorisation}
+	\begin{itemize}[<alert@+>]
+		\item In Denmark, the monomethod correlations for the second method increase more than those of the first method and more than the other correlations;
+		\item The method effects for the second method are therefore higher, while...
+		\item The quality coefficient estimates for the first method are lowered.
+		\item In Switzerland, the opposite: the first methods' monomethod correlations increase more on average than the second's, leading to higher quality coefficients after correction.
+	\end{itemize}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Quality ($q^2$)and method effects ($m$) according to the continuous and categorical models, with categorisation factors}
@@ -614,15 +633,20 @@ Mean percentage increase of the polychoric correlations: 6.5\%
 \end{tabular}\end{footnotesize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Consequences of correction for categorisation: conclusions}
 
-	\begin{itemize}
-		\item The monomethod correlations for the second method increase more than those of the first method
-		\item The method effects 
+\begin{frame}
+\frametitle{Correction for categorisation: conclusions}
+
+	\begin{itemize}[<alert@+>]
+		\item The general `push' of correcting for categorisation is that all coefficients go up, because the polychoric correlations are always higher than the Pearson correlations;
+		\item But when method factors are taken into account, the coefficients can also go down;
+		\item Particularly, if one method produces more categorisation errors than another, the quality coefficients can go down;
+		\item If this happens more in some countries than others, we can find differences;
+		\item Would then expect countries with high quality to have a lower quality after correction for categorisation and vice versa.
 	\end{itemize}
  
 \end{frame}
+
 
 \subsection{Meta analysis of the 4 different experiments}
 
@@ -682,14 +706,14 @@ Multiple R-Squared: 0.45; Adjusted R-squared: 0.35
 	\begin{itemize}[<alert@+>]
 				\item One way to prevent categorisation errors is to use continuous or near-continuous scales;
 				\item Don't use categories which are difficult to choose in some countries but not in others (e.g. disagree that `Men should take as much responsibility as women for the home and children.' in Slovenia vs. Greece.)
-				\item High-quality questions may not be as affected by categorisation errors as low-quality ones!
+
 			\end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Further study, problems}
 	\begin{itemize}[<alert@+>]
-				\item Investigate normality assumption, linearity;
+				\item Investigate normality assumption (tests indicate possible issues), linearity;
 				\item Unobserved heterogeneity;
 				\item Prediction of the data quality based on characteristics of the question.
 			\end{itemize}

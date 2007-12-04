@@ -1,0 +1,133 @@
+d<- read.table("C:/ESS/data/w1exponly.dat", sep="\t", header=F, na.strings="-9999")
+names<-c("idnum","cntrynum","dweight","tvtot","tvpol","rdtot","rdpol","nwsptot","nwsppol","netuse","ppltrst","pplfair","pplhlp","polcmpl","polactiv","poldcs","trstprl","trstlgl","trstplc","stfeco","stfgov","stfdem","ginveco","gincdif","needtru","test1a","test1b","test2a","test2b","test3a","test3b","test4","test5","test6","test7","test8","test9","test10","test11","test12","test13","test14","test15","test16","test17","test18","test19","test20","test21","test22","test23","test24","test25","test26","test27","test28","test29","test30","test31","test32","test33","test34","test35","test36","edulvl","eduyrs","inwtm","resclq","resrelq","resbab","resundq","preintf","regionbe","regionch","regiones","regionlu","inwdd","inwmm","inwyr","spltadm","supqadm","sourcemtmm","sourceint","cntry","idno","filter")
+names(d)<-names
+use<-c("polcmpl","polactiv","poldcs","test4","test5","test6","test22","test23","test24")
+effic<-d[,use]
+tab<-by(effic, d$cntry, function(x) round(cor(x,use='pairwise.complete.obs'),2))
+str(tab)
+tab$CH
+tab$DK
+polycor<- matrix(c(
+1.000,NA,NA,NA,NA,NA,
+-.369,1.000,NA,NA,NA,NA,
+-.463,.420,1.000,NA,NA,NA,
+.570,-.362,-.462,1.000,NA,NA,
+-.318,.828,.362,-.393,1.000,NA,
+-.358,.437,.695,-.493,.429,1.000),6,6,byrow=T)
+polycor
+library(polycor)
+install.packages("polycor",dependencies=T)
+library(polycor)
+DK <- effic[d$cntry == 'DK',]
+CH <- effic[d$cntry == 'CH',]
+library(Rcmd)
+library(Rcmdr)
+str(DK)
+hetcor(DK)
+?hetcor
+hetcor(DK, use='pairwise.complete.obs')
+hetcor(DK[,1:6], use='pairwise.complete.obs')
+tab$DK
+hetcor(CH[,1:6], use='pairwise.complete.obs')
+hetcor.DK <- hetcor(DK[,1:6], use='pairwise.complete.obs')
+hetcor.CH <- hetcor(CH[,1:6], use='pairwise.complete.obs')
+str(hetcor.DK)
+hetcor.DK$n
+mean(hetcor.DK$n)
+mean(hetcor.CH$n)
+polycor.CH<- matrix(c(
+1.000,NA,NA,NA,NA,NA,
+-.369,1.000,NA,NA,NA,NA,
+-.463,.420,1.000,NA,NA,NA,
+.570,-.362,-.462,1.000,NA,NA,
+-.318,.828,.362,-.393,1.000,NA,
+-.358,.437,.695,-.493,.429,1.000),6,6,byrow=T)
+polycor.CH
+tab$CH
+tab$CH[1:6,1:6]
+polycor.CHtab$CH[1:6,1:6]
+(polycor.CH - tab$CH[1:6,1:6]) / tab$CH[1:6,1:6]
+100*round( (polycor.CH - tab$CH[1:6,1:6]) / tab$CH[1:6,1:6], 2 )
+hetcor.CH$correlations
+100*round( (hetcor.CH$correlations - tab$CH[1:6,1:6]) / tab$CH[1:6,1:6], 2 )
+hetcor.CH$correlations / tab$CH[1:6,1:6]
+100*round( (hetcor.DK$correlations - tab$DK[1:6,1:6]) / tab$CH[1:6,1:6], 2 )
+100*round( (hetcor.DK$correlations - tab$DK[1:6,1:6]) / tab$DK[1:6,1:6], 2 )
+100*round( (hetcor.CH$correlations - tab$CH[1:6,1:6]) / tab$CH[1:6,1:6], 2 )
+100*round( abs(hetcor.CH$correlations - tab$CH[1:6,1:6]) / tab$CH[1:6,1:6], 2 )
+round( (hetcor.CH$correlations / tab$CH[1:6,1:6]), 2 )
+round( (hetcor.DK$correlations / tab$DK[1:6,1:6]), 2 )
+round( (polycor.CH / tab$CH[1:6,1:6]), 2 )
+tab$CH
+tab$DK
+tab$CH[1:6,1:6]
+tab.cor<-by(effic, d$cntry, function(x) round(cor(x,use='pairwise.complete.obs'),3))
+tab.sd<-by(effic, d$cntry, function(x) round(sd(x,use='na.rm=T'),3))
+tab.sd<-by(effic, d$cntry, function(x) round(sd(x,na.rm=T),3))
+tab.cor$CH[1:6,1:6]
+tab.sd$CH[1:6,1:6]
+tab.sd$CH[1:6]
+tab.sd$CH
+tab.sd$CH[1:9]
+tab.cor$CH[1:9]
+tab.cor$CH
+hetcor.CH$n
+round( (polycor.CH / tab$CH[1:6,1:6]), 2 )
+100*round( ((polycor.CH-tab$CH[1:6,1:6]) / tab$CH[1:6,1:6]), 2 )
+tab$CH[1:6,1:6]
+tab$DK[1:6,1:6]
+polycor.DK<-matrix(c(1.00 ,  ,  ,  ,  , 
+-0.44 , 1.00 ,  ,  ,  , 
+-0.51 , 0.47 , 1.00 ,  ,  , 
+0.66 , -0.45 , -0.51 , 1.00 ,  , 
+-0.44 , 0.74 , 0.46 , -0.51 , 1.00 , 
+-0.52 , 0.51 , 0.67 , -0.56 , 0.56 , 1.00),6,6,byrow=T)
+polycor.DK<-matrix(c(1.00 ,NA ,NA ,NA ,NA , 
+-0.44 , 1.00 ,NA ,NA ,NA , 
+-0.51 , 0.47 , 1.00 ,NA ,NA , 
+0.66 , -0.45 , -0.51 , 1.00 ,NA , 
+-0.44 , 0.74 , 0.46 , -0.51 , 1.00 , 
+-0.52 , 0.51 , 0.67 , -0.56 , 0.56 , 1.00),6,6,byrow=T)
+polycor
+polycor.DK
+c(1.00 ,NA ,NA ,NA ,NA , 
+-0.44 , 1.00 ,NA ,NA ,NA , 
+-0.51 , 0.47 , 1.00 ,NA ,NA , 
+0.66 , -0.45 , -0.51 , 1.00 ,NA , 
+-0.44 , 0.74 , 0.46 , -0.51 , 1.00 , 
+-0.52 , 0.51 , 0.67 , -0.56 , 0.56 , 1.00)
+polycor.DK<-matrix(c(1.00 ,NA ,NA ,NA ,NA , NA , 
+-0.44 , 1.00 ,NA ,NA ,NA , NA , 
+-0.51 , 0.47 , 1.00 ,NA ,NA , NA , 
+0.66 , -0.45 , -0.51 , 1.00 ,NA , NA , 
+-0.44 , 0.74 , 0.46 , -0.51 , 1.00 , NA , 
+-0.52 , 0.51 , 0.67 , -0.56 , 0.56 , 1.00),6,6,byrow=T)
+polycor.DK
+hetcor.DK
+hetcor.DK$correlations
+hetcor.DK$correlations/polycor.DK
+hetcor.DK$correlations-polycor.DK
+dev<-hetcor.DK$correlations-polycor.DK
+dev<-na.omit(dev)
+plot(dev)
+dev<-as.vector(dev)
+hist(deb)
+hist(dev)
+plot(deb)
+plot(dev)
+dev<-hetcor.DK$correlations-polycor.DK
+dev<-as.vector(dev)
+dev
+dev<-na.omit(dev)
+plot(dev)
+hist(dev)
+100*round( ((polycor.CH-tab$CH[1:6,1:6]) / tab$CH[1:6,1:6]), 2 )
+100*round( ((polycor.DK-tab$DK[1:6,1:6]) / tab$DK[1:6,1:6]), 2 )
+a<-100*round( ((polycor.DK-tab$DK[1:6,1:6]) / tab$DK[1:6,1:6]), 2 )
+b<-100*round( ((polycor.CH-tab$CH[1:6,1:6]) / tab$CH[1:6,1:6]), 2 )
+a<- as.vector(a)
+b<- as.vector(b)
+a[a==0]<-NA
+b[b==0]<-NA
+mean(a, na.rm=T)
+mean(b, na.rm=T)
