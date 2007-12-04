@@ -7,5 +7,5 @@
 \beamer@subsectionintoc {3}{2}{Experiments in the European Social Survey}{31}{0}{2}
 \beamer@sectionintoc {4}{Why are there differences between countries?}{36}{0}{3}
 \beamer@subsectionintoc {4}{1}{Categorisation errors in the efficacy experiment}{57}{0}{3}
-\beamer@subsectionintoc {4}{2}{Meta analysis of the 4 different experiments}{72}{0}{3}
-\beamer@sectionintoc {5}{Conclusion}{72}{0}{4}
+\beamer@subsectionintoc {4}{2}{Does categorisation explain differences across countries?}{74}{0}{3}
+\beamer@sectionintoc {5}{Conclusion}{76}{0}{4}

@@ -429,7 +429,7 @@ What we studied already:
 	Therefore,
 	\begin{itemize}[<alert@+>]
 		\item If the skewness of observed variables is higher for variables measured by one particular method, then the corrected correlations between those variables will go up more than the others, and the method effects in the categorical model will be higher;
-		\item As method-induced correlation goes up the estimates of the quality will go down.
+		\item As method-induced correlation goes up, the estimates of the quality will go down;
 		\item If this differs across countries, the process can explain differences in the quality.
 	\end{itemize} 
 \end{frame}
@@ -600,10 +600,12 @@ Mean percentage increase of the polychoric correlations: 7.6\%
 \begin{frame}
 \frametitle{Consequences of correction for categorisation}
 	\begin{itemize}[<alert@+>]
-		\item In Denmark, the monomethod correlations for the second method increase more than those of the first method and more than the other correlations;
-		\item The method effects for the second method are therefore higher, while...
-		\item The quality coefficient estimates for the first method are lowered.
-		\item In Switzerland, the opposite: the first methods' monomethod correlations increase more on average than the second's, leading to higher quality coefficients after correction.
+		\item In both Denmark and Switzerland, the monomethod correlations increase more than the other correlations;
+		\item In the continuous analysis, no significant method factor was found for the first method in either country;
+		\item In \textbf{Denmark} the monomethod correlations were already relatively high, however, leading to a significant method factor in the categorical model;
+		\item This leads to a lower quality estimate than in the continuous model in Denmark.
+		\item In \textbf{Switzerland} the monomethod correlations were lower; 
+		\item No significant method factor is found there, and the `upwards push' can therefore increase the quality coefficients.
 	\end{itemize}
 \end{frame}
 
@@ -648,12 +650,10 @@ Mean percentage increase of the polychoric correlations: 7.6\%
 \end{frame}
 
 
-\subsection{Meta analysis of the 4 different experiments}
-
-\section{Conclusion}
+\subsection{Does categorisation explain differences across countries?}
 
 \begin{frame}
-\frametitle{Does categorisation explain differences across countries}
+\frametitle{A meta-analysis of the categorisation error studies}
 
 The categorisation factor, $q_{cat}/q_{cont}$:
 
@@ -661,7 +661,7 @@ The categorisation factor, $q_{cat}/q_{cont}$:
 \end{frame}
 
 \begin{frame}
-\frametitle{A meta-analysis of the categorisation error studies}
+\frametitle{How general are the findings?}
 
 \begin{footnotesize}
 
@@ -691,6 +691,8 @@ Multiple R-Squared: 0.45; Adjusted R-squared: 0.35
 
 \end{footnotesize}
 \end{frame}
+
+\section{Conclusion}
 
 \begin{frame}
 \frametitle{Conclusions}
