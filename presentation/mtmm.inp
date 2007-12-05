@@ -1,0 +1,72 @@
+TITLE:  mtmm analysis of generated data
+
+DATA:
+  NGROUPS = 3;
+  FILE IS "C:\ESS\berlin\presentation\testcor.all.cov";
+  NOBSERVATIONS = 1000;
+  NOBSERVATIONS = 1000;
+  NOBSERVATIONS = 1000;
+  TYPE IS FULLCORR;
+  !FILE IS "C:\ESS\berlin\presentation\testdata.dat";
+  
+
+VARIABLE:
+  NAMES ARE X11 X21 X31 X12 X22 X32 X13 X23 X33;
+  USEVARIABLES ARE X11 X21 X31 X12 X22 X32 X13 X23 X33;
+
+ANALYSIS:
+  TYPE IS GENERAL ;
+  ESTIMATOR IS ML;
+  ITERATIONS = 1000;
+  CONVERGENCE = 0.00005;
+
+MODEL:
+  F1 BY X11@1 X12 X13; ! errors in variables standardisation
+  F2 BY X21@1 X22 X23;
+  F3 BY X31@1 X32 X33;
+
+  F1 WITH F2 F3; ! correlated trait
+  F2 WITH F3;
+
+  F1 F2 F3 M1 M2 M3; ! trait, method var's
+  X11 X21 X31 X12 X22 X32 X13 X23 X33; ! error variances
+
+
+  M1 BY X11@1 X21@1 X31@1;  ! equal method effects
+  M2 BY X12@1 X22@1 X32@1;
+  M3 BY X13@1 X23@1 X33@1;
+
+  M1 WITH F1@0 F2@0 F3@0 M2@0 M3@0; ! uncorrelated traits<>method, methods.
+  M2 WITH F1@0 F2@0 F3@0 M3@0;
+  M3 WITH F1@0 F2@0 F3@0 M2@0;
+
+MODEL G2:
+  F1 BY X11@1 X12* X13*; ! errors in variables standardisation
+  F2 BY X21@1 X22* X23*;
+  F3 BY X31@1 X32* X33*;
+
+  F1 WITH F2* F3*; ! correlated trait
+  F2 WITH F3*;
+
+  F1* F2* F3* M1* M2* M3*; ! trait, method var's
+  X11* X21* X31* X12* X22* X32* X13* X23* X33*; ! error variances
+
+MODEL G3:
+  F1 BY X11@1 X12* X13*; ! errors in variables standardisation
+  F2 BY X21@1 X22* X23*;
+  F3 BY X31@1 X32* X33*;
+
+  F1 WITH F2* F3*; ! correlated trait
+  F2 WITH F3*;
+
+  F1* F2* F3* M1* M2* M3*; ! trait, method var's
+  X11* X21* X31* X12* X22* X32* X13* X23* X33*; ! error variances
+
+
+OUTPUT:  SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL FSCOEFFICIENT
+ TECH1 TECH2 TECH3 TECH4 TECH5;
+
+
+!SAVEDATA:
+ !   SAVE = FSCORES;
+    !FILE IS "C:\ESS\berlin\presentation\facscores.dat";
