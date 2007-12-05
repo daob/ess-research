@@ -1,11 +1,11 @@
 \beamer@endinputifotherversion {3.06pt}
 \beamer@sectionintoc {2}{Multitrait-multimethod experiments}{3}{0}{1}
-\beamer@subsectionintoc {2}{1}{An example experiment}{5}{0}{1}
-\beamer@subsectionintoc {2}{2}{Models}{9}{0}{1}
-\beamer@sectionintoc {3}{What has been done before}{13}{0}{2}
-\beamer@subsectionintoc {3}{1}{The international research project 1984--1996}{13}{0}{2}
-\beamer@subsectionintoc {3}{2}{Experiments in the European Social Survey}{14}{0}{2}
-\beamer@sectionintoc {4}{Why are there differences between countries?}{19}{0}{3}
-\beamer@subsectionintoc {4}{1}{Categorisation errors in the efficacy experiment}{25}{0}{3}
-\beamer@subsectionintoc {4}{2}{Does categorisation explain differences across countries?}{33}{0}{3}
-\beamer@sectionintoc {5}{Conclusion}{35}{0}{4}
+\beamer@subsectionintoc {2}{1}{An example experiment}{8}{0}{1}
+\beamer@subsectionintoc {2}{2}{Models}{12}{0}{1}
+\beamer@sectionintoc {3}{What has been done before}{30}{0}{2}
+\beamer@subsectionintoc {3}{1}{The international research project 1984--1996}{30}{0}{2}
+\beamer@subsectionintoc {3}{2}{Experiments in the European Social Survey}{31}{0}{2}
+\beamer@sectionintoc {4}{Why are there differences between countries?}{36}{0}{3}
+\beamer@subsectionintoc {4}{1}{Categorisation errors in the efficacy experiment}{57}{0}{3}
+\beamer@subsectionintoc {4}{2}{Does categorisation explain differences across countries?}{73}{0}{3}
+\beamer@sectionintoc {5}{Conclusion}{75}{0}{4}
