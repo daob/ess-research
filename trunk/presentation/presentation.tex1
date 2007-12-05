@@ -1,9 +1,9 @@
 % To produce handouts, uncomment the following:
- \documentclass[handout]{beamer}
- \usepackage{pgfpages}
- \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+% \documentclass[handout]{beamer}
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 
-%\documentclass{beamer}
+\documentclass{beamer}
 
 \usepackage[T1]{fontenc}
 \usepackage{textcomp} 
@@ -645,7 +645,7 @@ Mean percentage increase of the polychoric correlations: 7.6\%
 		\item But when method factors are taken into account, the coefficients can also go down;
 		\item Particularly, if one method produces more categorisation errors than another, the quality coefficients can go down;
 		\item If this happens more in some countries than others, differences in quality will result;
-		\item Would then expect countries with high quality to have a lower quality after correction for categorisation and vice versa.
+%		\item Would then expect countries with high quality to have a lower quality after correction for categorisation and vice versa.
 	\end{itemize}
  
 \end{frame}
