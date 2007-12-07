@@ -165,234 +165,41 @@
 	\end{itemize}
 \end{frame}	
 
-
-\section{What has been done before}
-
-\subsection{The international research project 1984--1996}
-
-
 \begin{frame}
-\frametitle{Countries in the international survey project 1984--1996\\that have been included in SQP}
-	\begin{columns}[T]	
-		\begin{column}{8cm}
-			\includegraphics[width=\textwidth]{i/andrews-etal.pdf}
-		\end{column}
-		\begin{column}{3.2cm}
-		\begin{small}
-		\begin{enumerate}
-			\item Austria 
-			\item Belgium: Flanders
-			\item Netherlands
-			\item United States: Michigan		
-		\end{enumerate}
-		\end{small}
-		\end{column}
-	\end{columns}
-\end{frame}
-
-\subsection{Experiments in the European Social Survey}
-
-\begin{frame}
-	\frametitle{The European Social Survey (ESS)}
-
-	\includegraphics[width=2.8cm]{i/ess-logo.pdf}
+	\frametitle{The `categorisation factor'}
 	\begin{itemize}
-		\item Three rounds, 4th coming up
-		\item Six experiment in each round
-		\item \texttt{http://www.europeansocialsurvey.org}
+\item The quality was defined as:
+		\item \begin{equation*}
+q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
+\end{equation*}
+\item However, we have now seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation can be `decomposed' into
+\item \begin{equation*}
+q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
+\end{equation*}
+	\item We call this ratio of the quality coefficient $q = v.r$ from the categorical model to the same coefficient from the continuous model the `categorisation factor'.
 	\end{itemize}
 \end{frame}
 
 \begin{frame}
+	\frametitle{The `categorisation factor'}
 
-\frametitle{Countries in round 1 of the ESS -- 2002}
+	\begin{equation}
+	q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
+	\end{equation}
 
-	\begin{columns}[T]	
-		\begin{column}{5.5cm}
-			\includegraphics[width=\textwidth]{i/round1.pdf}
-		\end{column}
-		\begin{column}{4.5cm}
-			\begin{columns}	
-				\begin{column}{2.2cm}
-					\begin{scriptsize}\begin{enumerate}
-						\item Austria
-						\item Belgium	
-						\item Czech Republic 
-						\item Denmark 	
-						\item Finland 	
-						\item France 	
-						\item Germany 	
-						\item Greece
-						\item Hungary 
-						\item Ireland 
-						\item Israel 	
-						\item Italy 										
-					\end{enumerate}\end{scriptsize}
-				\end{column}
-				\begin{column}{2.5cm}
-					\begin{scriptsize}\begin{enumerate}			
-						\item[13.] Luxembourg			
-						\item[14.] Netherlands
-						\item[15.] Norway
-						\item[16.] Poland
-						\item[17.] Portugal
-						\item[18.] Slovenia
-						\item[19.] Spain
-						\item[20.] Sweden
-						\item[21.] Switzerland
-						\item[22.] United Kingdom
-					\end{enumerate}\end{scriptsize}
-				\end{column}
-			\end{columns}
-		\end{column}
-	\end{columns}
-\end{frame} % to enforce entries in the table of contents
-
-\begin{frame}
-
-\frametitle{Countries in round 2 of the ESS -- 2004}
-
-	\begin{columns}[T]	
-		\begin{column}{6.5cm}
-			\includegraphics[width=\textwidth]{i/round2.pdf}
-		\end{column}
-		\begin{column}{4.5cm}
-			\begin{columns}	
-				\begin{column}{2cm}
-					\begin{scriptsize}\begin{enumerate}
-            \item Austria 	        
-						\item Belgium 	        
-						\item Czech Republic 	
-						\item Denmark 	        
-						\item Estonia 	        
-						\item Finland 	        
-						\item France 	        
-						\item Germany 	        
-						\item Greece 	        
-						\item Hungary 	        
-						\item Iceland 	        
-						\item Ireland 	        		
-            \item Italy 	
-        \end{enumerate}\end{scriptsize}
-				\end{column}
-				\begin{column}{2.5cm}
-					\begin{scriptsize}\begin{enumerate}			
-						\item[14.] Luxembourg 	
-						\item[15.] Netherlands 	
-						\item[16.] Norway 	
-						\item[17.] Poland 	
-						\item[18.] Portugal 	
-						\item[19.] Slovakia 	
-						\item[20.] Slovenia 	
-						\item[21.] Spain 	
-						\item[22.] Sweden 	
-						\item[23.] Switzerland 	
-						\item[24.] Turkey 	
-						\item[25.] Ukraine 	
-						\item[26.] United Kingdom 						
-\end{enumerate}\end{scriptsize}
-				\end{column}
-			\end{columns}
-		\end{column}
-	\end{columns}
+	\begin{itemize}
+		\item It can be seen that the quality normally estimated from the continuous model is a product of two terms:
+		\item $$
+			q^2_{cont} = q^2_{categ} \cdot c,
+		$$
+		where $c$ is a categorisation factor.
+		\item If $c < 1$, the quality in the categorical model is higher than in the continuous model
+		\item If $c > 1$, the quality in the categorical model is lower than in the continuous model
+	\end{itemize}
 \end{frame}
 
-\begin{frame}
 
-\frametitle{Countries in round 3 of the ESS -- 2006}
 
-	\begin{columns}[T]	
-		\begin{column}{6.5cm}
-			\includegraphics[width=\textwidth]{i/round3.pdf}
-		\end{column}
-		\begin{column}{4.5cm}
-			\begin{columns}	
-				\begin{column}{2cm}
-					\begin{scriptsize}\begin{enumerate}
-						\item Austria
-						\item Belgium 	
-						\item Bulgaria 	
-						\item Cyprus 	
-						\item Denmark 	
-						\item Estonia 	
-						\item Finland 	
-						\item France 	
-						\item Germany 	
-						\item Hungary 	
-						\item Ireland
-						\item Latvia													
-					\end{enumerate}\end{scriptsize}
-				\end{column}
-				\begin{column}{2.5cm}
-					\begin{scriptsize}\begin{enumerate}		
-						\item[13.] Netherlands			
-						\item[14.] Norway 	
-						\item[15.] Poland 	
-						\item[16.] Portugal 	
-						\item[17.] Romania 	
-						\item[18.] Russian Federation 	
-						\item[19.] Slovakia 	
-						\item[20.] Slovenia 	
-						\item[21.] Spain 	
-						\item[22.] Sweden 	
-						\item[23.] Switzerland 	
-						\item[24.] Ukraine
-						\item[25.] United Kingdom 
-					\end{enumerate}\end{scriptsize}
-				\end{column}
-			\end{columns}
-		\end{column}
-	\end{columns}
-\end{frame}
-% topics
-
-\begin{frame}
-\frametitle{Some results from rounds 1 and 2}
-\begin{table}[hbt]\centering\begin{footnotesize}
-\begin{tabular}{lrrrr}
-\hline
-Country&Mean&Median&Minimum&Maximum\\\hline
-Portugal&0.79&0.81&0.63&0.91\\
-Switzerland&0.79&0.84&0.56&0.90\\
-Greece&0.78&0.79&0.64&0.90\\
-Estonia&0.78&0.85&0.58&0.90\\
-Poland&0.73&0.85&0.51&0.90\\
-Luxembourg&0.72&0.73&0.53&0.88\\
-United Kingdom&0.70&0.71&0.56&0.82\\
-Denmark&0.70&0.70&0.52&0.80\\
-Belgium&0.70&0.73&0.46&0.90\\
-Germany&0.69&0.70&0.53&0.83\\
-Spain&0.69&0.64&0.54&0.90\\
-Austria&0.68&0.68&0.51&0.85\\
-Czech Republic&0.65&0.60&0.52&0.87\\
-Slovenia&0.63&0.60&0.46&0.82\\
-Norway&0.59&0.59&0.35&0.83\\
-Sweden&0.58&0.58&0.43&0.68\\
-Finland&0.57&0.54&0.42&0.78\\
-	\hline
-\end{tabular}\end{footnotesize}
-\end{table}
-\end{frame}
-
-\section{Why are there differences between countries?}
-
-\begin{frame}
-\frametitle{Differences between countries?}
-
-What we studied already:
-
-\begin{itemize}[<alert@+>]
-	\item Differences in complexity of language? 
-		\begin{itemize}[<2-|alert@+>]\item{Not found}\end{itemize}
-	\item Artifacts due to sending in the questionnaire later?
-		\begin{itemize}[<4-|alert@+>]\item{Only Sweden, Norway, Finland}\end{itemize} 
-	\item Artifacts due to mistakes in translation?
-		\begin{itemize}[<6-|alert@+>]\item{Two cases found for two experiments}\end{itemize} 
-	\item<7-|alert@+> None of these findings suffice to explain the large differences we found!
-	\item<8-|alert@+> Differences in use of the scale?
-\end{itemize}
-
-\end{frame}
 
 \begin{frame}
 	\frametitle{Categorisation of continuous variables}
@@ -406,12 +213,13 @@ What we studied already:
  \end{columns}
 \end{frame}
 
+
+
 \begin{frame}
     \begin{itemize}
     \item These continuous latent response variables are related to each other according to the MTMM model.
 	\item Method effects, quality coefficients, and thresholds can be estimated.
     \item Equivalent to a 2 parameter graded response model in IRT (Muth\'en \& Asparouhov 2002).
-	\item We call the ratio of the quality coefficient $q = v.r$ from the categorical model to the same coefficient from the continuous model the `categorisation factor'.
     \end{itemize}
 \end{frame}
 
@@ -430,7 +238,7 @@ What we studied already:
 	Therefore,
 	\begin{itemize}[<alert@+>]
 		\item If the skewness of observed variables is higher for variables measured by one particular method, then the corrected correlations between those variables will go up more than the others, and the method effects in the categorical model will be higher;
-		\item As method-induced correlation goes up, the estimates of the quality will go down;
+		\item As method-induced correlation goes up, the estimates of the quality will go down instead of up!
 		\item If this differs across countries, the process can explain differences in the quality.
 	\end{itemize} 
 \end{frame}
