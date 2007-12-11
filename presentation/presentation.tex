@@ -14,9 +14,8 @@
 \usecolortheme{beetle}
 
 
-
-\title{Survey data quality in different countries}
-\author{Daniel Oberski}
+\title{Separating random, systematic, and categorisation errors in surveys}
+\author{Daniel Oberski\\Willem Saris\\Jacques Hagenaars}
 \institute
 {
   \inst{}%
@@ -42,10 +41,10 @@
 
 \section*{Outline}
 
-\begin{frame}
-\frametitle{Overview}
-	\tableofcontents
-\end{frame}
+%\begin{frame}
+%\frametitle{Overview}
+%	\tableofcontents
+%\end{frame}
 
 \section{Multitrait-multimethod experiments}
 
@@ -166,15 +165,20 @@
 \end{frame}	
 
 \begin{frame}
+   \frametitle{The basic response model, revised}
+   \includegraphics[height=7cm]{i/response-categ.pdf}
+\end{frame}
+
+\begin{frame}
 	\frametitle{The `categorisation factor'}
 	\begin{itemize}
 \item The quality was defined as:
 		\item \begin{equation*}
 q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
 \end{equation*}
-\item However, we have now seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation can be `decomposed' into
+\item However, we have seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation can be `decomposed' into
 \item \begin{equation*}
-q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
+q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
 \end{equation*}
 	\item We call this ratio of the quality coefficient $q = v.r$ from the categorical model to the same coefficient from the continuous model the `categorisation factor'.
 	\end{itemize}
@@ -184,7 +188,7 @@ q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.
 	\frametitle{The `categorisation factor'}
 
 	\begin{equation}
-	q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
+	q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
 	\end{equation}
 
 	\begin{itemize}
@@ -215,6 +219,7 @@ q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.
 
 
 
+\if 1=2
 \begin{frame}
     \begin{itemize}
     \item These continuous latent response variables are related to each other according to the MTMM model.
@@ -222,7 +227,7 @@ q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.
     \item Equivalent to a 2 parameter graded response model in IRT (Muth\'en \& Asparouhov 2002).
     \end{itemize}
 \end{frame}
-
+\fi
 
 \begin{frame}
 \frametitle{Consequences of categorisation for the correlations between observed variables}
@@ -239,7 +244,6 @@ q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.
 	\begin{itemize}[<alert@+>]
 		\item If the skewness of observed variables is higher for variables measured by one particular method, then the corrected correlations between those variables will go up more than the others, and the method effects in the categorical model will be higher;
 		\item As method-induced correlation goes up, the estimates of the quality will go down instead of up!
-		\item If this differs across countries, the process can explain differences in the quality.
 	\end{itemize} 
 \end{frame}
 
@@ -252,31 +256,31 @@ q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.
 
 			\includegraphics[width=10cm]{i/topics.pdf} 
 
-	\item Compare the country with the highest quality to the country with the lowest quality for that experiment
+	\item Compare the country with the highest quality to the country with the lowest quality for that experiment (not discussed here)
 	\end{itemize}
-
-
 \end{frame}
 
 
 \subsection{Categorisation errors in the efficacy experiment}
 
 \begin{frame}
-\frametitle{Quality ($q^2$)and method effects ($m$) in the efficacy experiment}
+\frametitle{Quality ($q^2$)and method effects ($m$) in the efficacy experiment, in Denmark}
 
-Continuous MTMM model, main questionnaire (first method)
+Results of continuous MTMM model, main questionnaire (first method)
 
-\begin{footnotesize}\begin{tabular}{lllrrr}
+\begin{footnotesize}\begin{tabular}{llrrr}
 \hline
- &  &  &  & `Efficacy' & \\
-	   &  &  & Complex & Active & Mind\\
+ &  &  &   `Efficacy' & \\
+&  &   Complex & Active & Mind\\
 	   \hline
- &  $q^2$& Denmark & 0.77 & 0.83 & 0.79\\
- &  & Switzerland & 0.49 & 0.81 & 0.50\\
- &  $m$& Denmark & 0.00 & 0.00 & 0.00\\
- &  & Switzerland & 0.00 & 0.00 & 0.00\\
+ &  $q^2$&   0.77 & 0.83 & 0.79\\
+ &  $m$&   0.00 & 0.00 & 0.00\\
 \hline
-\end{tabular}\end{footnotesize}
+\end{tabular}
+
+
+$df=19, \chi^2=40.0, p = 0.003$.
+\end{footnotesize}
 \end{frame}
 
 
@@ -319,7 +323,7 @@ $n \approx 916$
 \end{frame}
 
 
-
+\if 1=2
 \begin{frame}
 \frametitle{Efficacy experiment: Switzerland}
 \begin{footnotesize}
@@ -356,7 +360,7 @@ Method 2	& Complex 	&  0.55 & -0.35 & -0.45 & 1.00\\
 
 $n \approx 779$
 \end{footnotesize}
-\end{frame}
+\end{frame}\fi
 
 \begin{frame}
 \frametitle{\% Increase in the correlations after correction for categorisation}
@@ -384,7 +388,7 @@ Mean percentage increase of the polychoric correlations:  14.5\%
 
 
 
-
+\if 1=2
 \begin{frame}
 \frametitle{\% Increase in the correlations after correction for categorisation}
 
@@ -418,48 +422,44 @@ Mean percentage increase of the polychoric correlations: 7.6\%
 	\end{itemize}
 \end{frame}
 
+\fi
+
 
 \begin{frame}
 \frametitle{Quality ($q^2$)and method effects ($m$) according to the continuous and categorical models, with categorisation factors}
 
-\begin{footnotesize}\begin{tabular}{lllrrr}
+\begin{footnotesize}\begin{tabular}{llrrr}
 \hline
- &  &  &  & `Efficacy' & \\
-	   &  &  & Complex & Active & Mind\\
+ &  &  &   `Efficacy' & \\
+	   &  &   Complex & Active & Mind\\
 	   \hline
  \multicolumn{2}{l}{Continuous analysis}\\
- &  $q^2$& Denmark & 0.77 & 0.83 & 0.79\\
- &  & Switzerland & 0.49 & 0.81 & 0.50\\
- &  $m$& Denmark & 0.00 & 0.00 & 0.00\\
- &  & Switzerland & 0.00 & 0.00 & 0.00\\
-\multicolumn{2}{l}{Categorical analysis}   &  &  &  & \\
- &  $q^2$& Denmark & 0.63 & 0.70 & 0.63\\
- &  & Switzerland & 0.62 & 0.94 & 0.62\\
- &  $m$& Denmark & 0.11 & 0.08 & 0.11\\
- &  & Switzerland & 0.00 & 0.00 & 0.00\\
-\multicolumn{2}{l}{Categorisation factor}    &  &  & \\
- &  & Denmark & 1.23 & 1.18 & 1.25\\
- &  & Switzerland & 0.79 & 0.86 & 0.81\\
+ &  $q^2$&  0.77 & 0.83 & 0.79  \\
+ &  $m$&  0.00 & 0.00 & 0.00\\
+\multicolumn{4}{l}{Categorical analysis} \\
+ &  $q^2$&  0.63 & 0.70 & 0.63  \\
+ &  $m$&  0.11 & 0.08 & 0.11 \\
+\multicolumn{2}{l}{Categorisation factor}      &  & \\
+ &  &  1.23 & 1.18 & 1.25 \\
 \hline
-\end{tabular}\end{footnotesize}
+\end{tabular}
+
+\end{footnotesize}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Correction for categorisation: conclusions}
 
-	\begin{itemize}[<alert@+>]
-		\item The general `push' of correcting for categorisation is that all coefficients go up, because the polychoric correlations are always higher than the Pearson correlations;
-		\item But when method factors are taken into account, the coefficients can also go down;
-		\item Particularly, if one method produces more categorisation errors than another, the quality coefficients can go down;
-		\item If this happens more in some countries than others, differences in quality will result;
+\begin{itemize}[<alert@+>]
+   \item The general `push'  is that all coefficients go up, because the polychoric correlations are always higher than the Pearson correlations;
+   \item But when method factors are taken into account, the coefficients can also go down;
+   \item This happens especially when the method variance is estimated at zero in the continuous model, but cannot be so constrained in the categorical model.
 %		\item Would then expect countries with high quality to have a lower quality after correction for categorisation and vice versa.
 	\end{itemize}
- 
 \end{frame}
 
 
-\subsection{Does categorisation explain differences across countries?}
 
 \begin{frame}
 \frametitle{A meta-analysis of the categorisation error studies}
@@ -501,25 +501,54 @@ Multiple R-Squared: 0.45; Adjusted R-squared: 0.35
 \end{footnotesize}
 \end{frame}
 
+
+\begin{frame}
+\frametitle{Some implications of the findings}
+
+\begin{itemize}
+   \item Potentially, if one method produces more categorisation errors than another, the quality coefficients may be estimated higher in the continuous model.
+   \item If this happens more in some countries than others, differences in quality will result due to the way the LRV's have been categorised.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The latent traits}
+
+Estimated correlations between the latent traits under the two different models
+
+\begin{tabular}{lrrr}
+\hline
+	 & Complex & Active & Mind\\
+\hline
+Continuous model & 1\\
+&-.625  &     1\\
+&-.754   &    .663   &   1\\
+&\\
+Categorical model &1 \\
+&-.632 & 1\\
+&-.752  & .696 & 1\\
+\hline
+\end{tabular}
+\end{frame}
+
 \section{Conclusion}
 
 \begin{frame}
+
 \frametitle{Conclusions}
-
-	\begin{itemize}[<alert@+>]
-				\item Differences in data quality between countries are reduced after the categorisation is taken into account.
-				\item Differences in use of the scale play a large role in causing differences between countries.
-			\end{itemize}
+\begin{itemize}[<alert@+>]
+   \item It was possible to split the measurement error model into three parts:
+      \begin{itemize}
+	 \item A part due to random errors;
+	 \item A part due to systematic errors;
+	 \item A part due to splitting the variable into just a few categories.
+      \end{itemize}
+   \item The estimates one gets can differ, and not always in the way one might expect;
+   \item The correlations between the latent traits corrected for measurement error in this experiment were robust to the model specification;
+   \item This suggests either model will provide a correct (or at least similar) inference about the variables of interest in this case.
+\end{itemize}
 \end{frame}
 
-\begin{frame}
-\frametitle{Recommendations}
-	\begin{itemize}[<alert@+>]
-				\item One way to prevent categorisation errors is to use continuous or near-continuous scales;
-				\item Don't use categories which are difficult to choose in some countries but not in others (e.g. disagree that `Men should take as much responsibility as women for the home and children.' in Slovenia vs. Greece.)
-
-			\end{itemize}
-\end{frame}
 
 \begin{frame}
 \frametitle{Further study, problems}
@@ -541,7 +570,6 @@ That's it for now. Moltes gràcies per la seva atenció!
 \end{frame}
 
 
-\if 1=2
 
 \section{Epilogue: SQP}
 
@@ -563,6 +591,5 @@ That's it for now. Moltes gràcies per la seva atenció!
 		\item \texttt{http://www.sqp.nl} 
 	\end{enumerate}
 \end{frame}
-\fi
 
 \end{document}

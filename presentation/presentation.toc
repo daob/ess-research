@@ -1,7 +1,7 @@
 \beamer@endinputifotherversion {3.06pt}
-\beamer@sectionintoc {2}{Multitrait-multimethod experiments}{3}{0}{1}
-\beamer@subsectionintoc {2}{1}{An example experiment}{8}{0}{1}
-\beamer@subsectionintoc {2}{2}{Models}{12}{0}{1}
-\beamer@subsectionintoc {2}{3}{Categorisation errors in the efficacy experiment}{45}{0}{1}
-\beamer@subsectionintoc {2}{4}{Does categorisation explain differences across countries?}{61}{0}{1}
-\beamer@sectionintoc {3}{Conclusion}{63}{0}{2}
+\beamer@sectionintoc {2}{Multitrait-multimethod experiments}{2}{0}{1}
+\beamer@subsectionintoc {2}{1}{An example experiment}{7}{0}{1}
+\beamer@subsectionintoc {2}{2}{Models}{11}{0}{1}
+\beamer@subsectionintoc {2}{3}{Categorisation errors in the efficacy experiment}{43}{0}{1}
+\beamer@sectionintoc {3}{Conclusion}{54}{0}{2}
+\beamer@sectionintoc {4}{Epilogue: SQP}{65}{0}{3}
