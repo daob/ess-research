@@ -61,7 +61,7 @@
    V6 = *F3 + F5 + E6;
 /VARIANCES
    E1 TO E6 = *;
-   F1 TO F4 = *;
+   F1 TO F5 = *;
 /COVARIANCES
    F1 TO F3 = *;
 	E5,E3=*;
@@ -83,7 +83,7 @@
    V6 = *F3 + F5 + E6;
 /VARIANCES
    E1 TO E6 = *;
-   F1 TO F4 = *;
+   F1 TO F5 = *;
 /COVARIANCES
    F1 TO F3 = *;
 	E6,E5=*;
