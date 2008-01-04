@@ -40,7 +40,7 @@ In Figure \ref{fig:response} we show the basic response model \citep{Saris_desig
 \end{figure}
 
 The difference between the observed response ($y$) and the so called `true score' ($t$) is random measurement error ($e$). So the coefficient $r$ represents the reliability coefficient and $r^2$ is the reliability.
-The difference between the true score and the concept by intuition ($f_1$) are the respondents' systematic reactions to the method ($m$). So the coefficient $v$ represents the true score validity coefficient and $v^2$ is the true score validity. The quality of a measure ($q^2$) is defined as  $q^2 =  r^2 . v^2$ and $q$ is the quality coefficient. This quality--sometimes also called the reliability ratio--equals $\frac{Var(f)}{Var(y)}$: it can be interpreted as the proportion of variation in the observed variable that is due to the unobserved trait of interest. The correlation between the unobserved variables of interest is denoted by $\rho(f_1,f_2)$.
+The difference between the true score and the concept by intuition ($f_1$) are the respondents' systematic reactions to the method ($m$). An example of a method effect is when each respondent chooses her own reference points for all 11 point scales. A correlation between the answers to all 11 point scales will occur that has nothing to do with the respondents' opinions \citep{saris_variation_1988}.  The coefficient $v$ represents the true score validity coefficient and $v^2$ is the true score validity. The quality of a measure ($q^2$) is defined as  $q^2 =  r^2 . v^2$ and $q$ is the quality coefficient. This quality--sometimes also called the reliability ratio--equals $\frac{Var(f)}{Var(y)}$: it can be interpreted as the proportion of variation in the observed variable that is due to the unobserved trait of interest. The correlation between the unobserved variables of interest is denoted by $\rho(f_1,f_2)$.
 
 Several remarks should be made. The first is that the correlation $\rho(y_i, y_j)$ between two observed variables is:
 \begin{equation}
@@ -147,7 +147,11 @@ The second stage at which errors arise differs from the continuous case. Here th
 \end{enumerate}
 Categorisation, then, can be expected to be another source of measurement error besides random errors and method variance. If these errors differ across countries, then so will the overall measurement quality, and differences in means, correlations, regression coefficients, and cross-tables across countries result which are due purely to differences in measurement errors.
 
-The model we use allows to a certain extent for the separation of errors due to the categorisation, errors due to the reaction to the method and random errors. In this paper we take advantage of this separation to compare the amount of error due to categorisation introduced across countries. 
+We model categorisation errors using threshold parameters. These thresholds are the theoretical cutting points where the continuous latent response variable (LRV) has been discretized into the observed categories.  If the thresholds are different across countries, the questions are not directly comparable, since differences in the frequency distribution are partly due to differences in the way the LRV was discretized. If the thresholds are the same across countries the questions may still not be comparable due to differences in linear transformations (loadings) and random errors. But in that case it is not categorisation error that causes incomparability. A final possibility is that loadings, random errors and thresholds are all the same across countries. In that case the frequency distributions can be directly compared. 
+
+In this paper we will perform only a basic invariance tests on thresholds. If the thresholds are equal then there categorisation error is not a likely cause of differences in quality. However, we do not continue with tests for invariance on loadings and error variance, but will compare the results of two different models.
+
+Thus, the model we use allows to a certain extent for the separation of errors due to the categorisation, errors due to the reaction to the method and random errors. In this paper we take advantage of this separation to compare the amount of error due to categorisation introduced across countries. 
 
 \subsection{Categorisation errors in survey questions}
 
@@ -246,7 +250,8 @@ This approach has the advantage that consistent and numerically precise estimate
 
 We note here that the categorical MTMM model is equivalent to the `graded response model' in item response theory. There is a simple relationship between the threshold and quality coefficients of our model and difficulty and discrimination parameters in IRT models: the quality coefficients are scaled discrimination parameters, while a scaled difficulty for each category can be obtained by dividing each threshold by the corresponding quality coefficient \citep{muthen_latent_2002}.
 
-The two models are the same with respect to the covariance structure of the response variables (the `MTMM part' of the model). However, while in the CV model it is necessary to assume that the variables are not categorical, in the categorical model it is necessary to assume that the unobserved response variables follow bivariate normal distributions. While in principle the CV model makes the same assumption, it has been shown that the CV model is in many cases highly robust to violations of the normality assumption \citep{satorra_robustness_1990}. At the same time, the categorical model is known to be more sensitive to violations of this assumption, particularly when the variables are skewed in opposite directions \citep{coenders_structural_1996}. Thus, it depends on the structure of the data whether one model or the other provides a more adequate estimate of the quality of the questions. This should be kept in mind in the interpretations of the results.
+The two models are the same with respect to the covariance structure of the response variables (the `MTMM part' of the model). However, while in the CV model it is necessary to assume that the variables are continuous and interval level measures, in the categorical model it is necessary to assume that the unobserved response variables follow bivariate normal distributions. While in principle the CV model makes the same assumption, it has been shown that the CV model is in many cases highly robust to violations of the normality assumption \citep{satorra_robustness_1990}. At the same time, the categorical model is known to be sensitive to violations of this assumption, particularly when the variables are skewed in opposite directions \citep{coenders_structural_1996}. Thus, it depends on the structure of the data whether one model or the other provides a more adequate estimate of the quality of the questions. This should be kept in mind in the interpretations of the results.
+
 
 We estimated the quality of the measures based on the CV model and based on the categorical model for four experiments which used an answer scale of five categories or less in the main questionnaire.  For each of the questions we took the ratio of the two different quality measures as an index of the effect that categorisation has on the continuous quality estimates. For each experiment, the countries with the highest and the lowest qualities in the CV model were analysed. The next section presents the results.
 
@@ -358,7 +363,7 @@ Taking the estimated covariances of the latent response variables as our input, 
 The low quality of .21 for the second item in Slovenia catches the eye in table \ref{tab:job}. Interestingly, there is nothing in the thresholds to suggest where such a low quality should come from. The change in this coefficient when using the categorical model is relatively small, going from .21 to .29, suggesting the low quality is not so much tied to the thresholds as to other parameters of the model.
 
 For the second and third question, the country with the higher quality estimates in the continuous analysis again finds its estimates in the categorical model corrected substantially downwards. Belgium retains its position as the country with higher quality measurements according to this model, however.
-
+\clearpage
 \subsection{Experiment 3}
 
 The third experiment concerned the respondent's perception of the behaviour of doctors in general\footnote{The test statistics for the first and second split-ballot groups were 6.3 with 7 $df$, $p=.50$, and 4.5 with 3 $df$, $p=.22$, respectively.}.  The questions are presented in table \ref{card:doctors} with the thresholds for the country with the highest and lowest quality coefficient. The model in which all thresholds were constrained to be equal was rejected. Table \ref{card:doctors} displays our estimates of the threshold parameters for the different questions.
@@ -500,6 +505,7 @@ The interaction effect shown in figure \ref{fig:box_factor} has not been suppres
 
 Some questions were negatively phrased, for example as `A woman should \emph{not} have to cut down on her paid work for the sake of her family'. For such questions, the quality estimate in the continuous analysis was consistently lower than the quality obtained in the categorical analysis.
 
+
 \section{Discussion and conclusion}
 
 Using the multitrait-multimethod design and model in the ESS, we found large differences between countries in the quality of survey questions. Because such differences can have important implications for cross-country research and survey design, we set out to discover whether these differences could not be attributable to errors due to the use of a small number of categories. 
@@ -510,9 +516,23 @@ A caveat should be added to the interpretation of this result, because a violati
 
 If the categorisation factors were equal for countries with the highest and lowest quality coefficients, they could not explain the differences in quality which we found earlier. The meta-analysis suggested that there is a considerable difference in the categorisation factor between countries where the highest and the lowest quality coefficients were found given whether the question was part of the main or supplementary questionnaire.
 
-It cannot be excluded that this distinction between main and supplementary questionnaire is strongly related with the way the scale and the position of the items were chosen. This point requires further research.
+The methods in the main questionnaire were chosen beforehand based on other experiments as the ones least likely to cause method effects. For example, direct questions rather than batteries were used. After re-examining the experiments on which the meta-analysis was based, it appears this is closely related to the interaction effect found there.
 
-This study has been largely descriptive of the effects of categorisation error. Given our findings, it seems important to better judge the relative merits of the linear and categorical models, and the effects that different question characteristics have, not only on quality and method effects, but also on the categorisation errors.
+The main reason for the interaction effect we found in the meta-analysis appears to be that the method variance for the main questionnaire method was sometimes fixed to zero. This was done in cases where leaving this method variance free resulted in a very small variance, not significantly different from zero. The general rise in correlations that results from correction for categorisation seems to have `pushed' the monomethod correlations of the main questionnaire variable to the point where the method variance could not anymore be constrained to zero. And as the method variance rises, the quality must decrease in our model.
+
+In other words, the correction for categorisation has a negative influence on the quality in the case where method factors are removed, which was usually the main questionnaire. In that case, the quality is in general lower in the categorical model than in the continuous model. This is contrary to what one might expect considering that all of the polychoric correlations are higher than their Pearson counterparts.
+
+In this study we have shown that it is possible to split the measurement error model into
+three parts:
+\begin{itemize}
+     \item A part due to random errors;
+     \item A part due to systematic errors;
+     \item A part due to splitting the variable into just a few categories: `categorisation error'.
+\end{itemize}
+
+This study has been largely descriptive of the effects of categorisation error. Given our findings, it seems important to better judge the relative merits of the continuous and categorical models, and the effects that different question characteristics have, not only on quality and method effects, but also on the categorisation errors.
+
+Our study also has some shortcomings in the assumptions made to attain the above separation. These are: normality of the latent response variables, linearity of the relationship between the latent traits and latent response variables, and interval measurement of the latent traits. In another paper these issues will be addressed by examining ways to relax the assumptions.
 
 Future research might also focus on finding other explanations for differences in quality across countries. 
 
