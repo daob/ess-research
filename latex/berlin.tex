@@ -31,7 +31,7 @@ Categorisation errors arise when a continuous latent response variable is split 
 
 First we will discuss the necessary theory in more detail. The response model we use as our starting point, explanations of the multitrait-multimethod (MTMM) experiments we use to assess question quality and of categorisation error are given. Next we give a short overview of our previous findings on the origins of cross-country differences in measurement error. We then present the data from the European Social Survey and the structure of the experiments, and discuss the methods used to analyse these data. The subsequent section describes our analysis of categorisation errors for four experiments using categorical scales, and ends with a meta-analysis of these results. We then summarise and discuss our findings. Finally, some general conclusions are drawn and suggestions for further research are indicated.
 
-\section{Background}
+\section{Theory}
 
 In Figure \ref{fig:response} we show the basic response model \citep{Saris_design_2007} we use as our starting point. 
 
@@ -134,47 +134,6 @@ T33   &  &  & .88 &  &  & .48 &  & .84  \\
 \end{tabular}
 \end{table}
 \hfill
-\subsection{The categorical response model}
-
-The response model discussed so far makes no mention of the fact that many of the measures we use are in fact ordinal--that is, they are ordered categories rather than measured on a continuous scale. 
-Broadly speaking, two types of measurement models have been proposed for this situation. The first assumes there is an unobserved categorical variable, and that errors arise from the conditional chances of choosing a category on the survey question given the unobserved score. Such models are often referred to as latent class models \citep{lazarsfeld_latent_1968,hagenaars_applied_2002}.
-
-The second approach deals with the case where a continuous scale or `latent response variable' is thought to underly the observed categorical item. Such models are sometimes called latent trait models. Several possible extensions are possible, but we focus on a special case described by \citet{muthen_general_1984}. This is the model we will use in our subsequent analysis of the data\footnote{It can be shown that analysing polychoric correlations in an MTMM model is a special case of the model we use \citep{muthen_latent_2002}. However, we do not use polychoric correlations because it would be  necessary to assume that the variances of the latent response variables are equal across countries. Since we try to separate categorisation errors from differences in the continuous part of the model, this is not a desirable assumption. The model we use is equivalent to a multi-dimensional two parameter graded response model in item response theory \citep{muthen_latent_2002}.}.
-
-Errors may arise at two stages. The first is the connection between the latent response variable and its latent trait. This part of the error model can be completely analogous to factor analysis or MTMM models for continuous data: the scale is modelled as a linear combination of a latent trait, a reaction to the particular method used to measure the trait, and a random error, and interest then focuses on the connection between the trait and the scale, which we again term the `quality coefficient' (see figures \ref{fig:response} and \ref{fig:mtmm}). It should be noted that, because we are interested only in the quality coefficient and not in the separation of the reliability and validity coefficients, we do not make a distinction between the true score and the latent trait as is done in the true score model explained above. The true score and classic MTMM models are, however, equivalent \citep{coenders_testing_2000}.
-
-The second stage at which errors arise differs from the continuous case. Here the continuous latent response variable is split up into the different categories, such that each category of the observed variable corresponds to a certain range on the unobserved continuous scale. The sizes of these ranges are determined by threshold parameters. Several types of errors can be distinguished at this stage \citep{coenders_structural_1996}:
-\begin{enumerate}
-\item \emph{Grouping errors} occur because the infinite possible values of the latent response variable are collapsed into a fixed number of categories. These errors will be higher when there are fewer categories;
-\item \emph{Transformation errors} occur when the distances between the numerical scores assigned to each category are not the same as the distances between the means of the latent response variable in those categories. This happens when the thresholds are not equally spaced, or when the available categories do not cover the unobserved opinions adequately. 
-\end{enumerate}
-Categorisation, then, can be expected to be another source of measurement error besides random errors and method variance. If these errors differ across countries, then so will the overall measurement quality, and differences in means, correlations, regression coefficients, and cross-tables across countries result which are due purely to differences in measurement errors.
-
-We model categorisation errors using threshold parameters. These thresholds are the theoretical cutting points where the continuous latent response variable (LRV) has been discretized into the observed categories.  If the thresholds are different across countries, the questions are not directly comparable, since differences in the frequency distribution are partly due to differences in the way the LRV was discretized. If the thresholds are the same across countries the questions may still not be comparable due to differences in linear transformations (loadings) and random errors. But in that case it is not categorisation error that causes incomparability. A final possibility is that loadings, random errors and thresholds are all the same across countries. In that case the frequency distributions can be directly compared. 
-
-In this paper we will perform only a basic invariance tests on thresholds. If the thresholds are equal, categorisation error is not a likely cause of differences in quality. However, we do not continue with tests for invariance on loadings and error variance, but will compare the results of two different models.
-
-Thus, the model we use allows to a certain extent for the separation of errors due to the categorisation, errors due to the reaction to the method and random errors. In this paper we take advantage of this separation to compare the amount of error due to categorisation introduced across countries. 
-
-\subsection{Categorisation errors in survey questions}
-
-The previous sections showed that, using the MTMM design, it is possible to obtain a measure ($q^2$) of the total quality of a question. If a continuous variable model (hereafter referred to as CV model) is used, this quality is influenced by errors in both stages of the categorical response model: not only random errors and method effects are included, but also errors due to the categorisation. Consequently the linear MTMM model assuming continuous variables does not discount categorisation errors, but includes them to a certain extent in the estimates of the quality and other parameters \citep{coenders_structural_1996}.
-
-However, since the quality coefficient is estimated from the covariance matrix of the measures, it can be both reduced and increased by categorisation errors. In general all correlations between measures increase after correction for categorisation, but they need not all increase equally. For example, consider again table \ref{tab:mtmm_cor}. If categorisation errors are higher using the first method, the correlations between the latent response variables using this method (the upper-left triangle of the matrix) will increase more relative to the observed correlations than the correlations of each variable with its repetition using a different method (in bold). In this case the amount of variance in the reponse variable due to the method will be larger in the categorical model than in the CV model, and the estimated quality of the measure in the categorical response model can become lower than the estimated quality in the continuous MTMM model. This is because there are method effects (correlated errors) on the level of the continuous latent response variables which do not manifest themselves in the observed (Pearson) correlations between the categorical variables. Categorisation can therefore in some cases inflate estimates of the quality of categorical observed variables, even though, at the same time, it causes errors which reduce the quality. There are thus two processes at work, which have opposite effects on the estimates of the quality.
-
-Because it can both reduce and artificially inflate estimates of quality, categorisation error is an important possible cause of finding differences in question quality across countries. If either of these two processes differs from one country to another, the estimates of the quality can be expected to differ as well. Therefore, we focus here on the changes in the quality coefficient one observes in a continuous reponse model relative to a categorical model. This allows us to study the attentuation or inflation of quality estimates across countries.
-
-As noted before, the quality of a variable is defined as the ratio of the true trait variance to the observed variance (see also figure \ref{fig:response} in the first section):
-\begin{equation}
-q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
-\end{equation}
-However, we have now seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation \ref{eqn:relratio} can be `decomposed' into
-\begin{equation}
-q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
-\end{equation}
-The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2_{cont.}$, the quality from the continuous analyis, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis ($q^2_{cat.}$), have been obtained. So the effect of categorisation on the quality estimate can be derived: it is $q^2_{cont.}/q^2_{cat.}$. This correction factor is a useful index of the relative differences between the quality estimates of the continuous and categorical models. 
-
-In the present study, we estimate this `categorisation factor' for different countries and experiments, and examine to what extent it can explain the differences in quality across countries. First, however, we give an overview of the data we use.
 
 
 \section{Data}
@@ -238,6 +197,50 @@ Another alternative explanation for differences across countries is differences 
 The third alternative we considered was that the language of the questions could be more complex in one language than in another. Previous meta-analyses found that language complexity can have an effect on the quality \citep{saris_estimation_2007}. However, we found no strong evidence that the complexity of the questions caused differences in question quality in this case.
 
 Thus, in some cases we found artificial differences in quality which are likely to be due to an erroneous translation or different implementation of the experimental design--notably in the Scandivian countries except Denmark and for one item in the French-speaking countries. However, these cases are not so numerous that they can explain the large overall variations in question quality that were found in the ESS. Therefore we now turn to the possibility that the use of the categories in the categorical questions differs from country to country, and proceed to investigate the influence of categorisation errors on the quality in different countries and experiments.
+
+
+\subsection{The categorical response model}
+
+The response model discussed so far makes no mention of the fact that many of the measures we use are in fact ordinal--that is, they are ordered categories rather than measured on a continuous scale. 
+Broadly speaking, two types of measurement models have been proposed for this situation. The first assumes there is an unobserved categorical variable, and that errors arise from the conditional chances of choosing a category on the survey question given the unobserved score. Such models are often referred to as latent class models \citep{lazarsfeld_latent_1968,hagenaars_applied_2002}.
+
+The second approach deals with the case where a continuous scale or `latent response variable' is thought to underly the observed categorical item. Such models are sometimes called latent trait models. Several possible extensions are possible, but we focus on a special case described by \citet{muthen_general_1984}. This is the model we will use in our subsequent analysis of the data\footnote{It can be shown that analysing polychoric correlations in an MTMM model is a special case of the model we use \citep{muthen_latent_2002}. However, we do not use polychoric correlations because it would be  necessary to assume that the variances of the latent response variables are equal across countries. Since we try to separate categorisation errors from differences in the continuous part of the model, this is not a desirable assumption. The model we use is equivalent to a multi-dimensional two parameter graded response model in item response theory \citep{muthen_latent_2002}.}.
+
+Errors may arise at two stages. The first is the connection between the latent response variable and its latent trait. This part of the error model can be completely analogous to factor analysis or MTMM models for continuous data: the scale is modelled as a linear combination of a latent trait, a reaction to the particular method used to measure the trait, and a random error, and interest then focuses on the connection between the trait and the scale, which we again term the `quality coefficient' (see figures \ref{fig:response} and \ref{fig:mtmm}). It should be noted that, because we are interested only in the quality coefficient and not in the separation of the reliability and validity coefficients, we do not make a distinction between the true score and the latent trait as is done in the true score model explained above. The true score and classic MTMM models are, however, equivalent \citep{coenders_testing_2000}.
+
+The second stage at which errors arise differs from the continuous case. Here the continuous latent response variable is split up into the different categories, such that each category of the observed variable corresponds to a certain range on the unobserved continuous scale. The sizes of these ranges are determined by threshold parameters. Several types of errors can be distinguished at this stage \citep{coenders_structural_1996}:
+\begin{enumerate}
+\item \emph{Grouping errors} occur because the infinite possible values of the latent response variable are collapsed into a fixed number of categories. These errors will be higher when there are fewer categories;
+\item \emph{Transformation errors} occur when the distances between the numerical scores assigned to each category are not the same as the distances between the means of the latent response variable in those categories. This happens when the thresholds are not equally spaced, or when the available categories do not cover the unobserved opinions adequately. 
+\end{enumerate}
+Categorisation, then, can be expected to be another source of measurement error besides random errors and method variance. If these errors differ across countries, then so will the overall measurement quality, and differences in means, correlations, regression coefficients, and cross-tables across countries result which are due purely to differences in measurement errors.
+
+We model categorisation errors using threshold parameters. These thresholds are the theoretical cutting points where the continuous latent response variable (LRV) has been discretized into the observed categories.  If the thresholds are different across countries, the questions are not directly comparable, since differences in the frequency distribution are partly due to differences in the way the LRV was discretized. If the thresholds are the same across countries the questions may still not be comparable due to differences in linear transformations (loadings) and random errors. But in that case it is not categorisation error that causes incomparability. A final possibility is that loadings, random errors and thresholds are all the same across countries. In that case the frequency distributions can be directly compared. 
+
+In this paper we will perform only a basic invariance tests on thresholds. If the thresholds are equal, categorisation error is not a likely cause of differences in quality. However, we do not continue with tests for invariance on loadings and error variance, but will compare the results of two different models.
+
+Thus, the model we use allows to a certain extent for the separation of errors due to the categorisation, errors due to the reaction to the method and random errors. In this paper we take advantage of this separation to compare the amount of error due to categorisation introduced across countries. 
+
+\subsection{Categorisation errors in survey questions}
+
+The previous sections showed that, using the MTMM design, it is possible to obtain a measure ($q^2$) of the total quality of a question. If a continuous variable model (hereafter referred to as CV model) is used, this quality is influenced by errors in both stages of the categorical response model: not only random errors and method effects are included, but also errors due to the categorisation. Consequently the linear MTMM model assuming continuous variables does not discount categorisation errors, but includes them to a certain extent in the estimates of the quality and other parameters \citep{coenders_structural_1996}.
+
+However, since the quality coefficient is estimated from the covariance matrix of the measures, it can be both reduced and increased by categorisation errors. In general all correlations between measures increase after correction for categorisation, but they need not all increase equally. For example, consider again table \ref{tab:mtmm_cor}. If categorisation errors are higher using the first method, the correlations between the latent response variables using this method (the upper-left triangle of the matrix) will increase more relative to the observed correlations than the correlations of each variable with its repetition using a different method (in bold). In this case the amount of variance in the reponse variable due to the method will be larger in the categorical model than in the CV model, and the estimated quality of the measure in the categorical response model can become lower than the estimated quality in the continuous MTMM model. This is because there are method effects (correlated errors) on the level of the continuous latent response variables which do not manifest themselves in the observed (Pearson) correlations between the categorical variables. Categorisation can therefore in some cases inflate estimates of the quality of categorical observed variables, even though, at the same time, it causes errors which reduce the quality. There are thus two processes at work, which have opposite effects on the estimates of the quality.
+
+Because it can both reduce and artificially inflate estimates of quality, categorisation error is an important possible cause of finding differences in question quality across countries. If either of these two processes differs from one country to another, the estimates of the quality can be expected to differ as well. Therefore, we focus here on the changes in the quality coefficient one observes in a continuous reponse model relative to a categorical model. This allows us to study the attentuation or inflation of quality estimates across countries.
+
+As noted before, the quality of a variable is defined as the ratio of the true trait variance to the observed variance (see also figure \ref{fig:response} in the first section):
+\begin{equation}
+q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
+\end{equation}
+However, we have now seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation \ref{eqn:relratio} can be `decomposed' into
+\begin{equation}
+q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
+\end{equation}
+The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2_{cont.}$, the quality from the continuous analyis, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis ($q^2_{cat.}$), have been obtained. So the effect of categorisation on the quality estimate can be derived: it is $q^2_{cont.}/q^2_{cat.}$. This correction factor is a useful index of the relative differences between the quality estimates of the continuous and categorical models. 
+
+In the present study, we estimate this `categorisation factor' for different countries and experiments, and examine to what extent it can explain the differences in quality across countries. First, however, we give an overview of the data we use.
+
 
 \section{Methods}
 
