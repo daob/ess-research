@@ -1,26 +1,23 @@
-This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2007.12.9)  11 DEC 2007 22:30
+This is pdfeTeX, Version 3.141592-1.30.6-2.2 (MiKTeX 2.5) (preloaded format=pdflatex 2006.11.23)  9 JAN 2008 17:36
 entering extended mode
 **presentation.tex
-(./presentation.tex
-LaTeX2e <2003/12/01>
-Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
-ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
-stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
-h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
-kish, ukrainian, nohyphenation, loaded.
-(/usr/share/texmf/tex/latex/beamer/base/beamer.cls
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasercs.sty
+(presentation.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8g> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, french, loaded.
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamer.cls"
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasercs.sty"
 Package: beamerbasercs 2004/10/07 (rcs-revision 1.3)
 )
 Document Class: beamer 2005/10/23 cvs version 3.06 A class for typesetting pres
 entations (rcs-revision 1.67)
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasemodes.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasemodes.sty"
 Package: beamerbasemodes 2004/12/09 (rcs-revision 1.21)
 \beamer@tempbox=\box26
 \beamer@tempcount=\count79
 \c@beamerpauses=\count80
-
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasedecode.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasedecode.sty
+"
 Package: beamerbasedecode 2005/05/09 (rcs-revision 1.18)
 \beamer@slideinframe=\count81
 \beamer@minimum=\count82
@@ -71,42 +68,47 @@ Package: beamerbasedecode 2005/05/09 (rcs-revision 1.18)
 \beamer@sectionadjust=\count100
 \beamer@tocsectionnumber=\count101
 
-(/usr/share/texmf/tex/latex/beamer/base/beamerbaseoptions.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbaseoptions.st
+y"
 Package: beamerbaseoptions 2004/11/15 (rcs-revision 1.7)
-
-(/usr/share/texmf-tetex/tex/latex/graphics/keyval.sty
+ ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 ))
-(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texmf-tetex/tex/latex/graphics/graphicx.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\pgf\basiclayer\pgfcore.sty"
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-tetex/tex/latex/graphics/graphics.sty
-Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\graphics\graphics.sty"
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-tetex/tex/latex/graphics/trig.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texmf-tetex/tex/latex/graphics/graphics.cfg
-File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2005/12/29 v1.2 MiKTeX 'graphics' configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 80.
+Package graphics Info: Driver file: pdftex.def on input line 90.
 
-(/usr/share/texmf-tetex/tex/latex/graphics/pdftex.def
-File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\graphics\pdftex.def"
+File: pdftex.def 2006/08/14 v0.03t Graphics/color for pdfTeX
 \Gread@gobject=\count102
 ))
 \Gin@req@height=\dimen119
 \Gin@req@width=\dimen120
 )
-(/usr/share/texmf/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texmf/tex/generic/pgf/utilities/pgfrcs.code.tex
-Package: pgfrcs 2006/10/11 v1.09 (rcs-revision 1.12)
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\pgf\systemlayer\pgfsys.sty"
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\pgf\utilities\pgfrcs.sty"
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\utilities\pgfutil-common.t
+ex")
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\utilities\pgfutil-latex.de
+f")
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\utilities\pgfrcs.code.tex"
+Package: pgfrcs 2006/10/26 v1.10 (rcs-revision 1.14)
 ))
-(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2006/10/11 v1.09 (rcs-revision 1.18)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\systemlayer\pgfsys.code.te
+x"
+Package: pgfsys 2006/10/16 v1.10 (rcs-revision 1.19)
 \pgf@x=\dimen121
 \pgf@y=\dimen122
 \pgf@xa=\dimen123
@@ -115,29 +117,31 @@ Package: pgfsys 2006/10/11 v1.09 (rcs-revision 1.18)
 \pgf@yb=\dimen126
 \pgf@xc=\dimen127
 \pgf@yc=\dimen128
-
-(/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
+ ("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2006/10/11  (rcs-revision 1.2)
 )
-Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 889.
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 845.
 
-(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
-File: pgfsys-pdftex.def 2006/10/11  (rcs-revision 1.12)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\systemlayer\pgfsys-pdftex.
+def"
+File: pgfsys-pdftex.def 2006/10/23  (rcs-revision 1.14)
 
-(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2006/10/11  (rcs-revision 1.6)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\systemlayer\pgfsys-common-
+pdf.def"
+File: pgfsys-common-pdf.def 2006/10/16  (rcs-revision 1.7)
 )))
-(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2006/10/11  (rcs-revision 1.3)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\systemlayer\pgfsyssoftpath
+.code.tex"
+File: pgfsyssoftpath.code.tex 2006/10/16  (rcs-revision 1.4)
 )
-(/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2006/10/11  (rcs-revision 1.3)
-))
-(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\systemlayer\pgfsysprotocol
+.code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2005/12/21 v2.09 LaTeX color extensions (UK)
 
-(/usr/share/texmf-tetex/tex/latex/graphics/color.cfg
-File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\00miktex\color.cfg"
+File: color.cfg 2005/12/29 v1.1 MiKTeX 'color' configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 220.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1328.
@@ -150,18 +154,21 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1349.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1350.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1351.
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2006/10/11 v1.09 (rcs-revision 1.4)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcore.code.te
+x"
+Package: pgfcore 2006/10/11 v1.10 (rcs-revision 1.4)
 
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoremath.code.tex
-File: pgfcoremath.code.tex 2006/10/11  (rcs-revision 1.2)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcoremath.cod
+e.tex"
+File: pgfcoremath.code.tex 2006/10/15  (rcs-revision 1.3)
 \c@pgf@counta=\count103
 \c@pgf@countb=\count104
 \c@pgf@countc=\count105
 \c@pgf@countd=\count106
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2006/10/11  (rcs-revision 1.5)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcorepoints.c
+ode.tex"
+File: pgfcorepoints.code.tex 2006/10/16  (rcs-revision 1.7)
 \pgf@picminx=\dimen129
 \pgf@picmaxx=\dimen130
 \pgf@picminy=\dimen131
@@ -179,63 +186,75 @@ File: pgfcorepoints.code.tex 2006/10/11  (rcs-revision 1.5)
 \pgf@zx=\dimen142
 \pgf@zy=\dimen143
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2006/10/11  (rcs-revision 1.5)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcorepathcons
+truct.code.tex"
+File: pgfcorepathconstruct.code.tex 2006/10/16  (rcs-revision 1.6)
 \pgf@path@lastx=\dimen144
 \pgf@path@lasty=\dimen145
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2006/10/11  (rcs-revision 1.6)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcorepathusag
+e.code.tex"
+File: pgfcorepathusage.code.tex 2006/10/16  (rcs-revision 1.7)
 \pgf@shorten@end@additional=\dimen146
 \pgf@shorten@start@additional=\dimen147
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2006/10/11  (rcs-revision 1.18)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcorescopes.c
+ode.tex"
+File: pgfcorescopes.code.tex 2006/10/23  (rcs-revision 1.20)
 \pgfpic=\box34
 \pgf@hbox=\box35
 \pgf@layerbox@main=\box36
 \pgf@picture@serial@count=\count108
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2006/10/11  (rcs-revision 1.5)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcoregraphics
+tate.code.tex"
+File: pgfcoregraphicstate.code.tex 2006/10/16  (rcs-revision 1.6)
 \pgflinewidth=\dimen148
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcoretransfor
+mations.code.tex"
 File: pgfcoretransformations.code.tex 2006/10/11  (rcs-revision 1.4)
 \pgf@pt@x=\dimen149
 \pgf@pt@y=\dimen150
 \pgf@pt@temp=\dimen151
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcorequick.co
+de.tex"
 File: pgfcorequick.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcoreobjects.
+code.tex"
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2006/10/11  (rcs-revision 1.4)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcorepathproc
+essing.code.tex"
+File: pgfcorepathprocessing.code.tex 2006/10/16  (rcs-revision 1.5)
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2006/10/11  (rcs-revision 1.5)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcorearrows.c
+ode.tex"
+File: pgfcorearrows.code.tex 2006/10/16  (rcs-revision 1.6)
 )
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2006/10/11  (rcs-revision 1.6)
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfcoreshade.co
+de.tex"
+File: pgfcoreshade.code.tex 2006/10/16  (rcs-revision 1.7)
 \pgf@max=\dimen152
 \pgf@sys@shading@range@num=\count109
 )))
-(/usr/share/texmf/tex/latex/pgf/basiclayer/pgfbaseimage.sty
-(/usr/share/texmf/tex/generic/pgf/basiclayer/pgfbaseimage.code.tex
-Package: pgfbaseimage 2006/10/11 v1.09 (rcs-revision 1.4)
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\pgf\basiclayer\pgfbaseimage.sty"
+
+("C:\Archivos de programa\MiKTeX 2.5\tex\generic\pgf\basiclayer\pgfbaseimage.co
+de.tex"
+Package: pgfbaseimage 2006/10/16 v1.10 (rcs-revision 1.5)
 ))
-(/usr/share/texmf/tex/latex/pgf/utilities/xxcolor.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\pgf\utilities\xxcolor.sty"
 Package: xxcolor 2003/10/24 ver 0.1
 \XC@nummixins=\count110
 \XC@countmixins=\count111
 )
-(/usr/share/texmf-tetex/tex/latex/amsfonts/amssymb.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2002/01/22 v2.2d
 
-(/usr/share/texmf-tetex/tex/latex/amsfonts/amsfonts.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2001/10/25 v2.2f
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
@@ -243,7 +262,7 @@ Package: amsfonts 2001/10/25 v2.2f
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
 ))
-(/usr/share/texmf-tetex/tex/latex/geometry/geometry.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\geometry\geometry.sty"
 Package: geometry 2002/07/08 v3.2 Page Geometry
 \Gm@cnth=\count112
 \Gm@cntv=\count113
@@ -254,149 +273,148 @@ Package: geometry 2002/07/08 v3.2 Page Geometry
 \Gm@even@mp=\dimen156
 \Gm@dimlist=\toks16
 
-(/usr/share/texmf-tetex/tex/latex/geometry/geometry.cfg))
-(/usr/share/texmf-tetex/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\geometry\geometry.cfg"))
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2006/09/06 v6.75e Hypertext links for LaTeX
 \@linkdim=\dimen157
 \Hy@linkcounter=\count115
 \Hy@pagecounter=\count116
 
-(/usr/share/texmf-tetex/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2006/09/06 v6.75e Hyperref: PDFDocEncoding definition (HO)
 )
-(/usr/share/texmf-tetex/tex/latex/hyperref/hyperref.cfg
-File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive and teTeX
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2006/02/14 v1.1 MiKTeX 'hyperref' configuration
 )
-Package hyperref Info: Option `bookmarks' set `true' on input line 1830.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 1830.
-Package hyperref Info: Option `implicit' set `false' on input line 1830.
-Package hyperref Info: Hyper figures OFF on input line 1880.
-Package hyperref Info: Link nesting OFF on input line 1885.
-Package hyperref Info: Hyper index ON on input line 1888.
-Package hyperref Info: Plain pages ON on input line 1893.
-Package hyperref Info: Backreferencing OFF on input line 1900.
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2006/08/22 v2.4 Connects package keyval with LaTeX options (
+HO)
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 2073.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 2073.
+Package hyperref Info: Option `implicit' set `false' on input line 2073.
+Package hyperref Info: Hyper figures OFF on input line 2123.
+Package hyperref Info: Link nesting OFF on input line 2128.
+Package hyperref Info: Hyper index ON on input line 2131.
+Package hyperref Info: Plain pages OFF on input line 2138.
+Package hyperref Info: Backreferencing OFF on input line 2143.
 
 Implicit mode OFF; no redefinition of LaTeX internals
-Package hyperref Info: Bookmarks ON on input line 2004.
-(/usr/share/texmf-tetex/tex/latex/url/url.sty
+Package hyperref Info: Bookmarks ON on input line 2273.
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
-Package: url 2004/03/15  ver 3.1  Verb mode for urls, etc.
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 2143.
+LaTeX Info: Redefining \url on input line 2428.
 \Fld@menulength=\count117
 \Field@Width=\dimen158
 \Fld@charsize=\dimen159
 \Choice@toks=\toks17
 \Field@toks=\toks18
-Package hyperref Info: Hyper figures OFF on input line 2618.
-Package hyperref Info: Link nesting OFF on input line 2623.
-Package hyperref Info: Hyper index ON on input line 2626.
-Package hyperref Info: backreferencing OFF on input line 2633.
-Package hyperref Info: Link coloring OFF on input line 2638.
+Package hyperref Info: Hyper figures OFF on input line 2906.
+Package hyperref Info: Link nesting OFF on input line 2911.
+Package hyperref Info: Hyper index ON on input line 2914.
+Package hyperref Info: backreferencing OFF on input line 2921.
+Package hyperref Info: Link coloring OFF on input line 2926.
+\Hy@abspage=\count118
 
 Hyperref stopped early
 )
 *hyperref using default driver hpdftex*
-(/usr/share/texmf-tetex/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2003/11/30 v6.74m Hyperref driver for pdfTeX
-
-(/usr/share/texmf-tetex/tex/latex/psnfss/pifont.sty
-Package: pifont 2004/09/15 PSNFSS-v9.2 Pi font support (SPQR) 
-LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
-
-(/usr/share/texmf-tetex/tex/latex/psnfss/upzd.fd
-File: upzd.fd 2001/06/04 font definitions for U/pzd.
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2006/09/06 v6.75e Hyperref driver for pdfTeX
+\Fld@listcount=\count119
 )
-LaTeX Font Info:    Try loading font information for U+psy on input line 64.
-
-(/usr/share/texmf-tetex/tex/latex/psnfss/upsy.fd
-File: upsy.fd 2001/06/04 font definitions for U/psy.
-))
-\Fld@listcount=\count118
-\@outlinefile=\write3
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\base\size11.clo"
+File: size11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 )
-(/usr/share/texmf-tetex/tex/latex/base/size11.clo
-File: size11.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
-)
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasecompatibility.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasecompatibil
+ity.sty"
 Package: beamerbasecompatibility 2005/01/25  (rcs-revision 1.60)
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasefont.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasefont.sty"
 Package: beamerbasefont 2005/05/17  (rcs-revision 1.15)
-)
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasemisc.sty
+) ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasemisc.sty
+"
 Package: beamerbasemisc 2005/05/17  (rcs-revision 1.23)
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasetwoscreens.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasetwoscreens
+.sty"
 Package: beamerbasetwoscreens 2005/10/14  (rcs-revision 1.6)
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbaseoverlay.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbaseoverlay.st
+y"
 Package: beamerbaseoverlay 2005/05/18  (rcs-revision 1.49)
-\beamer@argscount=\count119
+\beamer@argscount=\count120
 \beamer@lastskipcover=\skip42
-\beamer@trivlistdepth=\count120
+\beamer@trivlistdepth=\count121
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasetitle.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasetitle.sty"
 Package: beamerbasetitle 2005/10/23  (rcs-revision 1.23)
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasesection.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasesection.st
+y"
 Package: beamerbasesection 2005/04/20  (rcs-revision 1.18)
-\c@lecture=\count121
-\c@part=\count122
-\c@section=\count123
-\c@subsection=\count124
-\c@subsubsection=\count125
+\c@lecture=\count122
+\c@part=\count123
+\c@section=\count124
+\c@subsection=\count125
+\c@subsubsection=\count126
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbaseframe.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbaseframe.sty"
 Package: beamerbaseframe 2005/06/02  (rcs-revision 1.58)
 \beamer@framebox=\box37
 \beamer@frametitlebox=\box38
 \beamer@zoombox=\box39
-\beamer@zoomcount=\count126
-\beamer@zoomframecount=\count127
+\beamer@zoomcount=\count127
+\beamer@zoomframecount=\count128
 \beamer@frametextheight=\dimen160
-\c@subsectionslide=\count128
+\c@subsectionslide=\count129
 \beamer@frametopskip=\skip43
 \beamer@framebottomskip=\skip44
 \beamer@frametopskipautobreak=\skip45
 \beamer@framebottomskipautobreak=\skip46
 \beamer@envbody=\toks19
-\c@framenumber=\count129
+\c@framenumber=\count130
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbaseverbatim.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbaseverbatim.s
+ty"
 Package: beamerbaseverbatim 2005/04/12  (rcs-revision 1.6)
-\beamer@verbatimfileout=\write4
+\beamer@verbatimfileout=\write3
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbaseframesize.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbaseframesize.
+sty"
 Package: beamerbaseframesize 2005/06/09  (rcs-revision 1.17)
 \beamer@splitbox=\box40
-\beamer@autobreakcount=\count130
+\beamer@autobreakcount=\count131
 \beamer@autobreaklastheight=\dimen161
 \beamer@frametitletoks=\toks20
 \beamer@framesubtitletoks=\toks21
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbaseframecomponents.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbaseframecompo
+nents.sty"
 Package: beamerbaseframecomponents 2004/11/08  (rcs-revision 1.40)
 \beamer@footins=\box41
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasecolor.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasecolor.sty"
 Package: beamerbasecolor 2005/01/25  (rcs-revision 1.41)
-)
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasenotes.sty
+) ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasenotes.st
+y"
 Package: beamerbasenotes 2005/10/14  (rcs-revision 1.22)
 \beamer@frameboxcopy=\box42
-)
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasetoc.sty
+) ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasetoc.sty"
 Package: beamerbasetoc 2004/12/09  (rcs-revision 1.20)
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasetemplates.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasetemplates.
+sty"
 Package: beamerbasetemplates 2004/10/07  (rcs-revision 1.50)
 \beamer@sbttoks=\toks22
 
-(/usr/share/texmf/tex/latex/beamer/base/beamerbaseauxtemplates.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbaseauxtemplat
+es.sty"
 Package: beamerbaseauxtemplates 2005/06/09  (rcs-revision 1.27)
 
-(/usr/share/texmf/tex/latex/beamer/base/beamerbaseboxes.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbaseboxes.sty"
 Package: beamerbaseboxes 2005/06/09  (rcs-revision 1.28)
 \bmb@box=\box43
 \bmb@colorbox=\box44
@@ -410,51 +428,52 @@ Package: beamerbaseboxes 2005/06/09  (rcs-revision 1.28)
 )
 \beamer@blockheadheight=\dimen166
 ))
-(/usr/share/texmf/tex/latex/beamer/base/beamerbaselocalstructure.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbaselocalstruc
+ture.sty"
 Package: beamerbaselocalstructure 2005/04/20  (rcs-revision 1.51)
-
-(/usr/share/texmf-tetex/tex/latex/tools/enumerate.sty
+ ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\tools\enumerate.sty"
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks23
 )
-\c@figure=\count131
-\c@table=\count132
+\c@figure=\count132
+\c@table=\count133
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasenavigation.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasenavigation
+.sty"
 Package: beamerbasenavigation 2005/06/01  (rcs-revision 1.34)
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasetheorems.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasetheorems.s
+ty"
 Package: beamerbasetheorems 2005/04/04  (rcs-revision 1.7)
-
-(/usr/share/texmf-tetex/tex/latex/amsmath/amsmath.sty
+ ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf-tetex/tex/latex/amsmath/amstext.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texmf-tetex/tex/latex/amsmath/amsgen.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks24
 \ex@=\dimen167
 ))
-(/usr/share/texmf-tetex/tex/latex/amsmath/amsbsy.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen168
 )
-(/usr/share/texmf-tetex/tex/latex/amsmath/amsopn.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count133
+\inf@bad=\count134
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count134
-\leftroot@=\count135
+\uproot@=\count135
+\leftroot@=\count136
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count136
-\DOTSCASE@=\count137
+\classnum@=\count137
+\DOTSCASE@=\count138
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
@@ -463,15 +482,15 @@ LaTeX Info: Redefining \cdots on input line 467.
 \big@size=\dimen169
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count138
-\c@MaxMatrixCols=\count139
+\macc@depth=\count139
+\c@MaxMatrixCols=\count140
 \dotsspace@=\muskip11
-\c@parentequation=\count140
-\dspbrk@lvl=\count141
+\c@parentequation=\count141
+\dspbrk@lvl=\count142
 \tag@help=\toks25
-\row@=\count142
-\column@=\count143
-\maxfields@=\count144
+\row@=\count143
+\column@=\count144
+\maxfields@=\count145
 \andhelp@=\toks26
 \eqnshift@=\dimen170
 \alignsep@=\dimen171
@@ -486,7 +505,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(/usr/share/texmf-tetex/tex/latex/amscls/amsthm.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks29
 \thm@bodyfont=\toks30
@@ -498,37 +517,43 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip54
 \dth@everypar=\toks34
 )
-\c@theorem=\count145
+\c@theorem=\count146
 )
-(/usr/share/texmf/tex/latex/beamer/base/beamerbasethemes.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\base\beamerbasethemes.sty
+"
 Package: beamerbasethemes 2004/10/07  (rcs-revision 1.9)
 )
-(/usr/share/texmf/tex/latex/beamer/themes/theme/beamerthemedefault.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\theme\beamerthemed
+efault.sty"
 Package: beamerthemedefault 2004/10/07  (rcs-revision 1.6)
 
-(/usr/share/texmf/tex/latex/beamer/themes/font/beamerfontthemedefault.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\font\beamerfontthe
+medefault.sty"
 Package: beamerfontthemedefault 2005/03/15  (rcs-revision 1.12)
 )
-(/usr/share/texmf/tex/latex/beamer/themes/color/beamercolorthemedefault.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\color\beamercolort
+hemedefault.sty"
 Package: beamercolorthemedefault 2005/03/15  (rcs-revision 1.27)
 )
-(/usr/share/texmf/tex/latex/beamer/themes/inner/beamerinnerthemedefault.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\inner\beamerinnert
+hemedefault.sty"
 Package: beamerinnerthemedefault 2005/06/17  (rcs-revision 1.19)
 \beamer@dima=\dimen176
 \beamer@dimb=\dimen177
 )
-(/usr/share/texmf/tex/latex/beamer/themes/outer/beamerouterthemedefault.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\outer\beameroutert
+hemedefault.sty"
 Package: beamerouterthemedefault 2005/06/09  (rcs-revision 1.13)
 )))
-(/usr/share/texmf-tetex/tex/latex/base/fontenc.sty
-Package: fontenc 2004/02/22 v1.99f Standard LaTeX package
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/share/texmf-tetex/tex/latex/base/t1enc.def
-File: t1enc.def 2004/02/22 v1.99f Standard LaTeX file
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/share/texmf-tetex/tex/latex/base/textcomp.sty
-Package: textcomp 2004/02/22 v1.99f Standard LaTeX package
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -542,7 +567,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
 
-(/usr/share/texmf-tetex/tex/latex/base/ts1enc.def
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
 LaTeX Info: Redefining \oldstylenums on input line 266.
@@ -594,24 +619,31 @@ Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
 )
-(/usr/share/texmf/tex/latex/pfu/futura.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\pfu\futura.sty"
 Package: futura 2004/09/28 (WaS)
 )
-(/usr/share/texmf/tex/latex/beamer/themes/theme/beamerthemeAntibes.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\theme\beamerthemeA
+ntibes.sty"
 Package: beamerthemeAntibes 2004/10/07  (rcs-revision 1.9)
 
-(/usr/share/texmf/tex/latex/beamer/themes/outer/beamerouterthemetree.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\outer\beameroutert
+hemetree.sty"
 Package: beamerouterthemetree 2004/10/14  (rcs-revision 1.4)
 )
-(/usr/share/texmf/tex/latex/beamer/themes/color/beamercolorthemewhale.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\color\beamercolort
+hemewhale.sty"
 Package: beamercolorthemewhale 2004/10/07  (rcs-revision 1.3)
 )
-(/usr/share/texmf/tex/latex/beamer/themes/color/beamercolorthemeorchid.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\color\beamercolort
+hemeorchid.sty"
 Package: beamercolorthemeorchid 2004/10/07  (rcs-revision 1.2)
 )
-(/usr/share/texmf/tex/latex/beamer/themes/inner/beamerinnerthemerectangles.sty
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\inner\beamerinnert
+hemerectangles.sty"
 Package: beamerinnerthemerectangles 2004/10/07  (rcs-revision 1.3)
-)) (/usr/share/texmf/tex/latex/beamer/themes/color/beamercolorthemebeetle.sty
+))
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\beamer\themes\color\beamercolort
+hemebeetle.sty"
 Package: beamercolorthemebeetle 2004/10/07  (rcs-revision 1.5)
 )
 
@@ -622,9 +654,7 @@ Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
 (hyperref)                removing `\\' on input line 18.
 
-(./presentation.aux)
-\openout1 = `presentation.aux'.
-
+(presentation.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
@@ -641,47 +671,46 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 32.
- (/usr/share/texmf-tetex/tex/latex/base/ts1cmr.fd
+ ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Try loading font information for T1+pfu on input line 32.
-
-(/usr/share/texmf/tex/latex/pfu/t1pfu.fd
+ ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\pfu\t1pfu.fd"
 File: t1pfu.fd 2004/09/28 scalable font definitions for T1/pfu.
 )
-(/usr/share/texmf-tetex/tex/context/base/supp-pdf.tex
-(/usr/share/texmf-tetex/tex/context/base/supp-mis.tex
+("C:\Archivos de programa\MiKTeX 2.5\tex\context\base\supp-pdf.tex"
+("C:\Archivos de programa\MiKTeX 2.5\tex\context\base\supp-mis.tex"
 loading : Context Support Macros / Miscellaneous (2004.10.26)
-\protectiondepth=\count146
-\scratchcounter=\count147
+\protectiondepth=\count147
+\scratchcounter=\count148
 \scratchtoks=\toks35
 \scratchdimen=\dimen178
 \scratchskip=\skip55
 \scratchmuskip=\muskip12
 \scratchbox=\box50
 \scratchread=\read1
-\scratchwrite=\write5
+\scratchwrite=\write4
 \zeropoint=\dimen179
 \onepoint=\dimen180
 \onebasepoint=\dimen181
-\minusone=\count148
+\minusone=\count149
 \thousandpoint=\dimen182
 \onerealpoint=\dimen183
 \emptytoks=\toks36
 \nextbox=\box51
 \nextdepth=\dimen184
 \everyline=\toks37
-\!!counta=\count149
-\!!countb=\count150
-\recursecounter=\count151
+\!!counta=\count150
+\!!countb=\count151
+\recursecounter=\count152
 )
 loading : Context Support Macros / PDF (2004.03.26)
-\nofMPsegments=\count152
-\nofMParguments=\count153
-\MPscratchCnt=\count154
+\nofMPsegments=\count153
+\nofMParguments=\count154
+\MPscratchCnt=\count155
 \MPscratchDim=\dimen185
-\MPnumerator=\count155
+\MPnumerator=\count156
 \everyMPtoPDFconversion=\toks38
 )
 -------------------- Geometry parameters
@@ -724,16 +753,19 @@ driver: pdftex
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
 Package hyperref Info: Link coloring OFF on input line 32.
- (/usr/share/texmf-tetex/tex/latex/hyperref/nameref.sty
-Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
-\c@section@level=\count156
+ ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\hyperref\nameref.sty"
+Package: nameref 2006/08/15 v2.26 Cross-referencing by name of section
+
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\oberdiek\refcount.sty"
+Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
+)
+\c@section@level=\count157
 )
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
- (./presentation.out)
-(./presentation.out)
-\openout3 = `presentation.out'.
 
+(presentation.out) (presentation.out)
+\@outlinefile=\write5
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 32.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
@@ -776,15 +808,15 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  T1/pfu/m/it --> T1/pfu/bx/it on input line 32.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 32.
- (./presentation.nav)
+ (presentation.nav)
 LaTeX Font Info:    Try loading font information for U+msa on input line 40.
 
-(/usr/share/texmf-tetex/tex/latex/amsfonts/umsa.fd
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
-(/usr/share/texmf-tetex/tex/latex/amsfonts/umsb.fd
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <8> not available
@@ -794,29 +826,29 @@ LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <6> not available
 LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <5> not available
 (Font)              Font shape `T1/pfu/m/sl' tried instead on input line 40.
 
-<i/uvt.pdf, id=39, 670.505pt x 153.57375pt>
+<i/uvt.pdf, id=27, 670.505pt x 153.57375pt>
 File: i/uvt.pdf Graphic file (type pdf)
  <use i/uvt.pdf>
-<i/esade.pdf, id=40, 482.80376pt x 250.82686pt>
+<i/esade.pdf, id=28, 482.80376pt x 250.82686pt>
 File: i/esade.pdf Graphic file (type pdf)
  <use i/esade.pdf>
 Overfull \vbox (4.78256pt too high) detected at line 40
  []
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{psfonts.map}
 
- <./i/uvt.pdf
-Warning: pdflatex (file ./i/uvt.pdf): pdf inclusion: Page Group detected which 
-pdfTeX can't handle. Ignoring it.
-> <./i/esade.pdf
-Warning: pdflatex (file ./i/esade.pdf): pdf inclusion: Page Group detected whic
-h pdfTeX can't handle. Ignoring it.
->] <i/response-model.pdf, id=85, 344.45004pt x 242.83119pt>
+ <i/uvt.pdf
+Warning:  (file i/uvt.pdf): pdf inclusion: Page Group detected which pdfTeX can
+'t handle. Ignoring it.
+> <i/esade.pdf
+Warning:  (file i/esade.pdf): pdf inclusion: Page Group detected which pdfTeX c
+an't handle. Ignoring it.
+>] <i/response-model.pdf, id=73, 344.45004pt x 242.83119pt>
 File: i/response-model.pdf Graphic file (type pdf)
 
 <use i/response-model.pdf> [2
 
- <./i/response-model.pdf>]
+ <i/response-model.pdf>]
 LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pfu/m/sl' tried instead on input line 64.
  [3
@@ -828,19 +860,19 @@ LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <10.95> not available
 ] [6
 
 ]
-<i/trait-1-m-1.pdf, id=231, 450.68375pt x 95.35625pt>
+<i/trait-1-m-1.pdf, id=219, 450.68375pt x 95.35625pt>
 File: i/trait-1-m-1.pdf Graphic file (type pdf)
  <use i/trait-1-m-1.pdf>
-<i/trait-1-m-2.pdf, id=232, 454.69875pt x 135.45154pt>
+<i/trait-1-m-2.pdf, id=220, 454.69875pt x 135.45154pt>
 File: i/trait-1-m-2.pdf Graphic file (type pdf)
  <use i/trait-1-m-2.pdf>
-<i/trait-1-m-3.pdf, id=233, 498.86375pt x 123.46124pt>
+<i/trait-1-m-3.pdf, id=221, 498.86375pt x 123.46124pt>
 File: i/trait-1-m-3.pdf Graphic file (type pdf)
  <use i/trait-1-m-3.pdf>
 [7
 
- <./i/trait-1-m-1.pdf> <./i/trait-1-m-2.pdf> <./i/trait-1-m-3.pdf>]
-<i/method-1.pdf, id=299, 458.71375pt x 172.645pt>
+ <i/trait-1-m-1.pdf> <i/trait-1-m-2.pdf> <i/trait-1-m-3.pdf>]
+<i/method-1.pdf, id=283, 458.71375pt x 172.645pt>
 File: i/method-1.pdf Graphic file (type pdf)
  <use i/method-1.pdf>
 Overfull \hbox (11.3809pt too wide) in paragraph at lines 81--81
@@ -849,17 +881,17 @@ Overfull \hbox (11.3809pt too wide) in paragraph at lines 81--81
 
 [8
 
- <./i/method-1.pdf>] <i/method-2.pdf, id=334, 434.62375pt x 476.23091pt>
+ <i/method-1.pdf>] <i/method-2.pdf, id=318, 434.62375pt x 476.23091pt>
 File: i/method-2.pdf Graphic file (type pdf)
 
 <use i/method-2.pdf> [9
 
- <./i/method-2.pdf>]
-<i/method-3.pdf, id=368, 501.875pt x 616.3025pt>
+ <i/method-2.pdf>]
+<i/method-3.pdf, id=352, 501.875pt x 616.3025pt>
 File: i/method-3.pdf Graphic file (type pdf)
  <use i/method-3.pdf> [10
 
- <./i/method-3.pdf>] [11
+ <i/method-3.pdf>] [11
 
 ] [12
 
@@ -878,7 +910,7 @@ File: i/method-3.pdf Graphic file (type pdf)
 ] [19
 
 ]
-<i/MTMM.pdf, id=648, 353.74722pt x 225.35275pt>
+<i/MTMM.pdf, id=629, 353.74722pt x 225.35275pt>
 File: i/MTMM.pdf Graphic file (type pdf)
  <use i/MTMM.pdf>
 Overfull \hbox (5.36346pt too wide) in paragraph at lines 153--153
@@ -887,7 +919,7 @@ Overfull \hbox (5.36346pt too wide) in paragraph at lines 153--153
 
 [20
 
- <./i/MTMM.pdf>]
+ <i/MTMM.pdf>]
 File: i/MTMM.pdf Graphic file (type pdf)
  <use i/MTMM.pdf>
 Overfull \hbox (5.36346pt too wide) in paragraph at lines 153--153
@@ -897,7 +929,7 @@ Overfull \hbox (5.36346pt too wide) in paragraph at lines 153--153
 ! pdfTeX warning (ext4): destination with the same identifier (name{model}) has
  been already used, duplicate ignored
 <to be read again> 
-                   \penalty 
+                   \relax 
 l.153 \end{frame}
                   [21
 
@@ -911,7 +943,7 @@ Overfull \hbox (5.36346pt too wide) in paragraph at lines 153--153
 ! pdfTeX warning (ext4): destination with the same identifier (name{model}) has
  been already used, duplicate ignored
 <to be read again> 
-                   \penalty 
+                   \relax 
 l.153 \end{frame}
                   [22
 
@@ -928,199 +960,9 @@ l.153 \end{frame}
 ] [28
 
 ]
-<i/response-categ.pdf, id=897, 597.50786pt x 845.04686pt>
-File: i/response-categ.pdf Graphic file (type pdf)
 
-<use i/response-categ.pdf> [29
-
- <./i/response-categ.pdf
-Warning: pdflatex (file ./i/response-categ.pdf): pdf inclusion: Page Group dete
-cted which pdfTeX can't handle. Ignoring it.
->] [30
-
-] [31
-
-] <i/LRV-8cat.pdf, id=986, 574.4074pt x 619.14938pt>
-File: i/LRV-8cat.pdf Graphic file (type pdf)
-
-<use i/LRV-8cat.pdf> <i/LRV-skew.pdf, id=987, 572.6006pt x 610.24202pt>
-File: i/LRV-skew.pdf Graphic file (type pdf)
-
-<use i/LRV-skew.pdf> [32
-
- <./i/LRV-8cat.pdf
-Warning: pdflatex (file ./i/LRV-8cat.pdf): pdf inclusion: Page Group detected w
-hich pdfTeX can't handle. Ignoring it.
-> <./i/LRV-skew.pdf
-Warning: pdflatex (file ./i/LRV-skew.pdf): pdf inclusion: Page Group detected w
-hich pdfTeX can't handle. Ignoring it.
->]
-File: i/LRV-8cat.pdf Graphic file (type pdf)
- <use i/LRV-8cat.pdf>
-File: i/LRV-skew.pdf Graphic file (type pdf)
- <use i/LRV-skew.pdf> [33
-
-]
-File: i/LRV-8cat.pdf Graphic file (type pdf)
- <use i/LRV-8cat.pdf>
-File: i/LRV-skew.pdf Graphic file (type pdf)
-
-<use i/LRV-skew.pdf> [34
-
-] [35
-
-] [36
-
-] [37
-
-] [38
-
-] [39
-
-]
-<i/topics.pdf, id=1201, 737.75626pt x 162.6075pt>
-File: i/topics.pdf Graphic file (type pdf)
- <use i/topics.pdf> [40
-
- <./i/topics.pdf
-Warning: pdflatex (file ./i/topics.pdf): pdf inclusion: Page Group detected whi
-ch pdfTeX can't handle. Ignoring it.
->]
-File: i/topics.pdf Graphic file (type pdf)
- <use i/topics.pdf> [41
-
-]
-File: i/topics.pdf Graphic file (type pdf)
- <use i/topics.pdf> [42
-
-]
-LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <9> not available
-(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 284.
-LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <14.4> not available
-(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 284.
-LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <10> not available
-(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 284.
-LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <7> not available
-(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 284.
- [43
-
-] [44
-
-]
-LaTeX Font Info:    Font shape `T1/pfu/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pfu/b/n' tried instead on input line 387.
- [45
-
-] [46
-
-] [47
-
-]
-[48
-
-] [49
-
-] <../latex/box.pdf, id=1496, 433.62pt x 433.62pt>
-File: ../latex/box.pdf Graphic file (type pdf)
-
-<use ../latex/box.pdf> [50
-
- <../latex/box.pdf>] [51
-
-] [52
-
-] [53
-
-] [54
-
-] [55
-
-]
-[56
-
-] [57
-
-] [58
-
-] [59
-
-] [60
-
-] [61
-
-] [62
-
-] [63
-
-]
-<i/uvt_fac.jpg, id=1868, 240.9pt x 180.675pt>
-File: i/uvt_fac.jpg Graphic file (type jpg)
- <use i/uvt_fac.jpg>
-<i/esade_fac.jpg, id=1869, 301.125pt x 225.84375pt>
-File: i/esade_fac.jpg Graphic file (type jpg)
- <use i/esade_fac.jpg>
-[64
-
- <./i/uvt_fac.jpg> <./i/esade_fac.jpg>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 593.
+LaTeX Warning: File `i/response-categ.pdf' not found on input line 170.
 
 
-(/usr/share/texmf-tetex/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [65
-
-] [66
-
-] [67
-
-] [68
-
-] [69
-
-]
-[70
-
-] [71
-
-] [72
-
-] [73
-
-] [74
-
-]
-\tf@nav=\write6
-\openout6 = `presentation.nav'.
-
-\tf@toc=\write7
-\openout7 = `presentation.toc'.
-
-\tf@snm=\write8
-\openout8 = `presentation.snm'.
-
- (./presentation.aux) ) 
-Here is how much of TeX's memory you used:
- 9186 strings out of 94500
- 160085 string characters out of 1175788
- 230565 words of memory out of 1000000
- 11875 multiletter control sequences out of 10000+50000
- 39468 words of font info for 91 fonts, out of 500000 for 2000
- 580 hyphenation exceptions out of 8191
- 41i,16n,56p,320b,669s stack positions out of 1500i,500n,5000p,200000b,5000s
-PDF statistics:
- 2157 PDF objects out of 300000
- 160 named destinations out of 131072
- 178 words of extra memory for PDF output out of 65536
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.e
-nc}</usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf
--tetex/fonts/type1/bluesky/cm/cmex10.pfb></usr/share/texmf-tetex/fonts/type1/bl
-uesky/cm/cmsy9.pfb></usr/share/texmf-tetex/fonts/type1/public/tt2001/fmex9.pfb>
-</usr/share/texmf-tetex/fonts/type1/bluesky/cm/cmmi9.pfb></usr/share/texmf-tete
-x/fonts/type1/bluesky/cm/cmss9.pfb></usr/share/texmf-tetex/fonts/type1/bluesky/
-cm/cmsy10.pfb></usr/share/texmf-tetex/fonts/type1/bluesky/cm/cmmi10.pfb></usr/s
-hare/texmf/fonts/type1/linotype/futura/lfubo8a.pfb>{/usr/share/texmf-tetex/font
-s/enc/dvips/psnfss/8r.enc}</usr/share/texmf/fonts/type1/linotype/futura/lfub8a.
-pfb></usr/share/texmf-tetex/fonts/type1/bluesky/cm/cmss10.pfb></usr/share/texmf
-/fonts/type1/linotype/futura/lfuko8a.pfb></usr/share/texmf/fonts/type1/linotype
-/futura/lfuk8a.pfb>
-Output written on presentation.pdf (74 pages, 12237510 bytes).
+Error:  (file i/response-categ.pdf): cannot find image file
+ ==> Fatal error occurred, the output PDF file is not finished!
