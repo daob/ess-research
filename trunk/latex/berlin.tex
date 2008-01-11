@@ -204,7 +204,7 @@ Thus, in some cases we found artificial differences in quality which are likely 
 \subsection{The categorical response model}
 
 The response model discussed so far makes no mention of the fact that many of the measures we use are in fact ordinal--that is, they are most likely ordered categories rather than measured on an interval scale. 
-Broadly speaking, two types of measurement models have been proposed for this situation. The first assumes there is an unobserved discrete variable, and that errors arise from the conditional chances of choosing a category on the survey question given the unobserved score. Such models are often referred to as latent class models \citep{lazarsfeld_latent_1968,hagenaars_applied_2002}.
+Broadly speaking, two types of measurement models have been proposed for this situation. The first assumes that there is an unobserved discrete variable, and that errors arise because the probability of choosing a category on the observed variable given a score on the unobserved variable is not equal to one. That is, the errors are modelled by the conditional chances of choosing a category on the survey question given the unobserved score. Such models are often referred to as latent class models \citep{lazarsfeld_latent_1968,hagenaars_applied_2002}.
 
 The second approach deals with the case where a continuous scale or `latent response variable' (LRV) is thought to underly the observed categorical item. Such models are sometimes called latent trait models. Several extensions are possible, but we focus on a special case described by \citet{muthen_general_1984}. This is the model we will use in our subsequent analysis of the data\footnote{It can be shown that analysing polychoric correlations in an MTMM model is a special case of the model we use \citep{muthen_latent_2002}. However, we do not use polychoric correlations because it would be  necessary to assume that the variances of the latent response variables are equal across countries. Since we try to separate categorisation errors from differences in the continuous part of the model, this is not a desirable assumption. The model we use is equivalent to a multi-dimensional two parameter graded response model in item response theory \citep{muthen_latent_2002}.}.
 
@@ -272,6 +272,8 @@ We estimated the quality of the measures based on the CV model and based on the 
 
 \section{Results}
 
+\subsection{Results of the experiments}
+
 The first experiment's results will be described in some detail, while we provide the results of the other experiments in the appendix.
 
 The first experiment concerned opinions on the role of women in society (see table \ref{card:women}). We first turn to the hypothesis that all thresholds are equal across different countries. If this hypothesis cannot be rejected  there is also little reason to think that the categorisation is causing differences in the quality coefficients. 
@@ -336,7 +338,8 @@ A consequence of this is that, using the CV model, a higher quality is obtained 
 
 The analyses of the other three experiments show that sometimes no large differences between the countries are found, while in others the thresholds are rather different. In particular we found several cases where the same question did not cover the distribution of the opinion in one country, but provided more information in another. We also found both examples of cases where differences in the quality do not go together with differences in the thresholds, and examples of cases where they do. A more detailed discussion of the results for the other three experiments can be found in the appendix.
 
-Now that we have presented and discussed the results of the different experiments, the question remains whether there are differences between the countries with regard to the categorisation factors, and what the influence on this factor of the topic and the scale used is. The next section therefore presents the results of a meta-analysis we conducted on the categorisation factors. 
+Now that we have presented and discussed the results of the different experiments, the question remains whether there is a connection between the categorisation factor and the quality of the question. The next section therefore presents the results of a meta-analysis we conducted on the categorisation factors. 
+
 
 \subsection{A meta-analysis of the results}
 
@@ -358,6 +361,7 @@ If the sample is split according to whether the quality was `high'  or `low', th
 
 In order to see whether this explanation of the differences holds when we control for other variables, we estimated a linear regression of the categorisation factors on whether the question was asked in a country with a high or low quality, was in the main or supplementary questionnaire, its topic, its scale and whether the question was negatively phrased or not. The amount of adjusted variance explained is 35\%. The estimates can be found in table \ref{tab:meta}.
 This analysis is necessarily limited by the design of the experiments. For example, true-false scales were only used for the `job' items--although this was of course not the only scale used in that experiment. 
+
 
 \begin{table}[htb]\centering\caption{A meta-analysis of the categorisation error studies. \label{tab:meta}}
 \begin{minipage}[ht]{.73\textwidth}
@@ -391,6 +395,9 @@ The interaction effect shown in figure \ref{fig:box_factor} has not been suppres
 
 Some questions were negatively phrased, for example as `A woman should \emph{not} have to cut down on her paid work for the sake of her family'. For such questions, the quality estimate in the continuous analysis was consistently lower than the quality obtained in the categorical analysis.
 
+\begin{figure}[tbh] \centering \includegraphics[width=\textwidth]{i/meta-scatter} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q_{cont.}^2$) across the experiments.\label{fig:meta_scatter}} \end{figure}
+
+Figure \ref{fig:meta_scatter} shows that categorisation factors above unity were mostly found for questions with a high quality. This means that high quality coefficients from the continuous model tend to be lower in the categorical model, and the other way around-.
 
 \section{Discussion and conclusion}
 
@@ -418,8 +425,9 @@ three parts:
 
 This study has been largely descriptive of the effects of categorisation error. Given our findings, it seems important to better judge the relative merits of the continuous and categorical models, and the effects that different question characteristics have, not only on quality and method effects, but also on the categorisation errors.
 
-Our study also has some limitations due to the assumptions made to attain the above separation. These are: normality of the latent response variables, linearity of the relationship between the latent traits and latent response variables, and interval measurement of the latent traits. In another paper these issues will be addressed by examining ways to relax the assumptions.
 
+
+Our study also has some limitations due to the assumptions made to attain the above separation. These are: normality of the latent response variables, linearity of the relationship between the latent traits and latent response variables, and interval measurement of the latent traits. In another paper these issues will be addressed by examining ways to relax the assumptions.
 Future research might also focus on finding other explanations for differences in quality across countries. 
 
 %\clearpage
