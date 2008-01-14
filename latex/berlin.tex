@@ -29,7 +29,7 @@ In an earlier study, we investigated differences in translations, differences in
 
 Categorisation errors arise when a continuous latent response variable is split up into different categories. This leads to two types of errors: grouping and transformation errors \citep{johnson_ordinal_1983}. Grouping errors occur  different opinions are grouped together in the same category. Transformation errors occur when the differences between the numerical values of adjacent categories do not correspond to equal distances between the means of the latent response variables in those categories. If, for instance, the distances between categories are not the same in two different countries, this can lead to larger categorisation errors in one country than another, leading in turn to lower question quality. This is why the distance between categories is a possible explanation for differences in question quality across countries.
 
-\marginpar{give an overview of the paper here.}
+The first section will discuss the models we use to estimate the measurement error coefficients of survey questions starting from a basic response model. We will then present the data from the European Social Survey that will be used. A short discussion of previous results follows. First the estimates from our previous research are shown. In a previous study, we already examined some possible explanations for the large differences in these estimates found across countries. These will be shortly reviewed. We then go on to present the model that will be the focus of this study, which accounts for categorisation errors. It will be shown what we mean by such errors and how we compare the results we get from categorical models with those from continuous models. The statistical method of estimation is presented, after which we discuss our results. Since we have many such results, they are followed by a meta-analysis of the results. Finally, we discuss our general conclusions from this meta-analysis.
 
 
 \section{Theory}
@@ -94,45 +94,46 @@ The MTMM design of 3 traits and 3 methods generates 45 covariances and variances
 Table \ref{tab:mtmm_cor} presents the correlations that we derived between the 9 measures obtained from a sample of 481 people in the British population. Using the specifications of the model indicated above and the ML estimator to estimate the quality indicators, the results presented in Table \ref{tab:mtmm_results} are obtained\footnote{In this case the ML estimator is used. The estimation is done using the covariance matrix as the input matrix and not the correlation matrix . Thereafter, the estimates are standardized to obtain the requested coefficients. A result of this is that the standardized  method effects are not exactly equal to each other.}.  
 
 \begin{table}[htb]\centering\caption{Correlations between nine measures obtained from a sample of 481 people from the British population. Correlations between a repetition of a trait using a different method (`monotrait-heteromethod' correlations) are indicated in boldface.\label{tab:mtmm_cor}}
-\begin{tabular}{lrrrrrrrrr}\hline
-& \multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2} & \multicolumn{3}{c}{Method  3} \\ 
+\begin{tabular}{llrrrrrrrrr}\hline
+& &\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2} & \multicolumn{3}{c}{Method  3} \\ 
 \hline
-& Q1 & Q2 & Q3 & Q1 & Q2 & Q3 & Q1 & Q2 & Q3 \\ 
-Method 1\\ 
-Q1 & 1.00 \\ 
-Q2 & .481 & 1.00 &  \\ 
-Q3 & .373 & .552 & 1.00 \\ 
-Method 2\\ 
-Q1 & \textbf{-.626} & -.422 & -.410 & 1.00 \\ 
-Q2 & -.429 & \textbf{-.663} & -.532 & .642 & 1.00 \\ 
-Q3 & -.453 & -.495 & -\textbf{.669} & .612 & .693 & 1.00 \\ 
-Method 3\\
-Q1 & -\textbf{.502} & -.374 & -.332 & .\textbf{584} & .436 & .438 & 1.00 \\ 
-Q2 & -.370 & -\textbf{.608} & -.399 & .429 & .\textbf{653} & .466 & .556 & 1.00 \\ 
-Q3 & -.336 & -.406 & -\textbf{.566} & .406 & .471 & .\textbf{638} & .514 & .558 & 1.00 \\ 
+&& F1 & F2 & F3 & F1 & F2 & F3 & F1 & F2 & F3 \\ 
+\multicolumn{2}{l}{Method 1}\\ 
+F1 &$y_{11}$ & 1.00 \\ 
+F2 &$y_{12}$ & .481 & 1.00 &  \\ 
+F3 &$y_{13}$ & .373 & .552 & 1.00 \\ 
+\multicolumn{2}{l}{Method 2}\\ 
+F1 & $y_{21}$ &\textbf{-.626} & -.422 & -.410 & 1.00 \\ 
+F2 & $y_{22}$ &-.429 & \textbf{-.663} & -.532 & .642 & 1.00 \\ 
+F3 & $y_{23}$ &-.453 & -.495 & -\textbf{.669} & .612 & .693 & 1.00 \\ 
+\multicolumn{2}{l}{Method 3}\\
+F1 & $y_{31}$ &-\textbf{.502} & -.374 & -.332 & .\textbf{584} & .436 & .438 & 1.00 \\ 
+F2 & $y_{32}$ &-.370 & -\textbf{.608} & -.399 & .429 & .\textbf{653} & .466 & .556 & 1.00 \\ 
+F3 & $y_{33}$ &-.336 & -.406 & -\textbf{.566} & .406 & .471 & .\textbf{638} & .514 & .558 & 1.00 \\ 
  \\ 
-Mean & 2.42 & 2.71 & 2.45 & 5.26 & 4.37 & 5.13 & 2.01 & 1.75 & 2.01 \\ 
-Standard Deviation & .77 & .76 & .84 & 2.29 & 2.37 & 2.44 & .72 & .71 & .77 \\ 
+\multicolumn{2}{l}{Mean}  &2.42 & 2.71 & 2.45 & 5.26 & 4.37 & 5.13 & 2.01 & 1.75 & 2.01 \\ 
+\multicolumn{2}{l}{Standard Deviation} & .77 & .76 & .84 & 2.29 & 2.37 & 2.44 & .72 & .71 & .77 \\ 
 \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[htb]\centering\caption{The standardised estimates of the MTMM parameters (figure \ref{fig:mtmm}), which are obtained when analysing the sample covariance matrix above.\label{tab:mtmm_results}}
-\begin{tabular}{lrrrrrrrr}\hline
- &   \multicolumn{3}{c}{Validity coeffs} & \multicolumn{3}{c}{Method effects} &  & Reliability coeff.\\ 
- \hline
+\begin{table}[htb]\centering\caption{The standardised estimates of the classic MTMM parameters (figure \ref{fig:mtmm}), which are obtained when analysing the sample covariance matrix above.\label{tab:mtmm_results}}
+\begin{tabular}{lrrrrrrr}
+\hline
+&   \multicolumn{3}{c}{Quality coeffs} & \multicolumn{3}{c}{Method effects} \\
+\hline
     & F1 & F2 & F3 & M1 & M2 & M3 \\ 
-T11   & .93 &  &  & .36 &  &  &  & .79 \\ 
-T21   &  & .94 &  & .35 &  &  &  & .85 \\ 
-T31   &  &  & .95 & .33 &  &  &  & .81 \\ 
- \\ 
-T12   & .91 &  &  &  & .41 &  &  & .91 \\ 
-T22   &  & .92 &  &  & .39 &  &  & .94     \\ 
-T32   &  &  & .93 &  & .38 &  &  & .93 \\ 
- \\ 
-T13   & .85 &  &  &  &  & .52 &  & .82 \\ 
-T23   &  & .87 &  &  &  & .50 &  & .87\\ 
-T33   &  &  & .88 &  &  & .48 &  & .84  \\
+ $y_{11}$ &   0.73& & & 0.28\\
+$y_{12}$ &  & 0.80 & & 0.30\\
+$y_{13}$ &  && 0.77 & 0.27\\
+ \\   
+$y_{21}$ &   0.83 &&&& 0.37\\
+$y_{22}$ &  & 0.86 &&& 0.37\\
+$y_{23}$ &  && 0.86 && 0.35\\
+ \\    
+$y_{31}$ &   0.70 &&&&& 0.43\\
+$y_{32}$ &  & 0.76 &&&& 0.43\\
+$y_{33}$ &  && 0.74 &&& 0.40\\
 \hline
 \end{tabular}
 \end{table}
@@ -362,7 +363,6 @@ If the sample is split according to whether the quality was `high'  or `low', th
 In order to see whether this explanation of the differences holds when we control for other variables, we estimated a linear regression of the categorisation factors on whether the question was asked in a country with a high or low quality, was in the main or supplementary questionnaire, its topic, its scale and whether the question was negatively phrased or not. The amount of adjusted variance explained is 35\%. The estimates can be found in table \ref{tab:meta}.
 This analysis is necessarily limited by the design of the experiments. For example, true-false scales were only used for the `job' items--although this was of course not the only scale used in that experiment. 
 
-
 \begin{table}[htb]\centering\caption{A meta-analysis of the categorisation error studies. \label{tab:meta}}
 \begin{minipage}[ht]{.73\textwidth}
 \begin{tabular}{llrrrr}
@@ -395,9 +395,14 @@ The interaction effect shown in figure \ref{fig:box_factor} has not been suppres
 
 Some questions were negatively phrased, for example as `A woman should \emph{not} have to cut down on her paid work for the sake of her family'. For such questions, the quality estimate in the continuous analysis was consistently lower than the quality obtained in the categorical analysis.
 
-\begin{figure}[tbh] \centering \includegraphics[width=\textwidth]{i/meta-scatter} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q_{cont.}^2$) across the experiments.\label{fig:meta_scatter}} \end{figure}
+One possible explanation for the interaction effect found here is that the method factors were often constrained to zero for the main questionnaire. The questions in the main questionnaire were selected especially because they were expected to have the highest quality and lowest method effects. After the initial continuous analysis the model often indicated that the questions in the main questionnaire indeed had zero method correlation. Since the categorical model tends to increase the correlations, if the monomethod correlations for the main questionnaire go up more than the other correlations, then it can happen that in the categorical model a method factor is found where none was found before.
 
-Figure \ref{fig:meta_scatter} shows that categorisation factors above unity were mostly found for questions with a high quality. This means that high quality coefficients from the continuous model tend to be lower in the categorical model, and the other way around-.
+A test was done of the hypothesis that questions for which the method effect was constrained to zero in the continuous model have the same categorisation factor as other questions, controlling for country effects. This hypothesis was rejected ($p=0.02$)\footnote{Result of a hierarchical linear model fit using \texttt{R 2.6.1} with fixed effects of country and restricting the method to zero or not (0/1), and a random intercept across topics to account for the dependency among the observations.}. This explanation therefore seems plausible.  
+
+\begin{figure}[bth] \centering \includegraphics[width=.6\textwidth]{i/meta-scatter} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q_{cont.}^2$) across the experiments.\label{fig:meta_scatter}} \end{figure}
+
+Figure \ref{fig:meta_scatter} shows that categorisation factors above unity were mostly found for questions with a high quality. If the quality coefficients from the continuous and categorical models were more or less equal, the categorisation factor would be constant across the continuous models' quality. After all, it simply equals $c := q^2_{cont}/q^2_{cat}$. The relationship that can be seen in the figure indicates that high quality coefficients from the continuous model tend to be lower in the categorical model, and vice versa.
+
 
 \section{Discussion and conclusion}
 
@@ -405,7 +410,7 @@ Using the multitrait-multimethod design and model in the ESS, we found large dif
 
 Overall, we found that categorisation errors do occur besides random errors and method effects. These errors have two types of effects on the quality of the questions, which can work in opposing directions. The first is that the quality is lower when there is more categorisation error. The second, that the categorisation attenuates the relationships between different variables in the model differently, affecting not only the quality, but also the method effects and other parameters of the model. This in turn has as its consequence that the quality parameter under the CV model is not always smaller than the quality under the categorical model, as evidenced by the many `categorisation factors' above unity which we found. 
 
-A caveat should be added to the interpretation of this result, because a violation of the assumptions of the models (no categorisation error versus multivariate normality) can have different consequences for the estimates. It is therefore not necessarily true that a categorisation factor above unity indicates overestimation of the quality in the CV model. Several studies of the robustness of factor analysis models to categorisation errors exist (see \citealt{olsson_robustness_1979}). However, we found that their results do not necessarily apply in the MTMM model, which also includes method factors. Given the ubiquity of correlated errors in survey questions, it would be useful to study more closely the robustness of this particular type of measurement error models to categorisation error. This, however, is beyond the scope of the present paper.
+A caveat should be added to the interpretation of this result, because a violation of the assumptions of the models (no categorisation error versus bivariate normality) can have different consequences for the estimates. It is therefore not necessarily true that a categorisation factor above unity indicates overestimation of the quality in the CV model. Several studies of the robustness of factor analysis models to categorisation errors exist (see \citealt{olsson_robustness_1979}). However, we found that their results do not necessarily apply in the MTMM model, which also includes method factors. Given the ubiquity of correlated errors in survey questions, it would be useful to study more closely the robustness of this particular type of measurement error model to categorisation error. This, however, is beyond the scope of the present paper.
 
 If the categorisation factors were equal for countries with the highest and lowest quality coefficients, they could not explain the differences in quality which we found earlier. The meta-analysis suggested that there is a considerable difference in the categorisation factor between countries where the highest and the lowest quality coefficients were found given whether the question was part of the main or supplementary questionnaire.
 
