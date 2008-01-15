@@ -360,34 +360,29 @@ Now that we have presented and discussed the results of one experiment in detail
 
 \subsection{A meta-analysis of the results}
 
-
-
+The question remains whether the categorisation factor affects the quality or not.
 Using the results presented in the previous sections, we constructed a data set consisting of the categorisation factor for all questions--including those from the supplementary questionnaire not shown above--in the four different experiments for which this index was available. This yielded 72 cases in total. 
 
+As shown before, the categorisation factor equals $c = q^2_{con} / q^2_{cat}$, and so $q^2_{con} = q^2_{cat} (c)$. If there were no effect of the categorisation, then there would be no relationship between $c$ and $q^2_{con}$, since $q^2_{cat}$ would be higher or lower by a constant factor. If  $c$ and $q^2_{con}$ are plotted against one another, one would then expect to find the points randomly distributed along a horizontal line. Figure \ref{fig:meta_scatter} shows the scatterplot of these two quantities. Estimates from different experiments have been indicated with different symbols.
 
-\begin{figure}[bth] \centering \includegraphics[width=.9\textwidth]{i/meta-scatter} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q_{cont.}^2$) across the experiments.\label{fig:meta_scatter}} \end{figure}
+\begin{figure}[bth] \centering \includegraphics[width=.75\textwidth]{i/meta-scatter} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q_{con}^2$) across the experiments.\label{fig:meta_scatter}} \end{figure}
 
-Figure \ref{fig:meta_scatter} shows that categorisation factors above unity were mostly found for questions with a high quality. If the quality coefficients from the continuous and categorical models were more or less equal, the categorisation factor would be constant across the continuous models' quality. After all, it simply equals $c := q^2_{cont}/q^2_{cat}$. The relationship that can be seen in the figure indicates that high quality coefficients from the continuous model tend to be lower in the categorical model, and vice versa.
+The clear relationship that can be seen in the figure indicates that high quality coefficients from the continuous model tend to be lower in the categorical model, and vice versa. Figure \ref{fig:meta_scatter} shows that categorisation factors above unity were mostly found for questions with a high quality. We can estimate the relationship between the quality from the continuous model for each experiment easily by the transformation $\ln(q^2_{con}) = \alpha_k + \beta_k \ln(c)$. Here $k$ indexes the four different experiments. Note that the base level of $q^2_{con}$ is $\exp(\alpha_k)$.%, and the $\beta_k$ coefficient represents the increase in quality due to the inverse of categorisation error. 
+We then fit a linear regression to the transformed variables. The resulting predictions for each experiment are shown in figure \ref{fig:predict} on the original scales\footnote{There are several outliers in our data set, but a sensitivity analysis showed that they do not affect the estimates of the coefficients very much. We therefore prefer to keep them in the analysis.}.
 
-\begin{figure}[bth] \centering \includegraphics[width=.8\textwidth]{i/predict_q2.pdf} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q_{cont.}^2$) by experiment. The prediction line of the model $\ln(q^2) = \alpha + \beta \ln(c)$, as estimated for each experiment separately, is also given.\label{fig:predict_q2.pdf}} \end{figure}
+\begin{figure}[bth] \centering \includegraphics[width=.7\textwidth]{i/predict_q2.pdf} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q^2_{con}$) by experiment. The prediction line of the model $\ln(q^2) = \alpha + \beta \ln(c)$, as estimated for each experiment separately, is also given.\label{fig:predict}. For the numerical estimates of these coefficients, please see the appendix.} \end{figure}
 
-\begin{figure}[hbt]
-\begin{minipage}[b]{0.5\linewidth} 
-\centering\includegraphics[width=5.5cm]{hist_factor}
-\caption{Histogram of the categorisation factor.\label{fig:hist_factor}}\centering
-\end{minipage}
-\hspace{0.5cm} 
-\begin{minipage}[b]{0.5\linewidth}
-\centering \includegraphics[width=6cm]{box.pdf} 
-\caption{Boxplots of the categorisation factor for countries with the highest and lowest quality in the main and supplementary questionnaires\label{fig:box_factor}}
-\end{minipage}
-\end{figure}
+Figure \ref{fig:predict} shows that both the intercepts and slopes for the `efficacy' and `job' experiments are rather similar, while the coefficients for the `role of women' and `social distance' experiments are completely different. The effect of the categorisation factor is strongest in the `social distance' experiment, where also some large differences between the threshold distances were found (see appendix). The experiment with the smaller number of categories, `job', does not have a high coefficient.
 
-If the sample is split according to whether the quality was `high'  or `low', the means of the two groups are 1.25 and 0.85, respectively, for the questions in the main questionnaire ($t = 3.7$, $df \approx 18$, $p = 0.002$. For the questions in the supplementary questionnaire, the difference is in the opposite direction, but not statistically significant ($t = -1.70$, $df = 28$, $p = 0.10$). This suggests that there is a considerable effect of the categorisation, at least for the questions in the main questionnaire.
+%\begin{figure}[hbt] \begin{minipage}[b]{0.5\linewidth} \centering\includegraphics[width=5.5cm]{hist_factor} \caption{Histogram of the categorisation factor.\label{fig:hist_factor}}\centering \end{minipage} \hspace{0.5cm} \begin{minipage}[b]{0.5\linewidth} \centering \includegraphics[width=6cm]{box.pdf} \caption{Boxplots of the categorisation factor for countries with the highest and lowest quality in the main and supplementary questionnaires\label{fig:box_factor}} \end{minipage} \end{figure}
 
+We now turn to the question if these factors are also different between the countries with `high' and `low' quality coefficients. If the sample is split according to whether the quality was `high'  or `low', the means of the categorisation factors of the two groups are 1.25 and 0.85, respectively, for the questions in the main questionnaire ($t = 3.7$, $df \approx 18$, $p = 0.002$. For the questions in the supplementary questionnaire, the difference is in the opposite direction, but not statistically significant ($t = -1.70$, $df = 28$, $p = 0.10$). This suggests there is a considerable effect of the categorisation, at least in the main questionnaire.
+
+%The phenomenon of categorisation factors above unity is somewhat surprising in itself. Since all of the correlations in the categorical model are higher one might think that the quality coefficients would be higher also, but this turns out not to be the case.
+ 
 One possible explanation for the interaction effect found here is that the method factors were often constrained to zero for the main questionnaire. The questions in the main questionnaire were selected especially because they were expected to have the highest quality and lowest method effects. After the initial continuous analysis the model often indicated that the questions in the main questionnaire indeed had zero method correlation. Since the categorical model tends to increase the correlations, if the monomethod correlations for the main questionnaire go up more than the other correlations, then it can happen that in the categorical model a method factor is found where none was found before.
 
-A test was done of the hypothesis that questions for which the method effect was constrained to zero in the continuous model have the same categorisation factor as other questions, controlling for country effects. This hypothesis was rejected ($p=0.02$)\footnote{Result of a hierarchical linear model fit using \texttt{R 2.6.1} with fixed effects of country and restricting the method to zero or not (0/1), and a random intercept across topics to account for the dependency among the observations.}. This explanation therefore seems plausible.  
+A test was done of the hypothesis that questions for which the method effect was constrained to zero in the continuous model have the same categorisation factor as other questions, controlling for country effects. This hypothesis was rejected ($p=0.02$)\footnote{Result of a hierarchical linear model fit using \texttt{R 2.6.1} with fixed effects of country and restricting the method to zero or not (0/1), and a random intercept across topics to account for the dependency among the observations.}. The explanation that constraining the method factors to zero causes the interaction found above therefore seems plausible.
 
 
 \section{Discussion and conclusion}
@@ -398,13 +393,15 @@ Overall, we found that categorisation errors do occur besides random errors and 
 
 A caveat should be added to the interpretation of this result, because a violation of the assumptions of the models (no categorisation error versus bivariate normality) can have different consequences for the estimates. It is therefore not necessarily true that a categorisation factor above unity indicates overestimation of the quality in the CV model. Several studies of the robustness of factor analysis models to categorisation errors exist (see \citealt{olsson_robustness_1979}). However, we found that their results do not necessarily apply in the MTMM model, which also includes method factors. Given the ubiquity of correlated errors in survey questions, it would be useful to study more closely the robustness of this particular type of measurement error model to categorisation error. This, however, is beyond the scope of the present paper.
 
+In the meta-analysis, we gathered the results from our four different experiments and analysed the relationship between the categorisation factor and the quality in the continuous model. Effects were found for all four experiments.
+
 If the categorisation factors were equal for countries with the highest and lowest quality coefficients, they could not explain the differences in quality which we found earlier. The meta-analysis suggested that there is a considerable difference in the categorisation factor between countries where the highest and the lowest quality coefficients were found given whether the question was part of the main or supplementary questionnaire.
 
 The methods in the main questionnaire were chosen beforehand based on other experiments as the ones least likely to cause method effects. For example, direct questions rather than batteries were used. After re-examining the experiments on which the meta-analysis was based, it appears this is closely related to the interaction effect found there.
 
 The main reason for the interaction effect we found in the meta-analysis appears to be that the method variance for the main questionnaire method was sometimes fixed to zero. This was done in cases where leaving this method variance free resulted in a very small variance, not significantly different from zero. The general rise in correlations that results from correction for categorisation seems to have `pushed' the monomethod correlations of the main questionnaire variable to the point where the method variance could not anymore be constrained to zero. And as the method variance rises, the quality must decrease in our model.
 
-In other words, the correction for categorisation has a negative influence on the quality in the case where method factors are removed, which was usually the main questionnaire. In that case, the quality is in general lower in the categorical model than in the continuous model. This is contrary to what one might expect considering that all of the polychoric correlations are higher than their Pearson counterparts.
+In other words, the correction for categorisation has a negative influence on the quality. When the method factors were constrained to zero in the first instance, the effect was that the quality was in general lower in the categorical model than in the continuous model. This is contrary to what one might expect considering that all of the polychoric correlations are higher than their Pearson counterparts.
 
 In this study we have shown that it is possible to split the measurement error model into
 three parts:
@@ -415,8 +412,6 @@ three parts:
 \end{itemize}
 
 This study has been largely descriptive of the effects of categorisation error. Given our findings, it seems important to better judge the relative merits of the continuous and categorical models, and the effects that different question characteristics have, not only on quality and method effects, but also on the categorisation errors.
-
-
 
 Our study also has some limitations due to the assumptions made to attain the above separation. These are: normality of the latent response variables, linearity of the relationship between the latent traits and latent response variables, and interval measurement of the latent traits. In another paper these issues will be addressed by examining ways to relax the assumptions.
 Future research might also focus on finding other explanations for differences in quality across countries. 
@@ -553,4 +548,61 @@ The comparison between the categorical and CV models for this experiment is show
 A seemingly puzzling phenomenon in table \ref{tab:efficacy} is that the estimates for the first question should be so different in the categorical model\footnote{The chi-square test statistic of our final categorical model was 28 with 2 degrees of freedom ($p=.10$).} after we have seen in table \ref{card:efficacy} that for this question the differences between the thresholds are minimal. This stresses again the fact the thresholds alone cannot provide all the necessary information. It can be seen, however, that the categorisation factors and the differences between them across the two countries are very similar for all three questions. 
 
 %Another consequence of this can be seen for the `active' question. Although in Switzerland and Denmark similar overall connections to the corresponding trait according to the continuous analysis were found, this similarily was apparently produced from very dissimilar categorisation errors and quality coefficients.
+
+\section{Numerical results of the meta analysis}
+
+More details on the estimates of the coefficients which are summarised in figure \ref{fig:predict} are presented here. Note that the linear regressions listed are of the natural logarithm of the quality on the logarithm of the categorisation factor. The computer program \texttt{R 2.6.1} was used to estimate these regressions.
+
+ 
+\subsection*{Social distance}
+
+\begin{tabular}{lrrrr}\hline
+&            Estimate &Std. Error &t value& p-value  \\\hline
+(Intercept)  &-0.71   &  0.25 & -2.84  & 0.01 \\
+Cat. factor           &1.69  &   0.65  & 2.61  & 0.02 \\
+\hline\end{tabular}
+
+\noindent Residual standard error: 0.78 on 16 degrees of freedom\\
+Multiple R-Squared: 0.30,	Adjusted R-squared: 0.25 \\
+F-statistic: 6.78 on 1 and 16 DF,  p-value: 0.02 
+
+\subsection*{Efficacy}
+
+\begin{tabular}{lrrrr}\hline
+&            Estimate &Std. Error &t value& p-value  \\\hline
+(Intercept) & -0.37  &     0.03 & -11.22&  5.42e-09  \\
+Cat. factor &       0.80  &   0.15  &  5.19 & 9.03e-05  \\
+\hline\end{tabular}
+
+\noindent Residual standard error: 0.13 on 16 degrees of freedom\\
+Multiple R-Squared: 0.63,	Adjusted R-squared: 0.60\\
+F-statistic: 26.88 on 1 and 16 DF,  p-value: 9.03e-05 
+
+
+\subsection*{Job}
+
+
+\begin{tabular}{lrrrr}\hline
+&            Estimate &Std. Error &t value& p-value  \\\hline
+(Intercept) & -0.45   &  0.08  & -5.94 & 2.73e-05  \\
+Cat. factor  &          0.48  &   0.21 &   2.27 &   0.04    \\
+\hline\end{tabular}
+
+\noindent Residual standard error: 0.30 on 15 degrees of freedom\\
+Multiple R-Squared: 0.26,	Adjusted R-squared: 0.21\\
+F-statistic: 5.15 on 1 and 15 DF,  p-value: 0.04
+
+
+\subsection*{Role of women}
+
+\begin{tabular}{lrrrr}\hline
+&            Estimate &Std. Error &t value& p-value  \\\hline
+(Intercept) &  -0.94 &     0.13 &  -7.21 &  3.2e-07  \\
+Cat. factor       &      0.62  &    0.31  &  1.98   &  0.06 \\
+\hline\end{tabular}
+
+ \noindent Residual standard error: 0.63 on 22 degrees of freedom\\
+Multiple R-Squared: 0.15,	Adjusted R-squared: 0.11 \\
+F-statistic: 3.90 on 1 and 22 DF,  p-value: 0.06 
+
 \end{document}
