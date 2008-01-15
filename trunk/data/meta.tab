@@ -1,4 +1,4 @@
-topic	scale	position	factor	q2	country	hilo	methfac
+topic	scale	position	cat_factor	q2	country	hilo	methfac
 women	agree	positive	1.39	0.76	GR	hi	nonzero
 women	agree	positive	1.89	0.58	GR	hi	nonzero
 women	agree	positive	1.48	0.75	GR	hi	nonzero

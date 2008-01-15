@@ -360,7 +360,16 @@ Now that we have presented and discussed the results of one experiment in detail
 
 \subsection{A meta-analysis of the results}
 
-Using the results presented in the previous sections, we constructed a data set consisting of the categorisation factor for all questions--including those from the supplementary questionnaire not shown above--in the four different experiments for which this index was available. This yielded 72 cases in total. We also recorded whether the question was asked in the country with the highest or lowest quality, was in the main or supplementary questionnaire, the topic of the experiment, the type of scale used (agree-disagree, true-false or direct question) and whether the question was phrased as a negative statement or not. The categorisation factors analysed are presented as a histogram in figure \ref{fig:hist_factor}. Figure \ref{fig:box_factor} shows a boxplot of the categorisation factor for the countries with the highest and lowest quality in each experiment, separated by whether the question was asked in the main or supplementary questionnaire.
+
+
+Using the results presented in the previous sections, we constructed a data set consisting of the categorisation factor for all questions--including those from the supplementary questionnaire not shown above--in the four different experiments for which this index was available. This yielded 72 cases in total. 
+
+
+\begin{figure}[bth] \centering \includegraphics[width=.9\textwidth]{i/meta-scatter} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q_{cont.}^2$) across the experiments.\label{fig:meta_scatter}} \end{figure}
+
+Figure \ref{fig:meta_scatter} shows that categorisation factors above unity were mostly found for questions with a high quality. If the quality coefficients from the continuous and categorical models were more or less equal, the categorisation factor would be constant across the continuous models' quality. After all, it simply equals $c := q^2_{cont}/q^2_{cat}$. The relationship that can be seen in the figure indicates that high quality coefficients from the continuous model tend to be lower in the categorical model, and vice versa.
+
+\begin{figure}[bth] \centering \includegraphics[width=.8\textwidth]{i/predict_q2.pdf} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q_{cont.}^2$) by experiment. The prediction line of the model $\ln(q^2) = \alpha + \beta \ln(c)$, as estimated for each experiment separately, is also given.\label{fig:predict_q2.pdf}} \end{figure}
 
 \begin{figure}[hbt]
 \begin{minipage}[b]{0.5\linewidth} 
@@ -376,48 +385,9 @@ Using the results presented in the previous sections, we constructed a data set 
 
 If the sample is split according to whether the quality was `high'  or `low', the means of the two groups are 1.25 and 0.85, respectively, for the questions in the main questionnaire ($t = 3.7$, $df \approx 18$, $p = 0.002$. For the questions in the supplementary questionnaire, the difference is in the opposite direction, but not statistically significant ($t = -1.70$, $df = 28$, $p = 0.10$). This suggests that there is a considerable effect of the categorisation, at least for the questions in the main questionnaire.
 
-In order to see whether this explanation of the differences holds when we control for other variables, we estimated a linear regression of the categorisation factors on whether the question was asked in a country with a high or low quality, was in the main or supplementary questionnaire, its topic, its scale and whether the question was negatively phrased or not. The amount of adjusted variance explained is 35\%. The estimates can be found in table \ref{tab:meta}.
-This analysis is necessarily limited by the design of the experiments. For example, true-false scales were only used for the `job' items--although this was of course not the only scale used in that experiment. 
-
-\begin{table}[htb]\centering\caption{A meta-analysis of the categorisation error studies. \label{tab:meta}}
-\begin{minipage}[ht]{.73\textwidth}
-\begin{tabular}{llrrrr}
-\hline
-& & & & \multicolumn{2}{c}{95\% C.I}\\
- &  & Estimate & S.E. & lower & upper\\
- \hline
-&(Intercept) & 1.04 & 0.36 & 0.31 & 1.77 \\ 
-\multicolumn{2}{l}{\textit{Topic}}&  &  &  & \\
- & Doctors & (reference category) &  &  & \\
-&Efficacy & 0.06 & 0.10 & -0.14 & 0.27 \\ 
-&Job & 0.04 & 0.40 & -0.71 & 0.78 \\ 
-&Women & 0.38 & 0.26 & -0.14 & 0.90 \\ 
-\multicolumn{2}{l}{\textit{Scale}}&  &  &  & \\ 
- & Direct  & (reference category) &  &  & \\
-&Agree-disagree & -0.11 & 0.35 & -0.81 & 0.59 \\ 
-&True-false & 0.17 & 0.32 & -0.48 & 0.81 \\ 
-\multicolumn{2}{l}{\textit{}   }&  &  &  & \\
-\multicolumn{2}{l}{Negative} & -0.50 & 0.23 & -0.96 & -0.02 \\ 
-\multicolumn{2}{l}{Main questionnaire} & -0.30 & 0.29 & -0.88 & 0.29 \\ 
-\multicolumn{2}{l}{Highest quality} & -0.19 & 0.09 & -0.37 & -0.01 \\ 
-\multicolumn{2}{l}{Highest quality $\times$ main} & 0.66 & 0.15 & 0.35 & 0.96 \\ 
-\hline
-\end{tabular}
-Multiple R-Squared: 0.45; Adjusted R-squared: 0.35 
-\end{minipage}
-\end{table}
-
-The interaction effect shown in figure \ref{fig:box_factor} has not been suppressed while controlling for other variables. Table \ref{tab:meta} shows that except for negative phrasing and asking the question in the country with the highest quality, the categorisation factor does not differ significantly for any of the other variables than this interaction.
-
-Some questions were negatively phrased, for example as `A woman should \emph{not} have to cut down on her paid work for the sake of her family'. For such questions, the quality estimate in the continuous analysis was consistently lower than the quality obtained in the categorical analysis.
-
 One possible explanation for the interaction effect found here is that the method factors were often constrained to zero for the main questionnaire. The questions in the main questionnaire were selected especially because they were expected to have the highest quality and lowest method effects. After the initial continuous analysis the model often indicated that the questions in the main questionnaire indeed had zero method correlation. Since the categorical model tends to increase the correlations, if the monomethod correlations for the main questionnaire go up more than the other correlations, then it can happen that in the categorical model a method factor is found where none was found before.
 
 A test was done of the hypothesis that questions for which the method effect was constrained to zero in the continuous model have the same categorisation factor as other questions, controlling for country effects. This hypothesis was rejected ($p=0.02$)\footnote{Result of a hierarchical linear model fit using \texttt{R 2.6.1} with fixed effects of country and restricting the method to zero or not (0/1), and a random intercept across topics to account for the dependency among the observations.}. This explanation therefore seems plausible.  
-
-\begin{figure}[bth] \centering \includegraphics[width=.6\textwidth]{i/meta-scatter} \caption{Scatterplot of the categorisation factor ($c$) and the total quality of a measure ($q_{cont.}^2$) across the experiments.\label{fig:meta_scatter}} \end{figure}
-
-Figure \ref{fig:meta_scatter} shows that categorisation factors above unity were mostly found for questions with a high quality. If the quality coefficients from the continuous and categorical models were more or less equal, the categorisation factor would be constant across the continuous models' quality. After all, it simply equals $c := q^2_{cont}/q^2_{cat}$. The relationship that can be seen in the figure indicates that high quality coefficients from the continuous model tend to be lower in the categorical model, and vice versa.
 
 
 \section{Discussion and conclusion}
