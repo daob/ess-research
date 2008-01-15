@@ -38,7 +38,7 @@
      inkscape:window-width="1280"
      inkscape:window-height="725"
      inkscape:window-x="0"
-     inkscape:window-y="49" />
+     inkscape:window-y="26" />
   <metadata
      id="metadata9008">
     <rdf:RDF>
@@ -517,33 +517,30 @@
          x="332.67224"
          id="tspan8491"
          sodipodi:role="line">Quality coefficient for variable i</tspan></text>
-    <g
-       id="g9255">
-      <path
-         sodipodi:type="arc"
-         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.60028791;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="path9170"
-         sodipodi:cx="51.51778"
-         sodipodi:cy="163.42795"
-         sodipodi:rx="37.375645"
-         sodipodi:ry="32.324883"
-         d="M 88.893425 163.42795 A 37.375645 32.324883 0 1 1  14.142136,163.42795 A 37.375645 32.324883 0 1 1  88.893425 163.42795 z"
-         transform="matrix(0.6688848,0,0,0.773398,42.947679,164.13271)" />
-      <text
-         xml:space="preserve"
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Futura LT"
+    <path
+       transform="matrix(0.6688848,0,0,0.773398,42.947679,164.13271)"
+       d="M 88.893425 163.42795 A 37.375645 32.324883 0 1 1  14.142136,163.42795 A 37.375645 32.324883 0 1 1  88.893425 163.42795 z"
+       sodipodi:ry="32.324883"
+       sodipodi:rx="37.375645"
+       sodipodi:cy="163.42795"
+       sodipodi:cx="51.51778"
+       id="path9170"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.60028791;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="arc" />
+    <text
+       sodipodi:linespacing="100%"
+       id="text9172"
+       y="294.25803"
+       x="76.775017"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Futura LT"
+       xml:space="preserve"><tspan
+         y="294.25803"
          x="76.775017"
-         y="296.25803"
-         id="text9172"
-         sodipodi:linespacing="100%"><tspan
-           sodipodi:role="line"
-           id="tspan9174"
-           x="76.775017"
-           y="296.25803">LRV<tspan
-   style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:Futura LT"
+         id="tspan9174"
+         sodipodi:role="line">LRV<tspan
+   dy="5.9293418"
    id="tspan9176"
-   dy="5.9293418">1</tspan></tspan></text>
-    </g>
+   style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:Futura LT">1j</tspan></tspan></text>
     <path
        sodipodi:type="arc"
        style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.60028791;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -580,18 +577,18 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Futura LT"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Futura LT"
        x="276.57074"
-       y="297.07257"
+       y="295.07257"
        id="text9221"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan9223"
          x="276.57074"
-         y="297.07257">LRV<tspan
-   style="font-size:10px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:Futura LT"
+         y="295.07257">LRV<tspan
+   style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;font-family:Futura LT"
    id="tspan9225"
-   dy="5">2</tspan></tspan></text>
+   dy="5">2j</tspan></tspan></text>
     <g
        id="g9239">
       <g
