@@ -1,69 +1,46 @@
 TITLE:  mtmm analysis of generated data
 
 DATA:
-  NGROUPS = 3;
-  FILE IS "C:\ESS\berlin\presentation\testcor.all.cov";
-  NOBSERVATIONS = 1000;
-  NOBSERVATIONS = 1000;
-  NOBSERVATIONS = 1000;
-  TYPE IS FULLCORR;
+  FILE IS "C:\data\trust-GB.dat";
+  
   !FILE IS "C:\ESS\berlin\presentation\testdata.dat";
   
+    
 
 VARIABLE:
-  NAMES ARE X11 X21 X31 X12 X22 X32 X13 X23 X33;
-  USEVARIABLES ARE X11 X21 X31 X12 X22 X32 X13 X23 X33;
+  NAMES ARE 
+ TRSTPRL TRSTLGL TRSTPLT TESTA25 TESTA26 TESTA27 TESTA38 TESTA39 TESTA40;
+  MISSING ARE ALL(-999);
+    
 
 ANALYSIS:
-  TYPE IS GENERAL ;
-  ESTIMATOR IS ML;
-  ITERATIONS = 1000;
-  CONVERGENCE = 0.00005;
+  TYPE IS MISSING;
+   ESTIMATOR = ML;
+
 
 MODEL:
-  F1 BY X11@1 X12 X13; ! errors in variables standardisation
-  F2 BY X21@1 X22 X23;
-  F3 BY X31@1 X32 X33;
+  F1 BY TESTA25@1 TESTA38 TRSTPRL; ! errors in variables standardisation
+  F2 BY TESTA26@1 TESTA39 TRSTLGL ;
+  F3 BY TESTA27@1 TESTA40 TRSTPLT ;
 
   F1 WITH F2 F3; ! correlated trait
   F2 WITH F3;
 
   F1 F2 F3 M1 M2 M3; ! trait, method var's
-  X11 X21 X31 X12 X22 X32 X13 X23 X33; ! error variances
+  TRSTPRL TRSTLGL TRSTPLT TESTA25 TESTA26 TESTA27 TESTA38 TESTA39 TESTA40; ! error variances
 
 
-  M1 BY X11@1 X21@1 X31@1;  ! equal method effects
-  M2 BY X12@1 X22@1 X32@1;
-  M3 BY X13@1 X23@1 X33@1;
+  M1 BY TRSTPRL@1 TRSTLGL@1 TRSTPLT@1;  ! equal method effects
+  M2 BY TESTA25@1 TESTA26@1 TESTA27@1;
+  M3 BY TESTA38@1 TESTA39@1 TESTA40@1;
 
   M1 WITH F1@0 F2@0 F3@0 M2@0 M3@0; ! uncorrelated traits<>method, methods.
   M2 WITH F1@0 F2@0 F3@0 M3@0;
   M3 WITH F1@0 F2@0 F3@0 M2@0;
 
-MODEL G2:
-  F1 BY X11@1 X12* X13*; ! errors in variables standardisation
-  F2 BY X21@1 X22* X23*;
-  F3 BY X31@1 X32* X33*;
-
-  F1 WITH F2* F3*; ! correlated trait
-  F2 WITH F3*;
-
-  F1* F2* F3* M1* M2* M3*; ! trait, method var's
-  X11* X21* X31* X12* X22* X32* X13* X23* X33*; ! error variances
-
-MODEL G3:
-  F1 BY X11@1 X12* X13*; ! errors in variables standardisation
-  F2 BY X21@1 X22* X23*;
-  F3 BY X31@1 X32* X33*;
-
-  F1 WITH F2* F3*; ! correlated trait
-  F2 WITH F3*;
-
-  F1* F2* F3* M1* M2* M3*; ! trait, method var's
-  X11* X21* X31* X12* X22* X32* X13* X23* X33*; ! error variances
-
-
-OUTPUT:  SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL FSCOEFFICIENT
+[TRSTPRL TRSTLGL TRSTPLT TESTA25 TESTA26 TESTA27 TESTA38 TESTA39 TESTA40];
+[F1@0 F2@0 F3@0 M1@0 M2@0 M3@0];
+OUTPUT:  SAMPSTAT MODINDICES(0) RESIDUAL STANDARDIZED CINTERVAL 
  TECH1 TECH2 TECH3 TECH4 TECH5;
 
 
