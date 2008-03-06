@@ -1,0 +1,25 @@
+1. I moved the footnote explaining that mode effects are not an issue here to the main text so that it is more prominently readable.
+
+2. Added a paragraph on page 3 explaining the 'fixed reference points' example of method effects.
+
+3. Added two sentences explaining SQP
+
+4. Expanded the MTMM models discussion making it less arcane (I hope)
+
+5. Gave a more precise phrasing of the job experiment
+
+6. Changed the numbers 1 through 4 to 0-3 to make it the same as in the picture. 
+   The main point here is that the distances are equal.
+
+7. Added a longish explanation of the differences between the models in assumptions.
+
+8. Added cursory explanation of the procedure used to arrive at the final model.
+
+9. Added a paragraph giving an intuitive example of what thresholds mean.
+
+10.Added a following paragraph connecting this example with the point later made the the 
+quality coefficients as just as important (or more)
+
+11. Opinionated on the "reverse phrasing" issue.
+
+
