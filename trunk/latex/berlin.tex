@@ -66,7 +66,7 @@ There are two different approaches to estimate these coefficients. The first is 
 
 \subsection{MTMM models}
 
-Campbell and Fiske (1959) suggested using multiple traits and multiple methods (MTMM). The classical MTMM approach recommends the use of a minimum of three traits that are measured with three different methods leading to nine different observed variables. An example of such a design is given in Table \ref{tab:design}.  
+Campbell and Fiske (1959) suggested using multiple traits and multiple methods to evaluate the quality of measurement instruments (MTMM). The classical MTMM approach recommends the use of a minimum of three traits that are measured with three different methods leading to nine different observed variables. An example of such a design is given in Table \ref{tab:design}.  
 
 \begin{table}[htb]\caption{The classic MTMM design used in the ESS pilot study.\label{tab:design}}
 \fbox{\begin{minipage}{\textwidth}
@@ -215,7 +215,7 @@ The first explanation we studied were errors in the translation. Although in the
 
 Another alternative explanation for differences across countries is differences in the implementation of the experimental design. Here one difference existed between the implementations in Norway, Sweden, and Finland and the other countries: in these countries respondents could send in the supplementary questionnaire containing the repetitions at a time chosen by themselves, while the general design used in other countries was that the supplementary questionnaire should be administered directly after the main interview. Since in some cases quite some time passed before the second questionnaire was completed, it is possible that the opinion had in this time changed or that other unique considerations were used to form an opinion at the second moment than at the first moment. An MTMM analysis of a sample split according to whether the questionnaire was returned within two days or later provided strong evidence that this was indeed the case. In fact, the sample of people who had returned the questionnaire on the same day was by itself very similar in the quality to other countries. 
 
-The third alternative we considered was that the language of the questions might be more complex in one language than in another. Previous meta-analyses found that language complexity can have an effect on the quality \citep{saris_estimation_2007}. However, we found no strong evidence that the complexity of the questions caused differences in question quality in this case.
+The third alternative we considered was that the language of the questions might be more complex in one language than in another. Previous meta-analyses found that language complexity can have an effect on the quality \citep{saris_estimation_2007}. However, we found no strong evidence that the complexity of the questions could explain the differences in question quality in this case.
 
 Thus, in some cases we found artificial differences in quality which are likely to be due to an erroneous translation or different implementation of the experimental design--notably in the Scandivian countries except Denmark and for one item in the French-speaking countries. However, these cases are not so numerous that they can explain the large overall variations in question quality found in the ESS. Therefore we now turn to the possibility that the distance between the categories in the categorical questions differs from country to country. Before we proceed to investigate the influence of categorization errors on the quality in different countries and experiments, we explain in more detail the model used to estimate the distances between the categories.
 
@@ -231,14 +231,19 @@ The second approach deals with the case where a continuous scale or `latent resp
 
 Errors may arise at two stages. The first is the connection between the latent response variable (LRV$_{ij}$ in figure \ref{fig:response_categ}) and its latent trait (f$_i$). This part of the error model is completely analogous to factor analysis or MTMM models for continuous data: the scale is modeled as a linear combination of a latent trait (f$_i$), a reaction to the particular method used to measure the trait (M$_j$), and a random error (e$_{ij}$), and interest then focuses on the connection between the trait and the scale (q$_{ij}$), which we again term the `quality coefficient' (see also figures \ref{fig:response} and \ref{fig:mtmm}). 
 
-The second stage at which errors arise differs from the continuous case. This is the connection between the variables LRV$_{ij}$ and y$_{ij}$ in figure \ref{fig:response_categ}. Here the continuous latent response variable is split up into the different categories, such that each category of the observed variable corresponds to a certain range on the unobserved continuous scale. The sizes of these ranges are determined by threshold parameters. In figure \ref{fig:response_categ} this step function has been represented by a black triangle. Examples of step functions are illustrated in figure \ref{fig:step-function}.
+
+The second stage at which errors arize differs from the continuous case. This is the connection between the variables LRV$_{ij}$ and y$_{ij}$ in figure \ref{fig:response_categ}. Here the continuous latent response variable is split up into the different categories, such that each category of the observed variable corresponds to a certain range on the unobserved continuous scale. The sizes of these ranges are determined by threshold parameters. In figure \ref{fig:response_categ} this step function has been represented by a black triangle. Examples of step functions are illustrated in figure \ref{fig:step-function}.
 
 \begin{figure}[htb]\centering \includegraphics[width=\textwidth]{i/step-function} 
-\caption{Two hypothetical step functions which result from categorization. The diagonal lines plot the expectation of the LRV and the latent trait on the same scale.\label{fig:step-function}} \end{figure}
+\caption{Two hypothetical step functions which result from categorization. The solid lines plot the observed categorical variable as a function of the latent response variable (LRV). The diagonal dotted lines plot the expectation of the LRV as a function of the latent trait on the same scale. The thresholds used for categorization are denoted by the symbols $\tau_1$, $\tau_2$, and $\tau_3$.\label{fig:step-function}} \end{figure}
 
-In figure \ref{fig:step-function}, the steps show the relationship between the LRV and the observed variable, while the straight line plots the expectation of the LRV given the latent trait. In the step function on the left-hand side, the LRV has been categorised into more or less equal intervals. The error that is added by the categorization is the vertical distance between the straight (diagonal) line and the step. It can be seen that the error is zero when the straight line crosses the steps, and that at each step, the error is the same (at 3, 6, and 9). The expectations within the categories have the same interval as the thresholds of 1, and so if the values 1,2,3,4 are assigned to the categories, no transformation occurs.
 
-Conversely, the right hand side shows a latent response variable that has been categorised with very unequal thresholds. At the second step there is almost no extra error, while at the first and third steps the errors are much larger. Here a transformation occurs because the distances between the expectations in the categories are not equal to the distances between the categories if the numbers 0 through 3, or any other set of numbers with equal distances, are assigned to them.
+
+In figure \ref{fig:step-function}, the steps (solid line) show the relationship between the LRV and the observed variable, while the straight (dotted) line plots the expectation of the LRV given the latent trait. In the step function on the left-hand side, the LRV has been categorized using equal intervals. The error that is added by the categorization is the vertical distance between the dotted line and the step. That is, the distance between the dotted line and the horizontal segments of the solid line. It can be seen that the error is zero when the straight line crosses the steps, and that at each step, the error is the same (at 3, 6, and 9). The expectations within the categories have the same interval as the thresholds of 1, and so if the values 1,2,3,4 are assigned to the categories, no transformation occurs. Errors still occur, because the values along the dotted line have been grouped into the four categories formed by the solid line. Relationships of the observed categorical variable with other variables will therefore be attenuated.
+
+
+
+Conversely, the right hand side shows a latent response variable that has been categorized with unequal steps. The figure shows that the distances between the thresholds $\tau_1$, $\tau_2$, and $\tau_3$ are very different from each other. The consequence is that at the second step, i.e. in between $\tau_2$ and $\tau_3$, there is almost no extra error, while at the first and third steps the errors are much larger. Here a transformation occurs. Suppose that the categories are given the numerical values 1,2,3,4, as is often done. Then the distances between the expectations of the LRV in each of the categories do not equal 1, which is the distance between the values chosen for categories.
 
 To sum up, two types of errors can be distinguished at this stage \citep{johnson_ordinal_1983}:
 \begin{enumerate}
@@ -256,9 +261,13 @@ Thus, the model we use allows to a certain extent for the separation of errors d
 
 The previous sections showed that, using the MTMM design, it is possible to obtain a measure ($q^2$) of the total quality of a question. If a continuous variable model (hereafter referred to as CV model) is used, this quality is influenced by errors in both stages of the categorical response model: not only random errors and method effects are included, but also errors due to the categorization. For this reason \citet{coenders_structural_1996} argued that the linear MTMM model assuming continuous variables does not ignore categorization errors, but absorbs them to a certain extent in the estimates of the random error and method correlations. How this absorption functions exactly will depend on the model in use and is not extensively studied. The extent to which it holds in general is thus a topic that is still under discussion.
 
-In general all correlations between measures increase after correction for categorization. But in spite of the fact that there is a general increase, the quality coefficient can be \emph{reduced} as well as increased by categorization errors. This paradox arises because of the combination of three facts: first, that the method variance depends mostly on the correlations between variables measured with the same method, the so-called `monomethod' correlations. Second, as there is more method variance the quality will be lower. And third, some correlations may be more affected by categorization errors than others, and subsequently increase more after correction.
 
-For example, consider again table \ref{tab:mtmm_cor}. Suppose we had at first wrongly assumed the variables in this matrix had been continuously measured, but in reality they were categorical. We therefore apply a correction for categorization. After this correction the correlations represent correlations between latent response variables, each of which corresponds to an observed categorical variable. If categorization errors are higher using the first method, the `monomethod' correlations for variables measured with this method will increase more than the other correlations. In this example this causes the method variance estimate to be larger in the categorical model than in the CV model. Consequently also the estimated quality of the measure in the categorical response model  becomes lower than the estimated quality in the continuous MTMM model.  There are method effects (correlated errors) on the level of the continuous latent response variables which do not manifest themselves in the observed (Pearson) correlations between the categorical variables. 
+
+However, since the quality coefficient is estimated from the covariance matrix of the measures, it can be both reduced and increased by categorization errors. In general all correlations between measures increase after correction for categorization, but they need not all increase equally. For example, consider again table \ref{tab:mtmm_cor}. If categorization errors are higher using the first method, the correlations between the latent response variables using this method (the upper-left triangle of the matrix) will increase more relative to the observed correlations than the correlations of each variable with its repetition using a different method (in bold). In this case the amount of variance in the response variable due to the method will be larger in the categorical model than in the CV model, and the estimated quality of the measure in the categorical response model can become lower than the estimated quality in the continuous MTMM model. This is because there are method effects (correlated errors) on the level of the continuous latent response variables which do not manifest themselves in the observed (Pearson) correlations between the categorical variables. Categorization can therefore in some cases inflate estimates of the quality of categorical observed variables, even though, at the same time, it causes errors which reduce the quality. There are thus two processes at work, which have opposite effects on the estimates of the quality.
+
+
+Because it can both reduce and artificially inflate estimates of quality, categorization error is an important possible cause of finding differences in question quality across countries. If either of these two processes differs from one country to another, the estimates of the quality can be expected to differ as well. Therefore, we focus here on the changes in the quality coefficient one observes in a continuous response model relative to a categorical model. This allows us to study the attenuation or inflation of quality estimates in the continuous model across countries.
+
 
 Categorization can therefore in some cases inflate estimates of the quality of categorical observed variables, even though, at the same time, it causes errors which reduce the quality. There are thus two processes at work, which have opposite effects on the estimates of the quality.
 
@@ -270,9 +279,9 @@ q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
 \end{equation}
 However, we have now seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation \ref{eqn:relratio} can be `decomposed' into
 \begin{equation}
-q^2 =  \frac{ Var(f)}{Var(c)} \cdot \frac{Var(c)}{Var(y)}.		
+q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
 \end{equation}
-The scale of $c$ is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(c)/Var(y)$ can easily be calculated once $q^2_{con}$, the quality from the continuous analyis, and $Var(f)/Var(c)$, the quality from the categorical MTMM analysis ($q^2_{cat.}$), have been obtained. So equation (3) shows that $q^2_{con} = q^2_{cat} \cdot c$  and 
+The scale of $LRV$, the latent response variable, is arbitrary, except that it may vary across countries due to relative differences in variance (Muth\'en \& Asparouhov, 2002). However, the ratio $Var(LRV)/Var(y)$ can easily be calculated once $q^2_{con}$, the quality from the continuous analysis, and $Var(f)/Var(LRV)$, the quality from the categorical MTMM analysis ($q^2_{cat.}$), have been obtained. So equation (3) shows that $q^2_{con} = q^2_{cat} \cdot c$  and 
 $$
 c = \frac{q^2_{con}} {q^2_{cat}},
 $$ 
@@ -300,13 +309,14 @@ This approach has the advantage that consistent and numerically precise estimate
 
 We model categorization errors using threshold parameters. These thresholds are the theoretical cutting points where the continuous latent response variable (LRV) has been discretized into the observed categories.  If the thresholds are different across countries, the questions are not directly comparable, since differences in the frequency distribution are partly due to differences in the way the LRV was discretized. If the thresholds are the same across countries the questions may still not be comparable due to differences in linear transformations (loadings) and random errors. But in that case it is not categorization error that causes incomparability. A final possibility is that loadings, random errors and thresholds are all the same across countries. In that case the frequency distributions can be directly compared. 
 
-In this paper we will perform only a basic invariance tests on thresholds. If the thresholds are equal, categorization error is not a likely cause of differences in quality. However, we do not continue with tests for invariance on loadings and error variance, but will compare the results of two different models.
+In this paper we will perform only a basic invariance tests on thresholds. If the thresholds are equal, categorization error is not a likely cause of differences in quality. However, we do not continue with tests for invariance on loadings and error variance, but will compare the results of the two different models.
+
 
 The two models are the same with respect to the covariance structure of the response variables (the `MTMM part' of the model). However, they differ in their basic assumptions about the `observation part' of the model: the CV model assumes that the continuous response variables have been directly observed, while the categorical model assumes a threshold connection between the response variables and the observed ones. 
 
 Both models assume normality of the response variables, but the differences in basic assumptions cause the categorical model to be more sensitive to departures from normality. While in the CV model, under quite general conditions, violation of normality will not affect the consistency of the estimates \citep{satorra_robustness_1990}, this is not so in the categorical model. There, the threshold estimates are derived directly from quantiles of the normal distribution which the latent response variable is assumed to follow. Therefore, if the LRV's are not normally distributed, the threshold estimates will be biased. The MTMM estimates depend on the thresholds and can also change, though the precise conditions under which such estimates would change significantly have, to our knowledge, not been investigated analytically. It has been found in several different simulation studies that bias may occur especially when the latent response variables are skewed in opposite directions \citep{coenders_structural_1996}. 
 
-Thus, while the categorical model may be more realistic in modelling the observed variables as ordinal rather than interval level measures, the CV model may be more realistic in that it is robust to violations of normality\footnote{One important point to make here is that even when univariate distributions such as histograms and tables of the observed categorical variables are highly non-normal, this does not necessarily imply that the normality assumption of the categorical model is violated. The reason is that a very non-normally distributed observed variable may be the consequence of a perfectly normally distributed variable that has been categorised in a very uneven way. }.
+Thus, while the categorical model may be more realistic in modelling the observed variables as ordinal rather than interval level measures, the CV model may be more realistic in that it is robust to violations of normality\footnote{One important point to make here is that even when univariate distributions such as histograms and tables of the observed categorical variables are highly non-normal, this does not necessarily imply that the normality assumption of the categorical model is violated. The reason is that a very non-normally distributed observed variable may be the consequence of a perfectly normally distributed variable that has been categorized in a very uneven way. }.
 In any particular analysis, whether one or the other model provides a more adequate estimate of the quality of the questions therefore depends on the degree to which these assumptions are violated\footnote{In principle the normality assumption on the latent response variables is testable. However, the question then still remains what impact any non-normality would have on the estimates. This question is beyond the scope of the present paper.}. This should be kept in mind in the interpretations of the results.
 
 
@@ -366,7 +376,8 @@ Table \ref{card:women} presents three different traits, each asked in two differ
 \hline
 \end{tabular}\end{footnotesize}\end{table}
 
-The tresholds in this model represent how extreme the `agreement' has to be before the next category is chosen rather than the previous one. This strength is expressed in z-scores, i.e. standard deviations from the mean. Take, for instance, the third statement in the table: ``Men should take as much responsibility as women for the home and children''.  Slovenians need to have an agreement differing from the country mean 2.6 times more than the standard deviation, before they will respond `disagree strongly'. 
+The thresholds in this model represent how extreme the `agreement' has to be before the next category is chosen rather than the previous one. This strength is expressed in z-scores, i.e. standard deviations from the mean. Take, for instance, the third statement in the table: ``Men should take as much responsibility as women for the home and children''.  Slovenians need to have an agreement differing from the country mean 2.6 times more than the standard deviation, before they will respond `disagree strongly'. 
+
 
 Note that the threshold part of the relationship between LRV and observed response is deterministic. However, not all Slovenians with an \emph{opinion} on the indicator of 2.6 standard deviations or more away from the mean will necessarily answer `disagree completly'.  This is so because the latent response variable is also affected by random measurement error. The combination of the threshold model and normally distributed random measurement error gives rise to a familiar probit relationship between indicator and response. Because the random error plays an important role in this relationship, not only the thresholds should be discussed here, but also the quality coefficients. 
 
@@ -380,9 +391,10 @@ The second phrasing of this question seems to provide a better coverage of the p
 
 For the third and last trait--the right to a job--the most striking feature of the thresholds is that in Slovenia, the first three categories represent opinions below the mean, while in Greece only the first category does. Beyond this, it is difficult to say which scale might produce fewer categorization errors. Surprising, however, is that the second form of the same question seems to produce much more comparable scales with respect to the thresholds than the first one.
 
-It is also clear from the table that the two forms of phrasing are not exactly opposite in the way they are understood and/or answered. This is especially true for the `right to a job' item. However, the choice for one phrasing or the other seems arbitrary. This particular way of phrasing a question is therefore inadvisable, because an arbitrary decision will lead to different results. The key problem in this case may be the complex sentence structure in which men are compared to women, given an attribute (right to a job) under a certain condition (when jobs are scarce), and then a `degree of agreement' with a norm (`should have') is asked. A more accurate way of measurement that may be less sensitive to such arbitrary shifts in response behaviour might be to ask questions about the rights men and women should have according to the respondent directly.
+It is also clear from the table that the two forms of phrasing are not exactly opposite in the way they are understood and/or answered. This is especially true for the `right to a job' item. However, the choice for one phrasing or the other seems arbitrary. This particular way of phrasing a question is therefore inadvisable, because a decision  that seems arbitrary is not arbitrary in its consequences. The key problem in this case may be the complex sentence structure in which men are compared to women, given an attribute (right to a job) under a certain condition (when jobs are scarce), and then a `degree of agreement' with a norm (`should have') is asked. A more accurate way of measurement that may be less sensitive to such arbitrary shifts in response behaviour might be to ask questions about the rights men and women should have according to the respondent directly.
 
-The thresholds provide some insight into the nature of differences in categorization. However, the final quality of the measure depends also on other parameters of the categorical response model such as the quality coefficients and the error variances, and on the latent response variable distribution. 
+The thresholds provide some insight into the nature of differences in categorization. However, the quality of the measure in the continuous model depends also on parameters of the categorical response model such as the method effects and the error variances, and on the latent response variable distribution. 
+
 
 Besides the thresholds also the correlations between the LRVs are estimated. Based on these correlations the MTMM model mentioned before has been estimated and so estimates of the quality and method effects of the measures corrected for categorization are estimated for all questions. The quality and method effects of the CV model have also been estimated. The results are presented in table \ref{tab:women}. Based on these results the categorization effect can be derived because it is the ratio of the two coefficients. This result, too, is presented in table \ref{tab:women}.
 
@@ -423,7 +435,7 @@ We now turn to the question if these factors are also different between the coun
 
 %The phenomenon of categorization factors above unity is somewhat surprising in itself. Since all of the correlations in the categorical model are higher one might think that the quality coefficients would be higher also, but this turns out not to be the case.
  
-One possible explanation for the interaction effect found here is that the method factors were often constrained to zero for the main questionnaire. The questions in the main questionnaire were selected especially because they were expected to have the highest quality and lowest method effects. After the initial continuous analysis the model often indicated that the questions in the main questionnaire indeed had zero method correlation. Since the categorical model tends to increase the correlations, if the monomethod correlations for the main questionnaire go up more than the other correlations, then it can happen that in the categorical model a method factor is found where none was found before.
+One possible explanation for the interaction effect found here is that the method factors were often constrained to zero for the main questionnaire. The questions in the main questionnaire were selected especially because they were expected to have the highest quality and lowest method effects. After the initial continuous analysis the model often indicated that the questions in the main questionnaire indeed had zero method correlation. Since the categorical model tends to increase the correlations, if the monomethod correlations for the main questionnaire go up more than the other correlations, then it can happen that in the categorical model a method factor is found where none was found before. This will then lower the quality estimates.
 
 A test was done of the hypothesis that questions for which the method effect was constrained to zero in the continuous model have the same categorization factor as other questions, controlling for country effects. This hypothesis was rejected ($p=0.02$)\footnote{Result of a hierarchical linear model fit using \texttt{R 2.6.1} with fixed effects of country and restricting the method to zero or not (0/1), and a random intercept across topics to account for the dependency among the observations.}. The explanation that constraining the method factors to zero causes the interaction found above therefore seems plausible.
 
@@ -436,13 +448,14 @@ Overall, we found that categorization errors do occur besides random errors and 
 
 A caveat should be added to the interpretation of this result, because a violation of the assumptions of the models (no categorization error versus bivariate normality) can have different consequences for the estimates. It is therefore not necessarily true that a categorization factor above unity indicates overestimation of the quality in the CV model. Several studies of the robustness of factor analysis models to categorization errors exist (see \citealt{olsson_robustness_1979}). However, we found that their results do not necessarily apply in the MTMM model, which also includes method factors. Given the ubiquity of correlated errors in survey questions, it would be useful to study more closely the robustness of this particular type of measurement error model to categorization error. This, however, is beyond the scope of the present paper.
 
-In the meta-analysis, we gathered the results from our four different experiments and analysed the relationship between the categorization factor and the quality in the continuous model. Effects were found for all four experiments.
+In a meta-analysis, we gathered the results from our four different experiments and analysed the relationship between the categorization factor and the quality in the continuous model. Effects were found for all four experiments.
 
 If the categorization factors were equal for countries with the highest and lowest quality coefficients, they could not explain the differences in quality which we found earlier. The meta-analysis suggested that there is a considerable difference in the categorization factor between countries where the highest and the lowest quality coefficients were found given whether the question was part of the main or supplementary questionnaire.
 
 The methods in the main questionnaire were chosen beforehand based on other experiments as the ones least likely to cause method effects. For example, direct questions rather than batteries were used. After re-examining the experiments on which the meta-analysis was based, it appears this is closely related to the interaction effect found there.
 
-The main reason for the interaction effect we found in the meta-analysis appears to be that the method variance for the main questionnaire method was sometimes fixed to zero. This was done in cases where leaving this method variance free resulted in a very small variance, not significantly different from zero. The general rise in correlations that results from correction for categorization seems to have `pushed' the monomethod correlations of the main questionnaire variable to the point where the method variance could not anymore be constrained to zero. And as the method variance rises, the quality must decrease in our model.
+The main reason for the interaction effect we found in the meta-analysis appears to be that the method variance for the main questionnaire method was often close zero.  The general rise in correlations that results from correction for categorization seems to have `pushed' the monomethod correlations of the main questionnaire variable to the point where the method variance could not anymore be constrained to zero. And as the method variance rises, the quality must decrease in our model.
+
 
 In other words, the correction for categorization has a negative influence on the quality. When the method factors were constrained to zero in the first instance, the effect was that the quality was in general lower in the categorical model than in the continuous model. This is contrary to what one might expect considering that all of the polychoric correlations are higher than their Pearson counterparts.
 
@@ -462,190 +475,5 @@ Future research might also focus on finding other explanations for differences i
 %\clearpage
 \bibliography{quality}
 
-\appendix
-
-\section{The results for experiments 2-4}
-
-
-\subsection{Experiment 2}
-
-The second experiment concerned some aspects of the respondent's job. The questions are presented in table \ref{card:job} with the thresholds for the country with the highest and lowest quality coefficient. The model in which all thresholds were constrained to be equal was rejected. Table \ref{card:job} again shows the threshold estimates after acceptable models for the threshold structure  had been found while leaving the covariance matrices free to vary (the test statistics for the two split-ballot groups were 2.4 with 4 $df$, $p=.66$, and 2.8 with 2 $df$, $p=.24$, respectively.).
-
-\begin{table}[htb]\caption{\label{card:job}The `job' experiment: questions and threshold estimates (in z-scores).}
-\fbox{\begin{minipage}{\textwidth}\begin{small}
-	\input{../output/thresh_job.tex}
-\end{small}\end{minipage}}\end{table}
-
-It can be seen that in all cases, the endpoints for Slovenia are further away than the same endpoints for Belgium. Transformation errors are also present, as the thresholds are sometimes one-sided or not equidistant.
-
-Taking the estimated covariances of the latent response variables as our input, we estimated the quality in order to compare the results of this analysis with the results from the continuous analysis. This model resulted in a test statistic of 40 on 23 degrees of freedom ($p=.01$). The different estimates, including the method effects, for the main questionnaire items are presented in table \ref{tab:job}.
-
-\begin{table}[htb]\centering\caption{Quality ($q^2$) and method effects ($m$) according to the continuous and categorical models, with categorization factors for the experiment on certain aspects of the job of the respondent.\label{tab:job}}\begin{tabular}{lllrrr}
-\hline
-  &    & & \multicolumn{3}{c}{`Job'} \\
- &      &   & Varied & Secure & Risky\\
-\hline
-\multicolumn{2}{l}{Continuous analysis    } &  &  &  & \\
- &   $q^2$ & Belgium & 0.88 & 0.88 & 0.92\\
- &    & Slovenia & 0.61 & 0.21 & 0.55\\
-&  $m$ & Belgium & 0.06 & 0.06 & 0.06\\
-&     &  Slovenia & 0.17 & 0.29 & 0.18\\
-\multicolumn{2}{l}{Categorical analysis  }   &  &  &  & \\
- &   $q^2$ & Belgium & 0.92 & 0.58 & 0.66\\
- &    & Slovenia & 0.50 & 0.29 & 0.67\\
-& $m$ & Belgium & 0.19 & 0.56 & 0.51\\
-&     &  Slovenia & 0.00 & 0.00 & 0.00\\
-
-\multicolumn{2}{l}{Categorization factor}     &  &  &  & \\
- &    & Belgium & 0.96 & 1.52 & 1.39\\
- &     & Slovenia & 1.22 & 0.72 & 0.82\\
-\hline
-\end{tabular}\end{table}
-
-The low quality of .21 for the second item in Slovenia catches the eye in table \ref{tab:job}. Interestingly, there is nothing in the thresholds to suggest where such a low quality should come from. The change in this coefficient when using the categorical model is relatively small, going from .21 to .29, suggesting the low quality is not so much tied to the thresholds as to other parameters of the model.
-
-For the second and third question, the country with the higher quality estimates in the continuous analysis again finds its estimates in the categorical model corrected substantially downwards. Belgium retains its position as the country with higher quality measurements according to this model, however.
-\clearpage
-\subsection{Experiment 3}
-
-The third experiment concerned the respondent's perception of the behaviour of doctors in general\footnote{The test statistics for the first and second split-ballot groups were 6.3 with 7 $df$, $p=.50$, and 4.5 with 3 $df$, $p=.22$, respectively.}.  The questions are presented in table \ref{card:doctors} with the thresholds for the country with the highest and lowest quality coefficient. The model in which all thresholds were constrained to be equal was rejected. Table \ref{card:doctors} displays our estimates of the threshold parameters for the different questions.
-
-\begin{table}[htb]\caption{\label{card:doctors}The `social distance' experiment: questions and threshold estimates (in z-scores).}
-\fbox{\begin{minipage}{\textwidth}\begin{scriptsize}
-	\input{../output/thresh_doctors.tex}
-\end{scriptsize}\end{minipage}}\end{table}
-
-\begin{table}[hbt]\centering\caption{Quality ($q^2$) and method effects ($m$) according to the continuous and categorical models, with categorization factors for the experiment on perception of the behaviour of doctors.\label{tab:doctors}}\begin{tabular}{lllrrr}
-\hline
-&&&\multicolumn{3}{c}{`Doctors'}\\
- &  &  & Truth & Equals & Discuss\\
-\hline
-\multicolumn{2}{l}{Continuous analysis   }&  &  &  & \\
- &  $q^2$& Estonia & 0.42 & 0.85 & 0.83\\
- &  & Denmark & 0.05 & 0.74 & 0.77\\
- &  $m$& Estonia & 0.00 & 0.00 & 0.00\\
- &  & Denmark & 0.00 & 0.00 & 0.00\\
-\multicolumn{2}{l}{Categorical analysis  } &  &  &  & \\
- &  $q^2$& Estonia & 0.75 & 0.79 & 0.75\\
- &  & Denmark & 0.12 & 0.83 & 0.82\\
- & $m$ & Estonia & 0.48 & 0.37 & 0.42\\
- &  & Denmark & 0.49 & 0.17 & 0.17\\
-\multicolumn{2}{l}{Categorization factor}   &  &  &  & \\
- &  & Estonia & 0.56 & 1.07 & 1.10\\
- &  & Denmark & 0.41 & 0.89 & 0.94\\
-\hline
-\end{tabular}\end{table}
-
-The parameter $\tau_3$ for the first question differs across the countries. Considerably more information is provided by this question in Denmark than in Estonia, since in the latter country only the first two categories are less than one standard deviation away from the mean. If we examine the distribution of this variable, this corresponds to a strong difference in skew: in Estonia 85\% of the observations fall in the first two categories, while in Denmark this percentage is a more modest, though still skewed, 72\%. Whether this is due to the thresholds themselves or to a skew in the underlying distribution, we can not say.
-
-In addition, there is a difference between the countries for threshold $\tau_1$ for the third question, `GPs treat their patients as their equals'. In Denmark this extreme cutting point is more distant than in Estonia.
-
-Not everything about categorization error can directly deduced by looking only at the thresholds. The categorical model produced results which might seem surprising if this is not taken into account. Table \ref{tab:doctors} shows the results we obtained for this experiment. The likelihood ratio in this case was 26 with 21 degrees of freedom ($p=.19$). 
-
-An extremely low quality for the first question was obtained in Denmark; this variable had very low correlations with its repetitions--and every other variable in the model. These low correlations were corrected upwards somewhat after taking the categorization into account, but they remained low, producing an also low quality of .05 in the continuous and .12 in the categorical analysis\footnote{The data were subjected to a search for mistakes, but no coding or other such errors became apparent.}. As suggested before, an explanation for this is that the random errors are very large for this question.
-
-In Estonia the quality using the CV model is also estimated to be rather low. However, the categorical model estimates the quality of the underlying scale at a level similar to that of the other two questions.
-
-For the other two questions, it is worth noting that while the estimates are slightly lower in Denmark in the CV model, these differences are reduced in the categorical model. 
-
-
-
-\subsection{Experiment 4}
-
-The topic of the last experiment was the subjective feeling of compentence to participate in politics, also called `efficacy'. This was the only experiment we analysed from the first round of the ESS.  The questions are presented in table \ref{card:efficacy} with the thresholds for the country with the highest and lowest quality coefficient. The model in which all thresholds were constrained to be equal was rejected. The results of the threshold model\footnote{The test statistics for the first and second split-ballot groups for this eperiment were 3.3 with 6 $df$ ($p=.78$) and 5.0 with 6 $df$ ($p=.54$), respectively.} are presented in table \ref{card:efficacy}.
-
-\begin{table}[htb]\caption{The `efficacy' experiment: questions and threshold estimates (in z-scores).\label{card:efficacy}}
-\fbox{\begin{minipage}{\textwidth}\begin{scriptsize}
-   \input{../output/thresh_efficacy.tex}
-\end{scriptsize}\end{minipage}}\end{table}
-
-For the first two questions belonging to the first trait, no relevant differences were found between the thresholds. The third questions exhibits differences in the sense that the skew of the thresholds in Switzerland and Denmark are in different directions. At the same time, the skew of the fourth question in Switzerland is in the opposite direction as for the third question. This is what might be expected given the answer scales. However, one consequence is that the continuous analysis may contain two variables that are skewed in opposite directions. It has been shown that this situation in particular causes differences between categorical and continuous analyses \citep{johnson_ordinal_1983}. 
-
-The same does not happen in Denmark though; here the fourth question exhibits more or less symmetrical thresholds. This is somewhat surprising given the thresholds of the same question using a direct question rather than an agree-disagree scale; if the scales were equally good but simply a reverse way of phrasing then one would expect also a reversal of the thresholds. The fact that this does not occur suggests that other factors play a part besides the categorization errors, such as the quality coefficients, random errors and method variance.
-
-%For the last trait, there are some substantial differences between the thresholds for the direct method, while the agree-disagree scale appears to be more similar across the countries. However, the endpoints of the scale are rather distant in both countries.
-
-The comparison between the categorical and CV models for this experiment is shown in table \ref{tab:efficacy}.
-
-\begin{table}[htb]\centering\caption{Quality ($q^2$) and method effects ($m$) according to the continuous and categorical models, with categorization factors for the experiment on the respondent's subjective political competence (political efficacy).\label{tab:efficacy}}\begin{tabular}{lllrrr}
-\hline
- &  &  &  & `Efficacy' & \\
-	   &  &  & Complex & Active & Mind\\
-	   \hline
- \multicolumn{2}{l}{Continuous analysis}\\
- &  $q^2$& Denmark & 0.77 & 0.83 & 0.79\\
- &  & Switzerland & 0.49 & 0.81 & 0.50\\
- &  $m$& Denmark & 0.00 & 0.00 & 0.00\\
- &  & Switzerland & 0.00 & 0.00 & 0.00\\
-\multicolumn{2}{l}{Categorical analysis}   &  &  &  & \\
- &  $q^2$& Denmark & 0.63 & 0.70 & 0.63\\
- &  & Switzerland & 0.62 & 0.94 & 0.62\\
- &  $m$& Denmark & 0.11 & 0.08 & 0.11\\
- &  & Switzerland & 0.00 & 0.00 & 0.00\\
-\multicolumn{2}{l}{Categorization factor}    &  &  & \\
- &  & Denmark & 1.23 & 1.18 & 1.25\\
- &  & Switzerland & 0.79 & 0.86 & 0.81\\
-\hline
-\end{tabular}\end{table}
-
-A seemingly puzzling phenomenon in table \ref{tab:efficacy} is that the estimates for the first question should be so different in the categorical model\footnote{The chi-square test statistic of our final categorical model was 28 with 2 degrees of freedom ($p=.10$).} after we have seen in table \ref{card:efficacy} that for this question the differences between the thresholds are minimal. This stresses again the fact the thresholds alone cannot provide all the necessary information. It can be seen, however, that the categorization factors and the differences between them across the two countries are very similar for all three questions. 
-
-%Another consequence of this can be seen for the `active' question. Although in Switzerland and Denmark similar overall connections to the corresponding trait according to the continuous analysis were found, this similarily was apparently produced from very dissimilar categorization errors and quality coefficients.
-
-\section{Numerical results of the meta analysis}
-
-More details on the estimates of the coefficients which are summarised in figure \ref{fig:predict} are presented here. Note that the linear regressions listed are of the natural logarithm of the quality on the logarithm of the categorization factor. The computer program \texttt{R 2.6.1} was used to estimate these regressions.
-
- 
-\subsection*{Social distance}
-
-\begin{tabular}{lrrrr}\hline
-&            Estimate &Std. Error &t value& p-value  \\\hline
-(Intercept)  &-0.71   &  0.25 & -2.84  & 0.01 \\
-Cat. factor           &1.69  &   0.65  & 2.61  & 0.02 \\
-\hline\end{tabular}
-
-\noindent Residual standard error: 0.78 on 16 degrees of freedom\\
-Multiple R-Squared: 0.30,	Adjusted R-squared: 0.25 \\
-F-statistic: 6.78 on 1 and 16 DF,  p-value: 0.02 
-
-\subsection*{Efficacy}
-
-\begin{tabular}{lrrrr}\hline
-&            Estimate &Std. Error &t value& p-value  \\\hline
-(Intercept) & -0.37  &     0.03 & -11.22&  5.42e-09  \\
-Cat. factor &       0.80  &   0.15  &  5.19 & 9.03e-05  \\
-\hline\end{tabular}
-
-\noindent Residual standard error: 0.13 on 16 degrees of freedom\\
-Multiple R-Squared: 0.63,	Adjusted R-squared: 0.60\\
-F-statistic: 26.88 on 1 and 16 DF,  p-value: 9.03e-05 
-
-
-\subsection*{Job}
-
-
-\begin{tabular}{lrrrr}\hline
-&            Estimate &Std. Error &t value& p-value  \\\hline
-(Intercept) & -0.45   &  0.08  & -5.94 & 2.73e-05  \\
-Cat. factor  &          0.48  &   0.21 &   2.27 &   0.04    \\
-\hline\end{tabular}
-
-\noindent Residual standard error: 0.30 on 15 degrees of freedom\\
-Multiple R-Squared: 0.26,	Adjusted R-squared: 0.21\\
-F-statistic: 5.15 on 1 and 15 DF,  p-value: 0.04
-
-
-\subsection*{Role of women}
-
-\begin{tabular}{lrrrr}\hline
-&            Estimate &Std. Error &t value& p-value  \\\hline
-(Intercept) &  -0.94 &     0.13 &  -7.21 &  3.2e-07  \\
-Cat. factor       &      0.62  &    0.31  &  1.98   &  0.06 \\
-\hline\end{tabular}
-
- \noindent Residual standard error: 0.63 on 22 degrees of freedom\\
-Multiple R-Squared: 0.15,	Adjusted R-squared: 0.11 \\
-F-statistic: 3.90 on 1 and 22 DF,  p-value: 0.06 
-
 \end{document}
+
