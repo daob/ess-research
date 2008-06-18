@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.30.6-2.2 (MiKTeX 2.5) (preloaded format=pdflatex 2006.11.23)  18 JUN 2008 18:53
+This is pdfeTeX, Version 3.141592-1.30.6-2.2 (MiKTeX 2.5) (preloaded format=pdflatex 2006.11.23)  18 JUN 2008 19:32
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -832,7 +832,7 @@ File: i/uvt.pdf Graphic file (type pdf)
 <i/esade.pdf, id=44, 482.80376pt x 250.82686pt>
 File: i/esade.pdf Graphic file (type pdf)
  <use i/esade.pdf>
-Overfull \vbox (4.78256pt too high) detected at line 42
+Overfull \vbox (5.38736pt too high) detected at line 42
  []
 
 [1{psfonts.map}
@@ -1079,21 +1079,17 @@ l.250 \end{frame}
 ]
 [51
 
-] <i/topics.pdf, id=1866, 737.75626pt x 162.6075pt>
-File: i/topics.pdf Graphic file (type pdf)
- <use i/topics.pdf>
-[52
+] <i/topics.png, id=1866, 845.559pt x 202.356pt>
+File: i/topics.png Graphic file (type png)
+ <use i/topics.png> [52
 
- <i/topics.pdf
-Warning:  (file i/topics.pdf): pdf inclusion: Page Group detected which pdfTeX 
-can't handle. Ignoring it.
->]
-File: i/topics.pdf Graphic file (type pdf)
- <use i/topics.pdf> [53
+ <i/topics.png>]
+File: i/topics.png Graphic file (type png)
+ <use i/topics.png> [53
 
 ]
-File: i/topics.pdf Graphic file (type pdf)
- <use i/topics.pdf> [54
+File: i/topics.png Graphic file (type png)
+ <use i/topics.png> [54
 
 ]
 LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <9> not available
@@ -1110,24 +1106,28 @@ LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <7> not available
 
 ] [57
 
-] [58
+]
+[58
 
 ] [59
 
-]
-[60
+] [60
 
 ] [61
 
-] <../latex/i/predict_q2.pdf, id=2160, 433.62pt x 433.62pt>
+] [62
+
+]
+<../latex/i/predict_q2.pdf, id=2167, 433.62pt x 433.62pt>
 File: ../latex/i/predict_q2.pdf Graphic file (type pdf)
 
-<use ../latex/i/predict_q2.pdf> [62
+<use ../latex/i/predict_q2.pdf>
+Overfull \vbox (1.43036pt too high) detected at line 511
+ []
 
- <C:/ESS/berlin/latex/i/predict_q2.pdf>]
 [63
 
-] [64
+ <C:/ESS/berlin/latex/i/predict_q2.pdf>] [64
 
 ] [65
 
@@ -1139,7 +1139,8 @@ File: ../latex/i/predict_q2.pdf Graphic file (type pdf)
 
 ] [69
 
-] [70
+]
+[70
 
 ] [71
 
@@ -1151,29 +1152,29 @@ File: ../latex/i/predict_q2.pdf Graphic file (type pdf)
 
 ] [75
 
+] [76
+
 ]
-<i/uvt_fac.jpg, id=2532, 240.9pt x 180.675pt>
+<i/uvt_fac.jpg, id=2541, 240.9pt x 180.675pt>
 File: i/uvt_fac.jpg Graphic file (type jpg)
  <use i/uvt_fac.jpg>
-<i/esade_fac.jpg, id=2533, 301.125pt x 225.84375pt>
+<i/esade_fac.jpg, id=2542, 301.125pt x 225.84375pt>
 File: i/esade_fac.jpg Graphic file (type jpg)
  <use i/esade_fac.jpg>
-[76
+[77
 
  <i/uvt_fac.jpg> <i/esade_fac.jpg>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 637.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 639.
 
 
 ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [77
+) [78
 
-] [78
+] [79
 
 ]
-[79
-
-] [80
+[80
 
 ] [81
 
@@ -1189,34 +1190,40 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 
 ] [87
 
+] [88
+
  <C:/Archivos de programa/MiKTeX 2.5/tex/latex/beamer/base/art/beamericonarticl
 e.pdf>]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
- (presentation.aux) ) 
+ (presentation.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 9884 strings out of 95419
- 165277 string characters out of 1187093
- 235357 words of memory out of 1229841
- 12157 multiletter control sequences out of 60000
+ 9890 strings out of 95419
+ 165331 string characters out of 1187093
+ 235402 words of memory out of 1229886
+ 12160 multiletter control sequences out of 60000
  37951 words of font info for 87 fonts, out of 1000000 for 2000
  14 hyphenation exceptions out of 8191
  41i,16n,51p,320b,667s stack positions out of 5000i,500n,10000p,200000b,32768s
 PDF statistics:
- 2855 PDF objects out of 300000
- 188 named destinations out of 300000
+ 2865 PDF objects out of 300000
+ 191 named destinations out of 300000
  206 words of extra memory for PDF output out of 10000
-{cm-super-t1.enc}<C:/Archivos de programa/MiKTeX 2.5/fonts
-/type1/public/cm-super/sftt1095.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/t
-ype1/bluesky/cm/cmex10.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/blue
-sky/cm/cmsy9.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cme
-x10.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmmi9.pfb><C
-:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmss9.pfb><C:/Archivos
- de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmsy10.pfb><C:/Archivos de progr
-ama/MiKTeX 2.5/fonts/type1/bluesky/cm/cmmi10.pfb>{8r.enc}<C:/Archivos de progra
-ma/MiKTeX 2.5/fonts/type1/linotype/futura/lfub8a.pfb><C:/Archivos de programa/M
-iKTeX 2.5/fonts/type1/bluesky/cm/cmss10.pfb><C:/Archivos de programa/MiKTeX 2.5
-/fonts/type1/linotype/futura/lfuko8a.pfb><C:/Archivos de programa/MiKTeX 2.5/fo
-nts/type1/linotype/futura/lfuk8a.pfb>
-Output written on presentation.pdf (87 pages, 12911433 bytes).
+{cm-super-t1.enc}<C:/Archivos de programa/MiKTeX 2.5/fonts/type1/public/cm-su
+per/sftt1095.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cme
+x10.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmsy9.pfb><C
+:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmex10.pfb><C:/Archivo
+s de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmmi9.pfb><C:/Archivos de progr
+ama/MiKTeX 2.5/fonts/type1/bluesky/cm/cmss9.pfb><C:/Archivos de programa/MiKTeX
+ 2.5/fonts/type1/bluesky/cm/cmsy10.pfb><C:/Archivos de programa/MiKTeX 2.5/font
+s/type1/bluesky/cm/cmmi10.pfb>{8r.enc}<C:/Archivos de programa/MiKTeX 2.5/fonts
+/type1/linotype/futura/lfub8a.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/typ
+e1/bluesky/cm/cmss10.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/linoty
+pe/futura/lfuko8a.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/linotype/
+futura/lfuk8a.pfb>
+Output written on presentation.pdf (88 pages, 5236574 bytes).
