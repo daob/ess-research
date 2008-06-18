@@ -1,7 +1,8 @@
 \beamer@endinputifotherversion {3.06pt}
-\beamer@sectionintoc {2}{Multitrait-multimethod experiments}{2}{0}{1}
-\beamer@subsectionintoc {2}{1}{An example experiment}{7}{0}{1}
-\beamer@subsectionintoc {2}{2}{Models}{11}{0}{1}
-\beamer@subsectionintoc {2}{3}{Categorisation errors in the efficacy experiment}{43}{0}{1}
-\beamer@sectionintoc {3}{Conclusion}{54}{0}{2}
-\beamer@sectionintoc {4}{Epilogue: SQP}{65}{0}{3}
+\beamer@sectionintoc {2}{Survey response model}{2}{0}{1}
+\beamer@sectionintoc {3}{Multitrait-multimethod experiments}{24}{0}{2}
+\beamer@subsectionintoc {3}{1}{An example experiment}{25}{0}{2}
+\beamer@subsectionintoc {3}{2}{Models}{29}{0}{2}
+\beamer@subsectionintoc {3}{3}{Categorisation errors in the efficacy experiment}{55}{0}{2}
+\beamer@sectionintoc {4}{Conclusion}{66}{0}{3}
+\beamer@sectionintoc {5}{Epilogue}{77}{0}{4}

@@ -12,6 +12,8 @@
 \usepackage{futura}
 \usetheme{Antibes}
 \usecolortheme{beetle}
+\xdefinecolor{myyellow}{rgb}{0.97, 0.90, 0.49}
+\setbeamercolor{alerted text}{fg=myyellow}
 
 
 \title{Separating random, systematic, and categorisation errors in surveys}
@@ -46,12 +48,17 @@
 %	\tableofcontents
 %\end{frame}
 
-\section{Multitrait-multimethod experiments}
+\section{Survey response model}
 
 \begin{frame}
 	\frametitle{The basic response model}
 	\includegraphics[height=7cm]{i/response-model.pdf}\\
 \end{frame}
+
+\begin{frame}
+	\includegraphics[width=\textwidth]{i/3_steps_together_CV.pdf}\\
+\end{frame}
+
 
 \begin{frame}	
 	\frametitle{The basic response model}
@@ -60,8 +67,98 @@
 		\item $q = vr$
 		\item The square $q^2$ is called the 'total quality' of a measure.
 		\item It is the percentage of variance in the observed variable that can be explained by the latent variable of interest.
+		\item The observed variables are assumed to be continuous.
 	\end{itemize}
 \end{frame}	
+
+\begin{frame}
+   \frametitle{The basic response model, revised}
+   \includegraphics[height=7cm]{../latex/i/response_model_categorical.pdf}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Categorisation of continuous variables}
+
+    Our model assumes that there are \emph{unobserved} continuous latent response variables (LRV) that have been categorised into the \emph{observed} categorical variables.
+
+ \begin{columns}<2->[T]
+ 	\begin{column}{4.5cm} \textbf{country A}
+
+	\includegraphics[width=4.5cm]{i/LRV-8cat.pdf}\end{column}
+ 	\begin{column}<3->{4.5cm} \textbf{country B}
+
+\includegraphics[width=4.5cm]{i/LRV-skew.pdf}
+ 	\end{column}
+ \end{columns}
+\end{frame}
+
+\begin{frame}
+   \includegraphics[height=8cm]{i/3_steps_together.pdf}
+\end{frame}
+
+\begin{frame}
+\frametitle{Two countries with equal qualities but different means}
+\begin{columns}<2->[T]
+ 	\begin{column}{5cm} 
+	\includegraphics[width=5cm]{i/country_A.pdf}\end{column}
+ 	\begin{column}<3->{5cm} 
+\includegraphics[width=5cm]{i/country_B.pdf}
+ 	\end{column}
+ \end{columns}
+\end{frame}
+
+
+\begin{frame}	
+	\frametitle{Categorical data in cross-country studies}
+	\begin{itemize}[<alert@+>]
+		\item The thresholds used earlier are taken from the estimates of a real experiment!
+		\item If the thresholds are different, the observed means and (Pearson) correlations will differ also;
+		\item Even a difference in \emph{means} across countries can cause an observed difference in Pearson correlations;
+		\item If the assumption of normality holds true, the categorical response model (using polychoric correlations) corrects the LRV correlations;
+		\item Whether this model is realistic is the topic of our other presentation.
+	\end{itemize}
+\end{frame}	
+
+\begin{frame}
+	\frametitle{The `categorisation factor'}
+	\begin{itemize}
+\item The quality was defined as:
+		\item \begin{equation*}
+q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
+\end{equation*}
+\item However, we have seen that $y$ is itself a categorization of an unobserved continuous variable ($LRV$), and therefore the above equation can be `decomposed' into
+\item \begin{equation*}
+q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
+\end{equation*}
+	\item We call this ratio of the quality coefficient $q = v.r$ from the categorical model to the same coefficient from the continuous model the `categorisation factor'.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{The `categorisation factor'}
+
+	\begin{equation}
+	q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
+	\end{equation}
+
+	\begin{itemize}
+		\item It can be seen that the quality normally estimated from the continuous model is a product of two terms:
+		\item $$
+			q^2_{cont} = q^2_{categ} \cdot c,
+		$$
+		where $c$ is a categorisation factor.
+		\item If $c < 1$, the quality in the categorical model is higher than in the continuous model
+		\item If $c > 1$, the quality in the categorical model is lower than in the continuous model
+	\end{itemize}
+\end{frame}
+
+\section{Multitrait-multimethod experiments}
+\begin{frame}
+
+\textbf{\centering How can the quality and thresholds be estimated in different countries?}
+
+\end{frame}
 
 \subsection{An example experiment}
 \begin{frame}
@@ -164,59 +261,6 @@
 	\end{itemize}
 \end{frame}	
 
-\begin{frame}
-   \frametitle{The basic response model, revised}
-   \includegraphics[height=7cm]{i/response-categ.pdf}
-\end{frame}
-
-\begin{frame}
-	\frametitle{The `categorisation factor'}
-	\begin{itemize}
-\item The quality was defined as:
-		\item \begin{equation*}
-q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
-\end{equation*}
-\item However, we have seen that $y$ is itself a categorization of an unobserved continuous variable ($c$), and therefore the above equation can be `decomposed' into
-\item \begin{equation*}
-q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
-\end{equation*}
-	\item We call this ratio of the quality coefficient $q = v.r$ from the categorical model to the same coefficient from the continuous model the `categorisation factor'.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{The `categorisation factor'}
-
-	\begin{equation}
-	q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
-	\end{equation}
-
-	\begin{itemize}
-		\item It can be seen that the quality normally estimated from the continuous model is a product of two terms:
-		\item $$
-			q^2_{cont} = q^2_{categ} \cdot c,
-		$$
-		where $c$ is a categorisation factor.
-		\item If $c < 1$, the quality in the categorical model is higher than in the continuous model
-		\item If $c > 1$, the quality in the categorical model is lower than in the continuous model
-	\end{itemize}
-\end{frame}
-
-
-
-
-\begin{frame}
-	\frametitle{Categorisation of continuous variables}
-
-    Our model assumes that there are \emph{unobserved} continuous latent response variables (LRV) that have been categorised into the \emph{observed} categorical variables.
-
- \begin{columns}<2->[T]
- 	\begin{column}{4.5cm}\includegraphics[width=4.5cm]{i/LRV-8cat.pdf}\end{column}
- 	\begin{column}<3->{4.5cm}\includegraphics[width=4.5cm]{i/LRV-skew.pdf}
- 	\end{column}
- \end{columns}
-\end{frame}
-
 
 
 \if 1=2
@@ -235,7 +279,7 @@ q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.
 	\begin{itemize}[<alert@+>]
 		\item The fewer categories, the smaller the Pearson correlation;
 		\item The more skew in observed variables, the smaller the Pearson correlation;
-		\item The corrected (`polychoric') correlations are always higher than the Pearson correlations, but not necessarily equally so for all variables.
+		\item The corrected (`polychoric') correlations are generally higher than the Pearson correlations, but not necessarily equally so for all variables.
 	\end{itemize}
 \end{frame}
 
@@ -466,7 +510,7 @@ Mean percentage increase of the polychoric correlations: 7.6\%
 
 The categorisation factor, $q_{cat}/q_{cont}$:
 
- \includegraphics[height=6cm]{../latex/box.pdf} 
+ \includegraphics[height=6cm]{../latex/i/predict_q2.pdf} 
 \end{frame}
 
 \begin{frame}
@@ -571,7 +615,7 @@ That's it for now. Moltes gràcies per la seva atenció!
 
 
 
-\section{Epilogue: SQP}
+\section{Epilogue}
 
 \begin{frame}
  \frametitle{The final goal: Survey Quality Predictor (SQP)}
@@ -591,5 +635,19 @@ That's it for now. Moltes gràcies per la seva atenció!
 		\item \texttt{http://www.sqp.nl} 
 	\end{enumerate}
 \end{frame}
+
+
+\begin{frame}
+ \frametitle{References of interest}
+
+\begin{thebibliography}{10}
+\bibitem{Saris2008}
+Saris, Willem, Albert Satorra, and William van der Veld
+\newblock Testing Structural Equation models or Detection of misspecifications? 
+\newblock Forthcoming in \emph{Structural Equation Modeling: an interdisciplinary journal}.
+\end{thebibliography}
+
+\end{frame}
+
 
 \end{document}
