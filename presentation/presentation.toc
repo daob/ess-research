@@ -4,5 +4,6 @@
 \beamer@subsectionintoc {3}{1}{An example experiment}{25}{0}{2}
 \beamer@subsectionintoc {3}{2}{Models}{29}{0}{2}
 \beamer@subsectionintoc {3}{3}{Categorisation errors in the efficacy experiment}{55}{0}{2}
-\beamer@sectionintoc {4}{Conclusion}{66}{0}{3}
-\beamer@sectionintoc {5}{Epilogue}{77}{0}{4}
+\beamer@sectionintoc {4}{A meta-analysis of the categorisation error studies}{63}{0}{3}
+\beamer@sectionintoc {5}{Conclusion}{67}{0}{4}
+\beamer@sectionintoc {6}{Epilogue}{78}{0}{5}

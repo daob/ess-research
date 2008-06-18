@@ -16,7 +16,7 @@
 \setbeamercolor{alerted text}{fg=myyellow}
 
 
-\title{Separating random, systematic, and categorisation errors in surveys}
+\title{Categorization errors and differences in the quality of questions across countries}
 \author{Daniel Oberski\\Willem Saris\\Jacques Hagenaars}
 \institute
 {
@@ -298,7 +298,7 @@ q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.
 		\item We analysed the 4 experiments from the ESS which involved variables with 5 categories or less
 		\item The topics: role of women, GP's, political efficacy, job.
 
-			\includegraphics[width=10cm]{i/topics.pdf} 
+			\includegraphics[width=10cm]{i/topics.png} 
 
 	\item Compare the country with the highest quality to the country with the lowest quality for that experiment (not discussed here)
 	\end{itemize}
@@ -499,18 +499,15 @@ Mean percentage increase of the polychoric correlations: 7.6\%
    \item The general `push'  is that all coefficients go up, because the polychoric correlations are always higher than the Pearson correlations;
    \item But when method factors are taken into account, the coefficients can also go down;
    \item This happens especially when the method variance is estimated at zero in the continuous model, but cannot be so constrained in the categorical model.
-%		\item Would then expect countries with high quality to have a lower quality after correction for categorisation and vice versa.
+	\item Would then expect countries with high quality to have a lower quality after correction for categorisation and vice versa.
 	\end{itemize}
 \end{frame}
 
-
-
-\begin{frame}
-\frametitle{A meta-analysis of the categorisation error studies}
-
+\section{A meta-analysis of the categorisation error studies}
+\begin{frame}\begin{center}
 The categorisation factor, $q_{cat}/q_{cont}$:
-
- \includegraphics[height=6cm]{../latex/i/predict_q2.pdf} 
+ \includegraphics[height=7.4cm]{../latex/i/predict_q2.pdf} 
+\end{center}
 \end{frame}
 
 \begin{frame}
@@ -606,11 +603,16 @@ Categorical model &1 \\
 \begin{frame}
 That's it for now. Moltes gràcies per la seva atenció!
 
+\vspace{1em}\begin{footnotesize}
 	\begin{columns}[T]
-		\begin{column}{3cm}\includegraphics[width=2.55cm]{i/uvt_fac.jpg}\end{column}
-		\begin{column}{3cm}\includegraphics[width=2.5cm]{i/esade_fac.jpg}\end{column}
-	\end{columns}		
+		\begin{column}{3cm}\centering\includegraphics[width=2.55cm]{i/uvt_fac.jpg} 
 
+Tilburg\end{column}
+		\begin{column}{3cm}\centering\includegraphics[width=2.5cm]{i/esade_fac.jpg} 
+
+Barcelona\end{column}
+	\end{columns}		
+\end{footnotesize}
 \end{frame}
 
 
