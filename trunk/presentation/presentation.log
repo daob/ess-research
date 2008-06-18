@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.30.6-2.2 (MiKTeX 2.5) (preloaded format=pdflatex 2006.11.23)  3 MAR 2008 16:09
+This is pdfeTeX, Version 3.141592-1.30.6-2.2 (MiKTeX 2.5) (preloaded format=pdflatex 2006.11.23)  18 JUN 2008 18:53
 entering extended mode
 **presentation.tex
 (presentation.tex
@@ -648,34 +648,34 @@ Package: beamercolorthemebeetle 2004/10/07  (rcs-revision 1.5)
 )
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `\\' on input line 18.
+(hyperref)                removing `\\' on input line 20.
 
 
 Package hyperref Warning: Token not allowed in a PDFDocEncoded string,
-(hyperref)                removing `\\' on input line 18.
+(hyperref)                removing `\\' on input line 20.
 
 (presentation.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 34.
  ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Try loading font information for T1+pfu on input line 32.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Try loading font information for T1+pfu on input line 34.
  ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\pfu\t1pfu.fd"
 File: t1pfu.fd 2004/09/28 scalable font definitions for T1/pfu.
 )
@@ -752,7 +752,7 @@ driver: pdftex
 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-Package hyperref Info: Link coloring OFF on input line 32.
+Package hyperref Info: Link coloring OFF on input line 34.
  ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\hyperref\nameref.sty"
 Package: nameref 2006/08/15 v2.26 Cross-referencing by name of section
 
@@ -761,78 +761,78 @@ Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
 )
 \c@section@level=\count157
 )
-LaTeX Info: Redefining \ref on input line 32.
-LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
 
 (presentation.out) (presentation.out)
 \@outlinefile=\write5
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 32.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 34.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 32.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 34.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 32.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 32.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/pfu/bx/n on input line 32.
+(Font)                  OT1/cmr/bx/n --> T1/pfu/bx/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/pfu/bx/n on input line 32.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 32.
+(Font)                  OT1/cmr/bx/n --> T1/pfu/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/pfu/m/n on input line 32.
+(Font)                  OT1/cmss/m/n --> T1/pfu/m/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/pfu/m/n on input line 32.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 32.
+(Font)                  OT1/cmss/bx/n --> T1/pfu/m/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/pfu/m/it on input line 32.
+(Font)                  OT1/cmr/m/it --> T1/pfu/m/it on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/pfu/m/it on input line 32.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 32.
+(Font)                  OT1/cmr/bx/it --> T1/pfu/m/it on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 32.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 32.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 34.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/pfu/m/n --> T1/pfu/bx/n on input line 32.
+(Font)                  T1/pfu/m/n --> T1/pfu/bx/n on input line 34.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/pfu/m/it --> T1/pfu/bx/it on input line 32.
+(Font)                  T1/pfu/m/it --> T1/pfu/bx/it on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 32.
+(Font)                  OT1/cmss/bx/n --> T1/cmr/bx/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/pfu/bx/n --> T1/pfu/bx/n on input line 32.
+(Font)                  T1/pfu/bx/n --> T1/pfu/bx/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/pfu/m/n --> T1/pfu/bx/n on input line 32.
+(Font)                  T1/pfu/m/n --> T1/pfu/bx/n on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/pfu/m/it --> T1/pfu/bx/it on input line 32.
+(Font)                  T1/pfu/m/it --> T1/pfu/bx/it on input line 34.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 32.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/bx/n on input line 34.
  (presentation.nav)
-LaTeX Font Info:    Try loading font information for U+msa on input line 40.
+LaTeX Font Info:    Try loading font information for U+msa on input line 42.
 
 ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 40.
+LaTeX Font Info:    Try loading font information for U+msb on input line 42.
 
 ("C:\Archivos de programa\MiKTeX 2.5\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <8> not available
-(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 40.
+(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <6> not available
-(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 40.
+(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 42.
 LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <5> not available
-(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 40.
+(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 42.
 
-<i/uvt.pdf, id=27, 670.505pt x 153.57375pt>
+<i/uvt.pdf, id=43, 670.505pt x 153.57375pt>
 File: i/uvt.pdf Graphic file (type pdf)
  <use i/uvt.pdf>
-<i/esade.pdf, id=28, 482.80376pt x 250.82686pt>
+<i/esade.pdf, id=44, 482.80376pt x 250.82686pt>
 File: i/esade.pdf Graphic file (type pdf)
  <use i/esade.pdf>
-Overfull \vbox (4.78256pt too high) detected at line 40
+Overfull \vbox (4.78256pt too high) detected at line 42
  []
 
 [1{psfonts.map}
@@ -843,65 +843,112 @@ Warning:  (file i/uvt.pdf): pdf inclusion: Page Group detected which pdfTeX can
 > <i/esade.pdf
 Warning:  (file i/esade.pdf): pdf inclusion: Page Group detected which pdfTeX c
 an't handle. Ignoring it.
->] <i/response-model.pdf, id=73, 344.45004pt x 242.83119pt>
+>] <i/response-model.pdf, id=89, 344.45004pt x 242.83119pt>
 File: i/response-model.pdf Graphic file (type pdf)
 
 <use i/response-model.pdf> [2
 
  <i/response-model.pdf>]
-LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 64.
- [3
+<i/3_steps_together_CV.pdf, id=125, 845.04686pt x 597.50786pt>
+File: i/3_steps_together_CV.pdf Graphic file (type pdf)
 
-] [4
+<use i/3_steps_together_CV.pdf> [3
+
+ <i/3_steps_together_CV.pdf
+Warning:  (file i/3_steps_together_CV.pdf): pdf inclusion: Page Group detected 
+which pdfTeX can't handle. Ignoring it.
+>]
+LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <10.95> not available
+(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 72.
+ [4
 
 ] [5
 
 ] [6
 
-]
-<i/trait-1-m-1.pdf, id=219, 450.68375pt x 95.35625pt>
-File: i/trait-1-m-1.pdf Graphic file (type pdf)
- <use i/trait-1-m-1.pdf>
-<i/trait-1-m-2.pdf, id=220, 454.69875pt x 135.45154pt>
-File: i/trait-1-m-2.pdf Graphic file (type pdf)
- <use i/trait-1-m-2.pdf>
-<i/trait-1-m-3.pdf, id=221, 498.86375pt x 123.46124pt>
-File: i/trait-1-m-3.pdf Graphic file (type pdf)
- <use i/trait-1-m-3.pdf>
-[7
+] [7
 
- <i/trait-1-m-1.pdf> <i/trait-1-m-2.pdf> <i/trait-1-m-3.pdf>]
-<i/method-1.pdf, id=283, 458.71375pt x 172.645pt>
-File: i/method-1.pdf Graphic file (type pdf)
- <use i/method-1.pdf>
-Overfull \hbox (11.3809pt too wide) in paragraph at lines 81--81
-[][]  
+] [8
+
+]
+<../latex/i/response_model_categorical.pdf, id=488, 466.64882pt x 333.38545pt>
+File: ../latex/i/response_model_categorical.pdf Graphic file (type pdf)
+
+<use ../latex/i/response_model_categorical.pdf> [9
+
+ <C:/ESS/berlin/latex/i/response_model_categorical.pdf
+Warning:  (file C:/ESS/berlin/latex/i/response_model_categorical.pdf): pdf incl
+usion: Page Group detected which pdfTeX can't handle. Ignoring it.
+>]
+LaTeX Font Info:    Font shape `T1/pfu/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pfu/b/n' tried instead on input line 94.
+ <i/LRV-8cat.pdf, id=517, 574.4074pt x 619.14938pt>
+File: i/LRV-8cat.pdf Graphic file (type pdf)
+ <use i/LRV-8cat.pdf>
+<i/LRV-skew.pdf, id=518, 572.6006pt x 610.24202pt>
+File: i/LRV-skew.pdf Graphic file (type pdf)
+ <use i/LRV-skew.pdf>
+[10
+
+ <i/LRV-8cat.pdf
+Warning:  (file i/LRV-8cat.pdf): pdf inclusion: Page Group detected which pdfTe
+X can't handle. Ignoring it.
+> <i/LRV-skew.pdf
+Warning:  (file i/LRV-skew.pdf): pdf inclusion: Page Group detected which pdfTe
+X can't handle. Ignoring it.
+>]
+File: i/LRV-8cat.pdf Graphic file (type pdf)
+ <use i/LRV-8cat.pdf>
+File: i/LRV-skew.pdf Graphic file (type pdf)
+ <use i/LRV-skew.pdf> [11
+
+]
+File: i/LRV-8cat.pdf Graphic file (type pdf)
+ <use i/LRV-8cat.pdf>
+File: i/LRV-skew.pdf Graphic file (type pdf)
+
+<use i/LRV-skew.pdf> [12
+
+]
+<i/3_steps_together.pdf, id=604, 769.66747pt x 584.16644pt>
+File: i/3_steps_together.pdf Graphic file (type pdf)
+
+<use i/3_steps_together.pdf> [13
+
+ <i/3_steps_together.pdf
+Warning:  (file i/3_steps_together.pdf): pdf inclusion: Page Group detected whi
+ch pdfTeX can't handle. Ignoring it.
+>] <i/country_A.pdf, id=768, 505.89pt x 758.835pt>
+File: i/country_A.pdf Graphic file (type pdf)
+ <use i/country_A.pdf>
+<i/country_B.pdf, id=769, 505.89pt x 758.835pt>
+File: i/country_B.pdf Graphic file (type pdf)
+ <use i/country_B.pdf>
+Overfull \vbox (5.51039pt too high) detected at line 109
  []
 
-[8
+[14
 
- <i/method-1.pdf>] <i/method-2.pdf, id=318, 434.62375pt x 476.23091pt>
-File: i/method-2.pdf Graphic file (type pdf)
+ <i/country_A.pdf> <i/country_B.pdf>]
+File: i/country_A.pdf Graphic file (type pdf)
+ <use i/country_A.pdf>
+File: i/country_B.pdf Graphic file (type pdf)
 
-<use i/method-2.pdf> [9
+<use i/country_B.pdf>
+Overfull \vbox (5.51039pt too high) detected at line 109
+ []
 
- <i/method-2.pdf>]
-<i/method-3.pdf, id=352, 501.875pt x 616.3025pt>
-File: i/method-3.pdf Graphic file (type pdf)
- <use i/method-3.pdf> [10
+[15
 
- <i/method-3.pdf>] [11
+]
+File: i/country_A.pdf Graphic file (type pdf)
+ <use i/country_A.pdf>
+File: i/country_B.pdf Graphic file (type pdf)
+ <use i/country_B.pdf>
+Overfull \vbox (5.51039pt too high) detected at line 109
+ []
 
-] [12
-
-] [13
-
-] [14
-
-] [15
-
-] [16
+[16
 
 ] [17
 
@@ -909,60 +956,267 @@ File: i/method-3.pdf Graphic file (type pdf)
 
 ] [19
 
-]
-<i/MTMM.pdf, id=629, 353.74722pt x 225.35275pt>
-File: i/MTMM.pdf Graphic file (type pdf)
- <use i/MTMM.pdf>
-Overfull \hbox (5.36346pt too wide) in paragraph at lines 153--153
-[][]  
- []
+] [20
 
-[20
+] [21
 
- <i/MTMM.pdf>]
-File: i/MTMM.pdf Graphic file (type pdf)
- <use i/MTMM.pdf>
-Overfull \hbox (5.36346pt too wide) in paragraph at lines 153--153
-[][]  
- []
-
-! pdfTeX warning (ext4): destination with the same identifier (name{model}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.153 \end{frame}
-                  [21
-
-]
-File: i/MTMM.pdf Graphic file (type pdf)
- <use i/MTMM.pdf>
-Overfull \hbox (5.36346pt too wide) in paragraph at lines 153--153
-[][]  
- []
-
-! pdfTeX warning (ext4): destination with the same identifier (name{model}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.153 \end{frame}
-                  [22
+] [22
 
 ] [23
 
 ] [24
 
-] [25
+]
+<i/trait-1-m-1.pdf, id=1076, 450.68375pt x 95.35625pt>
+File: i/trait-1-m-1.pdf Graphic file (type pdf)
+ <use i/trait-1-m-1.pdf>
+<i/trait-1-m-2.pdf, id=1077, 454.69875pt x 135.45154pt>
+File: i/trait-1-m-2.pdf Graphic file (type pdf)
 
-] [26
+<use i/trait-1-m-2.pdf>
+<i/trait-1-m-3.pdf, id=1078, 498.86375pt x 123.46124pt>
+File: i/trait-1-m-3.pdf Graphic file (type pdf)
 
-] [27
+<use i/trait-1-m-3.pdf> [25
 
-] [28
+ <i/trait-1-m-1.pdf> <i/trait-1-m-2.pdf> <i/trait-1-m-3.pdf>] <i/method-1.pdf, 
+id=1140, 458.71375pt x 172.645pt>
+File: i/method-1.pdf Graphic file (type pdf)
+
+<use i/method-1.pdf>
+Overfull \hbox (11.3809pt too wide) in paragraph at lines 178--178
+[][]  
+ []
+
+[26
+
+ <i/method-1.pdf>] <i/method-2.pdf, id=1175, 434.62375pt x 476.23091pt>
+File: i/method-2.pdf Graphic file (type pdf)
+
+<use i/method-2.pdf> [27
+
+ <i/method-2.pdf>]
+<i/method-3.pdf, id=1209, 501.875pt x 616.3025pt>
+File: i/method-3.pdf Graphic file (type pdf)
+ <use i/method-3.pdf> [28
+
+ <i/method-3.pdf>] [29
+
+] [30
+
+] [31
+
+] [32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
 
 ]
+<i/MTMM.pdf, id=1486, 353.74722pt x 225.35275pt>
+File: i/MTMM.pdf Graphic file (type pdf)
+ <use i/MTMM.pdf>
+Overfull \hbox (5.36346pt too wide) in paragraph at lines 250--250
+[][]  
+ []
 
-LaTeX Warning: File `i/response-categ.pdf' not found on input line 170.
+[38
+
+ <i/MTMM.pdf>]
+File: i/MTMM.pdf Graphic file (type pdf)
+ <use i/MTMM.pdf>
+Overfull \hbox (5.36346pt too wide) in paragraph at lines 250--250
+[][]  
+ []
+
+! pdfTeX warning (ext4): destination with the same identifier (name{model}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.250 \end{frame}
+                  [39
+
+]
+File: i/MTMM.pdf Graphic file (type pdf)
+ <use i/MTMM.pdf>
+Overfull \hbox (5.36346pt too wide) in paragraph at lines 250--250
+[][]  
+ []
+
+! pdfTeX warning (ext4): destination with the same identifier (name{model}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.250 \end{frame}
+                  [40
+
+] [41
+
+] [42
+
+] [43
+
+] [44
+
+] [45
+
+] [46
+
+] [47
+
+] [48
+
+] [49
+
+] [50
+
+]
+[51
+
+] <i/topics.pdf, id=1866, 737.75626pt x 162.6075pt>
+File: i/topics.pdf Graphic file (type pdf)
+ <use i/topics.pdf>
+[52
+
+ <i/topics.pdf
+Warning:  (file i/topics.pdf): pdf inclusion: Page Group detected which pdfTeX 
+can't handle. Ignoring it.
+>]
+File: i/topics.pdf Graphic file (type pdf)
+ <use i/topics.pdf> [53
+
+]
+File: i/topics.pdf Graphic file (type pdf)
+ <use i/topics.pdf> [54
+
+]
+LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <9> not available
+(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 328.
+LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <14.4> not available
+(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 328.
+LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <10> not available
+(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 328.
+LaTeX Font Info:    Font shape `T1/pfu/m/it' in size <7> not available
+(Font)              Font shape `T1/pfu/m/sl' tried instead on input line 328.
+ [55
+
+] [56
+
+] [57
+
+] [58
+
+] [59
+
+]
+[60
+
+] [61
+
+] <../latex/i/predict_q2.pdf, id=2160, 433.62pt x 433.62pt>
+File: ../latex/i/predict_q2.pdf Graphic file (type pdf)
+
+<use ../latex/i/predict_q2.pdf> [62
+
+ <C:/ESS/berlin/latex/i/predict_q2.pdf>]
+[63
+
+] [64
+
+] [65
+
+] [66
+
+] [67
+
+] [68
+
+] [69
+
+] [70
+
+] [71
+
+] [72
+
+] [73
+
+] [74
+
+] [75
+
+]
+<i/uvt_fac.jpg, id=2532, 240.9pt x 180.675pt>
+File: i/uvt_fac.jpg Graphic file (type jpg)
+ <use i/uvt_fac.jpg>
+<i/esade_fac.jpg, id=2533, 301.125pt x 225.84375pt>
+File: i/esade_fac.jpg Graphic file (type jpg)
+ <use i/esade_fac.jpg>
+[76
+
+ <i/uvt_fac.jpg> <i/esade_fac.jpg>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 637.
 
 
-Error:  (file i/response-categ.pdf): cannot find image file
- ==> Fatal error occurred, the output PDF file is not finished!
+("C:\Archivos de programa\MiKTeX 2.5\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [77
+
+] [78
+
+]
+[79
+
+] [80
+
+] [81
+
+] [82
+
+] [83
+
+] [84
+
+] [85
+
+] [86
+
+] [87
+
+ <C:/Archivos de programa/MiKTeX 2.5/tex/latex/beamer/base/art/beamericonarticl
+e.pdf>]
+\tf@nav=\write6
+\tf@toc=\write7
+\tf@snm=\write8
+ (presentation.aux) ) 
+Here is how much of TeX's memory you used:
+ 9884 strings out of 95419
+ 165277 string characters out of 1187093
+ 235357 words of memory out of 1229841
+ 12157 multiletter control sequences out of 60000
+ 37951 words of font info for 87 fonts, out of 1000000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 41i,16n,51p,320b,667s stack positions out of 5000i,500n,10000p,200000b,32768s
+PDF statistics:
+ 2855 PDF objects out of 300000
+ 188 named destinations out of 300000
+ 206 words of extra memory for PDF output out of 10000
+{cm-super-t1.enc}<C:/Archivos de programa/MiKTeX 2.5/fonts
+/type1/public/cm-super/sftt1095.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/t
+ype1/bluesky/cm/cmex10.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/blue
+sky/cm/cmsy9.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cme
+x10.pfb><C:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmmi9.pfb><C
+:/Archivos de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmss9.pfb><C:/Archivos
+ de programa/MiKTeX 2.5/fonts/type1/bluesky/cm/cmsy10.pfb><C:/Archivos de progr
+ama/MiKTeX 2.5/fonts/type1/bluesky/cm/cmmi10.pfb>{8r.enc}<C:/Archivos de progra
+ma/MiKTeX 2.5/fonts/type1/linotype/futura/lfub8a.pfb><C:/Archivos de programa/M
+iKTeX 2.5/fonts/type1/bluesky/cm/cmss10.pfb><C:/Archivos de programa/MiKTeX 2.5
+/fonts/type1/linotype/futura/lfuko8a.pfb><C:/Archivos de programa/MiKTeX 2.5/fo
+nts/type1/linotype/futura/lfuk8a.pfb>
+Output written on presentation.pdf (87 pages, 12911433 bytes).
