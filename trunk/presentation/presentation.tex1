@@ -1,9 +1,9 @@
 % To produce handouts, uncomment the following:
-% \documentclass[handout]{beamer}
-% \usepackage{pgfpages}
-% \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+ \documentclass[handout]{beamer}
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 
-\documentclass{beamer}
+%\documentclass{beamer}
 
 \usepackage[T1]{fontenc}
 \usepackage{textcomp} 
@@ -26,8 +26,7 @@
   \and
   \inst{}%
   Survey Research Centre\\
-  ESADE, Barcelona\\
-  Universitat Ramon Llull\vspace{-1.2cm}
+  ESADE Barcelona, Universitat Ramon Llull\vspace{-1.2cm}
 }
 \date{}
 
@@ -36,8 +35,9 @@
 \begin{frame}
 	\titlepage
 	\begin{center}
-	 \includegraphics[width=4.5cm]{i/uvt.pdf}\hspace{.2cm}
-	 \includegraphics[width=2.8cm]{i/esade.pdf}	
+	 \includegraphics[width=4.3cm]{i/uvttransparent.png}\hspace{.3cm}
+	 \includegraphics[width=2.0cm]{i/esade.png}\hspace{.3cm}
+	 \includegraphics[width=2.8cm]{i/ess.pdf}	
   \end{center}	
 \end{frame}
 
@@ -51,15 +51,16 @@
 \section{Survey response model}
 
 \begin{frame}
-	\frametitle{The basic response model}
-	\includegraphics[height=7cm]{i/response-model.pdf}\\
+	\frametitle{The basic survey response model}
+	\pause\includegraphics[height=7cm]{i/response-model.pdf}\\
 \end{frame}
 
+\subsection{Example}
 \begin{frame}
-	\includegraphics[width=\textwidth]{i/3_steps_together_CV.pdf}\\
+	\includegraphics[height=8.3cm]{i/3_steps_together_CV.pdf}\\
 \end{frame}
 
-
+\subsection{Reliability, validity, and quality}
 \begin{frame}	
 	\frametitle{The basic response model}
 	\begin{itemize}[<alert@+>]
@@ -71,8 +72,9 @@
 	\end{itemize}
 \end{frame}	
 
+\subsection{Revised model for categorical data}
 \begin{frame}
-   \frametitle{The basic response model, revised}
+   \frametitle{The basic response model, revised}\pause
    \includegraphics[height=7cm]{../latex/i/response_model_categorical.pdf}
 \end{frame}
 
@@ -93,6 +95,7 @@
  \end{columns}
 \end{frame}
 
+\subsection{Revised model: Example}
 \begin{frame}
    \includegraphics[height=8cm]{i/3_steps_together.pdf}
 \end{frame}
@@ -108,7 +111,7 @@
  \end{columns}
 \end{frame}
 
-
+\subsection{Cross-cultural/time/group studies}
 \begin{frame}	
 	\frametitle{Categorical data in cross-country studies}
 	\begin{itemize}[<alert@+>]
@@ -116,42 +119,9 @@
 		\item If the thresholds are different, the observed means and (Pearson) correlations will differ also;
 		\item Even a difference in \emph{means} across countries can cause an observed difference in Pearson correlations;
 		\item If the assumption of normality holds true, the categorical response model (using polychoric correlations) corrects the LRV correlations;
-		\item Whether this model is realistic is the topic of our other presentation.
+		\item Whether this model is realistic is the topic of our other presentation...
 	\end{itemize}
 \end{frame}	
-
-\begin{frame}
-	\frametitle{The `categorisation factor'}
-	\begin{itemize}
-\item The quality was defined as:
-		\item \begin{equation*}
-q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
-\end{equation*}
-\item However, we have seen that $y$ is itself a categorization of an unobserved continuous variable ($LRV$), and therefore the above equation can be `decomposed' into
-\item \begin{equation*}
-q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
-\end{equation*}
-	\item We call this ratio of the quality coefficient $q = v.r$ from the categorical model to the same coefficient from the continuous model the `categorisation factor'.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{The `categorisation factor'}
-
-	\begin{equation}
-	q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
-	\end{equation}
-
-	\begin{itemize}
-		\item It can be seen that the quality normally estimated from the continuous model is a product of two terms:
-		\item $$
-			q^2_{cont} = q^2_{categ} \cdot c,
-		$$
-		where $c$ is a categorisation factor.
-		\item If $c < 1$, the quality in the categorical model is higher than in the continuous model
-		\item If $c > 1$, the quality in the categorical model is lower than in the continuous model
-	\end{itemize}
-\end{frame}
 
 \section{Multitrait-multimethod experiments}
 \begin{frame}
@@ -184,119 +154,90 @@ q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.
 
 \begin{frame}
 	\frametitle{Three traits measured with third method}
-	\begin{columns}[T]
-		\begin{column}{7cm}\includegraphics[height=7cm]{i/method-3.pdf}\end{column}
-		\begin{column}{3cm}\hyperlink{model}{\beamerbutton{Skip details of the model}}\end{column}
-	\end{columns}		
+	\includegraphics[height=7cm]{i/method-3.pdf}
 \end{frame}
 
-\if 1=2
-\subsection{Designs}
-
-\begin{frame}	
-	\frametitle{Split ballot design}
-
-	\begin{itemize}[<alert@+>]
-		\item Different designs are possible
-		\item If 3 traits are asked using 3 methods, the respondent has to answer 
-			$3 \times 3 = 9$ questions per experiment
-		\item Answering the same question 3 times, for three different questions is a large response burden
-		\item The solution: split ballot MTMM design.
-\item<5-|alert@5> {
-	Split the sample into groups A and B:
-
-	\begin{tabular}{llccc}
-\hline
-		&&\multicolumn{3}{c}{Trait}\\
-		& Method & 1 & 2 & 3\\
-\hline
-		Main quest. 	& 1 & A,B & A,B & A,B\\
-		Supplementary quest.	& 2 & A & A & A\\
-							& 3 & B & B & B\\
-\hline
-	\end{tabular}	}
-	\end{itemize}
-
-\end{frame}	
-\fi
 
 \subsection{Models}
 
 \begin{frame}	
-	\frametitle{Different models for MTMM experiments}
-	\begin{itemize}[<alert@+>]
-		\item Classic MTMM model
-		\item Correlated uniqueness (Kenny \& Judd)
-		\item Direct product (Browne)
-		\item True score model
-		\item MTM-1 (Eid 2000)
-	\end{itemize}
-\end{frame}	
-\begin{frame}	
-	\frametitle{Different models for MTMM experiments}
-	\begin{itemize}[<alert@+>]
-		\item We use the true score model
-		\item Equivalent to the classic MTMM model
-		\item Sometimes necessary to remove one method factor
-		\item In that case our model is the equivalent to Eid's MTM-1 model.
-	\end{itemize}
-\end{frame}	
-
-\begin{frame}	
-	\frametitle{\hypertarget{model}{True score model}}
-	\includegraphics[height=7cm]{i/MTMM.pdf}
+	\frametitle{\hypertarget{model}{Classic MTMM model}}
+	\includegraphics[height=7cm]{../latex/MTMM.pdf}
 	\framezoom<1><2>(0cm,1.85cm)(.5cm,4.5cm)
 	\framezoom<1><3>(0cm,0cm)(1cm,3cm)
 \end{frame}	
 
 \begin{frame}	
-	\frametitle{True score model assumptions}
+	\frametitle{MTMM model assumptions}
 	\begin{itemize}[<alert@+>]
 		\item No correlations among methods
 		\item No correlations between traits and methods
 		\item Equal method effects
 		\item Linear and additive effects
 		\item Normal errors, independent of all unobserved variables
-		\item All variables are continuous
+%		\item All variables are continuous
+	\end{itemize}
+\end{frame}
+
+\subsection{Results of the analyses across countries of the ESS round 2}
+\begin{frame}
+	\includegraphics[height=8cm]{i/quality_plot.pdf}
+\end{frame}
+
+
+\begin{frame}	
+\frametitle{Conclusions from the analysis of the \textbf{continuous} MTMM model}
+
+	\begin{itemize}[<alert@+>]
+		\item It is clear that categorization error may cause differences in Pearson correlations across countries;
+		\item This can be expected to have its effect on the estimates of the MTMM model;
+		\item Using the continuous model, quite some differences were indeed found in quality across countries;
+		\item To what extent can these differences be explained by categorization errors?
+		\item In order to quantify the differences between the models across countries we first define a measure called the `catgorisation factor':
 	\end{itemize}
 \end{frame}	
 
-
-
-\if 1=2
+\subsection{Consequences of categorisation}
 \begin{frame}
-    \begin{itemize}
-    \item These continuous latent response variables are related to each other according to the MTMM model.
-	\item Method effects, quality coefficients, and thresholds can be estimated.
-    \item Equivalent to a 2 parameter graded response model in IRT (Muth\'en \& Asparouhov 2002).
-    \end{itemize}
-\end{frame}
-\fi
-
-\begin{frame}
-\frametitle{Consequences of categorisation for the correlations between observed variables}
-
-	\begin{itemize}[<alert@+>]
-		\item The fewer categories, the smaller the Pearson correlation;
-		\item The more skew in observed variables, the smaller the Pearson correlation;
-		\item The corrected (`polychoric') correlations are generally higher than the Pearson correlations, but not necessarily equally so for all variables.
+	\frametitle{The `categorisation factor'}
+	\begin{itemize}
+\item The quality was defined as:
+		\item \begin{equation*}
+q^2 = \frac{Var(f)}{Var(y)}.\label{eqn:relratio}
+\end{equation*}
+\item However, we have seen that $y$ is itself a categorization of an unobserved continuous variable ($LRV$), and therefore the above equation can be `decomposed' into
+\item \begin{equation*}
+q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
+\end{equation*}
+	\item We call this ratio of the quality coefficient $q = v.r$ from the categorical model to the same coefficient from the continuous model the `categorisation factor'.
 	\end{itemize}
 \end{frame}
 
-\begin{frame} 
-	Therefore,
-	\begin{itemize}[<alert@+>]
-		\item If the skewness of observed variables is higher for variables measured by one particular method, then the corrected correlations between those variables will go up more than the others, and the method effects in the categorical model will be higher;
-		\item As method-induced correlation goes up, the estimates of the quality will go down instead of up!
-	\end{itemize} 
+\begin{frame}
+	\frametitle{The `categorisation factor'}
+
+	\begin{equation}
+	q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.		
+	\end{equation}
+
+	\begin{itemize}
+		\item It can be seen that the quality normally estimated from the continuous model is a product of two terms:
+		\item $$
+			q^2_{cont} = q^2_{categ} \cdot c,
+		$$
+		where $c$ is a categorisation factor.
+\item If $c < 1$, the quality in the categorical model is higher than in the continuous model
+		\item If $c > 1$, the quality in the categorical model is lower than in the continuous model
+	\end{itemize}
 \end{frame}
+
 
 \begin{frame}
 \frametitle{Analysis of the experiments}
 
 	\begin{itemize}[<alert@+>]
-		\item We analysed the 4 experiments from the ESS which involved variables with 5 categories or less
-		\item The topics: role of women, GP's, political efficacy, job.
+		\item We analysed the 4 experiments from the ESS that involved variables with 5 categories or less
+		\item The topics: role of women, doctors, political efficacy, job.
 
 			\includegraphics[width=10cm]{i/topics.png} 
 
@@ -308,7 +249,7 @@ q^2 =  \frac{ Var(f)}{Var(LRV)} \cdot \frac{Var(LRV)}{Var(y)}.
 \subsection{Categorisation errors in the efficacy experiment}
 
 \begin{frame}
-\frametitle{Quality ($q^2$)and method effects ($m$) in the efficacy experiment, in Denmark}
+\frametitle{Example: Quality ($q^2$)and method effects ($m$) in the efficacy experiment in Denmark}
 
 Results of continuous MTMM model, main questionnaire (first method)
 
@@ -329,7 +270,7 @@ $df=19, \chi^2=40.0, p = 0.003$.
 
 
 \begin{frame}
-\frametitle{Efficacy experiment: Denmark}
+\frametitle{Example: Efficacy experiment in Denmark}
 \begin{footnotesize}
 Polychoric correlations
 \begin{tabular}{llrrrrrr}
@@ -367,47 +308,9 @@ $n \approx 916$
 \end{frame}
 
 
-\if 1=2
-\begin{frame}
-\frametitle{Efficacy experiment: Switzerland}
-\begin{footnotesize}
-
-Polychoric correlations
-
-\begin{tabular}{llrrrrrr}
- \hline
- &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
- &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$}\\
-Method 1	& Complex 	& 1.00 & \\
-			& Active 	& -0.37 & 1.00 & \\
-			& Mind 		& -0.46 & 0.42 & 1.00 & \\
-Method 2	& Complex 	& 0.57 & -0.36 & -0.46 & 1.00 & \\
-			& Active 	& -0.32 & 0.83 & 0.36 & -0.39 & 1.00 & \\
-			& Mind 		& -0.36 & 0.44 & 0.69 & -0.49 & 0.43 & 1.00\\
- \hline
- \end{tabular} 
-
-Pearson correlations
-
-\begin{tabular}{llrrrrrr}
- \hline
- &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
- &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$}\\
-Method 1	& Complex 	&  1.00\\
-			& Active 	& -0.33 & 1.00\\
-			& Mind 		& -0.43 & 0.36 & 1.00\\
-Method 2	& Complex 	&  0.55 & -0.35 & -0.45 & 1.00\\
-			& Active 	& -0.30 & 0.82 & 0.33 & -0.34 & 1.00\\
-			& Mind 		& -0.35 & 0.41 & 0.62 & -0.48 & 0.39 & 1.00\\
- \hline
- \end{tabular} 
-
-$n \approx 779$
-\end{footnotesize}
-\end{frame}\fi
 
 \begin{frame}
-\frametitle{\% Increase in the correlations after correction for categorisation}
+\frametitle{Example: \% Increase in the correlations after correction for categorisation}
 
 Efficacy experiment: Denmark
 
@@ -431,46 +334,8 @@ Mean percentage increase of the polychoric correlations:  14.5\%
 \end{frame}
 
 
-
-\if 1=2
 \begin{frame}
-\frametitle{\% Increase in the correlations after correction for categorisation}
-
-Efficacy experiment: Switzerland
-
-\begin{tabular}{llrrrrrr}
-\hline
- &&\multicolumn{3}{c}{Method 1} & \multicolumn{2}{c}{Method 2}  \\
-&&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{60pt}}$}\\
-Method 1	& Complex 	&    &  &  &  &  & \\
-			& Active 	& \textbf{12}\% &  &  &  &  & \\
-			& Mind 		&   \textbf{8}\% & \textbf{17}\% &  &  &  & \\
-Method 2	& Complex 	&   4\% & 3\% & 3\% &  &  & \\
-			& Active 	&   6\% & 1\% & 1\% & \textbf{16}\% &  & \\
-			& Mind 		&   2\% & 7\% & 12\% & \textbf{3}\% & \textbf{1}\% & \\
-\hline
-\end{tabular}
-
-Mean percentage increase of the polychoric correlations: 7.6\%
-\end{frame}
-
-\begin{frame}
-\frametitle{Consequences of correction for categorisation}
-	\begin{itemize}[<alert@+>]
-		\item In both Denmark and Switzerland, the monomethod correlations increase more than the other correlations;
-		\item In the continuous analysis, no significant method factor was found for the first method in either country;
-		\item In \textbf{Denmark} the monomethod correlations were already relatively high, however, leading to a significant method factor in the categorical model;
-		\item This leads to a lower quality estimate than in the continuous model in Denmark.
-		\item In \textbf{Switzerland} the monomethod correlations were lower; 
-		\item No significant method factor is found there, and the `upwards push' can therefore increase the quality coefficients.
-	\end{itemize}
-\end{frame}
-
-\fi
-
-
-\begin{frame}
-\frametitle{Quality ($q^2$)and method effects ($m$) according to the continuous and categorical models, with categorisation factors}
+\frametitle{Example: Quality ($q^2$)and method effects ($m$) according to the continuous and categorical models, with categorisation factors}
 
 \begin{footnotesize}\begin{tabular}{llrrr}
 \hline
@@ -496,66 +361,56 @@ Mean percentage increase of the polychoric correlations: 7.6\%
 \frametitle{Correction for categorisation: conclusions}
 
 \begin{itemize}[<alert@+>]
-   \item The general `push'  is that all coefficients go up, because the polychoric correlations are always higher than the Pearson correlations;
+   \item The general `push'  is that all coefficients go up, because the polychoric correlations are in general higher than the Pearson correlations;
    \item But when method factors are taken into account, the coefficients can also go down;
-   \item This happens especially when the method variance is estimated at zero in the continuous model, but cannot be so constrained in the categorical model.
-	\item Would then expect countries with high quality to have a lower quality after correction for categorisation and vice versa.
+   \item This happens especially when the method variance is very small (close to zero) in the continuous model, but larger in the categorical model;
+	\item Would then expect countries with high quality in the continuous model to have a lower quality after correction for categorisation and vice versa.
 	\end{itemize}
 \end{frame}
 
 \section{A meta-analysis of the categorisation error studies}
 \begin{frame}\begin{center}
-The categorisation factor, $q_{cat}/q_{cont}$:
+The categorisation factor, $q_{cat}/q_{cont}$ versus the quality:
  \includegraphics[height=7.4cm]{../latex/i/predict_q2.pdf} 
 \end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{How general are the findings?}
-
-\begin{footnotesize}
-
-\begin{tabular}{llrrrr}
-\hline
-& & & & \multicolumn{2}{c}{95\% C.I}\\
- &  & Estimate & S.E. & lower & upper\\
- \hline
-&(Intercept) & 1.04 & 0.36 & 0.31 & 1.77 \\ 
-\multicolumn{2}{l}{\textit{Topic}}&  &  &  & \\
- & Doctors & (reference category) &  &  & \\
-&Efficacy & 0.06 & 0.10 & -0.14 & 0.27 \\ 
-&Job & 0.04 & 0.40 & -0.71 & 0.78 \\ 
-&Women & 0.38 & 0.26 & -0.14 & 0.90 \\ 
-\multicolumn{2}{l}{\textit{Scale}}&  &  &  & \\ 
- & Direct  & (reference category) &  &  & \\
-&Agree-disagree & -0.11 & 0.35 & -0.81 & 0.59 \\ 
-&True-false & 0.17 & 0.32 & -0.48 & 0.81 \\ 
-\multicolumn{2}{l}{\textit{}   }&  &  &  & \\
-\multicolumn{2}{l}{Negative} & -0.50 & 0.23 & -0.96 & -0.02 \\ 
-\multicolumn{2}{l}{Main questionnaire} & -0.30 & 0.29 & -0.88 & 0.29 \\ 
-\multicolumn{2}{l}{Highest quality} & -0.19 & 0.09 & -0.37 & -0.01 \\ 
-\multicolumn{2}{l}{Highest quality $\times$ main} & 0.66 & 0.15 & 0.35 & 0.96 \\ 
-\hline
-\end{tabular}
-Multiple R-Squared: 0.45; Adjusted R-squared: 0.35 
-
-\end{footnotesize}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Some implications of the findings}
 
-\begin{itemize}
-   \item Potentially, if one method produces more categorisation errors than another, the quality coefficients may be estimated higher in the continuous model.
-   \item If this happens more in some countries than others, differences in quality will result due to the way the LRV's have been categorised.
+\begin{itemize}[<alert@+>]
+   \item Using discrete measures (with only a few categories) increased the apparent differences between countries using the continous factor model;
+	\item Differences are smaller after correction for categorization;
+	\item This means that either the continuous model gives misleading results regarding measurement invariance when analysing discrete data
+	\item \textbf{OR}
+	\item that the assumption of normality made in the `revised' (categorical) model is wrong.
 \end{itemize}
+
 \end{frame}
+
+
+\begin{frame}
+That's it for now. Moltes gràcies per la seva atenció!
+
+\vspace{1em}\begin{footnotesize}
+	\begin{columns}[T]
+		\begin{column}{3cm}\centering\includegraphics[width=2.55cm]{i/uvt_fac.jpg} 
+
+Tilburg\end{column}
+		\begin{column}{3cm}\centering\includegraphics[width=2.5cm]{i/esade_fac.jpg} 
+
+Barcelona\end{column}
+	\end{columns}		
+\end{footnotesize}
+\end{frame}
+
+\section{Epilogue}
 
 \begin{frame}
 \frametitle{The latent traits}
 
-Estimated correlations between the latent traits under the two different models
+Estimated correlations between the latent traits under the two different models in the example given before
 
 \begin{tabular}{lrrr}
 \hline
@@ -585,8 +440,9 @@ Categorical model &1 \\
 	 \item A part due to splitting the variable into just a few categories.
       \end{itemize}
    \item The estimates one gets can differ, and not always in the way one might expect;
-   \item The correlations between the latent traits corrected for measurement error in this experiment were robust to the model specification;
-   \item This suggests either model will provide a correct (or at least similar) inference about the variables of interest in this case.
+   \item The correlations between the latent traits corrected for measurement error \textbf{in this experiment} were robust to the model specification;
+   \item This suggests either model will provide a correct (or at least similar) inference about the variables of interest in this particular case;
+	\item One cannot expect this to be the case in general, however.
 \end{itemize}
 \end{frame}
 
@@ -599,25 +455,6 @@ Categorical model &1 \\
 				\item Prediction of the data quality based on characteristics of the question.
 			\end{itemize}
 \end{frame}
-
-\begin{frame}
-That's it for now. Moltes gràcies per la seva atenció!
-\vspace{1em}
-\begin{footnotesize}
-	\begin{columns}[T]
-		\begin{column}{3cm}\centering\includegraphics[width=2.55cm]{i/uvt_fac.jpg} 
-
-Tilburg\end{column}
-		\begin{column}{3cm}\centering\includegraphics[width=2.5cm]{i/esade_fac.jpg} 
-
-Barcelona\end{column}
-	\end{columns}		
-\end{footnotesize}
-\end{frame}
-
-
-
-\section{Epilogue}
 
 \begin{frame}
  \frametitle{The final goal: Survey Quality Predictor (SQP)}
