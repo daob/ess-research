@@ -1,9 +1,16 @@
 \beamer@endinputifotherversion {3.06pt}
 \beamer@sectionintoc {2}{Survey response model}{2}{0}{1}
+\beamer@subsectionintoc {2}{1}{Example}{4}{0}{1}
+\beamer@subsectionintoc {2}{2}{Reliability, validity, and quality}{5}{0}{1}
+\beamer@subsectionintoc {2}{3}{Revised model for categorical data}{10}{0}{1}
+\beamer@subsectionintoc {2}{4}{Revised model: Example}{15}{0}{1}
+\beamer@subsectionintoc {2}{5}{Cross-cultural/time/group studies}{19}{0}{1}
 \beamer@sectionintoc {3}{Multitrait-multimethod experiments}{24}{0}{2}
 \beamer@subsectionintoc {3}{1}{An example experiment}{25}{0}{2}
 \beamer@subsectionintoc {3}{2}{Models}{29}{0}{2}
-\beamer@subsectionintoc {3}{3}{Categorisation errors in the efficacy experiment}{55}{0}{2}
-\beamer@sectionintoc {4}{A meta-analysis of the categorisation error studies}{63}{0}{3}
-\beamer@sectionintoc {5}{Conclusion}{67}{0}{4}
-\beamer@sectionintoc {6}{Epilogue}{78}{0}{5}
+\beamer@subsectionintoc {3}{3}{Results of the analyses across countries of the ESS round 2}{37}{0}{2}
+\beamer@subsectionintoc {3}{4}{Consequences of categorisation}{43}{0}{2}
+\beamer@subsectionintoc {3}{5}{Categorisation errors in the efficacy experiment}{48}{0}{2}
+\beamer@sectionintoc {4}{A meta-analysis of the categorisation error studies}{56}{0}{3}
+\beamer@sectionintoc {5}{Epilogue}{63}{0}{4}
+\beamer@sectionintoc {6}{Conclusion}{64}{0}{5}
