@@ -1,4 +1,7 @@
+require(foreign)
+
 pdf("c:/ESS/berlin/presentation/i/quality_plot.pdf", width=10, height=7)
+par(mar=c( 5.1, 5.1, 4.1, 2.1 ))
 
 w <- read.spss('C:/ESS/ESS/wave2/MTMM analysis/mtmmexpw2.sav', to.data.frame=TRUE)
 
@@ -13,7 +16,7 @@ quality <- quality[country.order]
 country.means <- country.means[country.order,]
 
 plot(0,0, xlim=c(1,length(country.order)), ylim=c(0.4, 1), pch=NA, axes=FALSE, 
-      xlab="Country", ylab="Quality", 
+      xlab="Country", ylab="Question quality", cex.lab=3,
       main="Average quality of main questionnaire items in different countries, with interquartile range\n(Continuous CFA MTMM model)" )
 
 
@@ -22,7 +25,7 @@ upper.quartiles <- do.call("c", lapply(quality, function(C) quantile(C, c(.75) )
 
 segments(1:length(country.means), lower.quartiles,1:length(country.means), upper.quartiles)
 
-points(1:length(country.means), country.means, pch=20, col="#ffff9c", cex=1.4)
+points(1:length(country.means), country.means, pch=20, col="#da5e1d", cex=1.4)
 
 axis(2)
 axis(1, at=1:length(country.means), labels=names(quality))
