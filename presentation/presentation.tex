@@ -1,9 +1,9 @@
 % To produce handouts, uncomment the following:
-% \documentclass[handout]{beamer}
-% \usepackage{pgfpages}
-% \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+ \documentclass[handout]{beamer}
+ \usepackage{pgfpages}
+ \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 
-\documentclass{beamer}
+%\documentclass{beamer}
 
 \usepackage[T1]{fontenc}
 \usepackage{textcomp} 
@@ -11,9 +11,9 @@
 
 \usepackage{futura}
 \usetheme{Antibes}
-\usecolortheme{beetle}
-\xdefinecolor{myyellow}{rgb}{0.97, 0.90, 0.49}
-\setbeamercolor{alerted text}{fg=myyellow}
+\usecolortheme{crane}
+%\xdefinecolor{myyellow}{rgb}{0.97, 0.90, 0.49}
+%\setbeamercolor{alerted text}{fg=myyellow}
 
 
 \title{Categorization errors and differences in the quality of questions across countries}
@@ -48,25 +48,45 @@
 %	\tableofcontents
 %\end{frame}
 
+\section{Introduction}
+
+\begin{frame}
+	\includegraphics[height=8cm]{i/quality_plot.pdf}
+\end{frame}
+
+\begin{frame}	
+	\begin{itemize}[<alert@+>]
+		\item Big differences in question quality are found across countries
+		\item Previous explanations for the differences we (Oberski ea 2007) sought for were
+			\begin{itemize}[<alert@+>]
+				\item the complexity of the sentences in different languages
+				\item translation errors
+				\item different implementations of the experiments used to estimate the quality
+			\end{itemize}
+		\item None of these possible reasons could sufficiently explain the large differences found
+		\item Therefore we now consider another possible explanation:
+		\item Categorization error.
+	\end{itemize}
+\end{frame}	
+
 \section{Survey response model}
 
 \begin{frame}
 	\frametitle{The basic survey response model}
-	\pause\includegraphics[height=7cm]{i/response-model.pdf}\\
+	\pause\includegraphics[width=\textwidth]{i/response-model.pdf}\\
 \end{frame}
 
 \subsection{Example}
 \begin{frame}
-	\includegraphics[height=8.3cm]{i/3_steps_together_CV.pdf}\\
+   \frametitle{Example}
+	\includegraphics[width=\textwidth]{i/3_steps_together_CV.pdf}\\
 \end{frame}
 
 \subsection{Reliability, validity, and quality}
 \begin{frame}	
 	\frametitle{The basic response model}
 	\begin{itemize}[<alert@+>]
-		\item The quality coefficient $q$ is the product of the reliability and validity coefficients:
-		\item $q = vr$
-		\item The square $q^2$ is called the 'total quality' of a measure.
+		\item The square of the quality coefficient $q^2$ is called the 'total quality' of a measure.
 		\item It is the percentage of variance in the observed variable that can be explained by the latent variable of interest.
 		\item The observed variables are assumed to be continuous.
 	\end{itemize}
@@ -75,7 +95,7 @@
 \subsection{Revised model for categorical data}
 \begin{frame}
    \frametitle{The basic response model, revised}\pause
-   \includegraphics[height=7cm]{../latex/i/response_model_categorical.pdf}
+   \includegraphics[height=7cm]{i/response_categorical.pdf}
 \end{frame}
 
 
@@ -163,26 +183,9 @@
 \begin{frame}	
 	\frametitle{\hypertarget{model}{Classic MTMM model}}
 	\includegraphics[height=7cm]{../latex/MTMM.pdf}
-	\framezoom<1><2>(0cm,1.85cm)(.5cm,4.5cm)
-	\framezoom<1><3>(0cm,0cm)(1cm,3cm)
+%	\framezoom<1><2>(0cm,1.85cm)(.5cm,4.5cm)
+%	\framezoom<1><3>(0cm,0cm)(1cm,3cm)
 \end{frame}	
-
-\begin{frame}	
-	\frametitle{MTMM model assumptions}
-	\begin{itemize}[<alert@+>]
-		\item No correlations among methods
-		\item No correlations between traits and methods
-		\item Equal method effects
-		\item Linear and additive effects
-		\item Normal errors, independent of all unobserved variables
-%		\item All variables are continuous
-	\end{itemize}
-\end{frame}
-
-\subsection{Results of the analyses across countries of the ESS round 2}
-\begin{frame}
-	\includegraphics[height=8cm]{i/quality_plot.pdf}
-\end{frame}
 
 
 \begin{frame}	
@@ -272,20 +275,6 @@ $df=19, \chi^2=40.0, p = 0.003$.
 \begin{frame}
 \frametitle{Example: Efficacy experiment in Denmark}
 \begin{footnotesize}
-Polychoric correlations
-\begin{tabular}{llrrrrrr}
- \hline
- &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
- &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$}\\
-Method 1	& Complex 	& 1.00 \\
-			& Active 	& -0.44 & 1.00 \\
-			& Mind 		& -0.51 & 0.47 & 1.00 \\
-Method 2	& Complex 	& 0.66 & -0.45 & -0.51 & 1.00 \\
-			& Active 	& -0.44 & 0.74 & 0.46 & -0.51 & 1.00  \\
-			& Mind 		& -0.52 & 0.51 & 0.67 & -0.56 & 0.56 & 1.00\\
- \hline
- \end{tabular}
-
 Pearson correlations
 
 \begin{tabular}{llrrrrrr}
@@ -301,6 +290,21 @@ Method 2	& Complex 	& 0.60 & -0.37 & -0.44 & 1.00\\
 			& Mind 		&-0.46 & 0.43 & 0.62 & -0.49 & 0.48 & 1.00\\
  \hline
  \end{tabular} 
+
+Polychoric correlations
+\begin{tabular}{llrrrrrr}
+ \hline
+ &&\multicolumn{3}{c}{Method 1} & \multicolumn{3}{c}{Method 2}\\
+ &&\multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$} & \multicolumn{3}{c}{$\overbrace{\hspace{90pt}}$}\\
+Method 1	& Complex 	& 1.00 \\
+			& Active 	& -0.44 & 1.00 \\
+			& Mind 		& -0.51 & 0.47 & 1.00 \\
+Method 2	& Complex 	& 0.66 & -0.45 & -0.51 & 1.00 \\
+			& Active 	& -0.44 & 0.74 & 0.46 & -0.51 & 1.00  \\
+			& Mind 		& -0.52 & 0.51 & 0.67 & -0.56 & 0.56 & 1.00\\
+ \hline
+ \end{tabular}
+
 
 $n \approx 916$
 \end{footnotesize}
@@ -477,9 +481,14 @@ Categorical model &1 \\
 
 
 \begin{frame}
- \frametitle{References of interest}
+ \frametitle{References}
 
 \begin{thebibliography}{10}
+\bibitem{Oberski2007}
+Oberski, Daniel, Willem Saris, and Jacques Hagenaars
+\newblock Why are there Differences in Measurement Quality across Countries?
+\newblock in: \emph{Measuring Meaningful Data in Social Research}. G. Loosveldt, M. Swyngedouw \& B. Cambr\'e (eds.). Leuven: Acco. 2007.
+
 \bibitem{Saris2008}
 Saris, Willem, Albert Satorra, and William van der Veld
 \newblock Testing Structural Equation models or Detection of misspecifications? 
