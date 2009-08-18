@@ -62,11 +62,9 @@ where $i \neq k$ index the concepts by intuition and $j$ a method.
 
 This means that the correlation between the observed variables is normally smaller than the correlation between the variables of interest, but can be larger if the method effects are considerable. A second remark is that one can not compare correlations across countries without correction for measurement error if the measurement quality coefficients are very different across countries: this follows directly from the above equation (\ref{eqn:attenuation}). A third point is that one can not estimate these quality indicators from this simple design with two observed variables. In this model there are two quality coefficients, two method effects, and one correlation between the two latent traits, leaving us with  five unknown parameters, while only one correlation can be obtained from the data. It is impossible to estimate these five parameters from just one correlation.  
 
-There are two different approaches to estimate these coefficients. The first is direct estimation from MTMM experiments. The second is the use of the prediction program SQP. SQP predicts the quality coefficient and method effect of a single question from many of its characteristics such as the topic, the number of categories, etc\footnote{See the website \texttt{http://www.sqp.nl/}}. It is currently based on a meta-analysis of 87 MTMM experiments and 1028 different questions, while many more experiments are soon to be added \citep{oberski_sqp_}. Because we use the MTMM approach here, it is briefly introduced below. A more elaborate introduction to MTMM and SQP can be found in Saris and Gallhofer (2007).
+There are two different approaches to estimate these coefficients. The first is direct estimation from MTMM experiments. The second is the use of the prediction program SQP. SQP predicts the quality coefficient and method effect of a single question from many of its characteristics such as the topic, the number of categories, etc\footnote{See the website \texttt{http://www.sqp.nl/}}. It is currently based on a meta-analysis of 87 MTMM experiments and 1028 different questions, while many more experiments are soon to be added \citep{oberski_sqp_}. In this study we use the MTMM approach.
 
-\subsection{MTMM models}
-
-Campbell and Fiske (1959) suggested using multiple traits and multiple methods to evaluate the quality of measurement instruments (MTMM). The classical MTMM approach recommends the use of a minimum of three traits that are measured with three different methods leading to nine different observed variables. An example of such a design is given in Table \ref{tab:design}.  
+Campbell and Fiske (1959) suggested using multiple traits and multiple methods to evaluate the quality of measurement instruments (MTMM). The classical MTMM approach recommends the use of a minimum of three traits that are measured with three different methods leading to nine different observed variables. An example of such a design is given in Table \ref{tab:design}. Given the responses on all the variables, the coefficients described above can be estimated. A more elaborate introduction to MTMM and SQP can be found in Saris and Gallhofer (2007).
 
 \begin{table}[htb]\caption{The classic MTMM design used in the ESS pilot study.\label{tab:design}}
 \fbox{\begin{minipage}{\textwidth}
@@ -96,6 +94,7 @@ The three methods are specified by the following response scales:
 \caption{\label{fig:mtmm}MTMM model illustrating the observed scores and their factors of interest.}
 \end{figure}
 
+\if 1=2
 Collecting data using this MTMM design, data for nine variables are obtained and from that data a correlation matrix of $9 \times 9$ is obtained. The model formulated to estimate the quality coefficients and method effects is an extension of the model presented in Figure \ref{fig:response}. This figure illustrates the relationships between the observed variables and their general factors of interest. Figure \ref{fig:mtmm} shows that each trait (f$_i$) is measured in three ways. It is assumed that the traits are correlated but that the method factors (M$_1$, M$_2$, M$_3$) are not correlated. This assumption is discussed further below. To reduce the complexity of the figure, it is not indicated that for each observed variable there is a random error term as was previously introduced in the model in Figure \ref{fig:response}. 
 
 
@@ -153,25 +152,23 @@ $y_{33}$ &  && 0.74 &&& 0.40\\
 Table \ref{tab:mtmm_cor} presents the correlations we observed between the nine measures in a sample of 481 people in the British population. Using the specifications of the model indicated above and the ML estimator to estimate the quality indicators, the results presented in Table \ref{tab:mtmm_results} are obtained. Note that the estimation is done using the covariance matrix as the input matrix and not the correlation matrix. Thereafter, the estimates are standardized to obtain the requested coefficients. As a result, the standardized method effects are not exactly equal to each other.  
 
 \clearpage
-
+\fi
 \section{Data}
 
 The European Social Survey (ESS) has the unique characteristic that in more than 20 countries the same questions were asked and that within each round of the ESS Multitrait-Multimethod (MTMM) experiments are built in to evaluate the quality of a limited number of questions. This gives us an exceptional opportunity to observe the differences in quality of questions over a large number of countries. In this paper we have used the MTMM experiments of round 2 of the ESS, collected in 2004. 
 
 The questionnaires were administered by face to face interviewing in all countries. In Finland, France, Ireland, Italy, the Netherlands, Norway, and Sweden, the supplementary questionnaire with the repetition questions was self-completed with the interviewer present rather than asked face to face. This confounds mode effects with country effects for these countries. The countries we compare in subsequent sections all used face to face interviewing for both questionnaires, however. Therefore mode effects are not an issue in this particular study.
 
-The topics of the six MTMM experiments in the second round of the ESS were the following:
+The topics of the four MTMM experiments from the ESS we will study were the following:
 \begin{enumerate}
-\item Time spent on housework;
 \item The social distance between the doctor and patients;
 \item Opinions about job;
 \item The role of men and women in society;
-\item Satisfaction with the political situation;
-\item Political trust.
+\item Political efficacy.
 \end{enumerate}
-Concerning each of these topics three questions were asked and these three questions were presented in three different forms following the discussed MTMM designs. The first form,  used for all respondents, was presented in the main questionnaire. The two alternative forms were presented in a supplementary questionnaire which was completed after the main questionnaire. All respondents were only asked to reply to one alternative form but different groups got different version of the same questions \citep*{saris_new_2004}. For the specific questions in the six experiments we refer to the ESS website where the English source version of all questions are presented\footnote{http://www.europeansocialsurvey.org}, and for the different translations we refer to the ESS archive\footnote{http://ess.nsd.uib.no}.
+Concerning each of these topics three questions were asked and these three questions were presented in three different forms following the discussed MTMM designs. The first form,  used for all respondents, was presented in the main questionnaire. The two alternative forms were presented in a supplementary questionnaire which was completed after the main questionnaire. All respondents were only asked to reply to one alternative form but different groups got different version of the same questions \citep*{saris_new_2004}. For the specific questions in the experiments we refer to the ESS website where the English source version of all questions are presented\footnote{http://www.europeansocialsurvey.org}, and for the different translations we refer to the ESS archive\footnote{http://ess.nsd.uib.no}.
 
-	Each experiment varies a different aspect of the method by which questions can be asked in questionnaires. The `housework' experiment compares numeric estimates by respondents with other scales. The `social distance' experiment examines the effect of choosing arbitrary scale positions as a starting point for agreement-disagreement with a statement. The `job' experiment compares a four point true-false scale with direct questions using 4 and 11 point scales. In the `role of women' experiment agree-disagree scales are reversed, there is one negative item, and a `don't know' category is omitted in one of the methods.  The `satisfaction' experiment varies the extremeness and number of fixed reference points of the scale. And finally, the experiment on political trust was meant to investigate the effect of repeating the same question in the same format.
+	Each experiment varies a different aspect of the method by which questions can be asked in questionnaires. The `social distance' experiment examines the effect of choosing arbitrary scale positions as a starting point for agreement-disagreement with a statement. The `job' experiment compares a four point true-false scale with direct questions using 4 and 11 point scales. In the `role of women' experiment agree-disagree scales are reversed, there is one negative item, and a `don't know' category is omitted in one of the methods.  Finally, the political efficacy experiment pitted agree-disagree scales against direct questions.
 
 A special group took care that the samples in the different countries were proper probability samples and as comparable as possible \citep{hader_2007}. 
 
